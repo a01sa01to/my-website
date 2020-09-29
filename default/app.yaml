@@ -1,0 +1,2 @@
+runtime: ruby
+entrypoint: bundle exec jekyll serve --port $PORT
