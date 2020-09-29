@@ -1,0 +1,20 @@
+name: Default Deploy
+on:
+  push:
+    paths:
+      - default
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/Checkout@v2
+        with:
+          ref: main
+      - name: Deploy
+        uses: GoogleCloudPlatform/github-actions/appengine-deploy@master
+        with:
+          credentials: ${{ secrets.gcp_credentials }}
+          project_id: 'a01sa01to-b764c'
+          deliverables: 'default/app.yaml'
