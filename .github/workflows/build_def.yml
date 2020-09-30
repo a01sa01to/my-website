@@ -26,8 +26,7 @@ jobs:
           path: vendor/bundle
           key: ${{ runner.os }}-gem-${{ hashFiles('Gemfile.lock') }}
           restore-keys: |
-            ${{ runner.os }}-gems-
-          working-directory: ./default
+            ${{ runner.os }}-gem-
       - name: Prepare bundler
         run: |
           gem install bundler
