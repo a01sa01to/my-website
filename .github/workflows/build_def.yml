@@ -22,11 +22,13 @@ jobs:
           ruby-version: '2.7'
       - name: Install deps
         run: bundle install
+        working-directory: ./default
       - name: Build
         run: jekyll build
+        working-directory: ./default
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: ./default/_site
           publish_branch: def_deploy
