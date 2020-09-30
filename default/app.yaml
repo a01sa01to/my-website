@@ -3,38 +3,38 @@ runtime: python38
 handlers:
 - url: /(.*\.js)
   mime_type: text/javascript
-  static_files: _site/\1
-  upload: _site/(.*\.js)
+  static_files: /\1
+  upload: /(.*\.js)
 
 - url: /(.*\.(jpg|png|ico))
-  static_files: _site/\1
-  upload: _site/(.*\.img)
+  static_files: /\1
+  upload: /(.*\.img)
 
 - url: /(.*\.css)
   mime_type: text/css
-  static_files: _site/\1
-  upload: _site/(.*\.css)
+  static_files: /\1
+  upload: /(.*\.css)
 
 - url: /(.*\.(eot|svg|svgz|otf|ttf|woff|woff2))
-  static_files: _site/\1
-  upload: _site/(.*\.fonts)
+  static_files: /\1
+  upload: /(.*\.fonts)
 
 - url: /
-  static_files: _site/index.html
-  upload: _site/index.html
+  static_files: /index.html
+  upload: /index.html
 
 - url: /(.+)/
-  static_files: _site/\1/index.html
-  upload: _site/(.+)/index.html
+  static_files: /\1/index.html
+  upload: /(.+)/index.html
   expiration: "15m"
 
 - url: /(.+)
-  static_files: _site/\1/index.html
-  upload: _site/(.+)/index.html
+  static_files: /\1/index.html
+  upload: /(.+)/index.html
   expiration: "15m"
 
 - url: /(.*)
-  static_files: _site/\1
-  upload: _site/(.*)
+  static_files: /\1
+  upload: /(.*)
 
 #- url: /((tags)|(archive)|(about)|(posts)|(fonts))/
