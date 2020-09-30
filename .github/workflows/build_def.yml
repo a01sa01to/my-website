@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.7'
+      - name: Get gems cache directory path
+        id: gems-cache-dir-path
+        run: echo "::set-output name=dir::$(gems cache dir)"
       - name: Cache deps
         uses: actions/cache@v2
         with:
