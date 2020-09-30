@@ -1,2 +1,2 @@
-runtime: ruby
+runtime: ruby27
 entrypoint: bundle exec jekyll serve --port $PORT
