@@ -20,16 +20,20 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.7'
-      - name: Get gems cache directory path
-        id: gems-cache-dir-path
-        run: echo "::set-output name=dir::$(gems cache dir)"
       - name: Cache deps
         uses: actions/cache@v2
         with:
-          path: ${{ steps.gems-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-gems-${{ hashFiles('Gemfile.lock') }}
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
+          working-directory: ./default
+      - name: Prepare bundler
+        run: |
+          gem install bundler
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
+        working-directory: ./default
       - name: Install deps
         run: bundle install
         working-directory: ./default
