@@ -32,13 +32,12 @@ jobs:
         run: |
           gem install bundler
           bundle config path vendor/bundle
-          bundle install --jobs 4 --retry 3
         working-directory: ./default
       - name: Install deps
         run: bundle install
         working-directory: ./default
       - name: Build
-        run: jekyll build
+        run: bundle exec jekyll build
         working-directory: ./default
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
