@@ -20,6 +20,13 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.7'
+      - name: Cache deps
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.gems-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-gems-${{ hashFiles('Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
       - name: Install deps
         run: bundle install
         working-directory: ./default
