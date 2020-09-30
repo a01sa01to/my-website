@@ -1,5 +1,10 @@
 name: Default Build
-on: push
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build:
     name: Build
@@ -8,7 +13,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout
-        uses: actions/Checkout@v2
+        uses: actions/checkout@v2
         with:
           ref: main
       - name: Setup Ruby
