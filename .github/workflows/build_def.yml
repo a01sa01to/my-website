@@ -1,0 +1,27 @@
+name: Default Build
+on: push
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/Checkout@v2
+        with:
+          ref: main
+      - name: Setup Ruby
+        uses: actons/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+      - name: Install deps
+        run: bundle install
+      - name: Build
+        run: jekyll build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: def_deploy
