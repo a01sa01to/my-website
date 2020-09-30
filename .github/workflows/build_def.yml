@@ -23,8 +23,8 @@ jobs:
       - name: Cache deps
         uses: actions/cache@v2
         with:
-          path: default/vendor/bundle
-          key: ${{ runner.os }}-gem-${{ hashFiles('Gemfile.lock') }}
+          path: ./default/vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('./default/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gem-
       - name: Prepare bundler
