@@ -1,6 +1,4 @@
 runtime: python38
-threadsafe: yes
-
 
 handlers:
 - url: /(.*\.js)
