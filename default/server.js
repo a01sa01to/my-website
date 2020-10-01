@@ -1,5 +1,4 @@
 const express = require('express');
-const boom = require('@hapi/boom');
 const port = process.env.PORT || 3000;
 const path = require('path')
 
