@@ -9,7 +9,6 @@ app.use((req,res)=>{
 })
 app.use((err,req,res,next)=>{
 	console.error(err);
-	// res.status(err.statusCode).json(err);
 	res.status(err.statusCode).sendFile(path.join(__dirname,`err/${err.statusCode}.html`));
 })
 

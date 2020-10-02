@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,6 +13,8 @@ html, body {
   overflow-x: hidden;
   background-color: #f3f3f3;
   scroll-behavior: smooth;
+  -webkit-font-feature-settings: "palt" 1;
+          font-feature-settings: "palt" 1;
 }
 
 main {
@@ -19,10 +22,28 @@ main {
   margin-top: 56px;
 }
 
+p.note {
+  margin: auto;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+p.note::before {
+  content: "※ ";
+}
+
 .container {
   position: relative;
   padding: 40px 8px;
   border-bottom: 1px solid #ccc;
+}
+
+.container > * {
+  max-width: 1000px;
+}
+
+.container:nth-last-child(1) {
+  border-bottom: none;
 }
 
 .container.center {
@@ -37,6 +58,11 @@ main {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: i;
+}
+
+.container .right {
+  margin: auto;
+  text-align: right;
 }
 
 img {

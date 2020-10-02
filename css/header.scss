@@ -10,6 +10,7 @@ header{
   width: 100vw;
   height: 48px;
   padding: 6px;
+  line-height: 36px;
   color: #333;
   background-color: #fffc;
   box-shadow: 0px 0px 10px 0px #999;
@@ -32,9 +33,94 @@ header{
   }
 
   #right{
+    position: relative;
     margin: 0;
     margin-left: auto;
     text-align: right;
+
+    input{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      z-index: 1;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      opacity: 0;
+
+      &:checked+ div#menuIcon{
+
+        #bar1{
+          top: 17px;
+          transform: rotate(45deg);
+        }
+
+        #bar2{
+          bottom: 17px;
+          transform: rotate(-45deg);
+
+        }
+      }
+
+      &:checked ~ div#menuItem{
+        z-index: 1;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    div#menuIcon{
+      position: relative;
+      top: 0px;
+      right: 0px;
+      width: 36px;
+      height: 36px;
+
+      [id ^= bar]{
+        position: absolute;
+        left: 4px;
+        width: 28px;
+        height: 2px;
+        background: #222;
+        transition: 0.3s;
+      }
+
+      #bar1{
+        top: 12px;
+      }
+
+      #bar2{
+        bottom: 12px;
+      }
+    }
+
+    div#menuItem{
+      position: fixed;
+      top: 54px;
+      left: 0px;
+      z-index: -1;
+      width: 100vw;
+      height: calc(100vh - 54px);
+      padding: 16px;
+      visibility: hidden;
+      background: #f7f7f7;
+      opacity: 0;
+      transition: 0.3s;
+
+      li{
+        font-size: 1.3em;
+        list-style: none;
+
+        a{ text-decoration: none; }
+
+        &.social{
+
+          > *{
+            margin: 8px;
+          }
+        }
+      }
+    }
   }
 
 }

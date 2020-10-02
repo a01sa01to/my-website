@@ -25,6 +25,7 @@ html,body{
   overflow-x: hidden;
   background-color: #f3f3f3;
   scroll-behavior: smooth;
+  font-feature-settings: "palt" 1;
 }
 
 main{
@@ -32,10 +33,28 @@ main{
   margin-top: 56px;
 }
 
+p.note{
+  margin: auto;
+  font-size: 0.9em;
+  text-align: center;
+
+  &::before{
+    content: "※ ";
+  }
+}
+
 .container{
   position: relative;
   padding: 40px 8px;
   border-bottom: 1px solid #ccc;
+
+  > * {
+    max-width: 1000px;
+  }
+
+  &:nth-last-child(1){
+    border-bottom: none;
+  }
 
   &.center{
     display: grid;
@@ -45,6 +64,11 @@ main{
     > div{
       grid-area: i;
     }
+  }
+
+  .right{
+    margin: auto;
+    text-align: right;
   }
 }
 
