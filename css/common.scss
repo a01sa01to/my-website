@@ -6,7 +6,7 @@
   width: fit-content;
   max-width: 80vw;
   padding: 20px;
-  // background-color: #fff8;
+  background-color: #fff8;
   border-radius: 10px;
   transform: translate(-50%, -50%);
 }
@@ -80,8 +80,9 @@ img{
 img.abs {
   position: absolute;
   top: 50%;
+  left: 50%;
   z-index: 1;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .fullh{
