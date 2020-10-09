@@ -7,7 +7,8 @@ const app = express();
 
 app.use((req,res)=>{
 	if(!req.path.includes(".")){
-		const newPath = path.join(__dirname,`${req.path}.html`);
+		const newPath = path.join(__dirname,`${req.url}.html`);
+		console.log(newPath);
 		if(fs.existsSync(path)){
 			res.sendFile(newPath);
 			return;
