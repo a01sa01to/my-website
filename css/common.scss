@@ -92,8 +92,23 @@ img.abs {
   &.center{
     display: block;
 
+    img.abs{
+      filter: blur(5px);
+    }
+
     div{
       @include ttl();
+
+      p.center{
+        margin: 6px;
+        text-align: center;
+
+        a{
+          display: inline-block;
+          margin: 3px 8px;
+          font-size: 18px;
+        }
+      }
     }
   }
 }
@@ -195,6 +210,12 @@ a#gototop{
 
 a{
   color: #555;
+
+  &.ico[target = _blank]::after{
+    font-family: "Material Icons";
+    font-size: 0.65em;
+    content: "open_in_new";
+  }
 }
 
 @keyframes nextArrow{
