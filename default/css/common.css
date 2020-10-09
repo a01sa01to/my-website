@@ -88,6 +88,11 @@ img.abs {
   display: block;
 }
 
+.fullh.center img.abs {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
 .fullh.center div {
   position: absolute;
   top: 50%;
@@ -102,6 +107,17 @@ img.abs {
   border-radius: 10px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.fullh.center div p.center {
+  margin: 6px;
+  text-align: center;
+}
+
+.fullh.center div p.center a {
+  display: inline-block;
+  margin: 3px 8px;
+  font-size: 18px;
 }
 
 h1.title {
@@ -228,6 +244,12 @@ a#gototop span {
 
 a {
   color: #555;
+}
+
+a.ico[target=_blank]::after {
+  font-family: "Material Icons";
+  font-size: 0.65em;
+  content: "open_in_new";
 }
 
 @-webkit-keyframes nextArrow {
