@@ -8,15 +8,12 @@ const app = express();
 app.use((req,res)=>{
 	console.log(req.url);
 	if(!req.path.includes(".")){
-		const newPath = path.join(__dirname,`${req.url}.html`);
-		console.log(newPath);
-		if(fs.existsSync(path)){
-			res.sendFile(newPath);
+		const rewritePath = path.join(__dirname,`${req.url}.html`);
+		if(fs.existsSync(rewritePath)){
+			res.sendFile(rewritePath);
 			return;
 		}
 	}
-	console.log(path.join(__dirname,req.url));
-
 	res.sendFile(path.join(__dirname,req.url));
 })
 
