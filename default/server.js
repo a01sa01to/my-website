@@ -6,6 +6,7 @@ const path = require('path')
 const app = express();
 
 app.use((req,res)=>{
+	console.log(req.url);
 	if(!req.path.includes(".")){
 		const newPath = path.join(__dirname,`${req.url}.html`);
 		console.log(newPath);
@@ -14,6 +15,8 @@ app.use((req,res)=>{
 			return;
 		}
 	}
+	console.log(path.join(__dirname,req.url));
+
 	res.sendFile(path.join(__dirname,req.url));
 })
 
