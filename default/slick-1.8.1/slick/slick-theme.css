@@ -84,12 +84,15 @@
 
 .slick-prev
 {
-  left: -25px;
+  /* left: -25px; */
+  left: 10px;
+  z-index: 1;
 }
 
 [dir = "rtl"] .slick-prev
 {
-  right: -25px;
+  /* right: -25px; */
+  right: 10px;
   left: auto;
 }
 
@@ -105,13 +108,15 @@
 
 .slick-next
 {
-  right: -25px;
+  /* right: -25px; */
+  right: 10px;
 }
 
 [dir = "rtl"] .slick-next
 {
   right: auto;
-  left: -25px;
+  /* left: -25px; */
+  left: 10px;
 }
 
 .slick-next::before
@@ -225,5 +230,12 @@
 }
 
 .slick-slide p{
+  height: 36px;
+  padding: 8px auto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 36px;
+  color: #fff;
   text-align: center;
+  background-color: #555;
 }
