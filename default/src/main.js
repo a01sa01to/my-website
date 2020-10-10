@@ -1,7 +1,7 @@
 const $ = require('jquery');
 import "../slick-1.8.1/slick/slick.js";
 
-window.addEventListener('load',()=>{
+window.addEventListener('DOMContentLoaded',()=>{
   $('.slider').slick({
     dots: true,
     infinite: true,
@@ -13,4 +13,6 @@ window.addEventListener('load',()=>{
     autoplay: true,
     autoplaySpeed: 3000,
   });
+
+  document.querySelectorAll('img').forEach(_=>_.oncontextmenu=()=>false);
 })
