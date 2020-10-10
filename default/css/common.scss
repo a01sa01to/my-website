@@ -35,12 +35,8 @@ main{
 
 p.note{
   margin: auto;
-  font-size: 0.9em;
+  font-size: 0.85em;
   text-align: center;
-
-  &::before{
-    content: "※ ";
-  }
 }
 
 .container{
