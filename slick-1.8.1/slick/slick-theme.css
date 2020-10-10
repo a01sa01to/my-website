@@ -239,3 +239,8 @@
   text-align: center;
   background-color: #555;
 }
+
+.slick-slide p a{
+  color: #fff;
+  text-decoration: none;
+}
