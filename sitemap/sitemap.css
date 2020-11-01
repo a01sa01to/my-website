@@ -1,0 +1,54 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  width: 100%;
+  margin-top: 48px;
+  margin-bottom: 4px;
+  text-align: left;
+  border-bottom: 2px solid var(--bdCol);
+}
+
+h2#asas {
+  --bdCol: #0d47a1;
+}
+
+h2#bakakkoii {
+  --bdCol: #014715;
+}
+
+h2#youtube {
+  --bdCol: #f00;
+}
+
+h2#twitter {
+  --bdCol: #1da1f2;
+}
+
+h2#github {
+  --bdCol: #181717;
+}
+
+h2#instagram {
+  --bdCol: #e4405f;
+}
+
+p {
+  padding-left: 8px;
+  margin-bottom: 8px;
+  font-weight: 200;
+  color: #555;
+}
+
+ul {
+  margin-left: 40px;
+  font-size: 1.1em;
+  text-decoration: none;
+  list-style: circle;
+}
+
+ul li {
+  margin-top: 10px;
+}
+/*# sourceMappingURL=sitemap.css.map */
