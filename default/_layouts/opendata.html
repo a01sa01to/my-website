@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <title>{% if page.title != "TOP" %}{{ page.title }} - {% endif %}Asa's Website</title>
-  {% include meta.html logotitle="Website" subdomain="" %}
+  <title>{% if page.title != "TOP" %}{{ page.title }} - {% endif %}Asa's Opendata Catalog</title>
+  {% include meta.html logotitle="Opendata Catalog" subdomain="opendata." %}
   {% include css.html %}
   {% include script.html %}
-  <link rel="canonical" href="https://a01sa01to.com{{ page.relPath }}">
 </head>
 <body id="top">
-  <header>{% include header.html logotitle="Website" %}</header>
+  <header>{% include header.html logotitle="Opendata Catalog" %}</header>
   <main>{{ content }}</main>
   <footer>{% include footer.html %}</footer>
   <a href="#top" id="gototop"><span class="material-icons">keyboard_arrow_up</span></a>
