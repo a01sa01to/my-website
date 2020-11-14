@@ -1,11 +1,11 @@
-name: Default Build
+name: Opendata Build
 
 on:
   push:
     branches:
       - main
     paths:
-      - '/default/**'
+      - '/opendata/**'
 
 jobs:
   build:
@@ -25,24 +25,24 @@ jobs:
       - name: Cache deps
         uses: actions/cache@v2
         with:
-          path: ./default/vendor/bundle
-          key: ${{ runner.os }}-gem-${{ hashFiles('./default/Gemfile.lock') }}
+          path: ./opendata/vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('./opendata/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gem-
       - name: Prepare bundler
         run: |
           gem install bundler
           bundle config path vendor/bundle
-        working-directory: ./default
+        working-directory: ./opendata
       - name: Install deps
         run: bundle install
-        working-directory: ./default
+        working-directory: ./opendata
       - name: Build
         run: bundle exec jekyll build
-        working-directory: ./default
+        working-directory: ./opendata
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./default/_site
-          publish_branch: def_deploy
+          publish_dir: ./opendata/_site
+          publish_branch: opendata_deploy
