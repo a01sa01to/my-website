@@ -6,7 +6,7 @@
   width: fit-content;
   max-width: 80vw;
   padding: 20px;
-  background-color: #fff8;
+  background-color: #f3f3f388;
   border-radius: 10px;
   transform: translate(-50%, -50%);
 }
@@ -46,6 +46,7 @@ p.note{
 
   > * {
     max-width: 1000px;
+    margin: auto;
   }
 
   &:nth-last-child(1){
@@ -200,6 +201,11 @@ a#gototop{
   }
 }
 
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 a{
   color: #555;

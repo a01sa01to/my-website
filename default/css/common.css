@@ -35,6 +35,7 @@ p.note {
 
 .container > * {
   max-width: 1000px;
+  margin: auto;
 }
 
 .container:nth-last-child(1) {
@@ -98,7 +99,7 @@ img.abs {
   width: fit-content;
   max-width: 80vw;
   padding: 20px;
-  background-color: #fff8;
+  background-color: #f3f3f388;
   border-radius: 10px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -125,7 +126,7 @@ h1.title {
   width: fit-content;
   max-width: 80vw;
   padding: 20px;
-  background-color: #fff8;
+  background-color: #f3f3f388;
   border-radius: 10px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -230,6 +231,16 @@ a#gototop span {
 
 .w .sns.insta:hover {
   color: #e4405f;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 a {
