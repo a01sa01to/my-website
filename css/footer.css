@@ -1,3 +1,4 @@
+@charset "UTF-8";
 footer {
   width: 100vw;
   height: -webkit-fit-content;
@@ -8,6 +9,7 @@ footer {
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 10px 0px #999;
           box-shadow: 0px 0px 10px 0px #999;
+  /* 画面サイズが768px以上の時 */
 }
 
 footer p#copyright {
@@ -37,5 +39,82 @@ footer div#links ul li {
 footer div#links ul li a {
   color: #333;
   text-decoration: none;
+}
+
+footer .sb {
+  max-width: 1000px;
+  margin-bottom: 16px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+footer .sb .sbInner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .sb .sbInner::after {
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  content: ".";
+}
+
+footer .sb .sbInner a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 80px;
+  max-width: 15%;
+  padding: 0.7em 0;
+  font-weight: 700;
+  color: #666;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+footer .sb .sbInner a, footer .sb .sbInner a:link, footer .sb .sbInner a:visited, footer .sb .sbInner a:hover, footer .sb .sbInner a:active, footer .sb .sbInner a:focus {
+  color: #666;
+}
+
+footer .sb .sBtn {
+  -webkit-box-shadow: 0px 5px 10px 0px #888;
+          box-shadow: 0px 5px 10px 0px #888;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+footer .sb .sBtn:hover {
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+}
+
+@media only screen and (min-width: 768px) {
+  footer footer .sBtn::after {
+    margin-left: 0.25em;
+    font-weight: 700;
+  }
+  footer footer .sBtn::after.sBtn-facebook::after {
+    content: "Facebook";
+  }
+  footer footer .sBtn::after.sBtn-twitter::after {
+    content: "Twitter";
+  }
+  footer footer .sBtn::after.sBtn-line::after {
+    content: "LINE";
+  }
+  footer footer .sBtn::after.sBtn-pocket::after {
+    content: "Pocket";
+  }
+  footer footer .sBtn::after.sBtn-hatena::after {
+    content: "Hatena";
+  }
 }
 /*# sourceMappingURL=footer.css.map */
