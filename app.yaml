@@ -1,4 +1,4 @@
-servive: blog
+service: blog
 
 automatic_scaling:
   min_idle_instances: automatic
