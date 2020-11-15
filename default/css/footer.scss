@@ -30,4 +30,103 @@ footer{
       }
     }
   }
+
+  .sb {
+    max-width: 1000px;
+    margin-bottom: 16px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    text-align: center;
+
+    .sbInner{
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .sbInner::after {
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+      content: ".";
+    }
+
+    .sbInner a {
+      box-sizing: border-box;
+      display: block;
+      float: left;
+      width: 80px;
+      max-width: 15%;
+      padding: 0.7em 0;
+      font-weight: 700;
+      color: #666;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+
+      &, &:link, &:visited, &:hover, &:active, &:focus {
+        color: #666;
+      }
+    }
+
+
+    .sBtn {
+      box-shadow: 0px 5px 10px 0px #888;
+      transition: 0.3s ease-in-out;
+
+      // &.sBtn-twitter {
+      //   background: #1b95e0;
+      // }
+
+      // &.sBtn-line {
+      //   background: #1dcd00;
+      // }
+
+      // &.sBtn-facebook {
+      //   background: #3b5998;
+      // }
+
+      // &.sBtn-pocket {
+      //   background: #ee4056;
+      // }
+
+      // &.sBtn-hatena {
+      //   background: #008fde;
+      // }
+
+      &:hover {
+        filter: alpha(opacity=60);
+        opacity: 0.6;
+      }
+    }
+  }
+  /* 画面サイズが768px以上の時 */
+  @media only screen and (min-width: 768px) {
+
+    footer .sBtn::after {
+      margin-left: 0.25em;
+      font-weight: 700;
+
+      &.sBtn-facebook::after {
+        content: "Facebook";
+      }
+
+      &.sBtn-twitter::after {
+        content: "Twitter";
+      }
+
+      &.sBtn-line::after {
+        content: "LINE";
+      }
+
+      &.sBtn-pocket::after {
+        content: "Pocket";
+      }
+
+      &.sBtn-hatena::after {
+        content: "Hatena";
+      }
+    }
+
+  }
 }
