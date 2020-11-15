@@ -1,6 +1,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1.0, initial-scale=1.0, maximum-scale=10.0, shrink-to-fit=no">
-<meta name="description" content="{{ page.description }}">
+{% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  <meta property="og:description" content="{{ page.description }}">
+{% endif %}
 <meta name="keywords" content="a01sa01to">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:domain" content="https://{{ include.subdomain }}a01sa01to.com/">
@@ -8,7 +11,6 @@
 <meta name="twitter:creator" content="@a01sa01to">
 <meta property="og:url" content="https://{{ include.subdomain }}a01sa01to.com{{ page.relPath }}">
 <meta property="og:title" content="{% if page.title != "TOP" %}{{ page.title }} - {% endif %}Asa's {{ include.logotitle }}">
-<meta property="og:description" content="{{ page.description }}">
 <meta property="og:image" content="https://a01sa01to.com/img/twittercard.jpg">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://{{ include.subdomain }}a01sa01to.com{{ page.relPath }}">
