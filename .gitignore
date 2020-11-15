@@ -2,3 +2,16 @@ kss
 firebase
 koga-cs
 ws.code-workspace
+
+node_modules
+.jekyll-cache
+_site
+
+# Google App Engine generated folder
+appengine-generated/
+
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
