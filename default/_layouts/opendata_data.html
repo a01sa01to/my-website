@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>{{ page.title }} - Asa's Opendata Catalog</title>
+  {% include meta.html logotitle="Opendata Catalog" subdomain="opendata." %}
+  {% include css.html %}
+  {% include script.html %}
+  <link rel="stylesheet" href="/css/opendata.css">
+  <link rel="stylesheet" href="/css/material/btn.css">
+</head>
+<body id="top">
+  <header>{% include header.html logotitle="Opendata Catalog" %}</header>
+  <main>
+    <div class="container">
+      <div>
+        <h1>{{ page.title }}</h1><br>
+        <a href="./">&lt; {{ page.parent }}</a><br><br>
+        <p class="desc">{{ page.description }}</p><br>
+        <h2>情報</h2>
+        <input type="hidden" name="fn" value="{{ page.dir }}/{{ page.filename }}">
+        <table>
+          <tr><th>フィールド</th><th>値</th></tr>
+          <tr><td>最終更新</td><td id="upd"></td></tr>
+          <tr><td>作成日</td><td>{{ page.firstPub }}</td></tr>
+          <tr><td>ファイル名</td><td>{{ page.filename }}</td></tr>
+          <tr><td>ファイルサイズ</td><td id="filesize">Loading...</td></tr>
+          <tr><td>データ形式</td><td>{% if page.csv %}CSV{% endif %}{% if page.json %}JSON{% endif %}</td></tr>
+          <tr><td>ライセンス</td><td><a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">CC BY 4.0</a><br>出所の表示は必須ですが、商業利用・改変は許可されます。</td></tr>
+        </table>
+        <h2>ダウンロード</h2>
+        {% if page.json_m %}<p class="note">Minify版JSONは、通常のJSONの内容と変わりません。</p>{% endif %}
+        <div class="flex">
+          {% if page.csv %}<div class="pre csv">CSVをプレビュー</div>{% endif %}
+          {% if page.json %}<div class="pre json">JSONをプレビュー</div>{% endif %}
+          {% if page.csv %}<div class="dl csv">CSVでダウンロード</div>{% endif %}
+          {% if page.json %}<div class="dl json">JSONでダウンロード</div>{% endif %}
+          {% if page.json_m %}<div class="dl json_m">JSON(Minify版)でダウンロード</div>{% endif %}
+        </div>
+        <div class="modal">
+          <div class="modal_container">
+            <div class="load"><div class="loader"></div></div>
+            <div class="pre">
+              <p>{{ page.title }}<span></span>のプレビュー</p>
+              <div id="ace"></div>
+            </div>
+            <div class="dl">
+              <p>以下の説明・注意点を必ずお読みになってから、{{ page.title }}<span></span>をダウンロードしてください。</p>
+              <div class="ov_y">
+                <ul>
+                  {{ content }}
+                </ul>
+              </div>
+              <button disabled class="material">ファイルをダウンロード</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>{% include footer.html %}</footer>
+  <a href="#top" id="gototop"><span class="material-icons">keyboard_arrow_up</span></a>
+</body>
+</html>
