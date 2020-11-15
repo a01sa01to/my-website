@@ -1,4 +1,4 @@
-servive: opendata
+service: opendata
 
 automatic_scaling:
   min_idle_instances: automatic
