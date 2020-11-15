@@ -1,11 +1,11 @@
-name: Default Build
+name: Blog Build
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'default/**'
+      - 'blog/**'
 
 jobs:
   build:
@@ -25,24 +25,24 @@ jobs:
       - name: Cache deps
         uses: actions/cache@v2
         with:
-          path: ./default/vendor/bundle
-          key: ${{ runner.os }}-gem-${{ hashFiles('./default/Gemfile.lock') }}
+          path: ./blog/vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('./blog/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gem-
       - name: Prepare bundler
         run: |
           gem install bundler
           bundle config path vendor/bundle
-        working-directory: ./default
+        working-directory: ./blog
       - name: Install deps
         run: bundle install
-        working-directory: ./default
+        working-directory: ./blog
       - name: Build
         run: bundle exec jekyll build
-        working-directory: ./default
+        working-directory: ./blog
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./default/_site
-          publish_branch: def_deploy
+          publish_dir: ./blog/_site
+          publish_branch: blog_deploy
