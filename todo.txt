@@ -1,0 +1,18 @@
+title
+layout
+description
+relPath
+last_modified_at
+
+-- blog --
+tags
+date
+
+-- opendata --
+parent
+dir
+filename
+firstPub
+csv
+json
+json_m
