@@ -1,0 +1,52 @@
+---
+layout: blog
+---
+
+{% assign prev = page.pagination_info.curr_page | minus: 1 %}
+{% assign next = page.pagination_info.curr_page | plus: 1 %}
+{% assign next2 = page.pagination_info.curr_page | plus: 2 %}
+
+<div class="container">
+  <div>
+    <h1>「{% if page.autopages %}{{page.autopages.display_name}}{% endif %}」の記事一覧（{{page.pagination_info.curr_page}} / {{page.pagination_info.total_pages}}）</h1>
+    <a href="/tags/" class="back">&lt; タグ一覧</a>
+    <div class="article_container">
+      {% for post in paginator.posts %}
+        <div class="article_card">
+          <p class="title"><a href="{{ post.url }}">{{ post.title }}</a></p>
+          <p class="date">{{ post.date | date: "%Y.%m.%d"}}</p>
+        </div>
+      {% endfor %}
+    </div>
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination_link">
+      {% if page.pagination_info.curr_page != 1 and page.pagination_info.curr_page != 2 and page.pagination_info.curr_page != 3 and paginator.first_page %}
+        <a href="/{{ paginator.first_page_path }}">&Lt; 1</a>
+        <span>...</span>
+      {% elsif page.pagination_info.curr_page == 3 and paginator.first_page %}
+        <a href="/{{ paginator.first_page_path }}">&Lt; 1</a>
+      {% else %}
+        <span></span><span></span>
+      {% endif %}
+      {% if paginator.previous_page %}
+        <a href="/{{ paginator.previous_page_path }}">&lt; {{prev}}</a>
+      {% else %}
+        <span></span>
+      {% endif %}
+      <span>{{page.pagination_info.curr_page}}</span>
+      {% if paginator.next_page %}
+        <a href="/{{ paginator.next_page_path }}">{{next}} &gt;</a>
+      {% else %}
+        <span></span>
+      {% endif %}
+      {% if paginator.next_page and paginator.last_page and paginator.total_pages != next and paginator.total_pages != next2 %}
+        <span>...</span>
+        <a href="/{{ paginator.last_page_path }}">{{page.pagination_info.total_pages}} &Gt;</a>
+      {% elsif paginator.next_page and paginator.last_page and paginator.total_pages == next2 %}
+        <a href="/{{ paginator.last_page_path }}">{{page.pagination_info.total_pages}} &Gt;</a>
+      {% else %}
+        <span></span><span></span>
+      {% endif %}
+    {% endif %}
+    </div>
+</div>
