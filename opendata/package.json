@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "ace-builds": "^1.4.12",
+    "axios": "^0.21.0",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
     "webpack": "^5.4.0"
