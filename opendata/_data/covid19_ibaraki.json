@@ -1,1 +1,38 @@
-{"patients":"2020/11/14 23:20","test_people":"2020/11/14 23:20","call_center":"2020/11/10 20:00","positive_number":"2020/11/14 23:20","recovered_number":"2020/11/14 23:20","death_number":"2020/11/14 23:20","inspections_summary":"2020/11/10 20:00","main_summary":"2020/11/14 23:20","corona_next":"2020/11/14 23:20","lastUpdate":"2020/11/14 23:20"}
+{
+  "patients": {
+    "lastUpdate": "2020/11/21 21:20",
+    "size": "183.96 KB"
+  },
+  "test_people": {
+    "lastUpdate": "2020/11/21 21:20",
+    "size": "12.16 KB"
+  },
+  "call_center": {
+    "lastUpdate": "2020/11/16 19:20",
+    "size": "11.84 KB"
+  },
+  "positive_number": {
+    "lastUpdate": "2020/11/21 21:20",
+    "size": "10.46 KB"
+  },
+  "recovered_number": {
+    "lastUpdate": "2020/11/21 21:20",
+    "size": "9.29 KB"
+  },
+  "death_number": {
+    "lastUpdate": "2020/11/21 21:20",
+    "size": "9.27 KB"
+  },
+  "inspections_summary": {
+    "lastUpdate": "2020/11/10 20:00",
+    "size": "292 Byte"
+  },
+  "main_summary": {
+    "lastUpdate": "2020/11/21 21:20",
+    "size": "364 Byte"
+  },
+  "corona_next": {
+    "lastUpdate": "2020/11/21 21:20",
+    "size": "1005 Byte"
+  }
+}

@@ -1,0 +1,93 @@
+name: Data Update
+
+on:
+  push
+  # schedule:
+  #   - cron: '0 * * * *'
+
+jobs:
+  update:
+    name: Update
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Download Last Update time
+        run: 'curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=last_update -L -o last_update.json'
+        working-directory: ./opendata/data/covid19_ibaraki/
+      - name: Download Files
+        run: |
+          curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=patients_data -L -o 080004_ibaraki_covid19_patients.csv
+          curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=tested_people -L -o 080004_ibaraki_covid19_test_people.csv
+          curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=positive_rate -L -o 080004_ibaraki_covid19_positive_rate.csv
+          curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=call_center -L -o 080004_ibaraki_covid19_call_center.csv
+          curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=positive_number -L -o 080004_ibaraki_covid19_positive_number.csv
+          curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=recovered_number -L -o 080004_ibaraki_covid19_recovered_number.csv
+          curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=death_number -L -o 080004_ibaraki_covid19_death_number.csv
+          curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=inspections_summary -L -o 080004_ibaraki_covid19_inspections_summary.json
+          curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=main_summary -L -o 080004_ibaraki_covid19_summary.json
+          curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=corona_next -L -o 080004_ibaraki_covid19_corona_next.json
+          curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=forked_sites -L -o otherpref.csv
+          curl https://script.google.com/macros/s/AKfycby_JZ_sqx8BefQRPOq5AVwt2wMbiazNmYnEeMo--_e8qwqQwNQ/exec?data=news_json -L -o news.json
+        working-directory: ./opendata/data/covid19_ibaraki/
+      - name: Create Info Json
+        run: python ../../../workflow_tool/opendata/covid19_ibk.py
+        working-directory: ./opendata/data/covid19_ibaraki
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update Data" -a
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+
+  build:
+    name: Build
+    needs: update
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+      - name: Cache deps
+        uses: actions/cache@v2
+        with:
+          path: ./opendata/vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('./opendata/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gem-
+      - name: Prepare bundler
+        run: |
+          gem install bundler
+          bundle config path vendor/bundle
+        working-directory: ./opendata
+      - name: Install deps
+        run: bundle install
+        working-directory: ./opendata
+      - name: Build
+        run: bundle exec jekyll build
+        working-directory: ./opendata
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./opendata/_site
+          publish_branch: opendata_deploy
