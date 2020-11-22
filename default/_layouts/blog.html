@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <title>{% if page.title != "TOP" %}{{ page.title }} - {% endif %}Asa's Blog</title>
+  {% feed_meta %}
   {% include meta.html logotitle="Blog" subdomain="blog." %}
   {% include css.html %}
   {% include script.html %}
