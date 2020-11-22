@@ -74,14 +74,14 @@ footer .sb .sbInner a {
   max-width: 15%;
   padding: 0.7em 0;
   font-weight: 700;
-  color: #666;
+  color: #fff;
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
 }
 
 footer .sb .sbInner a, footer .sb .sbInner a:link, footer .sb .sbInner a:visited, footer .sb .sbInner a:hover, footer .sb .sbInner a:active, footer .sb .sbInner a:focus {
-  color: #666;
+  color: #fff;
 }
 
 footer .sb .sBtn {
@@ -89,6 +89,26 @@ footer .sb .sBtn {
           box-shadow: 0px 5px 10px 0px #888;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+}
+
+footer .sb .sBtn.sBtn-twitter {
+  background: #1b95e0;
+}
+
+footer .sb .sBtn.sBtn-line {
+  background: #1dcd00;
+}
+
+footer .sb .sBtn.sBtn-facebook {
+  background: #3b5998;
+}
+
+footer .sb .sBtn.sBtn-pocket {
+  background: #ee4056;
+}
+
+footer .sb .sBtn.sBtn-hatena {
+  background: #008fde;
 }
 
 footer .sb .sBtn:hover {
