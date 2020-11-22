@@ -20,6 +20,20 @@
   content: "preview";
 }
 
+.flex > div.api::after{
+  padding-left: 8px;
+  font-family: "Material Icons";
+  content: "api";
+}
+
+code{
+  display: block;
+  padding: 4px;
+  margin: auto;
+  background: #ccc;
+  border-radius: 4px;
+}
+
 .ov_y{
   width: 100%;
   height: 100%;
