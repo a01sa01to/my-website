@@ -59,13 +59,15 @@ footer{
       max-width: 15%;
       padding: 0.7em 0;
       font-weight: 700;
-      color: #666;
+      // color: #666;
+      color: #fff;
       text-align: center;
       text-decoration: none;
       border-radius: 5px;
 
       &, &:link, &:visited, &:hover, &:active, &:focus {
-        color: #666;
+        // color: #666;
+        color: #fff;
       }
     }
 
@@ -74,25 +76,25 @@ footer{
       box-shadow: 0px 5px 10px 0px #888;
       transition: 0.3s ease-in-out;
 
-      // &.sBtn-twitter {
-      //   background: #1b95e0;
-      // }
+      &.sBtn-twitter {
+        background: #1b95e0;
+      }
 
-      // &.sBtn-line {
-      //   background: #1dcd00;
-      // }
+      &.sBtn-line {
+        background: #1dcd00;
+      }
 
-      // &.sBtn-facebook {
-      //   background: #3b5998;
-      // }
+      &.sBtn-facebook {
+        background: #3b5998;
+      }
 
-      // &.sBtn-pocket {
-      //   background: #ee4056;
-      // }
+      &.sBtn-pocket {
+        background: #ee4056;
+      }
 
-      // &.sBtn-hatena {
-      //   background: #008fde;
-      // }
+      &.sBtn-hatena {
+        background: #008fde;
+      }
 
       &:hover {
         filter: alpha(opacity=60);

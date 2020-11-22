@@ -36,4 +36,11 @@ window.addEventListener('DOMContentLoaded',()=>{
 		editor.gotoLine(1);
 		editorlist.push(editor);
 	}
+
+	$('.article_container').each(function(){
+		const $list = $(this).find(".article_card");
+		if($list.length === 0){
+			$(this).prev("h2").remove();
+		}
+	})
 })
