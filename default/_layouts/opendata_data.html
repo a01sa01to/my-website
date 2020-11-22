@@ -17,14 +17,15 @@
         <h1>{{ page.title }}</h1><br>
         <a href="./">&lt; {{ page.parent }}</a><br><br>
         <p class="desc">{{ page.description }}</p><br>
+        <p class="note">当データを利用した作品を公開する際には、必ず当ページへのリンクを記載してください。</p>
         <h2>情報</h2>
-        <input type="hidden" name="fn" value="{{ page.dir }}/{{ page.filename }}">
+        <input type="hidden" name="fn" value="/data{{ page.dir }}{{ page.filename }}">
         <table>
           <tr><th>フィールド</th><th>値</th></tr>
           <tr><td>最終更新</td><td id="upd"></td></tr>
           <tr><td>作成日</td><td>{{ page.firstPub }}</td></tr>
           <tr><td>ファイル名</td><td>{{ page.filename }}</td></tr>
-          <tr><td>ファイルサイズ</td><td id="filesize">Loading...</td></tr>
+          <tr><td>ファイルサイズ</td><td id="filesize"></td></tr>
           <tr><td>データ形式</td><td>{% if page.csv %}CSV{% endif %}{% if page.json %}JSON{% endif %}</td></tr>
           <tr><td>ライセンス</td><td><a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">CC BY 4.0</a><br>出所の表示は必須ですが、商業利用・改変は許可されます。</td></tr>
         </table>
@@ -36,6 +37,7 @@
           {% if page.csv %}<div class="dl csv">CSVでダウンロード</div>{% endif %}
           {% if page.json %}<div class="dl json">JSONでダウンロード</div>{% endif %}
           {% if page.json_m %}<div class="dl json_m">JSON(Minify版)でダウンロード</div>{% endif %}
+          <div class="api">データへのURLを取得する</div>
         </div>
         <div class="modal">
           <div class="modal_container">
@@ -51,7 +53,16 @@
                   {{ content }}
                 </ul>
               </div>
-              <button disabled class="material">ファイルをダウンロード</button>
+              <button class="material">ファイルをダウンロード</button>
+            </div>
+            <div class="api">
+              <p>以下の説明・注意点を必ずお読みになってから、{{ page.title }}<span></span>を利用してください。</p>
+              <div class="ov_y">
+                <ul>
+                  {{ content }}
+                </ul>
+              </div>
+              <code>https://opendata.a01sa01to.com/data{{ page.dir }}{{ page.filename }}</code>
             </div>
           </div>
         </div>

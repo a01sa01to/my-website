@@ -26,30 +26,13 @@ window.addEventListener('DOMContentLoaded',()=>{
     $(this).attr("href", a)
   })
 
-  let fileinfo = {};
-  const filepath = $('input[type=hidden][name=fn]').attr("value");
-  fileinfo.name = filepath.split("/");
-  fileinfo.name = fileinfo.name[fileinfo.name.length - 1]
-  fetch(`/data/${filepath}`).then(r=>r.blob()).then(b=>{
-    fileinfo.link = URL.createObjectURL(b);
-    const sizeUnit = ['Byte', 'KB', 'MB', 'GB', 'TB', 'PB', 'EiB', 'ZB', 'YB'];
-    let size = b.size;
-    for(let i=0; i<sizeUnit.length; i++){
-      if(size / 1024 < 1){
-        fileinfo.size = size.toFixed(2) + sizeUnit[i];
-        break;
-      }
-      else{
-        size /= 1024;
-      }
-    }
-    $('table td#filesize').text(fileinfo.size)
-    $('.modal div.dl button').removeAttr('disabled');
-  })
+  let filepath = $('input[type=hidden][name=fn]').attr("value");
+  const filename = filepath.split("/").slice(-1)[0]
+  const filefull = filepath.split("/").slice(-2)[0] + "/" + filename
 
   $('div.flex div.pre').on('click',async function(){
     $('.modal').fadeIn();
-    $('.modal .pre, .modal .dl').hide();
+    $('.modal .pre, .modal .dl, .modal .api').hide();
     $('.modal .load').show();
     if($(this).hasClass('csv')){
       $('.modal .pre span').text("（CSV版）")
@@ -57,7 +40,11 @@ window.addEventListener('DOMContentLoaded',()=>{
     else if($(this).hasClass('json')){
       $('.modal .pre span').text("（JSON版）")
     }
-    const content = await fetch(fileinfo.link).then(r=>r.text());
+    const content = await fetch(filepath).then(r=>r.blob()).then(b=>{
+      filepath = URL.createObjectURL(b)
+      return b.text()
+    });
+
     const editor = ace.edit("ace",{
       tabSize: 2,
       useSoftTabs: true,
@@ -78,13 +65,13 @@ window.addEventListener('DOMContentLoaded',()=>{
 
     gtag('event','opendata',{
       'mode': 'preview',
-      'file': fileinfo.name
+      'file': filefull
     });
   })
 
   $('div.flex div.dl').on('click',async function(){
     $('.modal').fadeIn();
-    $('.modal .pre, .modal .load').hide();
+    $('.modal .pre, .modal .load, .modal .api').hide();
     $('.modal .dl').show();
     if($(this).hasClass('csv')){
       $('.modal .dl span').text("（CSV版）")
@@ -97,13 +84,19 @@ window.addEventListener('DOMContentLoaded',()=>{
     }
   })
 
+  $('div.flex div.api').on('click',async function(){
+    $('.modal').fadeIn();
+    $('.modal .pre, .modal .load, .modal .dl').hide();
+    $('.modal .api').show();
+  })
+
   $('.modal div.dl button').on('click',function(){
     const a = document.createElement('a');
-    a.download = fileinfo.name
-    a.href = fileinfo.link
+    a.download = filename
+    a.href = filepath
     gtag('event','opendata',{
       'mode': 'download',
-      'file': fileinfo.name
+      'file': filefull
     });
     a.click();
     a.remove();
@@ -116,8 +109,10 @@ window.addEventListener('DOMContentLoaded',()=>{
     $('.modal .modal_container > *').hide();
   })
 
-  $('table td#upd').text($('.modal ul p#updated').text());
+  $('table td#upd').text($('.modal .dl ul p#updated').text());
+  $('table td#filesize').text($('.modal .dl ul p#filesize').text());
   $('.modal ul p#updated').remove();
+  $('.modal ul p#filesize').remove();
   $('table td').each(function(){
     let ht = $(this).html();
     ht = ht.replace(/\(/gi,'<wbr>(');
