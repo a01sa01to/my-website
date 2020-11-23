@@ -1,5 +1,6 @@
 const $ = require('jquery');
 const ace = require('ace-builds');
+const ClipboardJS = require('clipboard');
 import "../slick-1.8.1/slick/slick.js";
 
 const sleep = s => new Promise(r=>setTimeout(r,s));
@@ -100,6 +101,13 @@ window.addEventListener('DOMContentLoaded',()=>{
     });
     a.click();
     a.remove();
+  })
+
+  const copy = new ClipboardJS('.modal div.api button');
+  copy.on('error',(e)=>{
+    alert('コピーに失敗しました。')
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
   })
 
   $('.modal').on('click',async e=>{

@@ -104,10 +104,17 @@ header{
       height: calc(100vh - 54px);
       max-height: none;
       padding: 16px;
+      overflow-y: auto;
       visibility: hidden;
       background: #f7f7f7;
       opacity: 0;
       transition: 0.3s;
+
+      p.border{
+        height: 0px;
+        margin: 8px;
+        border: 0.5px dotted #aaa;
+      }
 
       li{
         font-size: 1.3em;
