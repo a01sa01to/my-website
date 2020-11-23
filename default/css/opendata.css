@@ -8,28 +8,30 @@
   border-radius: 5px;
 }
 
-.flex > div.dl::after{
-  padding-left: 8px;
+.flex > div.dl::before{
+  padding-right: 8px;
   font-family: "Material Icons";
   content: "save_alt";
 }
 
-.flex > div.pre::after{
-  padding-left: 8px;
+.flex > div.pre::before{
+  padding-right: 8px;
   font-family: "Material Icons";
   content: "preview";
 }
 
-.flex > div.api::after{
-  padding-left: 8px;
+.flex > div.api::before{
+  padding-right: 8px;
   font-family: "Material Icons";
   content: "api";
 }
 
 code{
   display: block;
+  max-width: 100%;
   padding: 4px;
   margin: auto;
+  overflow-x: auto;
   background: #ccc;
   border-radius: 4px;
 }
@@ -86,6 +88,11 @@ code{
 #ace *{
   max-width: initial;
   max-height: initial;
+}
+
+button.material span{
+  padding-right: 8px;
+  font-family: "Material Icons";
 }
 
 table{
