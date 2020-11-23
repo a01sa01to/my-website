@@ -55,6 +55,7 @@ footer .sb .sbInner {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-top: 8px;
 }
 
 footer .sb .sbInner::after {
