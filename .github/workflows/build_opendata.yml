@@ -6,6 +6,11 @@ on:
       - main
     paths:
       - 'opendata/**'
+      - 'default/_includes/**'
+      - 'default/_layouts/**'
+      - 'default/css/**'
+      - 'default/err/**'
+      - 'default/img/**'
 
 jobs:
   build:
