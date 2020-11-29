@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   $("footer a.sBtn").each(function(){
     let a = $(this).attr("href");
     a = a.replace(/PAGEURL/g, encodeURIComponent(location.href));
-    a = a.replace(/PAGETITLE/g, $(".post-title").text());
+    a = a.replace(/PAGETITLE/g, $("title").text());
     $(this).attr("href", a)
   })
 
@@ -60,6 +60,7 @@ window.addEventListener('DOMContentLoaded',()=>{
       _.onmousedown = ()=>false
       _.onkeydown = ()=>false
     })
+    editor.clearSelection();
 
     $('.modal .load').hide();
     $('.modal .pre').show();
