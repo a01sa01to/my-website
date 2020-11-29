@@ -6,6 +6,7 @@
   padding: 0;
   margin: auto;
   font-family: "Quicksand", "Muli", "Open Sans", "Noto Sans JP", sans-serif;
+  outline: none;
 }
 
 html, body {
