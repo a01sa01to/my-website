@@ -51,6 +51,9 @@ window.addEventListener('DOMContentLoaded',()=>{
       useSoftTabs: true,
       wrap: true,
       readOnly: true,
+			maxLines: 10,
+			minLines: 1,
+			autoScrollEditorIntoView: true,
     });
     editor.setValue(content);
     document.querySelectorAll('#ace *').forEach(_=>{
