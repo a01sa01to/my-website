@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <title>{{ page.title }} - Asa's Opendata Catalog</title>
+  <title>{{ page.title }} | {{ page.parent }} - Asa's Opendata Catalog</title>
   {% feed_meta %}
   {% include meta.html logotitle="Opendata Catalog" subdomain="opendata." %}
   {% include css.html %}
@@ -19,7 +19,7 @@
         <p class="desc">{{ page.description }}</p><br>
         <p class="note">当データを利用した作品を公開する際には、必ず当ページへのリンクを記載してください。</p>
         <h2>情報</h2>
-        <input type="hidden" name="fn" value="/data{{ page.dir }}{{ page.filename }}">
+        <input type="hidden" name="fn" value="/data/{{ page.opendir }}/{{ page.filename }}">
         <table>
           <tr><th>フィールド</th><th>値</th></tr>
           <tr><td>最終更新</td><td id="upd"></td></tr>
@@ -36,7 +36,6 @@
           {% if page.json %}<div class="pre json">JSONをプレビュー</div>{% endif %}
           {% if page.csv %}<div class="dl csv">CSVでダウンロード</div>{% endif %}
           {% if page.json %}<div class="dl json">JSONでダウンロード</div>{% endif %}
-          {% if page.json_m %}<div class="dl json_m">JSON(Minify版)でダウンロード</div>{% endif %}
           <div class="api">データへのURLを取得する</div>
         </div>
         <div class="modal">
