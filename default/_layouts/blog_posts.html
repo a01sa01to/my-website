@@ -21,11 +21,17 @@
             <a href="/tags/{{ tag }}/" class="tag">{{ tag }}</a>&nbsp;
           {% endfor %}
         </p>
-        <p class="date">{{ page.date | date: "%Y.%m.%d"}}</p>
+        <p class="date"><nobr>Published on {{ page.date | date: "%Y.%m.%d"}}.<wbr> Last Modified on {{ page.last_modified_at | date: "%Y.%m.%d"}}.</nobr></p>
         <div class="article">
           {{ content }}
         </div>
-        <a href="./">&lt; Post in {{ page.date | date: "%Y.%m" }}</a>
+        {% assign pageYear = page.date | date: "%Y" %}
+        {% assign todayYear = "now" | date: "%Y" %}
+        {% if todayYear == pageYear %}
+          <a href="/list/">&lt; Post in {{ pageYear }}</a>
+        {% else %}
+          <a href="/list/{{ pageYear }}">&lt; Post in {{ pageYear }}</a>
+        {% endif %}
       </div>
     </div>
   </main>
