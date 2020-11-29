@@ -63,8 +63,8 @@ p.note {
 }
 
 img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: auto;
 }
 
 img.abs {
@@ -74,6 +74,18 @@ img.abs {
   z-index: 1;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+img.hv_gray {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+img.hv_gray:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .fullh {

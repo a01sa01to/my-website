@@ -1,5 +1,6 @@
 code.highlighter-rouge {
-  background-color: #ccc;
+  font-family: courier, monospace;
+  background-color: #eee;
 }
 
 [id^=editor] {
@@ -30,10 +31,6 @@ p.date {
   margin-bottom: 16px;
   font-size: 16px;
   text-align: right;
-}
-
-p.date::before {
-  content: "Published: ";
 }
 
 .article {

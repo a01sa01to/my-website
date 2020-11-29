@@ -30,10 +30,13 @@ window.addEventListener('DOMContentLoaded',()=>{
 			useSoftTabs: true,
 			wrap: true,
 			readOnly: true,
+			maxLines: 10,
+			minLines: 1,
+			autoScrollEditorIntoView: true,
 		})
 		editor.setTheme('ace/theme/dracula')
 		editor.setValue(code);
-		editor.gotoLine(1);
+		editor.clearSelection();
 		editorlist.push(editor);
 	}
 
