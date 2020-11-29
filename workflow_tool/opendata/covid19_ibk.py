@@ -12,6 +12,9 @@ json_list = {
   "inspections_summary": {"lastUpdate":"","size":""},
   "main_summary": {"lastUpdate":"","size":""},
   "corona_next": {"lastUpdate":"","size":""},
+  "roller_mito": {"lastUpdate":"2020/08/21 23:59","size":"1.10 KB"},
+  "roller_tsukuba_amakubo": {"lastUpdate":"2020/09/07 23:59","size":"1.02 KB"},
+  "roller_tsuchiura_sakura": {"lastUpdate":"","size":""},
 }
 
 FILELIST = [
@@ -24,6 +27,7 @@ FILELIST = [
   "080004_ibaraki_covid19_inspections_summary.json",
   "080004_ibaraki_covid19_summary.json",
   "080004_ibaraki_covid19_corona_next.json",
+  "080004_ibaraki_covid19_roller_tsuchiura_sakura.json",
 ]
 
 ALIASLIST = {
@@ -36,6 +40,7 @@ ALIASLIST = {
   "080004_ibaraki_covid19_inspections_summary.json": "inspections_summary",
   "080004_ibaraki_covid19_summary.json": "main_summary",
   "080004_ibaraki_covid19_corona_next.json": "corona_next",
+  "080004_ibaraki_covid19_roller_tsuchiura_sakura.json": "roller_tsuchiura_sakura",
 }
 
 jsonname = "covid19_ibaraki"
@@ -56,6 +61,12 @@ for filename in FILELIST:
 
   json_list[aliasname]["lastUpdate"] = lastUpdate[aliasname]
   json_list[aliasname]["size"] = filesize
+
+  if ".json" in filename:
+    with open(jsonname, "r", encoding="UTF-8") as f:
+      json_base = json.load(f)
+    with open(jsonname, "w", encoding="UTF-8") as f:
+      json.dump(json_base, f, ensure_ascii=False, indent=2, separators=(",", ": "))
 
 
 with open("../../_data/{}.json".format(jsonname), "w", encoding="UTF-8") as f:
