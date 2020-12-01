@@ -1,4 +1,4 @@
-permalink: /:year/:month/:day
+permalink: /:year/:month/:title
 name: Asa's Blog
 url: "https://blog.a01sa01to.com"
 author: Asa
