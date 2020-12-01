@@ -40,16 +40,10 @@
 	}
 	elseif(file_exists($p.".html")){
 		$p .= ".html";
-		if(preg_match('/(example)(\.html)?$/',$p)){
-			require_once __DIR__."/const.html";
-			exit();
-		}
-		minetype($p);
 		require_once $p;
 	}
 	elseif(file_exists($p.".php")){
 		$p .= ".php";
-		minetype($p);
 		require_once $p;
 	}
 	else{
