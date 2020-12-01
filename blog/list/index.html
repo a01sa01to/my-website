@@ -14,12 +14,12 @@ last_modified_at: 2020-11-23
       <h2>{{ month }}月</h2>
       {% capture firstDate %}{{yr}}-{{month}}-01{% endcapture %}
       {% capture lastDate %}{{yr}}-{{month}}-31{% endcapture %}
-      {% assign firstDate = firstDate | date: "%s" %}
-      {% assign lastDate = lastDate | date: "%s" %}
+      {% assign firstDate = firstDate | date: "%s" | times: 1 %}
+      {% assign lastDate = lastDate | date: "%s" | times: 1 | minus: 3600 %}
 
       <div class="article_container">
         {% for post in site.posts %}
-          {% assign postDate = post.date | date: "%s" %}
+          {% assign postDate = post.date | date: "%s" | times: 1 %}
           {% if firstDate <= postDate and postDate <= lastDate %}
           <div class="article_card">
             <p class="title"><a href="{{ post.url }}">{{ post.title }}</a></p>
