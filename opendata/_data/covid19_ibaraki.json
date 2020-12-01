@@ -1,38 +1,50 @@
 {
   "patients": {
     "lastUpdate": "2020/11/28 22:00",
-    "size": "226.93 KB"
+    "size": "228.41 KB"
   },
   "test_people": {
     "lastUpdate": "2020/11/28 22:00",
-    "size": "12.45 KB"
+    "size": "12.75 KB"
   },
   "call_center": {
     "lastUpdate": "2020/11/16 19:20",
-    "size": "11.84 KB"
+    "size": "12.12 KB"
   },
   "positive_number": {
     "lastUpdate": "2020/11/28 22:00",
-    "size": "10.77 KB"
+    "size": "11.02 KB"
   },
   "recovered_number": {
     "lastUpdate": "2020/11/28 22:00",
-    "size": "9.57 KB"
+    "size": "9.81 KB"
   },
   "death_number": {
     "lastUpdate": "2020/11/28 22:00",
-    "size": "9.55 KB"
+    "size": "9.78 KB"
   },
   "inspections_summary": {
     "lastUpdate": "2020/11/10 20:00",
-    "size": "292 Byte"
+    "size": "425 Byte"
   },
   "main_summary": {
     "lastUpdate": "2020/11/28 22:00",
-    "size": "367 Byte"
+    "size": "944 Byte"
   },
   "corona_next": {
     "lastUpdate": "2020/11/28 22:00",
-    "size": "1006 Byte"
+    "size": "1.76 KB"
+  },
+  "roller_mito": {
+    "lastUpdate": "2020/08/21 23:59",
+    "size": "1.10 KB"
+  },
+  "roller_tsukuba_amakubo": {
+    "lastUpdate": "2020/09/07 23:59",
+    "size": "1.02 KB"
+  },
+  "roller_tsuchiura_sakura": {
+    "lastUpdate": "2020/11/28 23:59",
+    "size": "1.38 KB"
   }
 }
