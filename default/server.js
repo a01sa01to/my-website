@@ -21,20 +21,20 @@ const notAllowed = [
 ];
 
 app.use((req,res)=>{
-	console.log(req.url);
+	console.log(req.path);
 	if(notAllowed.includes(req.path)){
 		res.status(404).sendFile(path.join(__dirname,`err/404.html`));
 		return;
 	}
 
 	if(!req.path.includes(".")){
-		const rewritePath = path.join(__dirname,`${req.url}.html`);
+		const rewritePath = path.join(__dirname,`${req.path}.html`);
 		if(fs.existsSync(rewritePath)){
 			res.sendFile(rewritePath);
 			return;
 		}
 	}
-	res.sendFile(path.join(__dirname,req.url));
+	res.sendFile(path.join(__dirname,req.path));
 })
 
 app.use((err,req,res,next)=>{
