@@ -28,13 +28,13 @@ app.use((req,res)=>{
 	}
 
 	if(!req.path.includes(".")){
-		const rewritePath = path.join(__dirname,`${req.url}.html`);
+		const rewritePath = path.join(__dirname,`${req.path}.html`);
 		if(fs.existsSync(rewritePath)){
 			res.sendFile(rewritePath);
 			return;
 		}
 	}
-	res.sendFile(path.join(__dirname,req.url));
+	res.sendFile(path.join(__dirname,req.path));
 })
 
 app.use((err,req,res,next)=>{
