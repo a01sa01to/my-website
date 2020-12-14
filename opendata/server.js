@@ -31,8 +31,10 @@ app.use((req,res)=>{
 		return;
 	}
 
-	if(req.path.includes("data/") && req.path.endsWith('.csv')){
-		if(req.query.mode === 'json'){
+	if(req.path.includes("data/")){
+		res.header('Access-Control-Allow-Origin', '*')
+
+		if(req.query.mode === 'json' && req.path.endsWith('.csv')){
 			const filecontent = fs.readFileSync(path.join(__dirname, req.path)).toString();
 			const rows = filecontent.replace(/\r/g,'').split("\n");
 			const key = rows[0].split(',');
