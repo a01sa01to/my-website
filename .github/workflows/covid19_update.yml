@@ -2,7 +2,7 @@ name: covid19_ibaraki Data Update
 
 on:
   schedule:
-    - cron: '0 9,10,11,12,13,14 * * *'
+    - cron: '*/20 9,10,11,12,13,14 * * *'
 
 jobs:
   update:
