@@ -2,17 +2,13 @@
   "stage": 3,
   "strengthen": true,
   "moveDate": "2020/11/11",
-  "pillar": 11.7,
-  "sickbed": 34,
-  "rate": 8.6,
-  "pillarYesterday": 12,
-  "sickbedYesterday": 32.5,
-  "rateYesterday": 8.3,
+  "pillar": 11.5,
+  "sickbed": 35.7,
+  "rate": 6.9,
+  "pillarYesterday": 11.7,
+  "sickbedYesterday": 34,
+  "rateYesterday": 8.6,
   "new_patients": [
-    {
-      "date": "2020-12-27",
-      "value": 27
-    },
     {
       "date": "2020-12-28",
       "value": 31
@@ -40,13 +36,13 @@
     {
       "date": "2021-01-03",
       "value": 52
+    },
+    {
+      "date": "2021-01-04",
+      "value": 32
     }
   ],
   "non_closecontact": [
-    {
-      "date": "2020-12-27",
-      "value": 9
-    },
     {
       "date": "2020-12-28",
       "value": 8
@@ -74,13 +70,13 @@
     {
       "date": "2021-01-03",
       "value": 17
+    },
+    {
+      "date": "2021-01-04",
+      "value": 21
     }
   ],
   "tokyo": [
-    {
-      "date": "2020-12-27",
-      "value": 436
-    },
     {
       "date": "2020-12-28",
       "value": 298
@@ -95,11 +91,11 @@
     },
     {
       "date": "2020-12-31",
-      "value": 28
+      "value": 928
     },
     {
       "date": "2021-01-01",
-      "value": 529
+      "value": 42
     },
     {
       "date": "2021-01-02",
@@ -108,6 +104,10 @@
     {
       "date": "2021-01-03",
       "value": 510
+    },
+    {
+      "date": "2021-01-04",
+      "value": 616
     }
   ]
 }
