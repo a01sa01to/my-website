@@ -2,17 +2,13 @@
   "stage": 4,
   "strengthen": true,
   "moveDate": "2021/01/15",
-  "pillar": 27.3,
-  "sickbed": 48.3,
-  "rate": 6.3,
-  "pillarYesterday": 25.8,
-  "sickbedYesterday": 49.1,
-  "rateYesterday": 5.9,
+  "pillar": 28.3,
+  "sickbed": 47.4,
+  "rate": 5.1,
+  "pillarYesterday": 27.3,
+  "sickbedYesterday": 48.3,
+  "rateYesterday": 6.3,
   "new_patients": [
-    {
-      "date": "2021-01-22",
-      "value": 78
-    },
     {
       "date": "2021-01-23",
       "value": 132
@@ -40,40 +36,44 @@
     {
       "date": "2021-01-29",
       "value": 87
+    },
+    {
+      "date": "2021-01-30",
+      "value": 69
     }
   ],
   "non_closecontact": [
     {
       "date": "2021-01-22",
-      "value": 30
+      "value": 29
     },
     {
       "date": "2021-01-23",
-      "value": 29
-    },
-    {
-      "date": "2021-01-24",
       "value": 16
     },
     {
-      "date": "2021-01-25",
+      "date": "2021-01-24",
       "value": 14
     },
     {
-      "date": "2021-01-26",
+      "date": "2021-01-25",
       "value": 23
     },
     {
-      "date": "2021-01-27",
+      "date": "2021-01-26",
       "value": 29
     },
     {
-      "date": "2021-01-28",
+      "date": "2021-01-27",
       "value": 15
     },
     {
-      "date": "2021-01-29",
+      "date": "2021-01-28",
       "value": 23
+    },
+    {
+      "date": "2021-01-29",
+      "value": 11
     }
   ],
   "tokyo": [
