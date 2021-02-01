@@ -11,7 +11,7 @@ last_modified_at: 2020-02-01
 ## 移管した理由
 最初にドメインを登録したのが2019年4月1日。<br>
 だから1年と7ヶ月くらい？ <a href="https://px.a8.net/svt/ejp?a8mat=3H5C5X+FQ79UI+50+2HHVNM" rel="nofollow" target="_blank">お名前.com</a>
-<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=3H5C5X+FQ79UI+50+2HHVNM" alt="" class="a8"> を使っていたんですよね。
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=3H5C5X+FQ79UI+50+2HHVNM" alt="" class="a8">を使っていたんですよね。
 
 サイトを再構築するときに考えていたのは
 
