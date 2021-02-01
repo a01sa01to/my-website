@@ -43,8 +43,41 @@ p.date{
   border-bottom: 1px solid #aaa;
 }
 
-img{
+.imgContainer{
   width: 600px;
+  max-width: 100%;
+  margin: 8px 0;
+  text-align: left;
+
+  span{
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 0.8em;
+    line-height: 16px;
+    color: #888;
+    text-align: center;
+  }
+
+  img{
+    margin-bottom: 4px;
+  }
+}
+
+img{
+  display: block;
+  width: 600px;
+  margin: 16px 0;
+}
+
+img.a8{
+  display: inline;
+  width: unset;
+  max-width: unset;
+  height: unset;
+  max-height: unset;
+  margin: 0;
+  visibility: hidden;
 }
 
 h2{

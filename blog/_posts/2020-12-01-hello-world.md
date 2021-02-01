@@ -3,7 +3,7 @@ title: "Hello World, publishing my website"
 layout: blog_posts
 tags: hello-world publish
 relPath: /2020/12/hello-world
-last_modified_at: 2020-12-25
+last_modified_at: 2021-02-01
 ---
 
 # Hello World!
@@ -26,7 +26,7 @@ Markdown 恐るべし...。
 そのうち技術記事出すつもり。「そのうち」ね。
 
 ## Thanks
-Build with <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer"><img src="/img/footer/jekyll_logo.png" alt="Jekyll" style="width: 59px;height: 30px;" class="hv_gray"></a><br>
-Deploy on <a href="https://cloud.google.com/" target="_blank" rel="noopener noreferrer"><img src="/img/footer/google_cloud_logo.png" alt="Google Cloud" style="width: 118px;height: 30px;" class="hv_gray"></a>
+Build with <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer"><img src="/img/footer/jekyll_logo.png" alt="Jekyll" style="width: 59px;height: 30px;" class="hv_gray no_alt"></a><br>
+Deploy on <a href="https://cloud.google.com/" target="_blank" rel="noopener noreferrer"><img src="/img/footer/google_cloud_logo.png" alt="Google Cloud" style="width: 118px;height: 30px;" class="hv_gray no_alt"></a>
 
 そのうちなぜこの2つを使ったかを書こうと思ってはいる。
