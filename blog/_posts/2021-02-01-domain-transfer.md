@@ -46,7 +46,7 @@ Google App Engine ならGitHubにソース上げればデプロイしてくれ�
 ![移管元から取得して...](/img/blog/2021/02/domain-transfer/02.png)
 ![移管先に貼り付け](/img/blog/2021/02/domain-transfer/03.png)
 
-## Step3 - Whois代行公開を一時無効化
+### Step3 - Whois代行公開を一時無効化
 Whois公開代行を一時的に無効化しないと、移管できないようです（お名前.comの場合は）。<br>
 私は無効化していなかったので、拒否されました。
 ![拒否された！？](/img/blog/2021/02/domain-transfer/10.png)
@@ -64,7 +64,7 @@ Whois公開代行を一時的に無効化しないと、移管できないよう
 なお、この時支払うのは、1年間分の料金である￥1,400です。
 ![](/img/blog/2021/02/domain-transfer/05.png)
 
-### Step4 - 支払い
+### Step5 - 支払い
 ![JCBで払おうとすると...？](/img/blog/2021/02/domain-transfer/06.png)
 
 いつも使っているJCB（LINE Pay）でやろうとしたところ、何度やってもダメでした。
@@ -75,13 +75,13 @@ Whois公開代行を一時的に無効化しないと、移管できないよう
 
 ![支払いが完了するとステータスが表示される](/img/blog/2021/02/domain-transfer/09.png)
 
-### Step5 - 移管承認
+### Step6 - 移管承認
 支払い後、移管元からメールが届きます。<br>
 このメールから承認しないと、移管できないので、承認します。
 ![確認メールが届くので](/img/blog/2021/02/domain-transfer/12.png)
 ![承認](/img/blog/2021/02/domain-transfer/13.png)
 
-### Step6 - 移管完了
+### Step7 - 移管完了
 しばらくすると、移管が完了し、移管先からメールが届きました。
 ![！！！](/img/blog/2021/02/domain-transfer/14.png)
 
