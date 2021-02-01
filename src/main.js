@@ -46,4 +46,19 @@ window.addEventListener('DOMContentLoaded',()=>{
 			$(this).prev("h2").remove();
 		}
 	})
+
+	$('img').each(function(){
+		$(this).attr('loading','lazy');
+		if($(this).attr('alt') && !$(this).hasClass('no_alt')){
+			$(this).attr('title',$(this).attr('alt'));
+			const imgContainer = document.createElement('div');
+			imgContainer.className = "imgContainer";
+			this.insertAdjacentElement('beforebegin',imgContainer);
+			$(this).appendTo(imgContainer);
+			const alt = document.createElement('span');
+			alt.className = "alt";
+			alt.innerText = $(this).attr('alt')
+			imgContainer.appendChild(alt);
+		}
+	})
 })
