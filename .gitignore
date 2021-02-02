@@ -2,7 +2,7 @@ kss
 firebase
 koga-cs
 ws.code-workspace
-
+.venv
 node_modules
 .jekyll-cache
 _site
