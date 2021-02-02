@@ -61,4 +61,18 @@ window.addEventListener('DOMContentLoaded',()=>{
 			imgContainer.appendChild(alt);
 		}
 	})
+
+	$('a').each(function(){
+		if($(this).attr('href').includes('http')){
+			$(this).attr('target','_blank');
+			const rel = $(this).attr('rel');
+			if(rel){
+				const rep = rel.replace("nofollow","nofollow sponsored").replace("noopener noreferrer","")
+				$(this).attr('rel',`noopener noreferrer ${rep}`);
+			}
+			else{
+				$(this).attr('rel','noopener noreferrer');
+			}
+		}
+	})
 })
