@@ -35,6 +35,7 @@ app.use((req,res)=>{
 		res.header('Access-Control-Allow-Origin', '*')
 
 		if(req.query.mode === 'json' && req.path.endsWith('.csv')){
+			// JSONに変換
 			const filecontent = fs.readFileSync(path.join(__dirname, req.path)).toString();
 			const rows = filecontent.replace(/\r/g,'').split("\n");
 			const key = rows[0].split(',');
@@ -48,6 +49,8 @@ app.use((req,res)=>{
 				}
 				return __;
 			})
+
+			// Queryを成形
 			let filt = decodeURIComponent(req.query.filter).split(';')
 			filt = filt.map(f => {
 				const __ = f.split('__');
@@ -60,19 +63,56 @@ app.use((req,res)=>{
 			});
 			filt.forEach(_=>{
 				switch(_.type){
+					case "key":
+						// array形式
+						_.key = JSON.parse(_.key);
+						const tmp = [];
+						for(let i=0;i<fileToJson.length;i++){
+							const tmp_obj = {};
+							_.key.forEach(key=>{
+								tmp_obj[key] = fileToJson[i][key];
+							});
+							tmp.push(tmp_obj)
+						}
+						fileToJson = tmp;
+						break;
 					case "date":
-						if(_.mode === "from"){ fileToJson = fileToJson.filter(__=> new Date(__[_.key]) >= new Date(_.val)); }
-						else if(_.mode === "to"){ fileToJson = fileToJson.filter(__=> new Date(__[_.key]) <= new Date(_.val)); }
+						if(_.mode === "from"){
+							fileToJson = fileToJson.filter(__=>
+								new Date(__[_.key]) >= new Date(_.val)
+							);
+						}
+						else if(_.mode === "to"){
+							fileToJson = fileToJson.filter(__=>
+								new Date(__[_.key]) <= new Date(_.val)
+							);
+						}
 						else{ c400(); return; }
 						break;
 					case "num":
-						if(_.mode === "over"){ fileToJson = fileToJson.filter(__=> Number(__[_.key]) >= Number(_.val)); }
-						else if(_.mode === "under"){ fileToJson = fileToJson.filter(__=> Number(__[_.key]) <= Number(_.val)); }
+						if(_.mode === "over"){
+							fileToJson = fileToJson.filter(__=>
+								Number(__[_.key]) >= Number(_.val)
+							);
+						}
+						else if(_.mode === "under"){
+							fileToJson = fileToJson.filter(__=>
+								Number(__[_.key]) <= Number(_.val)
+							);
+						}
 						else{ c400(); return; }
 						break;
 					case "str":
-						if(_.mode === "eq"){ fileToJson = fileToJson.filter(__=> __[_.key] === _.val); }
-						else if(_.mode === "ne"){ fileToJson = fileToJson.filter(__=> __[_.key] !== _.val); }
+						if(_.mode === "eq"){
+							fileToJson = fileToJson.filter(__=>
+								__[_.key] === _.val
+							);
+						}
+						else if(_.mode === "ne"){
+							fileToJson = fileToJson.filter(__=>
+								__[_.key] !== _.val
+							);
+						}
 						else{ c400(); return; }
 						break;
 					default:
