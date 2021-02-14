@@ -18,6 +18,21 @@ window.addEventListener('DOMContentLoaded',()=>{
     autoplaySpeed: 3000,
   });
 
+  const query = location.search.substring(1).split("&");
+	const lang_query = query.filter(_=>_.startsWith("lang"))[0];
+	const lang_cookie = document.cookie.split('; ').filter(_=>_.startsWith('lang'))[0];
+	const lang = lang_cookie || lang_query;
+  if(!lang || lang.split('=')[1] === "ja"){
+    $('html').attr('lang','ja');
+    $('[lang=en]').remove();
+		document.cookie = 'lang=ja;domain=a01sa01to.com;max-age=31536000;secure'
+  }
+  else{
+    $('html').attr('lang','en');
+    $('[lang=ja]').remove();
+		document.cookie = 'lang=en;domain=a01sa01to.com;max-age=31536000;secure'
+  }
+
   document.querySelectorAll('img').forEach(_=>_.oncontextmenu=()=>false);
 
   $("footer a.sBtn").each(function(){
@@ -35,12 +50,6 @@ window.addEventListener('DOMContentLoaded',()=>{
     $('.modal').fadeIn();
     $('.modal .pre, .modal .dl, .modal .api').hide();
     $('.modal .load').show();
-    if($(this).hasClass('csv')){
-      $('.modal .pre span').text("（CSV版）")
-    }
-    else if($(this).hasClass('json')){
-      $('.modal .pre span').text("（JSON版）")
-    }
     const content = await fetch(filepath).then(r=>r.blob()).then(b=>{
       filepath = URL.createObjectURL(b)
       return b.text()
@@ -78,15 +87,6 @@ window.addEventListener('DOMContentLoaded',()=>{
     $('.modal').fadeIn();
     $('.modal .pre, .modal .load, .modal .api').hide();
     $('.modal .dl').show();
-    if($(this).hasClass('csv')){
-      $('.modal .dl span').text("（CSV版）")
-    }
-    else if($(this).hasClass('json')){
-      $('.modal .dl span').text("（JSON版）")
-    }
-    else if($(this).hasClass('json_m')){
-      $('.modal .dl span').text("（JSON Minify版）")
-    }
   })
 
   $('div.flex div.api').on('click',async function(){

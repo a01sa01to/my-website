@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-  <title>{{ page.title }} | {{ page.parent }} - Asa's Opendata Catalog</title>
+  <title lang="ja">{{ page.titleJa }} | {{ page.parentJa }} - Asa's Opendata Catalog</title>
+  <title lang="en">{{ page.titleEn }} | {{ page.parentEn }} - Asa's Opendata Catalog</title>
   {% feed_meta %}
   {% include meta.html logotitle="Opendata Catalog" subdomain="opendata." %}
   {% include css.html %}
@@ -14,59 +15,71 @@
   <main>
     <div class="container">
       <div>
-        <h1>{{ page.title }}</h1><br>
-        <a href="./">&lt; {{ page.parent }}</a><br><br>
-        <p class="desc">{{ page.description }}</p><br>
-        <p class="note">当データを利用した作品を公開する際には、必ず当ページへのリンクを記載してください。</p>
-        <h2>情報</h2>
+        <h1 lang="ja">{{ page.titleJa }}</h1>
+        <h1 lang="en">{{ page.titleEn }}</h1><br>
+        <a href="./" lang="ja">&lt; {{ page.parentJa }}</a>
+        <a href="./" lang="en">&lt; {{ page.parentEn }}</a><br><br>
+        <p class="desc" lang="ja">{{ page.descriptionJa }}</p>
+        <p class="desc" lang="en">{{ page.descriptionEn }}</p><br>
+        <p class="note" lang="ja">当データを利用した作品を公開する際には、必ず当ページへのリンクを記載してください。</p>
+        <p class="note" lang="en">When you publish a work using this data, please be sure to include a link to this page.</p>
+        <h2 lang="ja">情報</h2>
+        <h2 lang="en">Information</h2>
         <input type="hidden" name="fn" value="/data/{{ page.opendir }}/{{ page.filename }}">
         <table>
-          <tr><th>フィールド</th><th>値</th></tr>
-          <tr><td>最終更新</td><td id="upd"></td></tr>
-          <tr><td>作成日</td><td>{{ page.firstPub }}</td></tr>
-          <tr><td>ファイル名</td><td>{{ page.filename }}</td></tr>
-          <tr><td>ファイルサイズ</td><td id="filesize"></td></tr>
-          <tr><td>データ形式</td><td>{% if page.csv %}CSV{% endif %}{% if page.json %}JSON{% endif %}</td></tr>
-          <tr><td>ライセンス</td><td><a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener noreferrer">CC BY 4.0</a><br>出所の表示は必須ですが、商業利用・改変は許可されます。</td></tr>
+          <tr lang="ja"><th>フィールド</th><th>値</th></tr>
+          <tr lang="en"><th>Field</th><th>Value</th></tr>
+          <tr><td lang="ja">最終更新</td><td lang="en">Last Update</td><td id="upd"></td></tr>
+          <tr><td lang="ja">作成日</td><td lang="en">Publish</td><td>{{ page.firstPub }}</td></tr>
+          <tr><td lang="ja">ファイル名</td><td lang="en">File Name</td><td>{{ page.filename }}</td></tr>
+          <tr><td lang="ja">ファイルサイズ</td><td lang="en">File Size</td><td id="filesize"></td></tr>
+          <tr><td lang="ja">データ形式</td><td lang="en">Data Format</td><td>{% if page.csv %}CSV{% endif %}{% if page.json %}JSON{% endif %}</td></tr>
+          <tr lang="ja"><td>ライセンス</td><td><a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener noreferrer">CC BY 4.0</a><br>出所の表示は必須ですが、商業利用・改変は許可されます。</td></tr>
+          <tr lang="en"><td>License</td><td><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" rel="noopener noreferrer">CC BY 4.0</a><br>Indication of the source is required, but commercial use and modification is permitted.</td></tr>
         </table>
-        <h2>ダウンロード</h2>
-        {% if page.json_m %}<p class="note">Minify版JSONは、通常のJSONの内容と変わりません。</p>{% endif %}
-        <div class="flex">
-          {% if page.csv %}
-            <div class="pre csv">CSVをプレビュー</div>
-            <div class="dl csv">CSVでダウンロード</div>
-          {% endif %}
-          {% if page.json %}
-            <div class="pre json">JSONをプレビュー</div>
-            <div class="dl json">JSONでダウンロード</div>
-          {% endif %}
+        <h2 lang="ja">ダウンロード</h2>
+        <h2 lang="en">Download</h2>
+        <p class="note" lang="en">Note that the data is only in Japanese.</p>
+        <div class="flex" lang="ja">
+          <div class="pre">プレビュー</div>
+          <div class="dl">ダウンロード</div>
           <div class="api">データへのURLを取得する</div>
+        </div>
+        <div class="flex" lang="en">
+          <div class="pre">Preview</div>
+          <div class="dl">Download</div>
+          <div class="api">Get URL to the data</div>
         </div>
         <div class="modal">
           <div class="modal_container">
             <div class="load"><div class="loader"></div></div>
             <div class="pre">
-              <p>{{ page.title }}<span></span>のプレビュー</p>
+              <p lang="ja">{{ page.titleJa }}のプレビュー</p>
+              <p lang="en">Preview {{ page.titleEn }}</p>
               <div id="ace"></div>
             </div>
             <div class="dl">
-              <p>以下の説明・注意点を必ずお読みになってから、{{ page.title }}<span></span>をダウンロードしてください。</p>
+              <p lang="ja">以下の説明・注意点を必ずお読みになってから、{{ page.title }}をダウンロードしてください。</p>
+              <p lang="en">Please be sure to read the following instructions and cautions before downloading {{ page.titleEn }}.</p>
               <div class="ov_y">
                 <ul>
                   {{ content }}
                 </ul>
               </div>
-              <button class="material">ファイルをダウンロード</button>
+              <button class="material" lang="ja">ファイルをダウンロード</button>
+              <button class="material" lang="en">Download the File</button>
             </div>
             <div class="api">
-              <p>以下の説明・注意点を必ずお読みになってから、{{ page.title }}<span></span>を利用してください。</p>
+              <p lang="ja">以下の説明・注意点を必ずお読みになってから、{{ page.title }}を利用してください。</p>
+              <p lang="en">Please be sure to read the following instructions and cautions before using {{ page.titleEn }}.</p>
               <div class="ov_y">
                 <ul>
                   {{ content }}
                 </ul>
               </div>
               <code>https://opendata.a01sa01to.com/data/{{ page.opendir }}/{{ page.filename }}</code>
-              <button class="material" data-clipboard-target=".modal .api code"><span>content_copy</span>URLをコピー</button>
+              <button class="material" data-clipboard-target=".modal .api code" lang="ja"><span>content_copy</span>URLをコピー</button>
+              <button class="material" data-clipboard-target=".modal .api code" lang="en"><span>content_copy</span>Copy the URL</button>
             </div>
           </div>
         </div>
