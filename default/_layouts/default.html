@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-  <title>{% if page.title != "TOP" %}{{ page.title }} - {% endif %}Asa's Website</title>
+  <title lang="ja">{% if page.titleJa != "TOP" %}{{ page.titleJa }} - {% endif %}Asa's Website</title>
+  <title lang="en">{% if page.titleEn != "TOP" %}{{ page.titleEn }} - {% endif %}Asa's Website</title>
   {% feed_meta %}
   {% include meta.html logotitle="Website" subdomain="" %}
   {% include css.html %}
