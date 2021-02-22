@@ -1,0 +1,52 @@
+name: WebSocket Build
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'ws/**'
+      - 'default/_includes/**'
+      - 'default/_layouts/**'
+      - 'default/css/**'
+      - 'default/err/**'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+      - name: Cache deps
+        uses: actions/cache@v2
+        with:
+          path: ./ws/vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('./ws/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gem-
+      - name: Prepare bundler
+        run: |
+          gem install bundler
+          bundle config path vendor/bundle
+        working-directory: ./ws
+      - name: Install deps
+        run: bundle install
+        working-directory: ./ws
+      - name: Build
+        run: bundle exec jekyll build
+        working-directory: ./ws
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./ws/_site
+          publish_branch: ws_deploy

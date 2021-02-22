@@ -1,4 +1,4 @@
-name: Opendata Build
+name: KSS New Build
 
 on:
   push:
