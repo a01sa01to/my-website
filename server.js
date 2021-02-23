@@ -1,5 +1,6 @@
 const express = require('express');
 const {Server} = require('ws');
+const _path = require('path');
 
 // const http = require('https');
 const url = require('url');
@@ -10,11 +11,15 @@ const INDEX = '/err/400.html';
 let list = {};
 
 const server = express()
-  	.use((req, res)=>{
+	.use((req, res)=>{
+		if(req.path.includes("css")){
+			res.sendFile(_path.join(__dirname,req.path))
+			return
+		}
 		res.sendFile(INDEX, {root: __dirname});
 		console.log(req.url)
 	})
-  	.listen(PORT, ()=>console.log(`Listening on ${PORT}`));
+	.listen(PORT, ()=>console.log(`Listening on ${PORT}`));
 
 server.on('upgrade', (req, socket, head)=>{
 	const path = url.parse(req.url).pathname;
