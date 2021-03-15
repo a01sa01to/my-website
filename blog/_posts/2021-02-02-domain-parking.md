@@ -3,7 +3,7 @@ title: ドメインパーキングを使ってみる
 layout: blog_posts
 tags: Domain Domain-Parking
 relPath: /2021/02/domain-parking
-last_modified_at: 2020-02-02
+last_modified_at: 2020-03-16
 a_few_word: 半年後にレポートを公開しようかな...
 ---
 
@@ -53,3 +53,6 @@ a_few_word: 半年後にレポートを公開しようかな...
 試しにアクセスしてみると、Simcastなるサイトに飛ばされました。<br>
 ~~リダイレクトなのね？？広告掲載じゃないのかよ...~~
 ![飛ばされた](/img/blog/2021/02/domain-parking/08.png)
+
+（2021.03.16追記）<br>
+飛ばされる先は、（定期的なのか不定期的なのかは不明ですが）変わるようです。
