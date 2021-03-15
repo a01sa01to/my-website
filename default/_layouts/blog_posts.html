@@ -24,6 +24,7 @@
         <p class="date"><nobr>Published on {{ page.date | date: "%Y.%m.%d"}}.<wbr> Last Modified on {{ page.last_modified_at | date: "%Y.%m.%d"}}.</nobr></p>
         <div class="article">
           {{ content }}
+          <p class="a_few_word">{{ page.a_few_word }}</p>
         </div>
         {% assign pageYear = page.date | date: "%Y" %}
         {% assign todayYear = "now" | date: "%Y" %}

@@ -1,9 +1,10 @@
 ---
 title: ドメインを移管しました
 layout: blog_posts
-tags: domain website
+tags: Domain Website
 relPath: /2021/02/domain-transfer
 last_modified_at: 2020-02-01
+a_few_word: Googleのヘビーユーザーになってしまう...
 ---
 
 この記事、今更感がすごい
@@ -87,7 +88,3 @@ Whois公開代行を一時的に無効化しないと、移管できないよう
 
 DNSはいくつか引き継がれていませんでした。
 ![DNS一覧](/img/blog/2021/02/domain-transfer/15.png)
-
-
-
-では～
