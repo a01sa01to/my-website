@@ -17,6 +17,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     env:
+      TZ: Asia/Tokyo
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout
