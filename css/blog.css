@@ -54,4 +54,14 @@ a.next {
   width: 300px;
   font-size: 16px;
 }
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 4px;
+  border: 1px solid #888;
+}
 /*# sourceMappingURL=blog.css.map */

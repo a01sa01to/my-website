@@ -37,6 +37,16 @@ p.date {
   text-align: right;
 }
 
+p.a_few_word {
+  width: 100%;
+  padding: 4px;
+  margin: 8px 0px;
+  font-size: 14px;
+  line-height: 1.5em;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+
 .article {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -44,7 +54,6 @@ p.date {
   margin-bottom: 24px;
   line-height: 32px;
   border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
 }
 
 .imgContainer {
