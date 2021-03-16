@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://blog.a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-03-15T15:05:42+00:00</updated><id>https://blog.a01sa01to.com/feed.xml</id><title type="html">Asa’s Blog</title><author><name>Asa</name></author><entry><title type="html">ドメインパーキングを使ってみる</title><link href="https://blog.a01sa01to.com/2021/02/domain-parking" rel="alternate" type="text/html" title="ドメインパーキングを使ってみる" /><published>2021-02-02T00:00:00+00:00</published><updated>2020-03-16T00:00:00+00:00</updated><id>https://blog.a01sa01to.com/2021/02/domain-parking</id><content type="html" xml:base="https://blog.a01sa01to.com/2021/02/domain-parking">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://blog.a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-03-16T00:19:19+00:00</updated><id>https://blog.a01sa01to.com/feed.xml</id><title type="html">Asa’s Blog</title><author><name>Asa</name></author><entry><title type="html">Googleカレンダーで予定別にカレンダーを仕分ける</title><link href="https://blog.a01sa01to.com/2021/03/separate-gcalendar" rel="alternate" type="text/html" title="Googleカレンダーで予定別にカレンダーを仕分ける" /><published>2021-03-16T00:00:00+00:00</published><updated>2020-03-16T00:00:00+00:00</updated><id>https://blog.a01sa01to.com/2021/03/separate-gcalendar</id><content type="html" xml:base="https://blog.a01sa01to.com/2021/03/separate-gcalendar">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Googleカレンダーをよく使っています。&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;学校でよく&lt;a href=&quot;http://classroom.google.com/&quot;&gt;Google Classroom&lt;/a&gt;を使っていて、画面横にクラスごとのカレンダーが出てくるので、予定の種類ごとにクラスを作っていました。&lt;br /&gt;&lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/01.png&quot; alt=&quot;モザイクがかかっているけど、横にとにかく仕分けられている&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;「Google製だし、Googleカレンダーだけで済ませられないのかな～？」&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;その方法があったので紹介。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;読むのにおすすめな人&quot;&gt;読むのにおすすめな人&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Googleアカウントを分けて、予定を分けている人&lt;/li&gt;
+  &lt;li&gt;Google Classroomなど別の方法で予定を分けている人&lt;/li&gt;
+  &lt;li&gt;GoogleカレンダーやOutlookなどで予定を分けている人&lt;/li&gt;
+  &lt;li&gt;その他、いろいろな方法で予定を分けている人&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-by-step&quot;&gt;Step by Step&lt;/h2&gt;
+
+&lt;h3 id=&quot;step1---ブラウザ版のgoogleカレンダーを開く&quot;&gt;Step1 - ブラウザ版のGoogleカレンダーを開く&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://calendar.google.com/&quot;&gt;Googleカレンダー&lt;/a&gt; を開きます。
+スマホの場合、アプリ版だとできませんでしたが、ブラウザ版では同じようにできました。&lt;/p&gt;
+
+&lt;h3 id=&quot;step2---設定を開く&quot;&gt;Step2 - 設定を開く&lt;/h3&gt;
+
+&lt;p&gt;画面上部にある「設定」を開きます。
+&lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step3---新しいカレンダーを作成する&quot;&gt;Step3 - 新しいカレンダーを作成する&lt;/h3&gt;
+
+&lt;p&gt;「カレンダーを追加」→「新しいカレンダー」へ行きます。&lt;/p&gt;
+
+&lt;p&gt;「名前」（仕分ける予定のカテゴリー）と「説明」（自分がわかるように）を入力し、「作成」します。&lt;br /&gt;
+ここでは、名前を「Payment」、説明を「定期購入の支払日」としました。
+&lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/03.png&quot; alt=&quot;入力して作成する&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;これで、仕分けの設定は完了です。&lt;/p&gt;
+
+&lt;h2 id=&quot;仕分けてみる&quot;&gt;仕分けてみる&lt;/h2&gt;
+
+&lt;p&gt;実際に仕分けていきます。&lt;/p&gt;
+
+&lt;h3 id=&quot;予定を作成&quot;&gt;予定を作成&lt;/h3&gt;
+
+&lt;p&gt;予定を作成する際に、「&lt;span class=&quot;material-icons&quot;&gt;event&lt;/span&gt;」のアイコンがあります。その横のプルダウンメニューから、先ほど作成したものを選択します。&lt;br /&gt;
+&lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ほかの情報も加えて、保存します。&lt;/p&gt;
+
+&lt;h3 id=&quot;予定一覧を見る&quot;&gt;予定一覧を見る&lt;/h3&gt;
+
+&lt;p&gt;月間予定などを見ると、仕分けられているのがわかります。
+&lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;その予定だけ見たい場合は、ブラウザ版の画面左側にある「マイカレンダー」のチェックボックスから切り替えられます。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Google" /><category term="Calendar" /><summary type="html">経緯 Googleカレンダーをよく使っています。 学校でよくGoogle Classroomを使っていて、画面横にクラスごとのカレンダーが出てくるので、予定の種類ごとにクラスを作っていました。 「Google製だし、Googleカレンダーだけで済ませられないのかな～？」 その方法があったので紹介。</summary></entry><entry><title type="html">ドメインパーキングを使ってみる</title><link href="https://blog.a01sa01to.com/2021/02/domain-parking" rel="alternate" type="text/html" title="ドメインパーキングを使ってみる" /><published>2021-02-02T00:00:00+00:00</published><updated>2020-03-16T00:00:00+00:00</updated><id>https://blog.a01sa01to.com/2021/02/domain-parking</id><content type="html" xml:base="https://blog.a01sa01to.com/2021/02/domain-parking">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
 
 &lt;p&gt;2月から &lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FPLU8Q+0K+10FASI&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;A8.net&lt;/a&gt;&lt;img border=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot; src=&quot;https://www14.a8.net/0.gif?a8mat=3H5C5X+FPLU8Q+0K+10FASI&quot; alt=&quot;&quot; class=&quot;a8&quot; /&gt; という、割と有名なアフィリエイトサイトに申し込んでみました。&lt;br /&gt;
 &lt;a href=&quot;./domain-transfer&quot;&gt;前回の記事&lt;/a&gt; で試しに「&lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;お名前.com&lt;/a&gt;&lt;img border=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot; src=&quot;https://www18.a8.net/0.gif?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; alt=&quot;&quot; class=&quot;a8&quot; /&gt;」やってみようかな～と提携申し込みしたら…&lt;/p&gt;
