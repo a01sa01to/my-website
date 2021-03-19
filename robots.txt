@@ -1,5 +1,6 @@
 User-agent: *
 Allow: 2020/
+Allow: 2021/
 Disallow: ace-mode/
 Allow: css/
 Disallow: err/
