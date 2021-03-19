@@ -7,7 +7,13 @@
   <div id="menuIcon"><div id="bar1"></div><div id="bar2"></div></div>
   <div id="menuItem">
     <li><a href="/">{{ include.logotitle }} Top</a></li>
-    {% if include.logotitle == "Opendata Catalog" %}<li><a href="https://github.com/a01sa01to/Opendata-Library/" target="_blank" rel="noopener noreferrer">Source Code</a></li>{% endif %}
+    {% if include.logotitle == "Website" %}
+      <li><a href="/about">About Me</a></li>
+      <li><a href="/works">Works</a></li>
+    {% endif %}
+    {% if include.logotitle == "Opendata Catalog" %}
+      <li><a href="https://github.com/a01sa01to/Opendata-Library/" target="_blank" rel="noopener noreferrer">Source Code</a></li>
+    {% endif %}
     <p class="border"></p>
     <li><a href="https://a01sa01to.com/">Asa's Website Home</a></li>
     <li><a href="https://blog.a01sa01to.com/">Blog</a></li>
