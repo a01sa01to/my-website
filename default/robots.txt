@@ -8,6 +8,7 @@ Disallow: slick-1.8.1/
 Disallow: src/
 Disallow: .googleconfig
 Disallow: .nojekyll
+Allow: about.html
 Disallow: app.yaml
 Allow: bundle.js
 Disallow: bundle.js.LICENSE.txt
