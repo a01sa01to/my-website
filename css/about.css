@@ -1,0 +1,64 @@
+#time_series {
+  margin-top: 16px;
+}
+
+#time_series div.item {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". ." "time bio" ". bio" ". .";
+  -ms-grid-rows: 0px 42px auto 0px;
+      grid-template-rows: 0px 42px auto 0px;
+  -ms-grid-columns: 50px 1fr;
+      grid-template-columns: 50px 1fr;
+  border-bottom: 1px solid #555;
+  gap: 8px;
+}
+
+#time_series div.item:first-child {
+  border-top: 1px solid #555;
+}
+
+#time_series div.item div.time {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: time;
+      grid-template-areas: "yr" "mo";
+  -ms-grid-rows: 22px 1fr;
+      grid-template-rows: 22px 1fr;
+  width: 50px;
+  height: 50px;
+  color: #000;
+  gap: 0px;
+}
+
+#time_series div.item div.time span#year {
+  display: inline-block;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: yr;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#time_series div.item div.time span#month {
+  display: inline-block;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: mo;
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#time_series div.item p.bio {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: bio;
+  width: 100%;
+  text-align: left;
+}
+/*# sourceMappingURL=about.css.map */
