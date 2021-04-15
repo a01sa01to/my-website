@@ -2,12 +2,12 @@
   "stage": 2,
   "strengthen": false,
   "moveDate": "2021/02/22",
-  "pillar": 7,
-  "sickbed": 115,
-  "new_patients": 36.7,
-  "non_closecontact": 13.1,
-  "pillarYesterday": 2,
-  "sickbedYesterday": 113,
-  "new_patientsYesterday": 30.6,
-  "non_closecontactYesterday": 10
+  "pillar": 8,
+  "sickbed": 126,
+  "new_patients": 39.6,
+  "non_closecontact": 15,
+  "pillarYesterday": 3,
+  "sickbedYesterday": 115,
+  "new_patientsYesterday": 32.6,
+  "non_closecontactYesterday": 9.4
 }
