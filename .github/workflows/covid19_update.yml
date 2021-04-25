@@ -22,18 +22,20 @@ jobs:
         working-directory: ./opendata/data/covid19_ibaraki/
       - name: Download Files
         run: |
-          curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=patients_data -L -o 080004_ibaraki_covid19_patients.csv
-          curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=tested_people -L -o 080004_ibaraki_covid19_test_people.csv
-          curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=call_center -L -o 080004_ibaraki_covid19_call_center.csv
-          curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=positive_number -L -o 080004_ibaraki_covid19_positive_number.csv
-          curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=recovered_number -L -o 080004_ibaraki_covid19_recovered_number.csv
-          curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=death_number -L -o 080004_ibaraki_covid19_death_number.csv
-          curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=inspections_summary -L -o 080004_ibaraki_covid19_inspections_summary.json
-          curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=main_summary -L -o 080004_ibaraki_covid19_summary.json
-          curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=corona_next -L -o 080004_ibaraki_covid19_corona_next.json
-          curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=forked_sites -L -o otherpref.csv
-          curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=news_json -L -o news.json
+          curl ${DATA_UPDATE_URL}?data=patients_data -L -o 080004_ibaraki_covid19_patients.csv
+          curl ${DATA_UPDATE_URL}?data=tested_people -L -o 080004_ibaraki_covid19_test_people.csv
+          curl ${DATA_UPDATE_URL}?data=call_center -L -o 080004_ibaraki_covid19_call_center.csv
+          curl ${DATA_UPDATE_URL}?data=positive_number -L -o 080004_ibaraki_covid19_positive_number.csv
+          curl ${DATA_UPDATE_URL}?data=recovered_number -L -o 080004_ibaraki_covid19_recovered_number.csv
+          curl ${DATA_UPDATE_URL}?data=death_number -L -o 080004_ibaraki_covid19_death_number.csv
+          curl ${DATA_UPDATE_URL}?data=inspections_summary -L -o 080004_ibaraki_covid19_inspections_summary.json
+          curl ${DATA_UPDATE_URL}?data=main_summary -L -o 080004_ibaraki_covid19_summary.json
+          curl ${DATA_UPDATE_URL}?data=corona_next -L -o 080004_ibaraki_covid19_corona_next.json
+          curl ${DATA_UPDATE_URL}?data=forked_sites -L -o otherpref.csv
+          curl ${DATA_UPDATE_URL}?data=news_json -L -o news.json
         working-directory: ./opendata/data/covid19_ibaraki/
+        env:
+          DATA_UPDATE_URL: "https://script.google.com/macros/s/AKfycbzsEmhJAsh9PKuTcZb1POcO8wJnN0WUOaiVzq2ENCVncBI_UKJBkLNP_9yiosjLFiA7/exec"
       - name: Create Info Json
         run: python ../../../workflow_tool/opendata/covid19_ibk.py
         working-directory: ./opendata/data/covid19_ibaraki
