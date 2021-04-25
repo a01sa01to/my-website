@@ -1,0 +1,32 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/default/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+    versioning-strategy: lockfile-only
+
+  - package-ecosystem: "npm"
+    directory: "/blog/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+    versioning-strategy: lockfile-only
+
+  - package-ecosystem: "npm"
+    directory: "/opendata/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+    versioning-strategy: lockfile-only
