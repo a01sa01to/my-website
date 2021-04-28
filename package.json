@@ -1,0 +1,47 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-tsdoc": "^0.2.14",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.13.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-scss": "^3.19.0",
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix"
+    ],
+    "*.scss": [
+      "stylelint --fix --allow-empty-imput"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a01sa01to/my-website.git"
+  },
+  "keywords": [],
+  "author": "Asa <npm@a01sa01to.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a01sa01to/my-website/issues"
+  },
+  "homepage": "https://github.com/a01sa01to/my-website#readme"
+}
