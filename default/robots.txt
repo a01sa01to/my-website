@@ -1,13 +1,14 @@
 User-agent: *
+
+Allow: blog/
 Allow: css/
+Disallow: deps/
 Disallow: err/
 Allow: img/
-Disallow: node_modules/
+Allow: opendata/
 Allow: sitemap/
-Disallow: slick-1.8.1/
 Disallow: src/
-Disallow: .googleconfig
-Disallow: .nojekyll
+
 Allow: about.html
 Disallow: app.yaml
 Allow: bundle.js
@@ -15,12 +16,14 @@ Disallow: bundle.js.LICENSE.txt
 Disallow: cloudbuild.yaml
 Allow: feed.xml
 Allow: index.html
-Allow: list.html
-Disallow: package-lock.json
 Disallow: package.json
+Allow: robots.txt
+Disallow: server_notAllowed.json
 Disallow: server.js
 Allow: sitemap.xml
-Disallow: source-context.json
+Disallow: tsconfig.json
 Disallow: webpack.config.js
 Allow: works.html
+Disallow: yarn.lock
+
 Sitemap: https://a01sa01to.com/sitemap.xml

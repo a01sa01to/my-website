@@ -1,14 +1,14 @@
 [
-	"node_modules/",
-	"src/",
-	".googleconfig",
-	".nojekyll",
-	"app.yaml",
-	"bundle.js.LICENSE.txt",
-	"cloudbuild.yaml",
-	"yarn.lock",
-	"package.json",
-	"server.js",
-	"source-context.json",
-	"webpack.config.js"
+	"/node_modules/*",
+	"/src/*",
+	"/.googleconfig",
+	"/.nojekyll",
+	"/app.yaml",
+	"/bundle.js.LICENSE.txt",
+	"/cloudbuild.yaml",
+	"/package.json",
+	"/server_nowAllowed.json",
+	"/server.js",
+	"/webpack.config.js",
+	"/yarn.lock"
 ]
