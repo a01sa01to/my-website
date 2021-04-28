@@ -1,1 +1,205 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-04-25T18:45:14+09:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-04-28T18:32:40+09:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">Googleカレンダーで予定別にカレンダーを仕分ける</title><link href="https://a01sa01to.com/blog/2021/03/separate-gcalendar" rel="alternate" type="text/html" title="Googleカレンダーで予定別にカレンダーを仕分ける" /><published>2021-03-16T00:00:00+09:00</published><updated>2020-03-16T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/03/separate-gcalendar</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/03/separate-gcalendar">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Googleカレンダーをよく使っています。&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;学校でよく&lt;a href=&quot;http://classroom.google.com/&quot;&gt;Google Classroom&lt;/a&gt;を使っていて、画面横にクラスごとのカレンダーが出てくるので、予定の種類ごとにクラスを作っていました。&lt;br /&gt;&lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/01.png&quot; alt=&quot;モザイクがかかっているけど、横にとにかく仕分けられている&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;「Google製だし、Googleカレンダーだけで済ませられないのかな～？」&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;その方法があったので紹介。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;読むのにおすすめな人&quot;&gt;読むのにおすすめな人&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Googleアカウントを分けて、予定を分けている人&lt;/li&gt;
+  &lt;li&gt;Google Classroomなど別の方法で予定を分けている人&lt;/li&gt;
+  &lt;li&gt;GoogleカレンダーやOutlookなどで予定を分けている人&lt;/li&gt;
+  &lt;li&gt;その他、いろいろな方法で予定を分けている人&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-by-step&quot;&gt;Step by Step&lt;/h2&gt;
+
+&lt;h3 id=&quot;step1---ブラウザ版のgoogleカレンダーを開く&quot;&gt;Step1 - ブラウザ版のGoogleカレンダーを開く&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://calendar.google.com/&quot;&gt;Googleカレンダー&lt;/a&gt; を開きます。
+スマホの場合、アプリ版だとできませんでしたが、ブラウザ版では同じようにできました。&lt;/p&gt;
+
+&lt;h3 id=&quot;step2---設定を開く&quot;&gt;Step2 - 設定を開く&lt;/h3&gt;
+
+&lt;p&gt;画面上部にある「設定」を開きます。
+&lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step3---新しいカレンダーを作成する&quot;&gt;Step3 - 新しいカレンダーを作成する&lt;/h3&gt;
+
+&lt;p&gt;「カレンダーを追加」→「新しいカレンダー」へ行きます。&lt;/p&gt;
+
+&lt;p&gt;「名前」（仕分ける予定のカテゴリー）と「説明」（自分がわかるように）を入力し、「作成」します。&lt;br /&gt;
+ここでは、名前を「Payment」、説明を「定期購入の支払日」としました。
+&lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/03.png&quot; alt=&quot;入力して作成する&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;これで、仕分けの設定は完了です。&lt;/p&gt;
+
+&lt;h2 id=&quot;仕分けてみる&quot;&gt;仕分けてみる&lt;/h2&gt;
+
+&lt;p&gt;実際に仕分けていきます。&lt;/p&gt;
+
+&lt;h3 id=&quot;予定を作成&quot;&gt;予定を作成&lt;/h3&gt;
+
+&lt;p&gt;予定を作成する際に、「&lt;span class=&quot;material-icons&quot;&gt;event&lt;/span&gt;」のアイコンがあります。その横のプルダウンメニューから、先ほど作成したものを選択します。&lt;br /&gt;
+&lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ほかの情報も加えて、保存します。&lt;/p&gt;
+
+&lt;h3 id=&quot;予定一覧を見る&quot;&gt;予定一覧を見る&lt;/h3&gt;
+
+&lt;p&gt;月間予定などを見ると、仕分けられているのがわかります。
+&lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;その予定だけ見たい場合は、ブラウザ版の画面左側にある「マイカレンダー」のチェックボックスから切り替えられます。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Google" /><category term="Calendar" /><summary type="html">経緯 Googleカレンダーをよく使っています。 学校でよくGoogle Classroomを使っていて、画面横にクラスごとのカレンダーが出てくるので、予定の種類ごとにクラスを作っていました。 「Google製だし、Googleカレンダーだけで済ませられないのかな～？」 その方法があったので紹介。</summary></entry><entry><title type="html">ドメインパーキングを使ってみる</title><link href="https://a01sa01to.com/blog/2021/02/domain-parking" rel="alternate" type="text/html" title="ドメインパーキングを使ってみる" /><published>2021-02-02T00:00:00+09:00</published><updated>2020-03-16T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/02/domain-parking</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/02/domain-parking">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
+
+&lt;p&gt;2月から &lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FPLU8Q+0K+10FASI&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;A8.net&lt;/a&gt;&lt;img border=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot; src=&quot;https://www14.a8.net/0.gif?a8mat=3H5C5X+FPLU8Q+0K+10FASI&quot; alt=&quot;&quot; class=&quot;a8&quot; /&gt; という、割と有名なアフィリエイトサイトに申し込んでみました。&lt;br /&gt;
+&lt;a href=&quot;./domain-transfer&quot;&gt;前回の記事&lt;/a&gt; で試しに「&lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;お名前.com&lt;/a&gt;&lt;img border=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot; src=&quot;https://www18.a8.net/0.gif?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; alt=&quot;&quot; class=&quot;a8&quot; /&gt;」やってみようかな～と提携申し込みしたら…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-parking/01.png&quot; alt=&quot;ドメイン無料プレゼント！？&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;太っ腹すぎません？？？？&lt;/p&gt;
+
+&lt;p&gt;さらになんと今日には
+&lt;img src=&quot;/img/blog/2021/02/domain-parking/02.png&quot; alt=&quot;.tokyoドメイン無料プレゼント！？&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;これは激熱でしょ…&lt;/p&gt;
+
+&lt;p&gt;で &lt;a href=&quot;http://asas.work&quot;&gt;asas.work&lt;/a&gt; と &lt;a href=&quot;http://asas.tokyo&quot;&gt;asas.tokyo&lt;/a&gt; の2ドメインを取得したはいいが、使う予定がない…。
+&lt;img src=&quot;/img/blog/2021/02/domain-parking/03.png&quot; alt=&quot;使う予定がない&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;そこで、使わないドメインを有効活用できるかな～と思い始めることにした。&lt;/p&gt;
+
+&lt;h2 id=&quot;ドメインパーキングとは&quot;&gt;ドメインパーキングとは？&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-parking/04.png&quot; alt=&quot;&quot; /&gt;
+&lt;a href=&quot;https://www.onamae.com/service/parking/?btn_id=commonfooter_op_parking&quot;&gt;ドメインパーキング｜ドメイン取るならお名前.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上のページを見てもらえればわかるんですけど、&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;ドメインパーキングを設定すると、お持ちのドメインに対して広告掲載ページを展開します。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ということなので、設定すると自動的に広告が掲載されて、クリックされると報酬が発生する、ということっぽいです。&lt;/p&gt;
+
+&lt;h2 id=&quot;登録してみる&quot;&gt;登録してみる&lt;/h2&gt;
+
+&lt;p&gt;ドメインパーキングに使用するドメインを追加します。
+&lt;img src=&quot;/img/blog/2021/02/domain-parking/05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;私は2つとも追加しました。&lt;br /&gt;
+（一応このサイトの &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a01sa01to.com&lt;/code&gt; は&lt;a href=&quot;./domain-transfer&quot;&gt;前回の記事&lt;/a&gt;で述べていますが、Googleドメインに移管したので表示されていません。）&lt;/p&gt;
+
+&lt;p&gt;次の画面で同意すれば、終わり。
+&lt;img src=&quot;/img/blog/2021/02/domain-parking/06.png&quot; alt=&quot;ネームサーバーとAレコードが変わるらしい&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;一応dns確認してみる&quot;&gt;一応DNS確認してみる&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-parking/07.png&quot; alt=&quot;よくわからんレコードが追加されてる&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;試しにアクセスしてみると、Simcastなるサイトに飛ばされました。&lt;br /&gt;
+&lt;del&gt;リダイレクトなのね？？広告掲載じゃないのかよ…&lt;/del&gt;
+&lt;img src=&quot;/img/blog/2021/02/domain-parking/08.png&quot; alt=&quot;飛ばされた&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;（2021.03.16追記）&lt;br /&gt;
+飛ばされる先は、（定期的なのか不定期的なのかは不明ですが）変わるようです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Domain-Parking" /><summary type="html">経緯</summary></entry><entry><title type="html">ドメインを移管しました</title><link href="https://a01sa01to.com/blog/2021/02/domain-transfer" rel="alternate" type="text/html" title="ドメインを移管しました" /><published>2021-02-01T00:00:00+09:00</published><updated>2020-02-01T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/02/domain-transfer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/02/domain-transfer">&lt;p&gt;この記事、今更感がすごい&lt;/p&gt;
+
+&lt;h2 id=&quot;移管した理由&quot;&gt;移管した理由&lt;/h2&gt;
+&lt;p&gt;最初にドメインを登録したのが2019年4月1日。&lt;br /&gt;
+だから1年と7ヶ月くらい？ &lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;お名前.com&lt;/a&gt;
+&lt;img border=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot; src=&quot;https://www18.a8.net/0.gif?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; alt=&quot;&quot; class=&quot;a8&quot; /&gt;を使っていたんですよね。&lt;/p&gt;
+
+&lt;p&gt;サイトを再構築するときに考えていたのは&lt;/p&gt;
+
+&lt;idea&gt;
+Git と 連携 させたい ... ！！
+&lt;/idea&gt;
+
+&lt;p&gt;Google App Engine ならGitHubにソース上げればデプロイしてくれるからベストだと思い、
+いっそのことGoogleサービスにまとめちゃえ！！っていうだけ。
+（GitHub Actions使えばFTPで上げられたりするんですけどね）&lt;/p&gt;
+
+&lt;h2 id=&quot;タイムライン&quot;&gt;タイムライン&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;2020.11.29 19:50 ドメイン移管手続き開始&lt;/li&gt;
+  &lt;li&gt;2020.11.29 19:57 支払い&lt;/li&gt;
+  &lt;li&gt;2020.11.29 20:27 拒否られた&lt;/li&gt;
+  &lt;li&gt;2020.11.30 18:43 リベンジ&lt;/li&gt;
+  &lt;li&gt;2020.11.30 19:38 確認メールが来た&lt;/li&gt;
+  &lt;li&gt;2020.11.30 22:15 メールに気づき、承認&lt;/li&gt;
+  &lt;li&gt;2020.11.30 22:27 移管完了&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-by-step&quot;&gt;Step by Step&lt;/h2&gt;
+&lt;p&gt;今回は「お名前.com（以下「移管元」）」から「Google Domains（以下「移管先」）」に移管しました。&lt;/p&gt;
+
+&lt;h3 id=&quot;step1---入力&quot;&gt;Step1 - 入力&lt;/h3&gt;
+&lt;p&gt;移管先のサイトを開き、「移管する」ページを開きます。
+移管したいドメインを入力します。
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/01.png&quot; alt=&quot;移管するドメインをテキストボックスに入力&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step2---authcode&quot;&gt;Step2 - AuthCode&lt;/h3&gt;
+&lt;p&gt;移管元から、AuthCodeを取得します。移管先に入力します。
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/02.png&quot; alt=&quot;移管元から取得して...&quot; /&gt;
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/03.png&quot; alt=&quot;移管先に貼り付け&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step3---whois代行公開を一時無効化&quot;&gt;Step3 - Whois代行公開を一時無効化&lt;/h3&gt;
+&lt;p&gt;Whois公開代行を一時的に無効化しないと、移管できないようです（お名前.comの場合は）。&lt;br /&gt;
+私は無効化していなかったので、拒否されました。
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/10.png&quot; alt=&quot;拒否された！？&quot; /&gt;
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/11.png&quot; alt=&quot;Whois公開代行されているとダメらしい&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;なので、忘れずに無効化しておきましょう。&lt;/p&gt;
+
+&lt;h3 id=&quot;step4---設定確認&quot;&gt;Step4 - 設定確認&lt;/h3&gt;
+&lt;p&gt;設定を確認します。&lt;br /&gt;
+&lt;del&gt;DNS設定は引き継がれるらしい。まあ引き継がれなかったら困る。&lt;/del&gt;&lt;br /&gt;
+一部引き継がれてなかった。一応移管後に確認しておいたほうがよさそうです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-transfer/04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;なお、この時支払うのは、1年間分の料金である￥1,400です。
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step5---支払い&quot;&gt;Step5 - 支払い&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-transfer/06.png&quot; alt=&quot;JCBで払おうとすると...？&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;いつも使っているJCB（LINE Pay）でやろうとしたところ、何度やってもダメでした。
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/07.png&quot; alt=&quot;なんでや！&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;そこでVisaを使ってみると、支払い完了しました。
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-transfer/09.png&quot; alt=&quot;支払いが完了するとステータスが表示される&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step6---移管承認&quot;&gt;Step6 - 移管承認&lt;/h3&gt;
+&lt;p&gt;支払い後、移管元からメールが届きます。&lt;br /&gt;
+このメールから承認しないと、移管できないので、承認します。
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/12.png&quot; alt=&quot;確認メールが届くので&quot; /&gt;
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/13.png&quot; alt=&quot;承認&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step7---移管完了&quot;&gt;Step7 - 移管完了&lt;/h3&gt;
+&lt;p&gt;しばらくすると、移管が完了し、移管先からメールが届きました。
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/14.png&quot; alt=&quot;！！！&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;DNSはいくつか引き継がれていませんでした。
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/15.png&quot; alt=&quot;DNS一覧&quot; /&gt;&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Website" /><summary type="html">この記事、今更感がすごい</summary></entry><entry><title type="html">Hello World, publishing my website</title><link href="https://a01sa01to.com/blog/2020/12/hello-world" rel="alternate" type="text/html" title="Hello World, publishing my website" /><published>2020-12-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2020/12/hello-world</id><content type="html" xml:base="https://a01sa01to.com/blog/2020/12/hello-world">&lt;h1 id=&quot;hello-world&quot;&gt;Hello World!&lt;/h1&gt;
+&lt;p&gt;この度、このサイトを立ち上げました。&lt;br /&gt;
+というか、以前のサイトをリフォームしました。&lt;/p&gt;
+
+&lt;h2 id=&quot;このサイトについて&quot;&gt;このサイトについて&lt;/h2&gt;
+&lt;p&gt;Asaのブログです。&lt;br /&gt;
+えっ？うん。それだけ。&lt;/p&gt;
+
+&lt;h2 id=&quot;このファイルはmarkdownで書かれています&quot;&gt;このファイルはMarkdownで書かれています。&lt;/h2&gt;
+&lt;p&gt;だから…&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;太字&lt;/strong&gt; も &lt;em&gt;斜体&lt;/em&gt; も &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Code&lt;/code&gt; も&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;JavaScriptも。&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Markdown 恐るべし…。&lt;/p&gt;
+
+&lt;p&gt;そのうち技術記事出すつもり。「そのうち」ね。&lt;/p&gt;
+
+&lt;h2 id=&quot;thanks&quot;&gt;Thanks&lt;/h2&gt;
+&lt;p&gt;Build with &lt;a href=&quot;https://jekyllrb.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;/img/footer/jekyll_logo.png&quot; alt=&quot;Jekyll&quot; style=&quot;width: 59px;height: 30px;&quot; class=&quot;hv_gray no_alt&quot; /&gt;&lt;/a&gt;&lt;br /&gt;
+Deploy on &lt;a href=&quot;https://cloud.google.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;/img/footer/google_cloud_logo.png&quot; alt=&quot;Google Cloud&quot; style=&quot;width: 118px;height: 30px;&quot; class=&quot;hv_gray no_alt&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Asa</name></author><category term="Hello-World" /><summary type="html">Hello World! この度、このサイトを立ち上げました。 というか、以前のサイトをリフォームしました。</summary></entry></feed>
