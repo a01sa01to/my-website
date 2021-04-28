@@ -13,20 +13,10 @@ updates:
       interval: "daily"
     labels:
       - "dependencies"
-    versioning-strategy: lockfile-only
 
-  - package-ecosystem: "npm"
-    directory: "/blog/"
+  - package-ecosystem: "bundler"
+    directory: "/default/"
     schedule:
       interval: "daily"
     labels:
       - "dependencies"
-    versioning-strategy: lockfile-only
-
-  - package-ecosystem: "npm"
-    directory: "/opendata/"
-    schedule:
-      interval: "daily"
-    labels:
-      - "dependencies"
-    versioning-strategy: lockfile-only
