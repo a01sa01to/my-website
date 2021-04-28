@@ -1,5 +1,5 @@
-import json
 import csv
+import json
 import os
 
 json_list = {
@@ -66,5 +66,5 @@ for filename in FILELIST:
       json.dump(json_base, f, ensure_ascii=False, indent=2, separators=(",", ": "))
 
 
-with open("../../_data/covid19_ibaraki.json", "w", encoding="UTF-8") as f:
+with open("../../../_data/covid19_ibaraki.json", "w", encoding="UTF-8") as f:
   json.dump(json_list, f, ensure_ascii=False, indent=2, separators=(",", ": "))
