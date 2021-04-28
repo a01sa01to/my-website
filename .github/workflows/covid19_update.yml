@@ -17,9 +17,6 @@ jobs:
         uses: actions/setup-python@v2.2.2
         with:
           python-version: 3.8
-      - name: Download Last Update time
-        run: 'curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=last_update -L -o last_update.json'
-        working-directory: ./default/opendata/data/covid19_ibaraki/
       - name: Download Files
         run: |
           curl ${DATA_UPDATE_URL}?data=patients_data -L -o 080004_ibaraki_covid19_patients.csv
@@ -33,7 +30,8 @@ jobs:
           curl ${DATA_UPDATE_URL}?data=corona_next -L -o 080004_ibaraki_covid19_corona_next.json
           curl ${DATA_UPDATE_URL}?data=forked_sites -L -o otherpref.csv
           curl ${DATA_UPDATE_URL}?data=news_json -L -o news.json
-        working-directory: ./opendata/data/covid19_ibaraki/
+          curl ${DATA_UPDATE_URL}?data=last_update -L -o last_update.json
+        working-directory: ./default/opendata/data/covid19_ibaraki/
         env:
           DATA_UPDATE_URL: "https://script.google.com/macros/s/AKfycbzsEmhJAsh9PKuTcZb1POcO8wJnN0WUOaiVzq2ENCVncBI_UKJBkLNP_9yiosjLFiA7/exec"
       - name: Create Info Json
