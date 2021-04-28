@@ -35,8 +35,8 @@ jobs:
         env:
           DATA_UPDATE_URL: "https://script.google.com/macros/s/AKfycbzsEmhJAsh9PKuTcZb1POcO8wJnN0WUOaiVzq2ENCVncBI_UKJBkLNP_9yiosjLFiA7/exec"
       - name: Create Info Json
-        run: python ../../../workflow_tool/opendata/covid19_ibk.py
-        working-directory: ./opendata/data/covid19_ibaraki
+        run: python ../../../../workflow_tool/opendata/covid19_ibk.py
+        working-directory: ./default/opendata/data/covid19_ibaraki
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
@@ -68,7 +68,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ./default/vendor/bundle
-          key: ${{ runner.os }}-gem-${{ hashFiles('./opendata/Gemfile.lock') }}
+          key: ${{ runner.os }}-gem-${{ hashFiles('./default/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gem-
       - name: Prepare bundler
