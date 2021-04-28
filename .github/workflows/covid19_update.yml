@@ -19,7 +19,7 @@ jobs:
           python-version: 3.8
       - name: Download Last Update time
         run: 'curl https://script.google.com/macros/s/AKfycbwgad-TiLkvm0p81eG9_xJSdmXK9HY_o8ET6nNqqRO9G704TxUsyZ-9vw/exec?data=last_update -L -o last_update.json'
-        working-directory: ./opendata/data/covid19_ibaraki/
+        working-directory: ./default/opendata/data/covid19_ibaraki/
       - name: Download Files
         run: |
           curl ${DATA_UPDATE_URL}?data=patients_data -L -o 080004_ibaraki_covid19_patients.csv
@@ -69,7 +69,7 @@ jobs:
       - name: Cache deps
         uses: actions/cache@v2
         with:
-          path: ./opendata/vendor/bundle
+          path: ./default/vendor/bundle
           key: ${{ runner.os }}-gem-${{ hashFiles('./opendata/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gem-
@@ -77,16 +77,16 @@ jobs:
         run: |
           gem install bundler
           bundle config path vendor/bundle
-        working-directory: ./opendata
+        working-directory: ./default
       - name: Install deps
         run: bundle install
-        working-directory: ./opendata
+        working-directory: ./default
       - name: Build
         run: bundle exec jekyll build
-        working-directory: ./opendata
+        working-directory: ./default
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./opendata/_site
-          publish_branch: opendata_deploy
+          publish_dir: ./default/_site
+          publish_branch: def_deploy

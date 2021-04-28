@@ -6,11 +6,6 @@ on:
       - main
     paths:
       - 'opendata/**'
-      - 'default/_includes/**'
-      - 'default/_layouts/**'
-      - 'default/css/**'
-      - 'default/err/**'
-      - 'default/img/**'
 
 jobs:
   build:
@@ -24,31 +19,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: main
-      - name: Setup Ruby
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: '2.7'
-      - name: Cache deps
-        uses: actions/cache@v2
-        with:
-          path: ./opendata/vendor/bundle
-          key: ${{ runner.os }}-gem-${{ hashFiles('./opendata/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gem-
-      - name: Prepare bundler
-        run: |
-          gem install bundler
-          bundle config path vendor/bundle
-        working-directory: ./opendata
-      - name: Install deps
-        run: bundle install
-        working-directory: ./opendata
-      - name: Build
-        run: bundle exec jekyll build
-        working-directory: ./opendata
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./opendata/_site
+          publish_dir: ./opendata
           publish_branch: opendata_deploy
