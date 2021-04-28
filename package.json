@@ -1,23 +1,9 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "node ."
-  },
-  "keywords": [],
-  "author": "Asa <npm@a01sa01to.com>",
   "license": "MIT",
   "dependencies": {
-    "ace-builds": "^1.4.12",
-    "express": "^4.17.1",
-    "jquery": "^3.5.1",
-    "webpack": "^5.4.0"
-  },
-  "devDependencies": {
-    "webpack-cli": "^4.2.0"
+    "express": "^4.17.1"
   }
 }
