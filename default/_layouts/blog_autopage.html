@@ -9,7 +9,7 @@ layout: blog
 <div class="container">
   <div>
     <h1>「{% if page.autopages %}{{page.autopages.display_name}}{% endif %}」の記事一覧（{{page.pagination_info.curr_page}} / {{page.pagination_info.total_pages}}）</h1>
-    <a href="/tags/" class="back">&lt; タグ一覧</a>
+    <a href="/blog/tags/" class="back">&lt; タグ一覧</a>
     <div class="article_container">
       {% for post in paginator.posts %}
         <div class="article_card">

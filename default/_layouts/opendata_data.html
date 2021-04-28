@@ -4,14 +4,14 @@
   <title lang="ja">{{ page.titleJa }} | {{ page.parentJa }} - Asa's Opendata Catalog</title>
   <title lang="en">{{ page.titleEn }} | {{ page.parentEn }} - Asa's Opendata Catalog</title>
   {% feed_meta %}
-  {% include meta.html logotitle="Opendata Catalog" subdomain="opendata." %}
+  {% include meta.html logotitle="Opendata Catalog" subdomain="/opendata" %}
   {% include css.html %}
   {% include script.html %}
   <link rel="stylesheet" href="/css/opendata.css">
   <link rel="stylesheet" href="/css/material/btn.css">
 </head>
 <body id="top">
-  <header>{% include header.html logotitle="Opendata Catalog" %}</header>
+  <header>{% include header.html logotitle="Opendata Catalog" subdomain="/opendata" %}</header>
   <main>
     <div class="container">
       <div>
@@ -25,7 +25,7 @@
         <p class="note" lang="en">When you publish a work using this data, please be sure to include a link to this page.</p>
         <h2 lang="ja">情報</h2>
         <h2 lang="en">Information</h2>
-        <input type="hidden" name="fn" value="/data/{{ page.opendir }}/{{ page.filename }}">
+        <input type="hidden" name="fn" value="/opendata/data/{{ page.opendir }}/{{ page.filename }}">
         <table>
           <tr lang="ja"><th>フィールド</th><th>値</th></tr>
           <tr lang="en"><th>Field</th><th>Value</th></tr>
@@ -79,7 +79,7 @@
                   {{ content }}
                 </ul>
               </div>
-              <code>https://opendata.a01sa01to.com/data/{{ page.opendir }}/{{ page.filename }}</code>
+              <code>https://a01sa01to.com/opendata/data/{{ page.opendir }}/{{ page.filename }}</code>
               <button class="material" data-clipboard-target=".modal .api code" lang="ja"><span>content_copy</span>URLをコピー</button>
               <button class="material" data-clipboard-target=".modal .api code" lang="en"><span>content_copy</span>Copy the URL</button>
             </div>

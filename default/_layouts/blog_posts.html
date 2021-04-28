@@ -3,14 +3,14 @@
 <head>
   <title>{{ page.title }} - Asa's Blog</title>
   {% feed_meta %}
-  {% include meta.html logotitle="Blog" subdomain="blog." %}
+  {% include meta.html logotitle="Blog" subdomain="/blog" %}
   {% include css.html %}
   {% include script.html %}
-  <link rel="canonical" href="https://blog.a01sa01to.com{{ page.relPath }}">
+  <link rel="canonical" href="https://a01sa01to.com/blog{{ page.relPath }}">
   <link rel="stylesheet" href="/css/blog_post.css">
 </head>
 <body id="top">
-  <header>{% include header.html logotitle="Blog" %}</header>
+  <header>{% include header.html logotitle="Blog" subdomain="/blog" %}</header>
   <main>
     <div class="container">
       <div>
@@ -18,7 +18,7 @@
         <p class="tags">
           Tags:
           {% for tag in page.tags %}
-            <a href="/tags/{{ tag }}/" class="tag">{{ tag }}</a>&nbsp;
+            <a href="/blog/tags/{{ tag }}/" class="tag">{{ tag }}</a>&nbsp;
           {% endfor %}
         </p>
         <p class="date"><nobr>Published on {{ page.date | date: "%Y.%m.%d"}}.<wbr> Last Modified on {{ page.last_modified_at | date: "%Y.%m.%d"}}.</nobr></p>
@@ -29,9 +29,9 @@
         {% assign pageYear = page.date | date: "%Y" %}
         {% assign todayYear = "now" | date: "%Y" %}
         {% if todayYear == pageYear %}
-          <a href="/list/">&lt; Post in {{ pageYear }}</a>
+          <a href="/blog/list/">&lt; Post in {{ pageYear }}</a>
         {% else %}
-          <a href="/list/{{ pageYear }}">&lt; Post in {{ pageYear }}</a>
+          <a href="/blog/list/{{ pageYear }}">&lt; Post in {{ pageYear }}</a>
         {% endif %}
       </div>
     </div>

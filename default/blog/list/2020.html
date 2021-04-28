@@ -9,7 +9,7 @@ last_modified_at: 2020-11-23
 <div class="container center">
   <div>
     <h1>{{ yr }}年の記事一覧</h1>
-    <a href="../" class="back">&lt; Top</a>
+    <a href="/blog/" class="back">&lt; Top</a>
     {% for month in (1..12) reversed %}
       <h2>{{ month }}月</h2>
       {% capture firstDate %}{{yr}}-{{month}}-01{% endcapture %}
@@ -30,7 +30,7 @@ last_modified_at: 2020-11-23
       </div>
     {% endfor %}
     <p class="left">
-      <a href="/list/">&lt; 2021年の記事</a>
+      <a href="/blog/list/">&lt; 2021年の記事</a>
     </p>
   </div>
 </div>
