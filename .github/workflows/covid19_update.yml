@@ -33,7 +33,7 @@ jobs:
           curl ${DATA_UPDATE_URL}?data=last_update -L -o last_update.json
         working-directory: ./default/opendata/data/covid19_ibaraki/
         env:
-          DATA_UPDATE_URL: "https://script.google.com/macros/s/AKfycbzsEmhJAsh9PKuTcZb1POcO8wJnN0WUOaiVzq2ENCVncBI_UKJBkLNP_9yiosjLFiA7/exec"
+          DATA_UPDATE_URL: "https://script.google.com/macros/s/AKfycbyzoAflJiBH8krkbhXfXk3MBexANc583Nm3n4wv3jemrf2bDrKH5xF4DLUxS6fumS1cZw/exec"
       - name: Create Info Json
         run: python ../../../../workflow_tool/opendata/covid19_ibk.py
         working-directory: ./default/opendata/data/covid19_ibaraki
