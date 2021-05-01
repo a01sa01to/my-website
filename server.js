@@ -9,7 +9,7 @@ const notAllowed = require('./server_notAllowed.json')
 app.use((req, res) => {
   console.log(req.path)
   for (let nonAllow of notAllowed) {
-    if(!req.path.match(new RegExp(nonAllow))){
+    if(req.path.match(new RegExp(nonAllow))){
       res.status(404).sendFile(path.join(__dirname, `err/404.html`))
       return
     }
