@@ -9,44 +9,40 @@ layout: blog
 <div class="container">
   <div>
     <h1>「{% if page.autopages %}{{page.autopages.display_name}}{% endif %}」の記事一覧（{{page.pagination_info.curr_page}} / {{page.pagination_info.total_pages}}）</h1>
-    <a href="/blog/tags/" class="back">&lt; タグ一覧</a>
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb" lang="ja">
+        <li class="breadcrumb-item"><a href="/blog/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/blog/tags/">タグ一覧</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ page.autopages.display_name }}</li>
+      </ol>
+    </nav>
     <div class="article_container">
       {% for post in paginator.posts %}
-        <div class="article_card">
-          <p class="title"><a href="{{ post.url }}">{{ post.title }}</a></p>
-          <p class="date">{{ post.date | date: "%Y.%m.%d"}}</p>
-        </div>
+      <div class="card">
+        <a href="{{ post.url }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.date | date: "%Y.%m.%d"}}</p>
+          </div>
+        </a>
+      </div>
       {% endfor %}
     </div>
-    {% if paginator.total_pages > 1 %}
-    <div class="pagination_link">
-      {% if page.pagination_info.curr_page != 1 and page.pagination_info.curr_page != 2 and page.pagination_info.curr_page != 3 and paginator.first_page %}
-        <a href="/{{ paginator.first_page_path }}">&Lt; 1</a>
-        <span>...</span>
-      {% elsif page.pagination_info.curr_page == 3 and paginator.first_page %}
-        <a href="/{{ paginator.first_page_path }}">&Lt; 1</a>
-      {% else %}
-        <span></span><span></span>
-      {% endif %}
-      {% if paginator.previous_page %}
-        <a href="/{{ paginator.previous_page_path }}">&lt; {{prev}}</a>
-      {% else %}
-        <span></span>
-      {% endif %}
-      <span>{{page.pagination_info.curr_page}}</span>
-      {% if paginator.next_page %}
-        <a href="/{{ paginator.next_page_path }}">{{next}} &gt;</a>
-      {% else %}
-        <span></span>
-      {% endif %}
-      {% if paginator.next_page and paginator.last_page and paginator.total_pages != next and paginator.total_pages != next2 %}
-        <span>...</span>
-        <a href="/{{ paginator.last_page_path }}">{{page.pagination_info.total_pages}} &Gt;</a>
-      {% elsif paginator.next_page and paginator.last_page and paginator.total_pages == next2 %}
-        <a href="/{{ paginator.last_page_path }}">{{page.pagination_info.total_pages}} &Gt;</a>
-      {% else %}
-        <span></span><span></span>
-      {% endif %}
-    {% endif %}
-    </div>
+
+    <nav aria-label="Blog Tag List Pagination">
+      <ul class="pagination">
+        {% if paginator.first_page %}
+          {% if page.pagination_info.curr_page >= 3 %}<li class="page-item"><a class="page-link" href="/{{ paginator.first_page_path }}">1</a></li>{% endif %}
+          {% if page.pagination_info.curr_page > 3 %}<li class="page-item"><a href="#" class="page-link">...</a></li>{% endif %}
+        {% endif %}
+        {% if paginator.previous_page %}<li class="page-item"><a href="/{{ paginator.previous_page_path }}">{{ paginator.previous_page }}</a></li>{% endif %}
+        <li class="page-item active" aria-current="page"><a class="page-link" href="#">{{ paginator.page }}</a></li>
+        {% if paginator.next_page %}<li class="page-item"><a href="/{{ paginator.next_page_path }}">{{ paginator.next_page }}</a></li>{% endif %}
+        {% if paginator.next_page and paginator.last_page %}
+          {% if paginator.total_pages > next2 %}<li class="page-item"><a href="#" class="page-link">...</a></li>{% endif %}
+          {% if paginator.total_pages >= next2 %}<a href="/{{ paginator.last_page_path }}">{{page.pagination_info.total_pages}}</a>{% endif %}
+        {% endif %}
+      </ul>
+    </nav>
 </div>

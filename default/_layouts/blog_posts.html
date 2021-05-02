@@ -15,6 +15,15 @@
     <div class="container">
       <div>
         <h1>{{ page.title }}</h1>
+        {% assign pageYear = page.date | date: "%Y" %}
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb" lang="ja">
+            <li class="breadcrumb-item"><a href="/blog/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/blog/list/{{ pageYear }}">{{ pageYear }}年の記事</a></li>
+            <li class="breadcrumb-item active" aria-current="page">この記事</li>
+          </ol>
+        </nav>
+
         <p class="tags">
           Tags:
           {% for tag in page.tags %}
@@ -26,13 +35,6 @@
           {{ content }}
           <p class="a_few_word">{{ page.a_few_word }}</p>
         </div>
-        {% assign pageYear = page.date | date: "%Y" %}
-        {% assign todayYear = "now" | date: "%Y" %}
-        {% if todayYear == pageYear %}
-          <a href="/blog/list/">&lt; Post in {{ pageYear }}</a>
-        {% else %}
-          <a href="/blog/list/{{ pageYear }}">&lt; Post in {{ pageYear }}</a>
-        {% endif %}
       </div>
     </div>
   </main>

@@ -1,8 +1,10 @@
-import ace from 'ace-builds'
+import Ace from 'ace-builds'
+import mode_json from 'ace-builds/src-noconflict/mode-json'
+import mode_csv from 'ace-builds/src-noconflict/mode-plain_text'
+import theme_github from 'ace-builds/src-noconflict/theme-github'
+import { Toast } from 'bootstrap'
 import ClipboardJS from 'clipboard'
 import $ from 'jquery'
-
-import { sleep } from './func'
 
 if (location.pathname.includes('/opendata/')) {
   window.addEventListener('DOMContentLoaded', () => {
@@ -11,10 +13,40 @@ if (location.pathname.includes('/opendata/')) {
       const filename = filepath.split('/').slice(-1)[0]
       const filefull = filepath.split('/').slice(-2)[0] + '/' + filename
 
-      $('div.flex div.pre').on('click', async function () {
-        $('.modal').fadeIn()
-        $('.modal .pre, .modal .dl, .modal .api').hide()
-        $('.modal .load').show()
+      const editor = Ace.edit('ace', {
+        tabSize: 4,
+        useSoftTabs: true,
+        wrap: true,
+        readOnly: true,
+        maxLines: 10,
+        minLines: 1,
+        fontSize: 14,
+      })
+      editor.setTheme(theme_github)
+      const format = $('table td#format').text()
+
+      /* eslint-disable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
+      if (format === 'CSV') {
+        editor.session.setMode(new mode_csv.Mode())
+      }
+      if (format === 'JSON') {
+        editor.session.setMode(new mode_json.Mode())
+      }
+      /* eslint-enable */
+
+      document.querySelectorAll('#ace *').forEach((__) => {
+        const _ = __ as HTMLElement
+        _.oncontextmenu = () => false
+        _.onselectstart = () => false
+        _.onselect = () => false
+        _.onmousedown = () => false
+        _.onkeydown = () => false
+      })
+
+      $('div.flex button.pre').on('click', async function () {
+        editor.setValue('Loading...')
+        editor.clearSelection()
+
         const content = await fetch(filepath!)
           .then((r) => r.blob())
           .then((b) => {
@@ -22,28 +54,8 @@ if (location.pathname.includes('/opendata/')) {
             return b.text()
           })
 
-        const editor = ace.edit('ace', {
-          tabSize: 2,
-          useSoftTabs: true,
-          wrap: true,
-          readOnly: true,
-          maxLines: 10,
-          minLines: 1,
-          autoScrollEditorIntoView: true,
-        })
         editor.setValue(content)
-        document.querySelectorAll('#ace *').forEach((__) => {
-          const _ = __ as HTMLElement
-          _.oncontextmenu = () => false
-          _.onselectstart = () => false
-          _.onselect = () => false
-          _.onmousedown = () => false
-          _.onkeydown = () => false
-        })
         editor.clearSelection()
-
-        $('.modal .load').hide()
-        $('.modal .pre').show()
 
         gtag('event', 'opendata', {
           mode: 'preview',
@@ -51,19 +63,7 @@ if (location.pathname.includes('/opendata/')) {
         })
       })
 
-      $('div.flex div.dl').on('click', function () {
-        $('.modal').fadeIn()
-        $('.modal .pre, .modal .load, .modal .api').hide()
-        $('.modal .dl').show()
-      })
-
-      $('div.flex div.api').on('click', function () {
-        $('.modal').fadeIn()
-        $('.modal .pre, .modal .load, .modal .dl').hide()
-        $('.modal .api').show()
-      })
-
-      $('.modal div.dl button').on('click', function () {
+      $('.modal#dl button.btn-outline-primary').on('click', function () {
         const a = document.createElement('a')
         a.download = filename
         a.href = filepath!
@@ -75,22 +75,32 @@ if (location.pathname.includes('/opendata/')) {
         a.remove()
       })
 
-      const copy = new ClipboardJS('.modal div.api button')
+      const copy = new ClipboardJS('.modal#api button.btn-outline-primary')
+
+      const copyToastElem = document.querySelector('.modal#api .toast')
+      const copyToast = new Toast(copyToastElem || '.modal#api .toast')
+
       copy.on('error', (e) => {
-        alert('コピーに失敗しました。')
         console.error('Action:', e.action)
         console.error('Trigger:', e.trigger)
+        if (copyToastElem) {
+          copyToastElem.innerHTML = 'コピーに失敗しました'
+          copyToastElem.classList.remove('bg-success')
+          copyToastElem.classList.add('bg-danger')
+          copyToast.show()
+        }
+      })
+      $('.modal#api button.btn-outline-primary').on('click', () => {
+        if (copyToastElem) {
+          copyToastElem.innerHTML = 'コピーしました'
+          copyToastElem.classList.remove('bg-danger')
+          copyToastElem.classList.add('bg-success')
+          copyToast.show()
+        }
       })
 
-      $('.modal').on('click', async (e) => {
-        if (e.target !== e.currentTarget) return
-        $('.modal').fadeOut()
-        await sleep(700)
-        $('.modal .modal_container > *').hide()
-      })
-
-      $('table td#upd').text($('.modal .dl ul p#updated').text())
-      $('table td#filesize').text($('.modal .dl ul p#filesize').text())
+      $('table td#upd').text($('.modal#dl ul p#updated').text())
+      $('table td#filesize').text($('.modal#dl ul p#filesize').text())
       $('.modal ul p#updated').remove()
       $('.modal ul p#filesize').remove()
       $('table td').each(function () {

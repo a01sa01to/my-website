@@ -8,7 +8,6 @@
   {% include css.html %}
   {% include script.html %}
   <link rel="stylesheet" href="/css/opendata.css">
-  <link rel="stylesheet" href="/css/material/btn.css">
 </head>
 <body id="top">
   <header>{% include header.html logotitle="Opendata Catalog" subdomain="/opendata" %}</header>
@@ -17,8 +16,22 @@
       <div>
         <h1 lang="ja">{{ page.titleJa }}</h1>
         <h1 lang="en">{{ page.titleEn }}</h1><br>
-        <a href="./" lang="ja">&lt; {{ page.parentJa }}</a>
-        <a href="./" lang="en">&lt; {{ page.parentEn }}</a><br><br>
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb" lang="ja">
+            <li class="breadcrumb-item"><a href="/opendata/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/opendata/list">提供オープンデータ一覧</a></li>
+            <li class="breadcrumb-item"><a href="./">{{ page.parentJa }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ page.titleJa }}</li>
+          </ol>
+          <ol class="breadcrumb" lang="en">
+            <li class="breadcrumb-item"><a href="/opendata/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/opendata/list">Open Data List</a></li>
+            <li class="breadcrumb-item"><a href="./">{{ page.parentEn }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ page.titleEn }}</li>
+          </ol>
+        </nav>
+
         <p class="desc" lang="ja">{{ page.descriptionJa }}</p>
         <p class="desc" lang="en">{{ page.descriptionEn }}</p><br>
         <p class="note" lang="ja">当データを利用した作品を公開する際には、必ず当ページへのリンクを記載してください。</p>
@@ -33,7 +46,7 @@
           <tr><td lang="ja">作成日</td><td lang="en">Publish</td><td>{{ page.firstPub }}</td></tr>
           <tr><td lang="ja">ファイル名</td><td lang="en">File Name</td><td>{{ page.filename }}</td></tr>
           <tr><td lang="ja">ファイルサイズ</td><td lang="en">File Size</td><td id="filesize"></td></tr>
-          <tr><td lang="ja">データ形式</td><td lang="en">Data Format</td><td>{% if page.csv %}CSV{% endif %}{% if page.json %}JSON{% endif %}</td></tr>
+          <tr><td lang="ja">データ形式</td><td lang="en">Data Format</td><td id="format">{% if page.csv %}CSV{% endif %}{% if page.json %}JSON{% endif %}</td></tr>
           <tr lang="ja"><td>ライセンス</td><td><a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener noreferrer">CC BY 4.0</a><br>出所の表示は必須ですが、商業利用・改変は許可されます。</td></tr>
           <tr lang="en"><td>License</td><td><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" rel="noopener noreferrer">CC BY 4.0</a><br>Indication of the source is required, but commercial use and modification is permitted.</td></tr>
         </table>
@@ -43,45 +56,79 @@
         <h2 lang="en">Download</h2>
         <p class="note" lang="en">Note that the data is only in Japanese.</p>
         <div class="flex" lang="ja">
-          <div class="pre">プレビュー</div>
-          <div class="dl">ダウンロード</div>
-          <div class="api">データへのURLを取得する</div>
+          <button type="button" class="btn btn-outline-dark pre" data-bs-toggle="modal" data-bs-target=".modal#preview">プレビュー</button>
+          <button type="button" class="btn btn-outline-dark dl" data-bs-toggle="modal" data-bs-target=".modal#dl">ダウンロード</button>
+          <button type="button" class="btn btn-outline-dark api" data-bs-toggle="modal" data-bs-target=".modal#api">データへのURLを取得する</button>
         </div>
         <div class="flex" lang="en">
-          <div class="pre">Preview</div>
-          <div class="dl">Download</div>
-          <div class="api">Get URL to the data</div>
+          <button type="button" class="btn btn-outline-dark pre" data-bs-toggle="modal" data-bs-target=".modal#preview">Preview</button>
+          <button type="button" class="btn btn-outline-dark dl" data-bs-toggle="modal" data-bs-target=".modal#dl">Download</button>
+          <button type="button" class="btn btn-outline-dark api" data-bs-toggle="modal" data-bs-target=".modal#api">Get URL to the data</button>
         </div>
-        <div class="modal">
-          <div class="modal_container">
-            <div class="load"><div class="loader"></div></div>
-            <div class="pre">
-              <p lang="ja">{{ page.titleJa }}のプレビュー</p>
-              <p lang="en">Preview {{ page.titleEn }}</p>
-              <div id="ace"></div>
+
+        <div class="modal fade" id="preview">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" lang="ja">プレビュー</h5>
+                <h5 class="modal-title" lang="en">Preview</h5>
+              </div>
+              <div class="modal-body" style="width: 500px;">
+                <div id="ace"></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
             </div>
-            <div class="dl">
-              <p lang="ja">以下の説明・注意点を必ずお読みになってから、{{ page.title }}をダウンロードしてください。</p>
-              <p lang="en">Please be sure to read the following instructions and cautions before downloading {{ page.titleEn }}.</p>
-              <div class="ov_y">
+          </div>
+        </div>
+        <div class="modal fade" id="dl">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" lang="ja">ダウンロード</h5>
+                <h5 class="modal-title" lang="en">Download</h5>
+              </div>
+              <div class="modal-body">
+                <p lang="ja">以下の説明・注意点を必ずお読みになってから、{{ page.titleJa }}をダウンロードしてください。</p>
+                <p lang="en">Please be sure to read the following instructions and cautions before downloading {{ page.titleEn }}.</p>
                 <ul>
                   {{ content }}
                 </ul>
               </div>
-              <button class="material" lang="ja">ファイルをダウンロード</button>
-              <button class="material" lang="en">Download the File</button>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" lang="ja">ファイルをダウンロード</button>
+                <button type="button" class="btn btn-outline-primary" lang="en">Download the File</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
             </div>
-            <div class="api">
-              <p lang="ja">以下の説明・注意点を必ずお読みになってから、{{ page.title }}を利用してください。</p>
-              <p lang="en">Please be sure to read the following instructions and cautions before using {{ page.titleEn }}.</p>
-              <div class="ov_y">
+          </div>
+        </div>
+        <div class="modal fade" id="api">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="toast d-flex align-items-center top-0 end-0 toast-container position-absolute p-3 text-white" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-body">
+                  Hello, world! This is a toast message.
+                </div>
+              </div>
+              <div class="modal-header">
+                <h5 class="modal-title" lang="ja">URLを取得</h5>
+                <h5 class="modal-title" lang="en">Get the URL</h5>
+              </div>
+              <div class="modal-body">
+                <p lang="ja">以下の説明・注意点を必ずお読みになってから、{{ page.titleJa }}をダウンロードしてください。</p>
+                <p lang="en">Please be sure to read the following instructions and cautions before downloading {{ page.titleEn }}.</p>
                 <ul>
                   {{ content }}
                 </ul>
               </div>
-              <code>https://a01sa01to.com/opendata/data/{{ page.opendir }}/{{ page.filename }}</code>
-              <button class="material" data-clipboard-target=".modal .api code" lang="ja"><span>content_copy</span>URLをコピー</button>
-              <button class="material" data-clipboard-target=".modal .api code" lang="en"><span>content_copy</span>Copy the URL</button>
+              <div class="modal-footer">
+                <code>https://a01sa01to.com/opendata/data/{{ page.opendir }}/{{ page.filename }}</code><br><br>
+                <button type="button" class="btn btn-outline-primary" data-clipboard-target=".modal#api code" lang="ja"><span>content_copy</span>URLをコピー</button>
+                <button type="button" class="btn btn-outline-primary" data-clipboard-target=".modal#api code" lang="en"><span>content_copy</span>Copy the URL</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
             </div>
           </div>
         </div>

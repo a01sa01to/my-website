@@ -37,9 +37,10 @@ if (location.pathname.includes('/blog/')) {
     }
 
     $('.article_container').each(function () {
-      const $list = $(this).find('.article_card')
+      const $list = $(this).find('.card')
       if ($list.length === 0) {
         $(this).prev('h2').remove()
+        $(this).remove()
       }
     })
 
@@ -71,6 +72,10 @@ if (location.pathname.includes('/blog/')) {
           $(this).attr('rel', 'noopener noreferrer')
         }
       }
+    })
+
+    $('div#yearJump button').on('click', () => {
+      location.href = String($('div#yearJump select').val())
     })
   })
 }

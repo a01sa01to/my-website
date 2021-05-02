@@ -8,16 +8,16 @@ last_modified_at: 2020-11-23
 <div class="container">
   <div>
     <h1>タグ一覧</h1>
-    <a href="../" class="back">&lt; Top</a>
-    <table>
-      <thead>
-        <tr><th>タグ</th><th>記事数</th></tr>
-      </thead>
-      <tbody>
-        {% for tag in site.tags %}
-          <tr><td><a href="./{{ tag[0] }}">{{ tag[0] }}</a></td><td>{{ tag[1] | size }}</td></tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb" lang="ja">
+        <li class="breadcrumb-item"><a href="/blog/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">タグ一覧</li>
+      </ol>
+    </nav>
+    <ul class="list-group">
+      {% for tag in site.tags %}
+        <li class="list-group-item"><a href="./{{ tag[0] }}">{{ tag[0] }}（{{ tag[1] | size }}記事）</a></li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
