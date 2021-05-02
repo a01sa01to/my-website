@@ -1,56 +1,7 @@
+@import "import/importCommon";
+
 .article_container{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  .article_card{
-    width: 300px;
-    max-width: 100%;
-    padding: 12px;
-    margin: 16px;
-    border-radius: 8px;
-    box-shadow: 0px 5px 20px 0px #aaa;
-
-    .title{
-      margin: 8px;
-      font-size: 1.3em;
-
-      a{
-        text-decoration: none;
-      }
-    }
-
-    .date{
-      margin: 12px;
-    }
-  }
-}
-
-a.back{
-  display: inline-block;
-  margin: 16px 0px;
-}
-
-a.next{
-  display: inline-block;
-  width: 100%;
-  margin: 16px 0px;
-  text-align: right;
-}
-
-.pagination_link{
-  display: flex;
-  justify-content: space-between;
-  width: 300px;
-  font-size: 16px;
-}
-
-table{
-  text-align: center;
-  border-collapse: collapse;
-
-  th,td{
-    padding: 4px;
-    border: 1px solid #888;
-  }
 }

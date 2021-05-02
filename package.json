@@ -33,7 +33,7 @@
       "eslint --fix"
     ],
     "*.scss": [
-      "stylelint --fix --allow-empty-imput"
+      "stylelint --fix --allow-empty-input"
     ]
   },
   "repository": {

@@ -16,9 +16,11 @@ a_few_word: Googleのヘビーユーザーになってしまう...
 
 サイトを再構築するときに考えていたのは
 
-<idea>
-Git と 連携 させたい ... ！！
-</idea>
+<div class="card">
+  <div class="card-body">
+    Git と 連携 させたい ... ！！
+  </div>
+</div>
 
 Google App Engine ならGitHubにソース上げればデプロイしてくれるからベストだと思い、
 いっそのことGoogleサービスにまとめちゃえ！！っていうだけ。

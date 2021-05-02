@@ -1,0 +1,28 @@
+nav[aria-label="breadcrumb"]{
+  --bs-breadcrumb-divider: ">";
+
+  li{
+    margin: initial;
+  }
+}
+
+.card{
+  width: 18rem;
+  margin: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+
+  a{
+    text-decoration: none;
+  }
+}
+
+.list-group-item{
+  width: 500px;
+  margin-top: 0;
+
+  a{
+    color: inherit;
+    text-decoration: 1px underline var(--bs-gray);
+  }
+}
