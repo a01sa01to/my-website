@@ -39,6 +39,67 @@ header{
     margin-left: auto;
     text-align: right;
 
+    div#menuIcon{
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 36px;
+      height: 36px;
+
+      [id^="bar"]{
+        position: absolute;
+        left: 4px;
+        width: 28px;
+        height: 2px;
+        background: var(--bs-gray-dark);
+        transition: 0.3s;
+      }
+
+      #bar1{
+        top: 12px;
+      }
+
+      #bar2{
+        bottom: 12px;
+      }
+    }
+
+    div#menuItem{
+      position: fixed;
+      top: 54px;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+      height: calc(100vh - 54px);
+      max-height: none;
+      padding: 16px;
+      overflow-y: auto;
+      visibility: hidden;
+      background: var(--bs-light);
+      opacity: 0;
+      transition: 0.3s;
+
+      p.border{
+        height: 0;
+        margin: 8px;
+        border: 0.5px dotted var(--bs-gray);
+      }
+
+      li{
+        font-size: 1.3em;
+        list-style: none;
+
+        a{ text-decoration: none; }
+
+        &.social{
+
+          > *{
+            margin: 8px;
+          }
+        }
+      }
+    }
+
     input{
       position: absolute;
       top: 0;
@@ -49,30 +110,6 @@ header{
       cursor: pointer;
       opacity: 0;
 
-      div#menuIcon{
-        position: relative;
-        top: 0;
-        right: 0;
-        width: 36px;
-        height: 36px;
-
-        [id^="bar"]{
-          position: absolute;
-          left: 4px;
-          width: 28px;
-          height: 2px;
-          background: var(--bs-gray-dark);
-          transition: 0.3s;
-        }
-
-        #bar1{
-          top: 12px;
-        }
-
-        #bar2{
-          bottom: 12px;
-        }
-      }
 
       &:checked+ div#menuIcon{
 
@@ -88,41 +125,6 @@ header{
         }
       }
 
-      div#menuItem{
-        position: fixed;
-        top: 54px;
-        left: 0;
-        z-index: -1;
-        width: 100vw;
-        height: calc(100vh - 54px);
-        max-height: none;
-        padding: 16px;
-        overflow-y: auto;
-        visibility: hidden;
-        background: var(--bs-light);
-        opacity: 0;
-        transition: 0.3s;
-
-        p.border{
-          height: 0;
-          margin: 8px;
-          border: 0.5px dotted var(--bs-gray);
-        }
-
-        li{
-          font-size: 1.3em;
-          list-style: none;
-
-          a{ text-decoration: none; }
-
-          &.social{
-
-            > *{
-              margin: 8px;
-            }
-          }
-        }
-      }
 
       &:checked ~ div#menuItem{
         z-index: 1;
