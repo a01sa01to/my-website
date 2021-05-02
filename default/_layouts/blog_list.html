@@ -1,0 +1,55 @@
+---
+layout: blog
+---
+
+{% assign yr = page.year %}
+
+<div class="container center">
+  <div>
+    <h1>{{ yr }}年の記事一覧</h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb" lang="ja">
+        <li class="breadcrumb-item"><a href="/blog/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ yr }}年の記事</li>
+      </ol>
+    </nav>
+    {% for month in (1..12) reversed %}
+      <h2>{{ month }}月</h2>
+      {% capture firstDate %}{{yr}}-{{month}}-01{% endcapture %}
+      {% capture lastDate %}{{yr}}-{{month}}-31{% endcapture %}
+      {% assign firstDate = firstDate | date: "%s" | times: 1 %}
+      {% assign lastDate = lastDate | date: "%s" | times: 1 | minus: 3600 %}
+
+      <div class="article_container">
+        {% for post in site.posts %}
+          {% assign postDate = post.date | date: "%s" | times: 1 %}
+          {% if firstDate <= postDate and postDate <= lastDate %}
+          <div class="card">
+            <a href="{{ post.url }}">
+              <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <p class="card-text">{{ post.date | date: "%Y.%m.%d"}}</p>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+    <div class="input-group align-items-center mt-5" style="justify-content: center;" id="yearJump">
+      <div class="col-auto" style="margin: 0;">
+        <select class="form-select" name="yearSelect" aria-label="Jump to list">
+          {% for year in (2020..yr) reversed %}
+            {% if year == yr %}
+              <option value="#" selected>{{ year }}</option>
+            {% else %}
+              <option value="{{ year }}">{{ year }}</option>
+            {% endif %}
+          {% endfor %}
+        </select>
+      </div>
+      <label for="yearSelect" class="input-group-text" style="margin: 0;">年の記事一覧</label>
+      <button class="btn btn-outline-secondary" type="button">Jump</button>
+    </div>
+  </div>
+</div>

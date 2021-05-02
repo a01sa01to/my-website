@@ -1,36 +1,7 @@
 ---
-layout: blog
-title: 記事一覧
+layout: blog_list
+title: 2020年の記事一覧
 relPath: /list/2020
 last_modified_at: 2020-11-23
+year: 2020
 ---
-{% assign yr = 2020 %}
-
-<div class="container center">
-  <div>
-    <h1>{{ yr }}年の記事一覧</h1>
-    <a href="/blog/" class="back">&lt; Top</a>
-    {% for month in (1..12) reversed %}
-      <h2>{{ month }}月</h2>
-      {% capture firstDate %}{{yr}}-{{month}}-01{% endcapture %}
-      {% capture lastDate %}{{yr}}-{{month}}-31{% endcapture %}
-      {% assign firstDate = firstDate | date: "%s" | times: 1 %}
-      {% assign lastDate = lastDate | date: "%s" | times: 1 | minus: 3600 %}
-
-      <div class="article_container">
-        {% for post in site.posts %}
-          {% assign postDate = post.date | date: "%s" | times: 1 %}
-          {% if firstDate <= postDate and postDate <= lastDate %}
-          <div class="article_card">
-            <p class="title"><a href="{{ post.url }}">{{ post.title }}</a></p>
-            <p class="date">{{ post.date | date: "%Y.%m.%d"}}</p>
-          </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    {% endfor %}
-    <p class="left">
-      <a href="/blog/list/">&lt; 2021年の記事</a>
-    </p>
-  </div>
-</div>
