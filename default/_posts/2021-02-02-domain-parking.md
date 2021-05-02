@@ -3,7 +3,7 @@ title: ドメインパーキングを使ってみる
 layout: blog_posts
 tags: Domain Domain-Parking
 relPath: /2021/02/domain-parking
-last_modified_at: 2020-03-16
+last_modified_at: 2021-05-02
 a_few_word: 半年後にレポートを公開しようかな...
 ---
 
