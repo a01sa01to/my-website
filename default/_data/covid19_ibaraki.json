@@ -1,10 +1,10 @@
 {
   "patients": {
-    "lastUpdate": "2021/05/06 18:00",
+    "lastUpdate": "2021/05/06 18:25",
     "size": "1.03 MB"
   },
   "test_people": {
-    "lastUpdate": "2021/05/06 18:00",
+    "lastUpdate": "2021/05/06 18:25",
     "size": "18.88 KB"
   },
   "call_center": {
@@ -12,15 +12,15 @@
     "size": "18.19 KB"
   },
   "positive_number": {
-    "lastUpdate": "2021/05/06 18:00",
+    "lastUpdate": "2021/05/06 18:25",
     "size": "17.6 KB"
   },
   "recovered_number": {
-    "lastUpdate": "2021/05/06 18:00",
+    "lastUpdate": "2021/05/06 18:25",
     "size": "15.94 KB"
   },
   "death_number": {
-    "lastUpdate": "2021/05/06 18:00",
+    "lastUpdate": "2021/05/06 18:25",
     "size": "15.76 KB"
   },
   "inspections_summary": {
@@ -28,11 +28,11 @@
     "size": "295 Byte"
   },
   "main_summary": {
-    "lastUpdate": "2021/05/06 18:00",
+    "lastUpdate": "2021/05/06 18:25",
     "size": "368 Byte"
   },
   "corona_next": {
-    "lastUpdate": "2021/05/06 18:00",
+    "lastUpdate": "2021/05/06 18:25",
     "size": "287 Byte"
   },
   "roller_mito": {
