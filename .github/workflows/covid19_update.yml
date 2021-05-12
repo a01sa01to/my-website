@@ -65,7 +65,7 @@ jobs:
         with:
           ruby-version: '2.7'
       - name: Cache deps
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.5
         with:
           path: ./default/vendor/bundle
           key: ${{ runner.os }}-gem-${{ hashFiles('./default/Gemfile.lock') }}
