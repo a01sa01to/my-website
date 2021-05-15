@@ -6,17 +6,6 @@ nav[aria-label="breadcrumb"]{
   }
 }
 
-.card{
-  width: 18rem;
-  margin: 1rem;
-  border-radius: 0.25rem;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
-
-  a{
-    text-decoration: none;
-  }
-}
-
 .list-group-item{
   width: 500px;
   margin-top: 0;
@@ -24,5 +13,26 @@ nav[aria-label="breadcrumb"]{
   a{
     color: inherit;
     text-decoration: 1px underline var(--bs-gray);
+  }
+}
+
+.card{
+  width: 18rem;
+  margin: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+
+  a:not(.decorate){
+    text-decoration: none;
+  }
+
+  div.card-body{
+
+    small.text-muted{
+      display: block;
+      width: 100%;
+      margin: 0.25rem;
+      text-align: right;
+    }
   }
 }
