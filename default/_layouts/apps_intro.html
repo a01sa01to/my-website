@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="/css/apps_intro.css">
+
+<div class="container">
+  <h1 lang="ja">{{ page.titleJa }}</h1>
+  <h1 lang="en">{{ page.titleEn }}</h1>
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb" lang="ja">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="./">アプリ一覧</a></li>
+      <li class="breadcrumb-item active" aria-current="page">このアプリ</li>
+    </ol>
+    <ol class="breadcrumb" lang="en">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="./">My Apps</a></li>
+      <li class="breadcrumb-item active" aria-current="page">This App</li>
+    </ol>
+  </nav>
+
+  <p lang="ja">{{ page.introJa }}</p>
+  <p lang="en">{{ page.introEn }}</p>
+</div>
+<div class="container">{{ content }}</div>
