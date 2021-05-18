@@ -36,3 +36,15 @@ nav[aria-label="breadcrumb"]{
     }
   }
 }
+
+.carousel .carousel-inner .carousel-item{
+
+  img{
+    filter: blur(3px);
+  }
+
+  .carousel-caption{
+    background-color: #fffa;
+    border-radius: 5px;
+  }
+}

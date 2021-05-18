@@ -4,7 +4,6 @@ import './footer'
 import './func'
 import './language'
 import './opendata'
-import './slick'
 
 window.addEventListener('DOMContentLoaded', () => {
   document

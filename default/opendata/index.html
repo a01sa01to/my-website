@@ -31,10 +31,28 @@ last_modified_at: 2021-05-02
 </div>
 <div class="container">
   <h2>Catalog</h2>
-  <div class="slider">
-    <div class="slick-slide"><img src="/img/ibk_stopcovid19.png" loading="lazy">
-      <p><a href="./covid19_ibaraki/" lang="ja">茨城県 新型コロナウイルス関連</a><a href="./covid19_ibaraki/" lang="en">COVID-19 Status in Ibaraki</a></p>
+  <div id="carouselCaptions" class="carousel slide carousel-dark" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/img/ibk_stopcovid19.png" class="d-block w-100" alt="COVID-19 Taskforce Website">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 lang="ja">茨城県 新型コロナウイルス感染症対策サイト</h5>
+          <h5 lang="en">COVID-19 Taskforce website in Ibaraki</h5>
+          <p><a href="https://ibaraki.stopcovid19.jp/" class="ico" target="_blank" rel="noopener noreferrer">https://ibaraki.stopcovid19.jp/</a></p>
+        </div>
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselCaptions" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
   </div>
   <p class="note" lang="ja">画像下の作品名をクリックすると作品を開きます<br>リスト形式で表示する場合は提供オープンデータ一覧からどうぞ</p>
   <p class="note" lang="en">Click on the name below the image to open the work<br>To view the work in a list format, please click on the Open Data List.</p>
