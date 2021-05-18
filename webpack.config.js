@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   resolve: {
-    modules: ['node_modules', 'es2015', 'ts-loader'],
+    modules: ['node_modules', 'es2020', 'ts-loader'],
     extensions: ['.ts', '.js'],
   },
   module: {
