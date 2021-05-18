@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>FirebaseUIで日本語にしてAuthDomainを設定したい - Asa's Blog</title>
+  <link type="application/atom+xml" rel="alternate" href="https://a01sa01to.com/feed.xml" title="Asa's Website" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, initial-scale=1.0, maximum-scale=10.0, shrink-to-fit=no">
+
+
+<meta name="keywords" content="a01sa01to">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" content="https://a01sa01to.com/">
+<meta name="twitter:site" content="@a01sa01to">
+<meta name="twitter:creator" content="@a01sa01to">
+<meta property="og:url" content="https://a01sa01to.com/blog/2021/05/firebaseui">
+<meta property="og:title" content=" - Asa's Blog" lang="ja">
+<meta property="og:title" content=" - Asa's Blog" lang="en">
+<meta property="og:image" content="https://a01sa01to.com/img/twittercard.jpg">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://a01sa01to.com/blog/2021/05/firebaseui">
+
+<!-- Change Chrome Tab Color -->
+<meta name="theme-color" content="#ffffff">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/main.css">
+
+
+  <script src="https://kit.fontawesome.com/7fba4a39db.js" crossorigin="anonymous" async></script>
+<script src="/bundle.js"></script>
+<script data-ad-client="ca-pub-3296104264173235" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z23EQDNLQY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z23EQDNLQY');
+</script>
+  <link rel="canonical" href="https://a01sa01to.com/blog/2021/05/firebaseui">
+  <link rel="stylesheet" href="/css/blog_post.css">
+</head>
+<body id="top">
+  <header><div id="left"></div>
+<div id="center">
+  <p id="title">Asa's Blog</p>
+</div>
+<div id="right">
+  <input type="checkbox" id="menuShow">
+  <div id="menuIcon"><div id="bar1"></div><div id="bar2"></div></div>
+  <div id="menuItem">
+    <li><a href="/blog/">Blog Top</a></li>
+    
+    
+    <p class="border"></p>
+    <li><a href="/">Asa's Website Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/opendata/">Opendata Catalog</a></li>
+    <li><a href="/works">Works</a></li>
+    <li><a href="/sitemap/">Sitemap</a></li>
+    <li class="social">
+      <a href="https://github.com/a01sa01to" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://twitter.com/a01sa01to" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com/a01sa01to" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="/feed.xml" target="_blank" rel="noopener">
+        <i class="fas fa-rss"></i>
+      </a>
+    </li>
+    <p class="border"></p>
+    <li><a href="?lang=ja">Japanese</a></li>
+    <li><a href="?lang=en">English</a></li>
+    <li style="height: 54px;"></li>
+  </div>
+</div></header>
+  <main>
+    <div class="container">
+      <div>
+        <h1>FirebaseUIで日本語にしてAuthDomainを設定したい</h1>
+        
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb" lang="ja">
+            <li class="breadcrumb-item"><a href="/blog/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/blog/list/2021">2021年の記事</a></li>
+            <li class="breadcrumb-item active" aria-current="page">この記事</li>
+          </ol>
+        </nav>
+
+        <p class="tags">
+          Tags:
+          
+            <a href="/blog/tags/Google/" class="tag">Google</a>&nbsp;
+          
+            <a href="/blog/tags/Firebase/" class="tag">Firebase</a>&nbsp;
+          
+        </p>
+        <p class="date"><nobr>Published on 2021.05.19.<wbr> Last Modified on 2020.05.19.</nobr></p>
+        <div class="article">
+          <p>とある用でFirebase Authenticationを使っていて、FirebaseUIをログイン画面に実装していました。</p>
+
+<p><a href="https://firebase.google.com/docs/auth/web/firebaseui?hl=ja">FirebaseUI でウェブアプリに簡単にログイン機能を追加する</a></p>
+
+<p>上のリンクを見てもらえればわかるように、FirebaseUIでは以下の画像のように、ただコンテナを作れば、勝手にログイン画面を作ってくれます。
+<img src="/img/blog/2021/05/firebaseui/01.png" alt="FirebaseUI" /></p>
+
+<p>最終的にここまでたどり着くまでに、いろいろ躓いたので、備忘録的な？</p>
+
+<h2 id="point1">Point1</h2>
+<p>まず、Googleのガイドにはいくつかの方法が載っていました。
+自分はESM（ES Modules）で、Webpackを使って1ファイルにまとめていたので、ガイド通り <code class="language-plaintext highlighter-rouge">npm install firebaseui --save</code> を実行して、プロジェクトに組み込みました。</p>
+
+<p>この際用いたコードは、途中省きますが以下の通りです。</p>
+
+<pre><code class="language-html:login.html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+  &lt;head&gt;
+    &lt;script src="./bundle.js"&gt;&lt;/script&gt;
+    &lt;link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="firebaseui-auth-container"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<pre><code class="language-typescript:login.ts">//----- ログイン処理 -----//
+import * as firebaseui from 'firebaseui'
+import 'firebase/auth'
+import firebase from 'firebase/app'
+import { firebaseConfig } from './firebaseConfig'
+
+// Firebaseを初期化
+firebase.initializeApp(firebaseConfig)
+const auth = firebase.auth()
+auth.languageCode = 'ja'
+
+if (location.pathname === '/login') {
+  const ui = new firebaseui.auth.AuthUI(firebase.auth())
+  ui.start('#firebaseui-auth-container', {
+    signInOptions: [
+      firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+    ],
+    callbacks: {
+      signInSuccessWithAuthResult: () =&gt; {
+        return true
+      },
+    },
+    signInSuccessUrl: '/',
+    privacyPolicyUrl: '/policy',
+  })
+}
+</code></pre>
+
+<p>これを開いてみると、以下のような表示になりました。</p>
+
+<p><img src="/img/blog/2021/05/02.png" alt="英語じゃない..." /></p>
+
+<h2 id="point2">Point2</h2>
+<p>「でも、やっぱりユーザーのことを考えたら日本語がいいな…」ということで、もう一つの方法「CDNを使う」を試すべく、先ほどの TypeScriptファイルを消して、HTMLファイルを変更。<code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>タグが終わる前に、これを追記しました。</p>
+
+<pre><code class="language-html:login.html">&lt;script src="/__/firebase/7.23.0/firebase-app.js"&gt;&lt;/script&gt;
+&lt;script src="/__/firebase/7.23.0/firebase-analytics.js"&gt;&lt;/script&gt;
+&lt;script src="/__/firebase/7.23.0/firebase-auth.js"&gt;&lt;/script&gt;
+&lt;script src="/__/firebase/init.js"&gt;&lt;/script&gt;
+&lt;script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth__ja.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  const ui = new firebaseui.auth.AuthUI(firebase.auth())
+  ui.start('#firebaseui-auth-container', {
+    signInOptions: [
+      firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+    ],
+    callbacks: {
+      signInSuccessWithAuthResult: () =&gt; {
+        return true
+      },
+    },
+    signInSuccessUrl: '/',
+    privacyPolicyUrl: '/policy',
+  })
+&lt;/script&gt;
+</code></pre>
+
+<p><img src="/img/blog/2021/05/01.png" alt="日本語になった！" /></p>
+
+<p>しかし、ここでも問題が。
+例えば今 <code class="language-plaintext highlighter-rouge">hogehoge.com</code> にいても、ログインボタンを押したら <code class="language-plaintext highlighter-rouge">&lt;project-id&gt;.firebaseapp.com</code> に飛ばされてから、OAuth画面へ飛びます。
+つまり、例えばGoogleでのアカウント選択画面では、「（サイト名）に移動」と表示されますが、このドメインが独自ドメインじゃないという…。</p>
+
+<p>これについては、Firebaseの設定の <code class="language-plaintext highlighter-rouge">authDomain</code> というKeyで設定できますが、そもそもCDNでは設定ファイルを埋め込めない…。</p>
+
+<h2 id="解決策">解決策</h2>
+<p>ドキュメントを見てみると、FirebaseUIのソースコードから自分でビルドすれば解決するのでは？と考え、試してみました。結果成功しました。</p>
+
+<p><a href="https://github.com/firebase/firebaseui-web">firebase/firebaseui-web: FirebaseUI is an open-source JavaScript library for Web that provides simple, customizable UI bindings on top of Firebase SDKs to eliminate boilerplate code and promote best practices.</a></p>
+
+<p>参考： https://github.com/firebase/firebaseui-web#building-firebaseui</p>
+
+<h3 id="step1">Step1</h3>
+<p>まず、ビルドのために必要となる開発環境をインストールします。</p>
+
+<ul>
+  <li>Node.js</li>
+  <li>npm</li>
+  <li>Java SE Runtime Environment 8</li>
+</ul>
+
+<h3 id="step2">Step2</h3>
+<p>ソースコードをCloneします。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/firebase/firebaseui-web.git
+<span class="nb">cd </span>firebaseui-web
+npm <span class="nb">install</span>
+</code></pre></div></div>
+
+<h3 id="step3">Step3</h3>
+<p>ESM用の日本語版ファイルをビルドします。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run build build-esm-ja
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">dist</code> フォルダ 内にある <code class="language-plaintext highlighter-rouge">esm__ja.js</code> が出力されたファイルになります。</p>
+
+<h3 id="step4">Step4</h3>
+<p>読み込みます。TypeScriptを用いているので、 <code class="language-plaintext highlighter-rouge">index.d.ts</code> もコピーしました。</p>
+
+<pre><code class="language-typescript:login.ts">import './firebaseui/@types/index'
+import { auth } from './firebaseui/esm__ja'
+
+// ～ Firebaseの設定は略 ～ //
+
+window.addEventListener('DOMContentLoaded', () =&gt; {
+  if (location.pathname === '/login') {
+    const ui = new auth.AuthUI(firebase.auth())
+    ui.start('#firebaseui-auth-container', {
+      signInOptions: [
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+      ],
+      callbacks: {
+        signInSuccessWithAuthResult: () =&gt; {
+          return true
+        },
+        signInFailure: (err) =&gt; {
+          console.error(err)
+        },
+        uiShown: () =&gt; {},
+      },
+      signInSuccessUrl: '/',
+      privacyPolicyUrl: '/policy',
+    })
+  }
+})
+</code></pre>
+
+<h3 id="step5">Step5</h3>
+<p>Step4のままだと、まだ <code class="language-plaintext highlighter-rouge">&lt;projectid&gt;.firebaseapp.com</code> に飛ばされます。
+そこで、Firebaseの設定ファイルを変更します。</p>
+
+<pre><code class="language-typescript:firebaseConfig.ts">{
+  apiKey: '...',
+  // authDomain: '&lt;projectid&gt;.firebaseapp.com',
+  authDomain: 'hogehoge.com',
+  databaseURL: '...',
+  // 以下略
+}
+</code></pre>
+
+<p>これで、Webpackでビルドすると、きちんと日本語になり、 <code class="language-plaintext highlighter-rouge">hogehoge.com</code> に飛ばされました！</p>
+
+          <p class="a_few_word">なんだかんだで初のプログラミング系記事やな...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer><div class='sb'>
+  Share this page!
+	<div class='sbInner'>
+		<!-- Facebook -->
+		<a class='shadow-lg mb-5 rounded sBtn sBtn-facebook' href="https://www.facebook.com/sharer/sharer.php?u=PAGEURL" rel='nofollow' target='_blank' title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+		<!-- Twitter -->
+		<a class='shadow-lg mb-5 rounded sBtn sBtn-twitter' href="http://twitter.com/share?url=PAGEURL&text=PAGETITLE&via=a01sa01to" rel='nofollow' target='_blank' title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+		<!-- LINE -->
+		<a class='shadow-lg mb-5 rounded sBtn sBtn-line' href="http://line.me/R/msg/text/?PAGETITLE%0APAGEURL" rel='nofollow' target='_blank' title='Share on LINE'><i class="fab fa-line"></i></a>
+		<!-- Pocket -->
+		<a class='shadow-lg mb-5 rounded sBtn sBtn-pocket' href="https://getpocket.com/edit?url=PAGEURL&title=PAGETITLE" rel='nofollow' target='blank' title='Share on Pocket'><i class="fab fa-get-pocket"></i></a>
+		<!-- B! Hatena -->
+		<a class='shadow-lg mb-5 rounded sBtn sBtn-hatena' href="https://b.hatena.ne.jp/add?mode=confirm&url=PAGEURL&title=PAGETITLE" rel='nofollow' target='_blank' title='Share on Hatena'><i aria-hidden='true' class='fa fa-hatena' style='font-weight: bold;'>B!</i></a>
+	</div>
+</div>
+
+<p id="copyright">Copyright &copy; 2020-2021 Asa(@a01sa01to)</p></footer>
+  <a href="#top" id="gototop"><span class="material-icons">keyboard_arrow_up</span></a>
+</body>
+</html>
