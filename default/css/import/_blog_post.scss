@@ -8,12 +8,15 @@ code.highlighter-rouge {
 [id^="editor"] {
   width: 100%;
   height: 30vh;
-  font-size: 12px;
+  margin: 16px auto;
 
-  * {
+  *{
     max-width: initial;
     max-height: initial;
+    font: 12px/normal "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
   }
+
+  font-size: 12px;
 }
 
 .tags {
