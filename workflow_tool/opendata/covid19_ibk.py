@@ -7,8 +7,10 @@ json_list = {
   "test_people": {"lastUpdate":"","size":""},
   "call_center": {"lastUpdate":"","size":""},
   "positive_number": {"lastUpdate":"","size":""},
+  "mutant_postive_number": {"lastUpdate":"","size":""},
   "recovered_number": {"lastUpdate":"","size":""},
   "death_number": {"lastUpdate":"","size":""},
+  "death_attr": {"lastUpdate":"","size":""},
   "inspections_summary": {"lastUpdate":"","size":""},
   "main_summary": {"lastUpdate":"","size":""},
   "corona_next": {"lastUpdate":"","size":""},
@@ -27,6 +29,8 @@ FILELIST = [
   "080004_ibaraki_covid19_inspections_summary.json",
   "080004_ibaraki_covid19_summary.json",
   "080004_ibaraki_covid19_corona_next.json",
+  "080004_ibaraki_covid19_death_attributes.csv",
+  "080004_ibaraki_covid19_mutant_positive_number.json"
 ]
 
 ALIASLIST = {
@@ -39,6 +43,8 @@ ALIASLIST = {
   "080004_ibaraki_covid19_inspections_summary.json": "inspections_summary",
   "080004_ibaraki_covid19_summary.json": "main_summary",
   "080004_ibaraki_covid19_corona_next.json": "corona_next",
+  "080004_ibaraki_covid19_death_attributes.csv": "death_attr",
+  "080004_ibaraki_covid19_mutant_positive_number.json": "mutant_positive_number",
 }
 
 SIZEUNIT = ["Byte", "KB", "MB", "GB", "TB", "PB", "EiB", "ZB", "YB"]

@@ -23,8 +23,10 @@ jobs:
           curl ${DATA_UPDATE_URL}?data=tested_people -L -o 080004_ibaraki_covid19_test_people.csv
           curl ${DATA_UPDATE_URL}?data=call_center -L -o 080004_ibaraki_covid19_call_center.csv
           curl ${DATA_UPDATE_URL}?data=positive_number -L -o 080004_ibaraki_covid19_positive_number.csv
+          curl ${DATA_UPDATE_URL}?data=mutant_positive_number -L -o 080004_ibaraki_covid19_mutant_positive_number.json
           curl ${DATA_UPDATE_URL}?data=recovered_number -L -o 080004_ibaraki_covid19_recovered_number.csv
           curl ${DATA_UPDATE_URL}?data=death_number -L -o 080004_ibaraki_covid19_death_number.csv
+          curl ${DATA_UPDATE_URL}?data=death_attributes -L -o 080004_ibaraki_covid19_death_attributes.csv
           curl ${DATA_UPDATE_URL}?data=inspections_summary -L -o 080004_ibaraki_covid19_inspections_summary.json
           curl ${DATA_UPDATE_URL}?data=main_summary -L -o 080004_ibaraki_covid19_summary.json
           curl ${DATA_UPDATE_URL}?data=corona_next -L -o 080004_ibaraki_covid19_corona_next.json
@@ -33,7 +35,7 @@ jobs:
           curl ${DATA_UPDATE_URL}?data=last_update -L -o last_update.json
         working-directory: ./default/opendata/data/covid19_ibaraki/
         env:
-          DATA_UPDATE_URL: "https://script.google.com/macros/s/AKfycbyzoAflJiBH8krkbhXfXk3MBexANc583Nm3n4wv3jemrf2bDrKH5xF4DLUxS6fumS1cZw/exec"
+          DATA_UPDATE_URL: "https://script.google.com/macros/s/AKfycbxFv8DYNwnCN0VYS-gvj06C_BNeieiTpMPozSFSzlYJH2ZcmV4ZMbMD1HOQgf-GNmLI1g/exec"
       - name: Create Info Json
         run: python ../../../../workflow_tool/opendata/covid19_ibk.py
         working-directory: ./default/opendata/data/covid19_ibaraki
