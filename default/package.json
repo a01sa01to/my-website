@@ -25,9 +25,9 @@
     "clipboard": "^2.0.8",
     "file-loader": "^6.2.0",
     "jquery": "^3.6.0",
-    "ts-loader": "^9.1.1",
+    "ts-loader": "^9.2.2",
     "typescript": "^4.2.4",
-    "webpack": "^5.36.0",
+    "webpack": "^5.37.1",
     "webpack-cli": "^4.6.0"
   }
 }
