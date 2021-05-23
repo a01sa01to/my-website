@@ -1,4 +1,3 @@
-import csv
 import json
 import os
 
@@ -7,7 +6,7 @@ json_list = {
   "test_people": {"lastUpdate":"","size":""},
   "call_center": {"lastUpdate":"","size":""},
   "positive_number": {"lastUpdate":"","size":""},
-  "mutant_postive_number": {"lastUpdate":"","size":""},
+  "mutant_positive_number": {"lastUpdate":"","size":""},
   "recovered_number": {"lastUpdate":"","size":""},
   "death_number": {"lastUpdate":"","size":""},
   "death_attr": {"lastUpdate":"","size":""},
@@ -47,10 +46,12 @@ ALIASLIST = {
   "080004_ibaraki_covid19_mutant_positive_number.json": "mutant_positive_number",
 }
 
-SIZEUNIT = ["Byte", "KB", "MB", "GB", "TB", "PB", "EiB", "ZB", "YB"]
+SIZEUNIT = ["Byte", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"]
 
 with open("last_update.json", "r", encoding="UTF-8") as f:
   lastUpdate = json.load(f)
+  lastUpdate["mutant_positive_number"] = lastUpdate["mutant_positive"]
+  del lastUpdate["mutant_positive"]
 
 for filename in FILELIST:
   aliasname = ALIASLIST[filename]
