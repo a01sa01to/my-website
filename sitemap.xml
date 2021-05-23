@@ -39,6 +39,9 @@
 <loc>https://a01sa01to.com/opendata/covid19_ibaraki/corona_next</loc>
 </url>
 <url>
+<loc>https://a01sa01to.com/opendata/covid19_ibaraki/death_attr</loc>
+</url>
+<url>
 <loc>https://a01sa01to.com/opendata/covid19_ibaraki/death_number</loc>
 </url>
 <url>
@@ -82,6 +85,9 @@
 </url>
 <url>
 <loc>https://a01sa01to.com/opendata/covid19_ibaraki/roller/mito</loc>
+</url>
+<url>
+<loc>https://a01sa01to.com/opendata/covid19_ibaraki/mutant_positive_number</loc>
 </url>
 <url>
 <loc>https://a01sa01to.com/opendata/covid19_ibaraki/patients</loc>
@@ -131,10 +137,10 @@
 </url>
 <url>
 <loc>https://a01sa01to.com/blog/list/</loc>
-<lastmod>2021-05-23T12:12:10+09:00</lastmod>
+<lastmod>2021-05-23T16:05:21+09:00</lastmod>
 </url>
 <url>
 <loc>https://a01sa01to.com/opendata/covid19_ibaraki/roller/</loc>
-<lastmod>2021-05-23T12:12:11+09:00</lastmod>
+<lastmod>2021-05-23T16:05:21+09:00</lastmod>
 </url>
 </urlset>
