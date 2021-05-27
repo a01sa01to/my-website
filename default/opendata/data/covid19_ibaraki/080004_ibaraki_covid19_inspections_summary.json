@@ -1,15 +1,15 @@
 {
-  "updDate": "2021/05/16",
+  "updDate": "2021/05/23",
   "datasets": [
     {
       "label": "茨城県衛生研究所\n水戸市保健所",
-      "data": 31619,
-      "positive": 1939
+      "data": 32222,
+      "positive": 1986
     },
     {
       "label": "民間検査機関\n帰国者・接触者外来設置等医療機関",
-      "data": 344364,
-      "positive": 7006
+      "data": 355233,
+      "positive": 7346
     },
     {
       "label": "その他の検査機関",
