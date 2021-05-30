@@ -129,7 +129,7 @@
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//----- ログイン処理 -----//</span>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//----- ログイン処理 -----//</span>
 <span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">firebaseui</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">firebaseui</span><span class="dl">'</span>
 <span class="k">import</span> <span class="dl">'</span><span class="s1">firebase/auth</span><span class="dl">'</span>
 <span class="k">import</span> <span class="nx">firebase</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">firebase/app</span><span class="dl">'</span>
@@ -235,7 +235,7 @@ npm <span class="nb">install</span>
 <h3 id="step4">Step4</h3>
 <p>読み込みます。TypeScriptを用いているので、 <code class="language-plaintext highlighter-rouge">index.d.ts</code> もコピーしました。</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="dl">'</span><span class="s1">./firebaseui/@types/index</span><span class="dl">'</span>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="dl">'</span><span class="s1">./firebaseui/@types/index</span><span class="dl">'</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">auth</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./firebaseui/esm__ja</span><span class="dl">'</span>
 
 <span class="c1">// ～ Firebaseの設定は略 ～ //</span>
@@ -270,7 +270,7 @@ npm <span class="nb">install</span>
 <p>Step4のままだと、まだ <code class="language-plaintext highlighter-rouge">&lt;projectid&gt;.firebaseapp.com</code> に飛ばされます。<br />
 そこで、Firebaseの設定ファイルを変更します。</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
   <span class="nl">apiKey</span><span class="p">:</span> <span class="dl">'</span><span class="s1">...</span><span class="dl">'</span><span class="p">,</span>
   <span class="c1">// authDomain: '&lt;projectid&gt;.firebaseapp.com',</span>
   <span class="nx">authDomain</span><span class="p">:</span> <span class="dl">'</span><span class="s1">hogehoge.com</span><span class="dl">'</span><span class="p">,</span>
