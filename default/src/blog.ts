@@ -1,4 +1,12 @@
 import ace from 'ace-builds'
+import mode_cpp from 'ace-builds/src-noconflict/mode-c_cpp'
+import mode_html from 'ace-builds/src-noconflict/mode-html'
+import mode_js from 'ace-builds/src-noconflict/mode-javascript'
+import mode_json from 'ace-builds/src-noconflict/mode-json'
+import mode_plaintext from 'ace-builds/src-noconflict/mode-plain_text'
+import mode_bash from 'ace-builds/src-noconflict/mode-sh'
+import mode_ts from 'ace-builds/src-noconflict/mode-typescript'
+import theme_dracula from 'ace-builds/src-noconflict/theme-dracula'
 import $ from 'jquery'
 
 if (location.pathname.includes('/blog/')) {
@@ -13,7 +21,6 @@ if (location.pathname.includes('/blog/')) {
       _.setAttribute('data-lang', lang)
       _.className = ''
     })
-    ace.config.set('basePath', '/deps/ace-mode/')
     for (let i = 0; i < codeHighlight.length; i++) {
       const e = codeHighlight[i] as HTMLElement
       e.setAttribute('id', `editor_${i}`)
@@ -29,8 +36,34 @@ if (location.pathname.includes('/blog/')) {
         autoScrollEditorIntoView: true,
       })
       const progLang = e.getAttribute('data-lang')
-      if (progLang) editor.setOption('mode', `ace/mode/${progLang}`)
-      editor.setTheme('ace/theme/dracula')
+
+      /* eslint-disable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
+      switch (progLang) {
+        case 'js':
+          editor.session.setMode(new mode_js.Mode())
+          break
+        case 'cpp':
+          editor.session.setMode(new mode_cpp.Mode())
+          break
+        case 'html':
+          editor.session.setMode(new mode_html.Mode())
+          break
+        case 'json':
+          editor.session.setMode(new mode_json.Mode())
+          break
+        case 'bash':
+          editor.session.setMode(new mode_bash.Mode())
+          break
+        case 'ts':
+          editor.session.setMode(new mode_ts.Mode())
+          break
+        default:
+          editor.session.setMode(new mode_plaintext.Mode())
+          break
+      }
+      /* eslint-enable */
+
+      editor.setTheme(theme_dracula)
       editor.setValue(code)
       editor.clearSelection()
       editorlist.push(editor)
