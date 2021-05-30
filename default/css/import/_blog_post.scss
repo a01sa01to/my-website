@@ -1,8 +1,12 @@
 @import "markdown";
 
 code.highlighter-rouge {
-  font-family: courier, monospace;
+  font-family: "courier", monospace;
   background-color: var(--bs-light);
+}
+
+mjx-container, mjx-container *{
+  font-family: initial;
 }
 
 [id^="editor"] {
