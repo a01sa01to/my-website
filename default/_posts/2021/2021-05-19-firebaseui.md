@@ -35,7 +35,7 @@ a_few_word: なんだかんだで初のプログラミング系記事やな...
 </html>
 ```
 
-```typescript
+```ts
 //----- ログイン処理 -----//
 import * as firebaseui from 'firebaseui'
 import 'firebase/auth'
@@ -143,7 +143,7 @@ npm run build build-esm-ja
 ### Step4
 読み込みます。TypeScriptを用いているので、 `index.d.ts` もコピーしました。
 
-```typescript
+```ts
 import './firebaseui/@types/index'
 import { auth } from './firebaseui/esm__ja'
 
@@ -179,7 +179,7 @@ window.addEventListener('DOMContentLoaded', () => {
 Step4のままだと、まだ `<projectid>.firebaseapp.com` に飛ばされます。<br>
 そこで、Firebaseの設定ファイルを変更します。
 
-```typescript
+```ts
 {
   apiKey: '...',
   // authDomain: '<projectid>.firebaseapp.com',

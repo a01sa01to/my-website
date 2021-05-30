@@ -19,7 +19,7 @@ Asaのブログです。<br>
 だから...<br>
 
 **太字** も *斜体* も `Code` も
-```javascript
+```js
 console.log("JavaScriptも。");
 ```
 Markdown 恐るべし...。
