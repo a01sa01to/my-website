@@ -31,6 +31,18 @@
           {% endfor %}
         </p>
         <p class="date"><nobr>Published on {{ page.date | date: "%Y.%m.%d"}}.<wbr> Last Modified on {{ page.last_modified_at | date: "%Y.%m.%d"}}.</nobr></p>
+        <div class="accordion" id="toc">
+          <div class="accordion-item">
+            <p class="accordion-header" id="headingToc">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
+                Table of Contents
+              </button>
+            </p>
+            <div id="collapseToc" class="accordion-collapse collapse" aria-labelledby="headingToc" data-bs-parent="#toc">
+              <div class="accordion-body"></div>
+            </div>
+          </div>
+        </div>
         <div class="article">
           {{ content }}
           <p class="a_few_word">{{ page.a_few_word }}</p>

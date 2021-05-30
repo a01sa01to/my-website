@@ -3,7 +3,7 @@ title: Googleカレンダーで予定別にカレンダーを仕分ける
 layout: blog_posts
 tags: Google Calendar
 relPath: /2021/03/separate-gcalendar
-last_modified_at: 2021-05-02
+last_modified_at: 2021-05-30
 a_few_word: これはますます便利になりそう...
 ---
 

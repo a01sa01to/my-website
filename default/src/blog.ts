@@ -110,5 +110,15 @@ if (location.pathname.includes('/blog/')) {
     $('div#yearJump button').on('click', () => {
       location.href = String($('div#yearJump select').val())
     })
+
+    $('.article')
+      .find('h2,h3,h4,h5,h6')
+      .each(function () {
+        $('#toc .accordion-body').append(
+          `<a href="#${this.id}" class="${this.tagName.toLowerCase()}">${
+            this.innerText
+          }</a>`
+        )
+      })
   })
 }

@@ -3,7 +3,7 @@ title: ドメインを移管しました
 layout: blog_posts
 tags: Domain Website
 relPath: /2021/02/domain-transfer
-last_modified_at: 2021-05-02
+last_modified_at: 2021-05-30
 a_few_word: Googleのヘビーユーザーになってしまう...
 ---
 

@@ -115,3 +115,26 @@ h3 {
   padding: 0 6px;
   border-bottom: 2px solid #1a73e8;
 }
+
+#toc{
+  margin: 32px auto;
+
+  .accordion-body{
+
+    a{
+      display: block;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .h2{ padding-left: 0; }
+
+    .h3{ padding-left: 1em; }
+
+    .h4{ padding-left: 2em; }
+
+    .h5{ padding-left: 3em; }
+
+    .h6{ padding-left: 4em; }
+  }
+}

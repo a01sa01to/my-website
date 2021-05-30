@@ -3,7 +3,7 @@ title: "Hello World, publishing my website"
 layout: blog_posts
 tags: Hello-World
 relPath: /2020/12/hello-world
-last_modified_at: 2021-05-02
+last_modified_at: 2021-05-30
 a_few_word: そのうちなぜこの2つを使ったかを書こうと思ってはいる。
 ---
 
