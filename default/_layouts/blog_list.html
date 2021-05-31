@@ -3,6 +3,7 @@ layout: blog
 ---
 
 {% assign yr = page.year %}
+{% assign thisYr = "now" | date: "%Y" | times: 1 %}
 
 <div class="container center">
   <div>
@@ -16,9 +17,20 @@ layout: blog
     {% for month in (1..12) reversed %}
       <h2>{{ month }}月</h2>
       {% capture firstDate %}{{yr}}-{{month}}-01{% endcapture %}
-      {% capture lastDate %}{{yr}}-{{month}}-31{% endcapture %}
+      {% assign uruu1 = yr | modulo: 4 %}
+      {% assign uruu2 = yr | module: 100 %}
+      {% if month == 2 and uruu1 == 0 and uruu2 != 0 %}
+        {% capture lastDate %}{{yr}}-{{month}}-29{% endcapture %}
+      {% elsif month == 2 %}
+        {% capture lastDate %}{{yr}}-{{month}}-28{% endcapture %}
+      {% elsif month == 4 or month == 6 or month == 9 or month == 11 %}
+        {% capture lastDate %}{{yr}}-{{month}}-30{% endcapture %}
+      {% else %}
+        {% capture lastDate %}{{yr}}-{{month}}-31{% endcapture %}
+      {% endif %}
+
       {% assign firstDate = firstDate | date: "%s" | times: 1 %}
-      {% assign lastDate = lastDate | date: "%s" | times: 1 | minus: 3600 %}
+      {% assign lastDate = lastDate | date: "%s" | times: 1 %}
 
       <div class="article_container">
         {% for post in site.posts %}
@@ -39,7 +51,7 @@ layout: blog
     <div class="input-group align-items-center mt-5" style="justify-content: center;" id="yearJump">
       <div class="col-auto" style="margin: 0;">
         <select class="form-select" name="yearSelect" aria-label="Jump to list">
-          {% for year in (2020..yr) reversed %}
+          {% for year in (2020..thisYr) reversed %}
             {% if year == yr %}
               <option value="#" selected>{{ year }}</option>
             {% else %}

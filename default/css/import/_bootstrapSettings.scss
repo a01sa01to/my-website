@@ -23,6 +23,9 @@ nav[aria-label="breadcrumb"]{
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
 
   a:not(.decorate){
+    display: inline-block;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
   }
 
