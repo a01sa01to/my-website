@@ -2,7 +2,6 @@ User-agent: *
 
 Allow: blog/
 Allow: css/
-Disallow: deps/
 Disallow: err/
 Allow: img/
 Allow: opendata/
