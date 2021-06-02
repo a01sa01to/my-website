@@ -4,6 +4,7 @@ import os
 json_list = {
   "patients": {"lastUpdate":"","size":""},
   "test_people": {"lastUpdate":"","size":""},
+  "mutant_test_people": {"lastUpdate":"","size":""},
   "call_center": {"lastUpdate":"","size":""},
   "positive_number": {"lastUpdate":"","size":""},
   "mutant_positive_number": {"lastUpdate":"","size":""},
@@ -21,6 +22,7 @@ json_list = {
 FILELIST = [
   "080004_ibaraki_covid19_patients.csv",
   "080004_ibaraki_covid19_test_people.csv",
+  "080004_ibaraki_covid19_mutant_test_people.csv",
   "080004_ibaraki_covid19_call_center.csv",
   "080004_ibaraki_covid19_positive_number.csv",
   "080004_ibaraki_covid19_recovered_number.csv",
@@ -35,6 +37,7 @@ FILELIST = [
 ALIASLIST = {
   "080004_ibaraki_covid19_patients.csv": "patients",
   "080004_ibaraki_covid19_test_people.csv": "test_people",
+  "080004_ibaraki_covid19_mutant_test_people.csv": "mutant_test_people",
   "080004_ibaraki_covid19_call_center.csv": "call_center",
   "080004_ibaraki_covid19_positive_number.csv": "positive_number",
   "080004_ibaraki_covid19_recovered_number.csv": "recovered_number",

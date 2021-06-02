@@ -21,6 +21,7 @@ jobs:
         run: |
           curl ${DATA_UPDATE_URL}?data=patients_data -L -o 080004_ibaraki_covid19_patients.csv
           curl ${DATA_UPDATE_URL}?data=tested_people -L -o 080004_ibaraki_covid19_test_people.csv
+          curl ${DATA_UPDATE_URL}?data=mutant_tested_people -L -o 080004_ibaraki_covid19_mutant_test_people.csv
           curl ${DATA_UPDATE_URL}?data=call_center -L -o 080004_ibaraki_covid19_call_center.csv
           curl ${DATA_UPDATE_URL}?data=positive_number -L -o 080004_ibaraki_covid19_positive_number.csv
           curl ${DATA_UPDATE_URL}?data=mutant_positive_number -L -o 080004_ibaraki_covid19_mutant_positive_number.json
@@ -35,7 +36,7 @@ jobs:
           curl ${DATA_UPDATE_URL}?data=last_update -L -o last_update.json
         working-directory: ./default/opendata/data/covid19_ibaraki/
         env:
-          DATA_UPDATE_URL: "https://script.google.com/macros/s/AKfycbxFv8DYNwnCN0VYS-gvj06C_BNeieiTpMPozSFSzlYJH2ZcmV4ZMbMD1HOQgf-GNmLI1g/exec"
+          DATA_UPDATE_URL: "https://script.google.com/macros/s/AKfycby5yT8vK7UyYlpjRrJ8bSR0bUptnXSFQ5UKmhRIPh-AhnXmeu3VnWa_MmBc9BQ1zb9Njw/exec"
       - name: Create Info Json
         run: python ../../../../workflow_tool/opendata/covid19_ibk.py
         working-directory: ./default/opendata/data/covid19_ibaraki
