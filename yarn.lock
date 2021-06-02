@@ -1059,6 +1059,13 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.1.tgz#c4b489e80096d9df1dfc97c79871aea7c617c469"
   integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
 
+front-matter@^3.0.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/front-matter/-/front-matter-3.2.1.tgz#88be839638f397bbbcb0d61ac03bd08abb4f0a40"
+  integrity sha512-YUhgEhbL6tG+Ok3vTGIoSDKqcr47aSDvyhEqIv8B+YuBJFsPnOiArNXTPp2yO07NL+a0L4+2jXlKlKqyVcsRRA==
+  dependencies:
+    js-yaml "^3.13.1"
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -2290,6 +2297,13 @@ stylelint-config-standard@^22.0.0:
   integrity sha512-uQVNi87SHjqTm8+4NIP5NMAyY/arXrBgimaaT7skvRfE9u3JKXRK9KBkbr4pVmeciuCcs64kAdjlxfq6Rur7Hw==
   dependencies:
     stylelint-config-recommended "^5.0.0"
+
+stylelint-processor-ignore-front-matter@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/stylelint-processor-ignore-front-matter/-/stylelint-processor-ignore-front-matter-1.0.1.tgz#6dadeea0516ec7fb64fbf4d3a51b644eda2949bd"
+  integrity sha512-rTKidXOnPE+iw+i9KKiBSPBZLK3I+Wk7CtzAfn7Rh3LXuZSzYaIgm9PBuTgsFQ+duvqH3YFLnV3v1t4Wi2t8Bg==
+  dependencies:
+    front-matter "^3.0.0"
 
 stylelint-scss@^3.19.0:
   version "3.19.0"
