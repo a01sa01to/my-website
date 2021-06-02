@@ -14,9 +14,6 @@ json_list = {
   "inspections_summary": {"lastUpdate":"","size":""},
   "main_summary": {"lastUpdate":"","size":""},
   "corona_next": {"lastUpdate":"","size":""},
-  "roller_mito": {"lastUpdate":"2020/08/21 23:59","size":"1.10 KB"},
-  "roller_tsukuba_amakubo": {"lastUpdate":"2020/09/07 23:59","size":"1.02 KB"},
-  "roller_tsuchiura_sakura": {"lastUpdate":"2020/11/28 23:59","size":"1.38 KB"},
 }
 
 FILELIST = [

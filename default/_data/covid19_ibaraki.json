@@ -21,7 +21,7 @@
   },
   "mutant_positive_number": {
     "lastUpdate": "2021/06/02 18:50",
-    "size": "40.22 KiB"
+    "size": "59.52 KiB"
   },
   "recovered_number": {
     "lastUpdate": "2021/06/02 18:50",
@@ -37,26 +37,14 @@
   },
   "inspections_summary": {
     "lastUpdate": "2021/05/27 18:15",
-    "size": "295 Byte"
+    "size": "409 Byte"
   },
   "main_summary": {
     "lastUpdate": "2021/06/02 18:50",
-    "size": "368 Byte"
+    "size": "898 Byte"
   },
   "corona_next": {
     "lastUpdate": "2021/06/02 18:50",
-    "size": "289 Byte"
-  },
-  "roller_mito": {
-    "lastUpdate": "2020/08/21 23:59",
-    "size": "1.10 KB"
-  },
-  "roller_tsukuba_amakubo": {
-    "lastUpdate": "2020/09/07 23:59",
-    "size": "1.02 KB"
-  },
-  "roller_tsuchiura_sakura": {
-    "lastUpdate": "2020/11/28 23:59",
-    "size": "1.38 KB"
+    "size": "346 Byte"
   }
 }
