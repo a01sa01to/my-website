@@ -32,8 +32,8 @@ autopages:
     layouts:
       - 'blog_autopage.html'
     enabled: true
-    permalink: 'blog/tags/:tag'
-    title: '「:tag」の記事一覧'
+    permalink: 'blog/tags/:tag/'
+    title: "「:tag」の記事一覧 - Asa's Blog"
 
 pagination:
   enabled: true
