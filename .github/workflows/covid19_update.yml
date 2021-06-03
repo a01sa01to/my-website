@@ -34,9 +34,16 @@ jobs:
           curl ${DATA_UPDATE_URL}?data=forked_sites -L -o otherpref.csv
           curl ${DATA_UPDATE_URL}?data=news_json -L -o news.json
           curl ${DATA_UPDATE_URL}?data=last_update -L -o last_update.json
+          curl --compressed https://vrs-data.cio.go.jp/vaccination/opendata/latest/prefecture.ndjson -L -o vaccine_data.ndjson
         working-directory: ./default/opendata/data/covid19_ibaraki/
         env:
           DATA_UPDATE_URL: "https://script.google.com/macros/s/AKfycby5yT8vK7UyYlpjRrJ8bSR0bUptnXSFQ5UKmhRIPh-AhnXmeu3VnWa_MmBc9BQ1zb9Njw/exec"
+      - name: Convert Vaccine Data
+        run: python ../../../../workflow_tool/opendata/cov19_vaccine_data.py
+        working-directory: ./default/opendata/data/covid19_ibaraki
+      - name: Remove Base Vaccine Data
+        run: rm vaccine_data.ndjson
+        working-directory: ./default/opendata/data/covid19_ibaraki
       - name: Create Info Json
         run: python ../../../../workflow_tool/opendata/covid19_ibk.py
         working-directory: ./default/opendata/data/covid19_ibaraki

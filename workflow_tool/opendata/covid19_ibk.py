@@ -14,6 +14,7 @@ json_list = {
   "inspections_summary": {"lastUpdate":"","size":""},
   "main_summary": {"lastUpdate":"","size":""},
   "corona_next": {"lastUpdate":"","size":""},
+  "vaccination": {"lastUpdate":"","size":""},
 }
 
 FILELIST = [
@@ -28,7 +29,8 @@ FILELIST = [
   "080004_ibaraki_covid19_summary.json",
   "080004_ibaraki_covid19_corona_next.json",
   "080004_ibaraki_covid19_death_attributes.csv",
-  "080004_ibaraki_covid19_mutant_positive_number.json"
+  "080004_ibaraki_covid19_mutant_positive_number.json",
+  "080004_ibaraki_covid19_vaccination.json"
 ]
 
 ALIASLIST = {
@@ -44,6 +46,7 @@ ALIASLIST = {
   "080004_ibaraki_covid19_corona_next.json": "corona_next",
   "080004_ibaraki_covid19_death_attributes.csv": "death_attr",
   "080004_ibaraki_covid19_mutant_positive_number.json": "mutant_positive_number",
+  "080004_ibaraki_covid19_vaccination.json": "vaccination",
 }
 
 SIZEUNIT = ["Byte", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"]
@@ -51,6 +54,7 @@ SIZEUNIT = ["Byte", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"]
 with open("last_update.json", "r", encoding="UTF-8") as f:
   lastUpdate = json.load(f)
   lastUpdate["mutant_positive_number"] = lastUpdate["mutant_positive"]
+  lastUpdate["vaccination"] = lastUpdate["lastUpdate"]
   del lastUpdate["mutant_positive"]
 
 for filename in FILELIST:
@@ -58,7 +62,10 @@ for filename in FILELIST:
   filesize = os.path.getsize(filename)
   for i in range(len(SIZEUNIT)):
     if(filesize / 1024 < 1):
-      filesize = "{} {}".format(round(filesize,2), SIZEUNIT[i])
+      if(i==0):
+        filesize = "{:.0f} {}".format(filesize, SIZEUNIT[i])
+      else:
+        filesize = "{:.2f} {}".format(round(filesize,2), SIZEUNIT[i])
       break
     else:
       filesize /= 1024
