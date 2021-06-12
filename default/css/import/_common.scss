@@ -25,9 +25,9 @@
 html,
 body {
   overflow-x: hidden;
+  font-feature-settings: "palt"1;
   background-color: var(--bs-light);
   scroll-behavior: smooth;
-  font-feature-settings: "palt"1;
 }
 
 main {
@@ -38,7 +38,7 @@ main {
 a {
   color: #555;
 
-  &.ico[target="_blank"] {
+  &.ico[target = "_blank"] {
     padding: 0 2px;
     text-decoration: none;
     border-bottom: 1px solid var(--bs-gray);

@@ -1,4 +1,4 @@
-nav[aria-label="breadcrumb"]{
+nav[aria-label = "breadcrumb"]{
   --bs-breadcrumb-divider: ">";
 
   li{
@@ -49,5 +49,14 @@ nav[aria-label="breadcrumb"]{
   .carousel-caption{
     background-color: #fffa;
     border-radius: 5px;
+  }
+}
+
+.btn.btn-primary.btn-custom{
+  margin: 4px;
+
+  i{
+    display: inline-block;
+    margin-right: 8px;
   }
 }

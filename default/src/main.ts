@@ -1,5 +1,6 @@
 import 'bootstrap'
 import './blog'
+import './bootstrap/button-custom'
 import './footer'
 import './func'
 import './language'
