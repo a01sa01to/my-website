@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+  {% include meta.html logotitle="Opendata Catalog" subdomain="/opendata" %}
   <title lang="ja">{% if page.titleJa != "TOP" %}{{ page.titleJa }} - {% endif %}Asa's Opendata Catalog</title>
   <title lang="en">{% if page.titleEn != "TOP" %}{{ page.titleEn }} - {% endif %}Asa's Opendata Catalog</title>
   {% feed_meta %}
-  {% include meta.html logotitle="Opendata Catalog" subdomain="/opendata" %}
   {% include css.html %}
   {% include script.html %}
 </head>
