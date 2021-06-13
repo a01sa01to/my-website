@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-06-13T23:52:59+09:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">ABC205</title><link href="https://a01sa01to.com/blog/2021/06/abc205" rel="alternate" type="text/html" title="ABC205" /><published>2021-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc205</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc205">&lt;p&gt;今週もやっていきましょう振り返りを。（謎の倒置）&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-06-14T01:27:23+09:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">ABC205</title><link href="https://a01sa01to.com/blog/2021/06/abc205" rel="alternate" type="text/html" title="ABC205" /><published>2021-06-13T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc205</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc205">&lt;p&gt;今週もやっていきましょう振り返りを。（謎の倒置）&lt;/p&gt;
 
 &lt;p&gt;今回解けたのはAからD。かなり時間がかかってしまった…。&lt;/p&gt;
 
@@ -90,7 +90,8 @@ $ i $ 番目のクエリでは、$ K_i $ が与えられる。 $ A $ に属さ�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;完全にテンパって &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WA&lt;/code&gt; を3回やってしまいました。場合分けを丁寧にしていれば…後悔。&lt;br /&gt;
-chokudaiさんの 解説(?) Spacesで、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C = (C%2) ? 2 : 1&lt;/code&gt; （つまりCが偶数なら2、奇数なら1に置き換え） にしてそのまま $ A^C $ と $ B^C $ を比較すればいい、と仰っていた(?) との情報があったので、なるほどと思った。もっと早く気づいていれば…。&lt;/p&gt;
+chokudaiさんの 解説(?) Spacesで、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C = (C%2) ? 2 : 1&lt;/code&gt; （つまりCが偶数なら2、奇数なら1に置き換え） にしてそのまま $ A^C $ と $ B^C $ を比較すればいい、と仰っていたらしく、なるほどと思った。もっと早く気づいていれば…。&lt;br /&gt;
+しかもABC解説放送で「Cが奇数ならAとBの大小関係そのまま」と仰っていて、「そうだよなぁ…こんな汚いコードにならないよなぁ…」とか考えながら聞いていました。&lt;/p&gt;
 
 &lt;p&gt;提出時刻は 21:28:39。それに3ペナなので、実質 21:43:39。つらい…。&lt;/p&gt;
 
