@@ -27,7 +27,7 @@
         <p class="tags">
           Tags:
           {% for tag in page.tags %}
-            <a href="/blog/tags/{{ tag | downcase }}/" class="tag">{{ tag }}</a>&nbsp;
+            <a href="/blog/tags/{{ tag | downcase }}/" class="tag"><nobr>{{ tag }}</nobr></a>&nbsp;
           {% endfor %}
         </p>
         <p class="date"><nobr>Published on {{ page.date | date: "%Y.%m.%d"}}.<wbr> Last Modified on {{ page.last_modified_at | date: "%Y.%m.%d"}}.</nobr></p>
