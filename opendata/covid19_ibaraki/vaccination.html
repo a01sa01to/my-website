@@ -1,98 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-<link
-  rel="icon"
-  href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:60px;font-family:cursive;%22 fill=%22%230d47a1%22>Asa</text></svg>"
-/>
-<meta
-  name="viewport"
-  content="width=device-width,minimum-scale=1.0, initial-scale=1.0, maximum-scale=10.0, shrink-to-fit=no"
-/>
+<head>
+  <meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:60px;font-family:cursive;%22 fill=%22%230d47a1%22>Asa</text></svg>">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, initial-scale=1.0, maximum-scale=10.0, shrink-to-fit=no">
 
-<meta name="description" content="国が集計したオープンデータを、「茨城県 新型コロナウイルス感染症 対策サイト」で用いる形式に改変したものです。" lang="ja" />
-<meta property="og:description" content="国が集計したオープンデータを、「茨城県 新型コロナウイルス感染症 対策サイト」で用いる形式に改変したものです。" lang="ja" />
- 
-<meta name="description" content="Open data compiled by the national government has been modified to the format used on the "COVID-19 Taskforce site in Ibaraki"." lang="en" />
-<meta property="og:description" content="Open data compiled by the national government has been modified to the format used on the "COVID-19 Taskforce site in Ibaraki"." lang="en" />
+  <meta name="description" content="国が集計したオープンデータを、「茨城県 新型コロナウイルス感染症 対策サイト」で用いる形式に改変したものです。" lang="ja">
+  <meta property="og:description" content="国が集計したオープンデータを、「茨城県 新型コロナウイルス感染症 対策サイト」で用いる形式に改変したものです。" lang="ja">
 
-<meta name="keywords" content="a01sa01to" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:domain" content="https://a01sa01to.com/" />
-<meta name="twitter:site" content="@a01sa01to" />
-<meta name="twitter:creator" content="@a01sa01to" />
-<meta
-  property="og:url"
-  content="https://a01sa01to.com/opendata/covid19_ibaraki/vaccination"
-/>
-<meta property="og:title" content="ワクチン接種状況 - Asa's Opendata Catalog" lang="ja"> <meta
-property="og:title" content="Vaccination Status -
-Asa's Opendata Catalog" lang="en">
-<meta property="og:image" content="https://a01sa01to.com/img/twittercard.jpg" />
-<meta property="og:type" content="website" />
-<link
-  rel="canonical"
-  href="https://a01sa01to.com/opendata/covid19_ibaraki/vaccination"
-/>
+
+<meta name="description" content="Open data compiled by the national government has been modified to the format used on the "COVID-19 Taskforce site in Ibaraki"." lang="en">
+<meta property="og:description" content="Open data compiled by the national government has been modified to the format used on the "COVID-19 Taskforce site in Ibaraki"." lang="en">
+
+<meta name="keywords" content="a01sa01to">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" content="https://a01sa01to.com/">
+<meta name="twitter:site" content="@a01sa01to">
+<meta name="twitter:creator" content="@a01sa01to">
+<meta property="og:url" content="https://a01sa01to.com/opendata/covid19_ibaraki/vaccination">
+<meta property="og:title" content="ワクチン接種状況 - Asa's Opendata Catalog" lang="ja">
+<meta property="og:title" content="Vaccination Status - Asa's Opendata Catalog" lang="en">
+<meta property="og:image" content="https://a01sa01to.com/img/twittercard.jpg">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://a01sa01to.com/opendata/covid19_ibaraki/vaccination">
 
 <!-- Change Chrome Tab Color -->
-<meta name="theme-color" content="#ffffff" />
-
-    <title lang="ja">
-      ワクチン接種状況 | 茨城県 新型コロナウイルス感染症 - Asa's Opendata Catalog
-    </title>
-    <title lang="en">
-      Vaccination Status | COVID-19 Status in Ibaraki - Asa's Opendata Catalog
-    </title>
-    <link type="application/atom+xml" rel="alternate" href="https://a01sa01to.com/feed.xml" title="Asa's Website" /> <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-  crossorigin="anonymous"
-/>
-<link rel="stylesheet" href="/css/main.css" />
- <script
-  src="https://kit.fontawesome.com/7fba4a39db.js"
-  crossorigin="anonymous"
-  async
-></script>
+<meta name="theme-color" content="#ffffff">
+  <title lang="ja">ワクチン接種状況 | 茨城県 新型コロナウイルス感染症 - Asa's Opendata Catalog</title>
+  <title lang="en">Vaccination Status | COVID-19 Status in Ibaraki - Asa's Opendata Catalog</title>
+  <link type="application/atom+xml" rel="alternate" href="https://a01sa01to.com/feed.xml" title="Asa's Website" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/main.css">
+  <script src="https://kit.fontawesome.com/7fba4a39db.js" crossorigin="anonymous" async></script>
 <script src="/bundle.js"></script>
-<script
-  data-ad-client="ca-pub-3296104264173235"
-  async
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-></script>
+<script data-ad-client="ca-pub-3296104264173235" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-Z23EQDNLQY"
-></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z23EQDNLQY"></script>
 <script>
-  window.dataLayer = window.dataLayer || []
-  function gtag() {
-    dataLayer.push(arguments)
-  }
-  gtag('js', new Date())
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  gtag('config', 'G-Z23EQDNLQY')
+  gtag('config', 'G-Z23EQDNLQY');
 </script>
-
-    <link rel="stylesheet" href="/css/opendata.css" />
-  </head>
-  <body id="top">
-    <header>
-      <div id="left"></div>
+  <link rel="stylesheet" href="/css/opendata.css">
+</head>
+<body id="top">
+  <header><div id="left"></div>
 <div id="center">
   <p id="title">Asa's Opendata Catalog</p>
 </div>
 <div id="right">
-  <input type="checkbox" id="menuShow" />
-  <div id="menuIcon">
-    <div id="bar1"></div>
-    <div id="bar2"></div>
-  </div>
+  <input type="checkbox" id="menuShow">
+  <div id="menuIcon"><div id="bar1"></div><div id="bar2"></div></div>
   <div id="menuItem">
     <li><a href="/opendata/">Opendata Catalog Top</a></li>
     
@@ -103,25 +64,13 @@ Asa's Opendata Catalog" lang="en">
     <li><a href="/works">Works</a></li>
     <li><a href="/sitemap/">Sitemap</a></li>
     <li class="social">
-      <a
-        href="https://github.com/a01sa01to"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://github.com/a01sa01to" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-github"></i>
       </a>
-      <a
-        href="https://twitter.com/a01sa01to"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://twitter.com/a01sa01to" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-twitter"></i>
       </a>
-      <a
-        href="https://instagram.com/a01sa01to"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://instagram.com/a01sa01to" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-instagram"></i>
       </a>
       <a href="/feed.xml" target="_blank" rel="noopener">
@@ -131,498 +80,166 @@ Asa's Opendata Catalog" lang="en">
     <p class="border"></p>
     <li><a href="?lang=ja">Japanese</a></li>
     <li><a href="?lang=en">English</a></li>
-    <li style="height: 54px"></li>
+    <li style="height: 54px;"></li>
   </div>
-</div>
+</div></header>
+  <main>
+    <div class="container">
+      <div>
+        <h1 lang="ja">ワクチン接種状況</h1>
+        <h1 lang="en">Vaccination Status</h1><br>
 
-    </header>
-    <main>
-      <div class="container">
-        <div>
-          <h1 lang="ja">ワクチン接種状況</h1>
-          <h1 lang="en">Vaccination Status</h1>
-          <br />
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb" lang="ja">
+            <li class="breadcrumb-item"><a href="/opendata/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/opendata/list">提供オープンデータ一覧</a></li>
+            <li class="breadcrumb-item"><a href="./">茨城県 新型コロナウイルス感染症</a></li>
+            <li class="breadcrumb-item active" aria-current="page">ワクチン接種状況</li>
+          </ol>
+          <ol class="breadcrumb" lang="en">
+            <li class="breadcrumb-item"><a href="/opendata/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/opendata/list">Open Data List</a></li>
+            <li class="breadcrumb-item"><a href="./">COVID-19 Status in Ibaraki</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Vaccination Status</li>
+          </ol>
+        </nav>
 
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb" lang="ja">
-              <li class="breadcrumb-item"><a href="/opendata/">Home</a></li>
-              <li class="breadcrumb-item">
-                <a href="/opendata/list">提供オープンデータ一覧</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="./">茨城県 新型コロナウイルス感染症</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                ワクチン接種状況
-              </li>
-            </ol>
-            <ol class="breadcrumb" lang="en">
-              <li class="breadcrumb-item"><a href="/opendata/">Home</a></li>
-              <li class="breadcrumb-item">
-                <a href="/opendata/list">Open Data List</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="./">COVID-19 Status in Ibaraki</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Vaccination Status
-              </li>
-            </ol>
-          </nav>
+        <p class="desc" lang="ja">国が集計したオープンデータを、「茨城県 新型コロナウイルス感染症 対策サイト」で用いる形式に改変したものです。</p>
+        <p class="desc" lang="en">Open data compiled by the national government has been modified to the format used on the "COVID-19 Taskforce site in Ibaraki".</p><br>
+        <p class="note" lang="ja">当データを利用した作品を公開する際には、必ず当ページへのリンクを記載してください。</p>
+        <p class="note" lang="en">When you publish a work using this data, please be sure to include a link to this page.</p>
+        <h2 lang="ja">情報</h2>
+        <h2 lang="en">Information</h2>
+        <input type="hidden" name="fn" value="/opendata/data/covid19_ibaraki/080004_ibaraki_covid19_vaccination.json">
+        <table>
+          <tr lang="ja"><th>フィールド</th><th>値</th></tr>
+          <tr lang="en"><th>Field</th><th>Value</th></tr>
+          <tr><td lang="ja">最終更新</td><td lang="en">Last Update</td><td id="upd"></td></tr>
+          <tr><td lang="ja">作成日</td><td lang="en">Publish</td><td>2021/06/03 21:00(UTC+09:00)</td></tr>
+          <tr><td lang="ja">ファイル名</td><td lang="en">File Name</td><td>080004_ibaraki_covid19_vaccination.json</td></tr>
+          <tr><td lang="ja">ファイルサイズ</td><td lang="en">File Size</td><td id="filesize"></td></tr>
+          <tr><td lang="ja">データ形式</td><td lang="en">Data Format</td><td id="format">JSON</td></tr>
+          <tr lang="ja"><td>ライセンス</td><td><a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener noreferrer">CC BY 4.0</a><br>出所の表示は必須ですが、商業利用・改変は許可されます。</td></tr>
+          <tr lang="en"><td>License</td><td><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" rel="noopener noreferrer">CC BY 4.0</a><br>Indication of the source is required, but commercial use and modification is permitted.</td></tr>
+        </table>
+        <p lang="ja" style="margin: 10px; text-align: center;">何か不具合や要望があれば、<a href="mailto:info%40a01sa01to.com" target="_blank" rel="noopener noreferrer">info@a01sa01to.com</a>にお寄せください。</p>
+        <p lang="en" style="margin: 10px; text-align: center;">If you have any problems or requests, please send them to <a href="mailto:info%40a01sa01to.com" target="_blank" rel="noopener noreferrer">info@a01sa01to.com</a>.</p>
+        <h2 lang="ja">ダウンロード</h2>
+        <h2 lang="en">Download</h2>
+        <p class="note" lang="en">Note that the data is only in Japanese.</p>
+        <div class="flex" lang="ja">
+          <button type="button" class="btn btn-outline-dark pre" data-bs-toggle="modal" data-bs-target=".modal#preview">プレビュー</button>
+          <button type="button" class="btn btn-outline-dark dl" data-bs-toggle="modal" data-bs-target=".modal#dl">ダウンロード</button>
+          <button type="button" class="btn btn-outline-dark api" data-bs-toggle="modal" data-bs-target=".modal#api">データへのURLを取得する</button>
+        </div>
+        <div class="flex" lang="en">
+          <button type="button" class="btn btn-outline-dark pre" data-bs-toggle="modal" data-bs-target=".modal#preview">Preview</button>
+          <button type="button" class="btn btn-outline-dark dl" data-bs-toggle="modal" data-bs-target=".modal#dl">Download</button>
+          <button type="button" class="btn btn-outline-dark api" data-bs-toggle="modal" data-bs-target=".modal#api">Get URL to the data</button>
+        </div>
 
-          <p class="desc" lang="ja">国が集計したオープンデータを、「茨城県 新型コロナウイルス感染症 対策サイト」で用いる形式に改変したものです。</p>
-          <p class="desc" lang="en">Open data compiled by the national government has been modified to the format used on the "COVID-19 Taskforce site in Ibaraki".</p>
-          <br />
-          <p class="note" lang="ja">
-            当データを利用した作品を公開する際には、必ず当ページへのリンクを記載してください。
-          </p>
-          <p class="note" lang="en">
-            When you publish a work using this data, please be sure to include a
-            link to this page.
-          </p>
-          <h2 lang="ja">情報</h2>
-          <h2 lang="en">Information</h2>
-          <input
-            type="hidden"
-            name="fn"
-            value="/opendata/data/covid19_ibaraki/080004_ibaraki_covid19_vaccination.json"
-          />
-          <table>
-            <tr lang="ja">
-              <th>フィールド</th>
-              <th>値</th>
-            </tr>
-            <tr lang="en">
-              <th>Field</th>
-              <th>Value</th>
-            </tr>
-            <tr>
-              <td lang="ja">最終更新</td>
-              <td lang="en">Last Update</td>
-              <td id="upd"></td>
-            </tr>
-            <tr>
-              <td lang="ja">作成日</td>
-              <td lang="en">Publish</td>
-              <td>2021/06/03 21:00(UTC+09:00)</td>
-            </tr>
-            <tr>
-              <td lang="ja">ファイル名</td>
-              <td lang="en">File Name</td>
-              <td>080004_ibaraki_covid19_vaccination.json</td>
-            </tr>
-            <tr>
-              <td lang="ja">ファイルサイズ</td>
-              <td lang="en">File Size</td>
-              <td id="filesize"></td>
-            </tr>
-            <tr>
-              <td lang="ja">データ形式</td>
-              <td lang="en">Data Format</td>
-              <td id="format">
-                JSON
-              </td>
-            </tr>
-            <tr lang="ja">
-              <td>ライセンス</td>
-              <td>
-                <a
-                  href="https://creativecommons.org/licenses/by/4.0/deed.ja"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >CC BY 4.0</a
-                ><br />出所の表示は必須ですが、商業利用・改変は許可されます。
-              </td>
-            </tr>
-            <tr lang="en">
-              <td>License</td>
-              <td>
-                <a
-                  href="https://creativecommons.org/licenses/by/4.0/deed.en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >CC BY 4.0</a
-                ><br />Indication of the source is required, but commercial use
-                and modification is permitted.
-              </td>
-            </tr>
-          </table>
-          <p lang="ja" style="margin: 10px; text-align: center">
-            何か不具合や要望があれば、<a
-              href="mailto:info%40a01sa01to.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              >info@a01sa01to.com</a
-            >にお寄せください。
-          </p>
-          <p lang="en" style="margin: 10px; text-align: center">
-            If you have any problems or requests, please send them to
-            <a
-              href="mailto:info%40a01sa01to.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              >info@a01sa01to.com</a
-            >.
-          </p>
-          <h2 lang="ja">ダウンロード</h2>
-          <h2 lang="en">Download</h2>
-          <p class="note" lang="en">Note that the data is only in Japanese.</p>
-          <div class="flex" lang="ja">
-            <button
-              type="button"
-              class="btn btn-outline-dark pre"
-              data-bs-toggle="modal"
-              data-bs-target=".modal#preview"
-            >
-              プレビュー
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-dark dl"
-              data-bs-toggle="modal"
-              data-bs-target=".modal#dl"
-            >
-              ダウンロード
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-dark api"
-              data-bs-toggle="modal"
-              data-bs-target=".modal#api"
-            >
-              データへのURLを取得する
-            </button>
-          </div>
-          <div class="flex" lang="en">
-            <button
-              type="button"
-              class="btn btn-outline-dark pre"
-              data-bs-toggle="modal"
-              data-bs-target=".modal#preview"
-            >
-              Preview
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-dark dl"
-              data-bs-toggle="modal"
-              data-bs-target=".modal#dl"
-            >
-              Download
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-dark api"
-              data-bs-toggle="modal"
-              data-bs-target=".modal#api"
-            >
-              Get URL to the data
-            </button>
-          </div>
-
-          <div class="modal fade" id="preview">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" lang="ja">プレビュー</h5>
-                  <h5 class="modal-title" lang="en">Preview</h5>
-                </div>
-                <div class="modal-body" style="width: 500px">
-                  <div id="ace"></div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                </div>
+        <div class="modal fade" id="preview">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" lang="ja">プレビュー</h5>
+                <h5 class="modal-title" lang="en">Preview</h5>
+              </div>
+              <div class="modal-body" style="width: 500px;">
+                <div id="ace"></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
-          <div class="modal fade" id="dl">
-            <div
-              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-            >
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" lang="ja">ダウンロード</h5>
-                  <h5 class="modal-title" lang="en">Download</h5>
-                </div>
-                <div class="modal-body">
-                  <p lang="ja">
-                    以下の説明・注意点を必ずお読みになってから、ワクチン接種状況をダウンロードしてください。
-                  </p>
-                  <p lang="en">
-                    Please be sure to read the following instructions and
-                    cautions before downloading Vaccination Status.
-                  </p>
-                  <ul>
-                    <p id="updated">
-  2021/06/16 17:25(UTC+09:00)
-</p>
-<p id="filesize">6.01 KiB</p>
-<li lang="ja">
-  本データは、<a
-    href="https://ibaraki.stopcovid19.jp/"
-    target="_blank"
-    rel="noopener noreferrer"
-    >「茨城県 新型コロナウイルス感染症 対策サイト」</a
-  >で利用しているフォーマットに則り、オープンデータとして公開しているものです。
-</li>
-<li lang="ja">
-  こちらのオープンデータは、「ワクチン接種記録システム（VRS）」への報告を居住地の都道府県別に国が集計し、公表したものに基づき作成しています。<a
-    href="https://cio.go.jp/c19vaccine_dashboard"
-    target="_blank"
-    rel="noopener noreferrer"
-    >国が公開しているオープンデータ</a
-  >も併せてご覧ください。
-</li>
-<li lang="ja">
-  当データの情報の正確性については万全を期していますが、利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。
-</li>
+        </div>
+        <div class="modal fade" id="dl">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" lang="ja">ダウンロード</h5>
+                <h5 class="modal-title" lang="en">Download</h5>
+              </div>
+              <div class="modal-body">
+                <p lang="ja">以下の説明・注意点を必ずお読みになってから、ワクチン接種状況をダウンロードしてください。</p>
+                <p lang="en">Please be sure to read the following instructions and cautions before downloading Vaccination Status.</p>
+                <ul>
+                  <p id="updated">2021/06/17 17:15(UTC+09:00)</p>
+<p id="filesize">6.12 KiB</p>
+<li lang="ja">本データは、<a href="https://ibaraki.stopcovid19.jp/" target="_blank" rel="noopener noreferrer">「茨城県 新型コロナウイルス感染症 対策サイト」</a>で利用しているフォーマットに則り、オープンデータとして公開しているものです。</li>
+<li lang="ja">こちらのオープンデータは、「ワクチン接種記録システム（VRS）」への報告を居住地の都道府県別に国が集計し、公表したものに基づき作成しています。<a href="https://cio.go.jp/c19vaccine_dashboard" target="_blank" rel="noopener noreferrer">国が公開しているオープンデータ</a>も併せてご覧ください。</li>
+<li lang="ja">当データの情報の正確性については万全を期していますが、利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。</li>
 
-<li lang="en">
-  This data has been released as open data in accordance with the format used in
-  the
-  <a
-    href="https://ibaraki.stopcovid19.jp/"
-    target="_blank"
-    rel="noopener noreferrer"
-    >"COVID-19 Taskforce site in Ibaraki"</a
-  >
-  and is open to the public as open data.
-</li>
-<li lang="en">
-  This open data is based on reports to the Vaccination Record System (VRS),
-  which are compiled and published by the government by prefecture of residence.
-  See also
-  <a
-    href="https://cio.go.jp/c19vaccine_dashboard"
-    target="_blank"
-    rel="noopener noreferrer"
-    >open data released by the government</a
-  >.
-</li>
-<li lang="en">
-  While every effort has been made to ensure the accuracy of the information in
-  this data, we are not responsible for any actions taken by users using the
-  information on this site.
-</li>
-
-                  </ul>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary"
-                    lang="ja"
-                  >
-                    ファイルをダウンロード
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary"
-                    lang="en"
-                  >
-                    Download the File
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                </div>
+<li lang="en">This data has been released as open data in accordance with the format used in the <a href="https://ibaraki.stopcovid19.jp/" target="_blank" rel="noopener noreferrer">"COVID-19 Taskforce site in Ibaraki"</a> and is open to the public as open data.</li>
+<li lang="en">This open data is based on reports to the Vaccination Record System (VRS), which are compiled and published by the government by prefecture of residence. See also <a href="https://cio.go.jp/c19vaccine_dashboard" target="_blank" rel="noopener noreferrer">open data released by the government</a>.</li>
+<li lang="en">While every effort has been made to ensure the accuracy of the information in this data, we are not responsible for any actions taken by users using the information on this site.</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" lang="ja">ファイルをダウンロード</button>
+                <button type="button" class="btn btn-outline-primary" lang="en">Download the File</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
-          <div class="modal fade" id="api">
-            <div
-              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-            >
-              <div class="modal-content">
-                <div
-                  class="
-                    toast
-                    d-flex
-                    align-items-center
-                    top-0
-                    end-0
-                    toast-container
-                    position-absolute
-                    p-3
-                    text-white
-                  "
-                  role="alert"
-                  aria-live="assertive"
-                  aria-atomic="true"
-                >
-                  <div class="toast-body">
-                    Hello, world! This is a toast message.
-                  </div>
+        </div>
+        <div class="modal fade" id="api">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="toast d-flex align-items-center top-0 end-0 toast-container position-absolute p-3 text-white" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-body">
+                  Hello, world! This is a toast message.
                 </div>
-                <div class="modal-header">
-                  <h5 class="modal-title" lang="ja">URLを取得</h5>
-                  <h5 class="modal-title" lang="en">Get the URL</h5>
-                </div>
-                <div class="modal-body">
-                  <p lang="ja">
-                    以下の説明・注意点を必ずお読みになってから、ワクチン接種状況をダウンロードしてください。
-                  </p>
-                  <p lang="en">
-                    Please be sure to read the following instructions and
-                    cautions before downloading Vaccination Status.
-                  </p>
-                  <ul>
-                    <p id="updated">
-  2021/06/16 17:25(UTC+09:00)
-</p>
-<p id="filesize">6.01 KiB</p>
-<li lang="ja">
-  本データは、<a
-    href="https://ibaraki.stopcovid19.jp/"
-    target="_blank"
-    rel="noopener noreferrer"
-    >「茨城県 新型コロナウイルス感染症 対策サイト」</a
-  >で利用しているフォーマットに則り、オープンデータとして公開しているものです。
-</li>
-<li lang="ja">
-  こちらのオープンデータは、「ワクチン接種記録システム（VRS）」への報告を居住地の都道府県別に国が集計し、公表したものに基づき作成しています。<a
-    href="https://cio.go.jp/c19vaccine_dashboard"
-    target="_blank"
-    rel="noopener noreferrer"
-    >国が公開しているオープンデータ</a
-  >も併せてご覧ください。
-</li>
-<li lang="ja">
-  当データの情報の正確性については万全を期していますが、利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。
-</li>
+              </div>
+              <div class="modal-header">
+                <h5 class="modal-title" lang="ja">URLを取得</h5>
+                <h5 class="modal-title" lang="en">Get the URL</h5>
+              </div>
+              <div class="modal-body">
+                <p lang="ja">以下の説明・注意点を必ずお読みになってから、ワクチン接種状況をダウンロードしてください。</p>
+                <p lang="en">Please be sure to read the following instructions and cautions before downloading Vaccination Status.</p>
+                <ul>
+                  <p id="updated">2021/06/17 17:15(UTC+09:00)</p>
+<p id="filesize">6.12 KiB</p>
+<li lang="ja">本データは、<a href="https://ibaraki.stopcovid19.jp/" target="_blank" rel="noopener noreferrer">「茨城県 新型コロナウイルス感染症 対策サイト」</a>で利用しているフォーマットに則り、オープンデータとして公開しているものです。</li>
+<li lang="ja">こちらのオープンデータは、「ワクチン接種記録システム（VRS）」への報告を居住地の都道府県別に国が集計し、公表したものに基づき作成しています。<a href="https://cio.go.jp/c19vaccine_dashboard" target="_blank" rel="noopener noreferrer">国が公開しているオープンデータ</a>も併せてご覧ください。</li>
+<li lang="ja">当データの情報の正確性については万全を期していますが、利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。</li>
 
-<li lang="en">
-  This data has been released as open data in accordance with the format used in
-  the
-  <a
-    href="https://ibaraki.stopcovid19.jp/"
-    target="_blank"
-    rel="noopener noreferrer"
-    >"COVID-19 Taskforce site in Ibaraki"</a
-  >
-  and is open to the public as open data.
-</li>
-<li lang="en">
-  This open data is based on reports to the Vaccination Record System (VRS),
-  which are compiled and published by the government by prefecture of residence.
-  See also
-  <a
-    href="https://cio.go.jp/c19vaccine_dashboard"
-    target="_blank"
-    rel="noopener noreferrer"
-    >open data released by the government</a
-  >.
-</li>
-<li lang="en">
-  While every effort has been made to ensure the accuracy of the information in
-  this data, we are not responsible for any actions taken by users using the
-  information on this site.
-</li>
-
-                  </ul>
-                </div>
-                <div class="modal-footer">
-                  <code
-                    >https://a01sa01to.com/opendata/data/covid19_ibaraki/080004_ibaraki_covid19_vaccination.json</code
-                  ><br /><br />
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary"
-                    data-clipboard-target=".modal#api code"
-                    lang="ja"
-                  >
-                    <span>content_copy</span>URLをコピー
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary"
-                    data-clipboard-target=".modal#api code"
-                    lang="en"
-                  >
-                    <span>content_copy</span>Copy the URL
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                </div>
+<li lang="en">This data has been released as open data in accordance with the format used in the <a href="https://ibaraki.stopcovid19.jp/" target="_blank" rel="noopener noreferrer">"COVID-19 Taskforce site in Ibaraki"</a> and is open to the public as open data.</li>
+<li lang="en">This open data is based on reports to the Vaccination Record System (VRS), which are compiled and published by the government by prefecture of residence. See also <a href="https://cio.go.jp/c19vaccine_dashboard" target="_blank" rel="noopener noreferrer">open data released by the government</a>.</li>
+<li lang="en">While every effort has been made to ensure the accuracy of the information in this data, we are not responsible for any actions taken by users using the information on this site.</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <code>https://a01sa01to.com/opendata/data/covid19_ibaraki/080004_ibaraki_covid19_vaccination.json</code><br><br>
+                <button type="button" class="btn btn-outline-primary" data-clipboard-target=".modal#api code" lang="ja"><span>content_copy</span>URLをコピー</button>
+                <button type="button" class="btn btn-outline-primary" data-clipboard-target=".modal#api code" lang="en"><span>content_copy</span>Copy the URL</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
-    <footer><div class="sb">
+    </div>
+  </main>
+  <footer><div class='sb'>
   Share this page!
-  <div class="sbInner">
-    <!-- Facebook -->
-    <a
-      class="shadow-lg mb-5 rounded sBtn sBtn-facebook"
-      href="https://www.facebook.com/sharer/sharer.php?u=PAGEURL"
-      rel="nofollow"
-      target="_blank"
-      title="Share on Facebook"
-      ><i class="fab fa-facebook-f"></i
-    ></a>
-    <!-- Twitter -->
-    <a
-      class="shadow-lg mb-5 rounded sBtn sBtn-twitter"
-      href="http://twitter.com/share?url=PAGEURL&text=PAGETITLE&via=a01sa01to"
-      rel="nofollow"
-      target="_blank"
-      title="Share on Twitter"
-      ><i class="fab fa-twitter"></i
-    ></a>
-    <!-- LINE -->
-    <a
-      class="shadow-lg mb-5 rounded sBtn sBtn-line"
-      href="http://line.me/R/msg/text/?PAGETITLE%0APAGEURL"
-      rel="nofollow"
-      target="_blank"
-      title="Share on LINE"
-      ><i class="fab fa-line"></i
-    ></a>
-    <!-- Pocket -->
-    <a
-      class="shadow-lg mb-5 rounded sBtn sBtn-pocket"
-      href="https://getpocket.com/edit?url=PAGEURL&title=PAGETITLE"
-      rel="nofollow"
-      target="blank"
-      title="Share on Pocket"
-      ><i class="fab fa-get-pocket"></i
-    ></a>
-    <!-- B! Hatena -->
-    <a
-      class="shadow-lg mb-5 rounded sBtn sBtn-hatena"
-      href="https://b.hatena.ne.jp/add?mode=confirm&url=PAGEURL&title=PAGETITLE"
-      rel="nofollow"
-      target="_blank"
-      title="Share on Hatena"
-      ><i aria-hidden="true" class="fa fa-hatena" style="font-weight: bold"
-        >B!</i
-      ></a
-    >
-  </div>
+	<div class='sbInner'>
+		<!-- Facebook -->
+		<a class='shadow-lg mb-5 rounded sBtn sBtn-facebook' href="https://www.facebook.com/sharer/sharer.php?u=PAGEURL" rel='nofollow' target='_blank' title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+		<!-- Twitter -->
+		<a class='shadow-lg mb-5 rounded sBtn sBtn-twitter' href="http://twitter.com/share?url=PAGEURL&text=PAGETITLE&via=a01sa01to" rel='nofollow' target='_blank' title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+		<!-- LINE -->
+		<a class='shadow-lg mb-5 rounded sBtn sBtn-line' href="http://line.me/R/msg/text/?PAGETITLE%0APAGEURL" rel='nofollow' target='_blank' title='Share on LINE'><i class="fab fa-line"></i></a>
+		<!-- Pocket -->
+		<a class='shadow-lg mb-5 rounded sBtn sBtn-pocket' href="https://getpocket.com/edit?url=PAGEURL&title=PAGETITLE" rel='nofollow' target='blank' title='Share on Pocket'><i class="fab fa-get-pocket"></i></a>
+		<!-- B! Hatena -->
+		<a class='shadow-lg mb-5 rounded sBtn sBtn-hatena' href="https://b.hatena.ne.jp/add?mode=confirm&url=PAGEURL&title=PAGETITLE" rel='nofollow' target='_blank' title='Share on Hatena'><i aria-hidden='true' class='fa fa-hatena' style='font-weight: bold;'>B!</i></a>
+	</div>
 </div>
 
-<p id="copyright">Copyright &copy; 2020-2021 Asa(@a01sa01to)</p>
-</footer>
-    <a href="#top" id="gototop"
-      ><span class="material-icons">keyboard_arrow_up</span></a
-    >
-  </body>
+<p id="copyright">Copyright &copy; 2020-2021 Asa(@a01sa01to)</p></footer>
+  <a href="#top" id="gototop"><span class="material-icons">keyboard_arrow_up</span></a>
+</body>
 </html>

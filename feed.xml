@@ -1,32 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-06-17T12:22:29+09:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">ABC205</title><link href="https://a01sa01to.com/blog/2021/06/abc205" rel="alternate" type="text/html" title="ABC205" /><published>2021-06-13T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc205</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc205">&lt;p&gt;今週もやっていきましょう振り返りを。（謎の倒置）&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-06-17T08:02:10+00:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">ABC205</title><link href="https://a01sa01to.com/blog/2021/06/abc205" rel="alternate" type="text/html" title="ABC205" /><published>2021-06-13T00:00:00+00:00</published><updated>2020-06-14T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/abc205</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc205">&lt;p&gt;今週もやっていきましょう振り返りを。（謎の倒置）&lt;/p&gt;
 
-&lt;p&gt;今回解けたのは A から D。かなり時間がかかってしまった…。&lt;/p&gt;
+&lt;p&gt;今回解けたのはAからD。かなり時間がかかってしまった…。&lt;/p&gt;
 
 &lt;h2 id=&quot;問題概要&quot;&gt;問題概要&lt;/h2&gt;
 
 &lt;h3 id=&quot;a&quot;&gt;A&lt;/h3&gt;
-
-&lt;p&gt;100mL あたり A kcal のドリンクが B mL のとき、何 kcal？&lt;/p&gt;
+&lt;p&gt;100mLあたり A kcal のドリンクが B mL のとき、何 kcal？&lt;/p&gt;
 
 &lt;h3 id=&quot;b&quot;&gt;B&lt;/h3&gt;
-
-&lt;p&gt;1 以上 N 以下の整数からなる長さ N の数列が与えられる。この数列が $ (1,2,…,N) $ の並び替えで得られる？&lt;/p&gt;
+&lt;p&gt;1以上N以下の整数からなる長さNの数列が与えられる。この数列が $ (1,2,…,N) $ の並び替えで得られる？&lt;/p&gt;
 
 &lt;h3 id=&quot;c&quot;&gt;C&lt;/h3&gt;
-
-&lt;p&gt;「A の C 乗」と「B の C 乗」の大小比較&lt;/p&gt;
+&lt;p&gt;「AのC乗」と「BのC乗」の大小比較&lt;/p&gt;
 
 &lt;h3 id=&quot;d&quot;&gt;D&lt;/h3&gt;
-
 &lt;p&gt;正整数列 $ A = (A_1, A_2, …, A_N) $　（ソート済） と Q個のクエリ。&lt;br /&gt;
 $ i $ 番目のクエリでは、$ K_i $ が与えられる。 $ A $ に属さない正整数のうち、小さいほうから数えて $ K_i $ 番目のものを求める。&lt;/p&gt;
 
 &lt;h2 id=&quot;提出結果&quot;&gt;提出結果&lt;/h2&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc205/submissions?f.User=a01sa01to&quot;&gt;ここから&lt;/a&gt; 提出結果がわかります。&lt;/p&gt;
 
 &lt;h3 id=&quot;a-1&quot;&gt;A&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc205/submissions/23396970&quot;&gt;提出 #23396970 - AtCoder Beginner Contest 205&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
@@ -40,10 +34,9 @@ $ i $ 番目のクエリでは、$ K_i $ が与えられる。 $ A $ に属さ�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;普通に、計算するだけ。だけど、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;double&lt;/code&gt; 型じゃないとアウト。&lt;br /&gt;
-提出時刻は 21:00:56。1 分以内に提出できた…！&lt;/p&gt;
+提出時刻は 21:00:56。1分以内に提出できた…！&lt;/p&gt;
 
 &lt;h3 id=&quot;b-1&quot;&gt;B&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc205/submissions/23403526&quot;&gt;提出 #23403526 - AtCoder Beginner Contest 205&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
@@ -66,13 +59,12 @@ $ i $ 番目のクエリでは、$ K_i $ が与えられる。 $ A $ に属さ�
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;長さ N なので、重複して数字が出なければ OK。なので、長さ N の数列 A を用意して、与数列に数 x が出てきたら、A[x-1]を+1 する。で A[x-1]が 2 以上なら&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;No&lt;/code&gt;を出力して終了、という流れ。&lt;br /&gt;
-今思えば、+1 する前にチェックしてもよかったかも。&lt;/p&gt;
+&lt;p&gt;長さNなので、重複して数字が出なければOK。なので、長さNの数列Aを用意して、与数列に数xが出てきたら、A[x-1]を+1する。でA[x-1]が2以上なら&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;No&lt;/code&gt;を出力して終了、という流れ。&lt;br /&gt;
+今思えば、+1する前にチェックしてもよかったかも。&lt;/p&gt;
 
 &lt;p&gt;提出時刻は 21:03:29。まあ、いつも通りという感じ…？&lt;/p&gt;
 
 &lt;h3 id=&quot;c-1&quot;&gt;C&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc205/submissions/23426950&quot;&gt;提出 #23426950 - AtCoder Beginner Contest 205&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
@@ -97,14 +89,13 @@ $ i $ 番目のクエリでは、$ K_i $ が与えられる。 $ A $ に属さ�
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;完全にテンパって &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WA&lt;/code&gt; を 3 回やってしまいました。場合分けを丁寧にしていれば…後悔。&lt;br /&gt;
-chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C = (C%2) ? 2 : 1&lt;/code&gt; （つまり C が偶数なら 2、奇数なら 1 に置き換え） にしてそのまま $ A^C $ と $ B^C $ を比較すればいい、と仰っていたらしく、なるほどと思った。もっと早く気づいていれば…。&lt;br /&gt;
-しかも ABC 解説放送で「C が奇数なら A と B の大小関係そのまま」と仰っていて、「そうだよなぁ…こんな汚いコードにならないよなぁ…」とか考えながら聞いていました。&lt;/p&gt;
+&lt;p&gt;完全にテンパって &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WA&lt;/code&gt; を3回やってしまいました。場合分けを丁寧にしていれば…後悔。&lt;br /&gt;
+chokudaiさんの 解説(?) Spacesで、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C = (C%2) ? 2 : 1&lt;/code&gt; （つまりCが偶数なら2、奇数なら1に置き換え） にしてそのまま $ A^C $ と $ B^C $ を比較すればいい、と仰っていたらしく、なるほどと思った。もっと早く気づいていれば…。&lt;br /&gt;
+しかもABC解説放送で「Cが奇数ならAとBの大小関係そのまま」と仰っていて、「そうだよなぁ…こんな汚いコードにならないよなぁ…」とか考えながら聞いていました。&lt;/p&gt;
 
-&lt;p&gt;提出時刻は 21:28:39。それに 3 ペナなので、実質 21:43:39。つらい…。&lt;/p&gt;
+&lt;p&gt;提出時刻は 21:28:39。それに3ペナなので、実質 21:43:39。つらい…。&lt;/p&gt;
 
 &lt;h3 id=&quot;d-1&quot;&gt;D&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc205/submissions/23447498&quot;&gt;提出 #23447498 - AtCoder Beginner Contest 205&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
@@ -134,59 +125,53 @@ chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintex
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;えっと、制約から $ N,Q \le 10^5 $ だったので、計算量的に log が出てくる二分探索かなーとすぐに気づけました。それと、$ A_x - x $ の値が、「 $ A $ に属さない正整数かつ $ A_x $ 以下（or 未満）の個数」と同じだとすぐに気づけ、かなり考察力が上がったなと実感できました。&lt;/p&gt;
+&lt;p&gt;えっと、制約から $ N,Q \le 10^5 $ だったので、計算量的に log が出てくる二分探索かなーとすぐに気づけました。それと、$ A_x - x $ の値が、「 $ A $ に属さない正整数かつ $ A_x $ 以下（or未満）の個数」と同じだとすぐに気づけ、かなり考察力が上がったなと実感できました。&lt;/p&gt;
 
 &lt;p&gt;いろいろローカルで試行錯誤してみました。メモをとって、きちんと計算をしていればすぐにミスに気づけたと思いますが…。&lt;/p&gt;
 
 &lt;p&gt;方針としては、&lt;br /&gt;
-[1] $ A_1 \gt K_i $ の場合を考えると、1 から $ A_i - 1 $ までの数字は $ A $ に属していないので、そのまま $ K_i $ を出力。&lt;br /&gt;
+[1] $ A_1 \gt K_i $ の場合を考えると、1から $ A_i - 1 $ までの数字は $ A $ に属していないので、そのまま $ K_i $ を出力。&lt;br /&gt;
 [2] $ A_N \lt K_i $ の場合、$ A_N + 1 $ 以上の数はすべて属さないので、求める数は $ K_i - (A_N - N) = K_i + N $ を出力。$ (A_N - N) $ は、「$ A_N $ 以下で $ A $ に属さない整数の個数」なので。&lt;br /&gt;
-[3] それ以外の場合、二分探索で $ A_x - x \ge K_i $ となる $ x $ を求めて、x を-1 します。そのあとに、先ほどと同じ理由で、 $ K_i - (A_x - x) = K_i + x $ を出力。&lt;/p&gt;
+[3] それ以外の場合、二分探索で $ A_x - x \ge K_i $ となる $ x $ を求めて、xを-1します。そのあとに、先ほどと同じ理由で、 $ K_i - (A_x - x) = K_i + x $ を出力。&lt;/p&gt;
 
-&lt;p&gt;提出時刻は 22:24:45。1 ペナにより実質 22:29:45 です。&lt;/p&gt;
+&lt;p&gt;提出時刻は 22:24:45。1ペナにより実質 22:29:45です。&lt;/p&gt;
 
 &lt;h2 id=&quot;結果と感想&quot;&gt;結果と感想&lt;/h2&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;ABC197以来の4完！！！&lt;br /&gt;&lt;br /&gt;a01sa01toさんのAtCoder Beginner Contest 205での成績：3177位&lt;br /&gt;パフォーマンス：814相当&lt;br /&gt;レーティング：630→652 (+22) :)&lt;br /&gt;Highestを更新しました！&lt;a href=&quot;https://twitter.com/hashtag/AtCoder?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#AtCoder&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/ABC205?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ABC205&lt;/a&gt; &lt;a href=&quot;https://t.co/4HyUv5Gyod&quot;&gt;https://t.co/4HyUv5Gyod&lt;/a&gt;&lt;/p&gt;&amp;mdash; Asa (@a01sa01to) &lt;a href=&quot;https://twitter.com/a01sa01to/status/1404084102362394630?ref_src=twsrc%5Etfw&quot;&gt;June 13, 2021&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;ABC197 以来の 4 完です。3177 位で、レーティングは+22 の 652 です。&lt;/p&gt;
+&lt;p&gt;ABC197以来の4完です。3177位で、レーティングは+22の652です。&lt;/p&gt;
 
-&lt;p&gt;C と D 問題のペナルティと、D 問題のメモ無しが響いてきたと思います…。&lt;br /&gt;
-4 ペナがなければ、 20 分マイナスで &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;84:45&lt;/code&gt; となったため、順位は 2870 位となり、680 くらいまで届いたのかなぁと。ミス修正の時間も引けばさらに上がったかも…。&lt;/p&gt;
+&lt;p&gt;CとD問題のペナルティと、D問題のメモ無しが響いてきたと思います…。&lt;br /&gt;
+4ペナがなければ、 20分マイナスで &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;84:45&lt;/code&gt; となったため、順位は2870位となり、680くらいまで届いたのかなぁと。ミス修正の時間も引けばさらに上がったかも…。&lt;/p&gt;
 
-&lt;p&gt;何とかレーティングは下がりませんでした。これからも維持できるよう頑張りたいです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今週もやっていきましょう振り返りを。（謎の倒置）</summary></entry><entry><title type="html">ABC204</title><link href="https://a01sa01to.com/blog/2021/06/abc204" rel="alternate" type="text/html" title="ABC204" /><published>2021-06-06T00:00:00+09:00</published><updated>2020-06-06T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc204</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc204">&lt;p&gt;&lt;a href=&quot;./ahc003&quot;&gt;前回の AHC003&lt;/a&gt; に引き続き、競プロ振り返りますかね…。&lt;/p&gt;
+&lt;p&gt;何とかレーティングは下がりませんでした。これからも維持できるよう頑張りたいです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今週もやっていきましょう振り返りを。（謎の倒置）</summary></entry><entry><title type="html">ABC204</title><link href="https://a01sa01to.com/blog/2021/06/abc204" rel="alternate" type="text/html" title="ABC204" /><published>2021-06-06T00:00:00+00:00</published><updated>2020-06-06T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/abc204</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc204">&lt;p&gt;&lt;a href=&quot;./ahc003&quot;&gt;前回のAHC003&lt;/a&gt; に引き続き、競プロ振り返りますかね…。&lt;/p&gt;
 
-&lt;p&gt;今回解けたのは、A-C 問題。D も解けそうだったけど WA 出た…。&lt;/p&gt;
+&lt;p&gt;今回解けたのは、A-C問題。Dも解けそうだったけどWA出た…。&lt;/p&gt;
 
 &lt;h2 id=&quot;問題概要&quot;&gt;問題概要&lt;/h2&gt;
 
 &lt;h3 id=&quot;a&quot;&gt;A&lt;/h3&gt;
-
-&lt;p&gt;3 人でじゃんけんして、あいこだった。2 人の手が与えられるので、残り 1 人の手を求める。&lt;br /&gt;
+&lt;p&gt;3人でじゃんけんして、あいこだった。2人の手が与えられるので、残り1人の手を求める。&lt;br /&gt;
 なお、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt; はグー、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt; はチョキを、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2&lt;/code&gt; はパーを表す。&lt;/p&gt;
 
 &lt;h3 id=&quot;b&quot;&gt;B&lt;/h3&gt;
-
 &lt;p&gt;$ N $ 本の木があって、 $ i $ 番目の木には $ A_i $ 個の実がある。&lt;br /&gt;
-木の実が 11 個以上の時、 10 個残してそれ以外すべて収穫するとき、全部で何個収穫するか。&lt;/p&gt;
+木の実が11個以上の時、 10個残してそれ以外すべて収穫するとき、全部で何個収穫するか。&lt;/p&gt;
 
 &lt;h3 id=&quot;c&quot;&gt;C&lt;/h3&gt;
-
-&lt;p&gt;1-indexed な $ N $ 個の都市と、1-indexed な $ M $ 個の道路。道路 $ i $ を通ると $ A_i \to B_i $ に一方通行できる。&lt;br /&gt;
-0 本以上の道路を使っていける、スタート地点とゴール地点の組としてあり得るのは何通り？&lt;/p&gt;
+&lt;p&gt;1-indexedな $ N $ 個の都市と、1-indexedな $ M $ 個の道路。道路 $ i $ を通ると $ A_i \to B_i $ に一方通行できる。&lt;br /&gt;
+0本以上の道路を使っていける、スタート地点とゴール地点の組としてあり得るのは何通り？&lt;/p&gt;
 
 &lt;h3 id=&quot;d&quot;&gt;D&lt;/h3&gt;
-
-&lt;p&gt;$ N $ 品の料理を作りたい。料理 $ i $ はオーブンを連続で $ T_i $ 分使って作れる。1 オーブンで同時に作れるのは 1 料理のみ。2 つのオーブンだけを使える。&lt;br /&gt;
+&lt;p&gt;$ N $ 品の料理を作りたい。料理 $ i $ はオーブンを連続で $ T_i $ 分使って作れる。1オーブンで同時に作れるのは1料理のみ。2つのオーブンだけを使える。&lt;br /&gt;
 すべて作るのにかかる最短時間は？&lt;/p&gt;
 
 &lt;h2 id=&quot;提出結果&quot;&gt;提出結果&lt;/h2&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc204/submissions?f.User=a01sa01to&quot;&gt;ここから&lt;/a&gt; 提出結果がわかります。&lt;/p&gt;
 
 &lt;h3 id=&quot;a-1&quot;&gt;A&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc204/submissions/23210769&quot;&gt;提出 #23210769 - AtCoder Beginner Contest 204&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
@@ -204,10 +189,9 @@ chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintex
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;同じなら &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c = a&lt;/code&gt; にして、違うなら全部とは違う手にする。「&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt; はグー、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt; はチョキを、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2&lt;/code&gt; はパー」なので、残りの手は、$ 3 - (a + b) $ で求められるという。&lt;br /&gt;
-提出時刻は 21:01:12 なので、開始 72 秒で提出。前回よりも早くなった…！&lt;/p&gt;
+提出時刻は 21:01:12 なので、開始72秒で提出。前回よりも早くなった…！&lt;/p&gt;
 
 &lt;h3 id=&quot;b-1&quot;&gt;B&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc204/submissions/23215639&quot;&gt;提出 #23215639 - AtCoder Beginner Contest 204&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
@@ -229,11 +213,10 @@ chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintex
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;「木の実が 11 個以上の時、 10 個残してそれ以外すべて収穫」、つまり $ A_i \gt 10 $ なら $ (A_i - 10) $ 個収穫できるので、全部の $ A_i $ に対してこの収穫数を加えれば OK。&lt;br /&gt;
+&lt;p&gt;「木の実が11個以上の時、 10個残してそれ以外すべて収穫」、つまり $ A_i \gt 10 $ なら $ (A_i - 10) $ 個収穫できるので、全部の $ A_i $ に対してこの収穫数を加えればOK。&lt;br /&gt;
 確認作業含め、提出時刻は 21:03:26 。前回より早く解けました！&lt;/p&gt;
 
 &lt;h3 id=&quot;c-1&quot;&gt;C&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc204/submissions/23245855&quot;&gt;提出 #23245855 - AtCoder Beginner Contest 204&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
@@ -274,16 +257,14 @@ chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintex
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://qiita.com/drken/items/a803d4fc4a727e02f7ba&quot;&gt;DFS (深さ優先探索) 超入門！ 〜 グラフ・アルゴリズムの世界への入口 〜【後編】 - Qiita&lt;/a&gt;&lt;br /&gt;
 こちらの記事を参考に（ほぼコピペ）して解けました。&lt;/p&gt;
 
-&lt;p&gt;解説より、計算量は $ O(N(N+M)) $ になるようです。一応 TLE なしで解けました。&lt;/p&gt;
+&lt;p&gt;解説より、計算量は $ O(N(N+M)) $ になるようです。一応TLEなしで解けました。&lt;/p&gt;
 
-&lt;p&gt;「グラフ苦手…」で飛ばした + 「DFS 知らん…」で提出時刻は 22:08:16 。グラフをもっと学ばなければ……。&lt;/p&gt;
+&lt;p&gt;「グラフ苦手…」で飛ばした + 「DFS知らん…」で提出時刻は 22:08:16 。グラフをもっと学ばなければ……。&lt;/p&gt;
 
-&lt;h3 id=&quot;dwa-コード&quot;&gt;D（WA コード）&lt;/h3&gt;
-
+&lt;h3 id=&quot;dwaコード&quot;&gt;D（WAコード）&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc204/submissions/23248390&quot;&gt;提出 #23248390 - AtCoder Beginner Contest 204&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#define _GLIBCXX_DEBUG
@@ -311,7 +292,7 @@ chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintex
 
 &lt;p&gt;えっと、大きい順にソートして、少ないほうに数字を加えるという雑手段()&lt;br /&gt;
 一応サンプルだと全部通ったので、ワンチャンいけないかなーという…。&lt;br /&gt;
-最初は bit 全探索とか考えたんですけど、さすがに $ 2^{100} $ は TLE の未来しか見えないのであきらめました()&lt;/p&gt;
+最初はbit全探索とか考えたんですけど、さすがに $ 2^{100} $ はTLEの未来しか見えないのであきらめました()&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;自分も全く同じだった...... &lt;a href=&quot;https://t.co/xnQm82IjJZ&quot;&gt;https://t.co/xnQm82IjJZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Asa (@a01sa01to) &lt;a href=&quot;https://twitter.com/a01sa01to/status/1401546153309577219?ref_src=twsrc%5Etfw&quot;&gt;June 6, 2021&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
@@ -332,29 +313,27 @@ chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintex
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;うーん、微増...！w&lt;br /&gt;グラフ系の問題苦手すぎる......&lt;br /&gt;&lt;br /&gt;a01sa01toさんのAtCoder Beginner Contest 204での成績：3830位&lt;br /&gt;パフォーマンス：699相当&lt;br /&gt;レーティング：622→630 (+8) :)&lt;br /&gt;Highestを更新しました！&lt;a href=&quot;https://twitter.com/hashtag/AtCoder?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#AtCoder&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/ABC204?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ABC204&lt;/a&gt; &lt;a href=&quot;https://t.co/tap0Mmeq7a&quot;&gt;https://t.co/tap0Mmeq7a&lt;/a&gt;&lt;/p&gt;&amp;mdash; Asa (@a01sa01to) &lt;a href=&quot;https://twitter.com/a01sa01to/status/1401538511388299270?ref_src=twsrc%5Etfw&quot;&gt;June 6, 2021&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;微増しました。3,830 位の+8 です。&lt;/p&gt;
+&lt;p&gt;微増しました。3,830位の+8です。&lt;/p&gt;
 
-&lt;p&gt;D 問題での反例探しができていれば、思考が固定されなかったのかなぁと…。&lt;br /&gt;
-このレートを維持できるように特訓しなければ…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">前回の AHC003 に引き続き、競プロ振り返りますかね…。</summary></entry><entry><title type="html">AHC003</title><link href="https://a01sa01to.com/blog/2021/06/ahc003" rel="alternate" type="text/html" title="AHC003" /><published>2021-06-01T00:00:00+09:00</published><updated>2020-06-10T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/ahc003</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/ahc003">&lt;p&gt;&lt;a href=&quot;/blog/2021/05/abc203&quot;&gt;ABC203&lt;/a&gt; に引き続き、AHC003 を振り返ります。&lt;/p&gt;
+&lt;p&gt;D問題での反例探しができていれば、思考が固定されなかったのかなぁと…。&lt;br /&gt;
+このレートを維持できるように特訓しなければ…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">前回のAHC003 に引き続き、競プロ振り返りますかね…。</summary></entry><entry><title type="html">AHC003</title><link href="https://a01sa01to.com/blog/2021/06/ahc003" rel="alternate" type="text/html" title="AHC003" /><published>2021-06-01T00:00:00+00:00</published><updated>2020-06-10T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/ahc003</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/ahc003">&lt;p&gt;&lt;a href=&quot;/blog/2021/05/abc203&quot;&gt;ABC203&lt;/a&gt; に引き続き、AHC003を振り返ります。&lt;/p&gt;
 
 &lt;h2 id=&quot;問題概要&quot;&gt;問題概要&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;クエリが 1000 個与えられるので、30x30 のグラフで、最短経路を予測。&lt;/li&gt;
+  &lt;li&gt;クエリが1000個与えられるので、30x30のグラフで、最短経路を予測。&lt;/li&gt;
   &lt;li&gt;出力したら flush しないと &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TLE&lt;/code&gt; になる。&lt;/li&gt;
-  &lt;li&gt;出力されたら［出力されたパスの長さ $ b_k $ × 乱数（0.9 ～ 1.1） $ e_k $ ］が標準入力に入る。&lt;/li&gt;
-  &lt;li&gt;同じところを何回も通ったり、はみ出したり、ちゃんとゴールにつけてなかったりすると &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WA&lt;/code&gt; で 0 点。&lt;/li&gt;
+  &lt;li&gt;出力されたら［出力されたパスの長さ $ b_k $ × 乱数（0.9～1.1） $ e_k $ ］が標準入力に入る。&lt;/li&gt;
+  &lt;li&gt;同じところを何回も通ったり、はみ出したり、ちゃんとゴールにつけてなかったりすると &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WA&lt;/code&gt; で0点。&lt;/li&gt;
   &lt;li&gt;得点は、 $ \mathrm{round}(2312311\times \sum_{k=1}^{1000}0.998^{1000-k} \frac{a_k}{b_k}) $ 。なお、最短経路が $ a_k $ で、出力パスが $ b_k $ 。&lt;/li&gt;
-  &lt;li&gt;実行時間制限は 2sec、メモリ制限は 1024MB。&lt;/li&gt;
-  &lt;li&gt;暫定テストでは 100 個のテストケース。1 つ当たり $ 10^9 $ 点で、 満点は $ 10^{11} $ 点。&lt;/li&gt;
+  &lt;li&gt;実行時間制限は 2sec、メモリ制限は1024MB。&lt;/li&gt;
+  &lt;li&gt;暫定テストでは100個のテストケース。1つ当たり $ 10^9 $ 点で、 満点は $ 10^{11} $ 点。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;実装してみる&quot;&gt;実装してみる&lt;/h2&gt;
-
 &lt;p&gt;一応 &lt;a href=&quot;https://atcoder.jp/contests/ahc003/submissions?f.User=a01sa01to&quot;&gt;こちらから&lt;/a&gt; 私の実装を見れます。&lt;/p&gt;
 
 &lt;h3 id=&quot;エイリアス定義など&quot;&gt;エイリアス定義など&lt;/h3&gt;
-
 &lt;p&gt;私は main() 関数前に以下の定義をしています。型宣言等でわからないところがあったら参照していただければ。&lt;/p&gt;
 
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#define _GLIBCXX_DEBUG
@@ -371,7 +350,6 @@ chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintex
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;試しにとりあえず直線的に移動する&quot;&gt;試しにとりあえず直線的に移動する&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/ahc003/submissions/22779476&quot;&gt;提出 #22779476 - AtCoder Heuristic Contest 003&lt;/a&gt; &lt;br /&gt;
 とにかく同じ行になるまで上下どっちかに移動して、そのあとゴールへ一直線する寸法です。とりあえず出力後に入る $ b_k \times e_k $ は無視します。&lt;/p&gt;
 
@@ -391,10 +369,9 @@ chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintex
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;これで 63,179,310,956 点得られました。これでも 63%とれるみたいです。&lt;/p&gt;
+&lt;p&gt;これで 63,179,310,956 点得られました。これでも63%とれるみたいです。&lt;/p&gt;
 
 &lt;h3 id=&quot;-b_k-times-e_k--を使う&quot;&gt;$ b_k \times e_k $ を使う&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/ahc003/submissions/22783808&quot;&gt;提出 #22783808 - AtCoder Heuristic Contest 003&lt;/a&gt;&lt;br /&gt;
 $ b_k \times e_k $ は実質経路の長さなので、最短経路を求めるにはこれを使わないわけにはいかないという。&lt;/p&gt;
 
@@ -477,21 +454,19 @@ $ b_k \times e_k $ は実質経路の長さなので、最短経路を求める�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;ここで何をしているかというと、&lt;/p&gt;
-
 &lt;ol&gt;
-  &lt;li&gt;すべての地点に対して上下左右の経路を 0 で初期化&lt;/li&gt;
+  &lt;li&gt;すべての地点に対して上下左右の経路を0で初期化&lt;/li&gt;
   &lt;li&gt;自分がゴール地点にいない限り、今ゴールの左上にいるなら、右か下の経路の短いほうへ行く。右上なら左か下、左下なら右か上、右下なら左か上、といった具合に移動。&lt;/li&gt;
   &lt;li&gt;出力し、すぐに flush する&lt;/li&gt;
-  &lt;li&gt;得点を歩数で割って、各経路に max(経路, 得点 ÷ 歩数) を代入する。訪れていない場合、(経路)=0 となっているため、必ず［得点 ÷ 歩数］が入る仕組み。&lt;/li&gt;
+  &lt;li&gt;得点を歩数で割って、各経路に max(経路, 得点÷歩数) を代入する。訪れていない場合、(経路)=0となっているため、必ず［得点÷歩数］が入る仕組み。&lt;/li&gt;
   &lt;li&gt;繰り返し…&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;これだと 69,388,118,612 点。得点率は 6%くらい上がりました。&lt;/p&gt;
+&lt;p&gt;これだと 69,388,118,612 点。得点率は6%くらい上がりました。&lt;/p&gt;
 
 &lt;h3 id=&quot;全探索してみる&quot;&gt;全探索してみる&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/ahc003/submissions/22787318&quot;&gt;提出 #22787318 - AtCoder Heuristic Contest 003&lt;/a&gt;&lt;br /&gt;
-もっと得点ほしい！！ってなったので、1 歩先ではなく、ある程度先まで読める全探索でやってみます。&lt;/p&gt;
+もっと得点ほしい！！ってなったので、1歩先ではなく、ある程度先まで読める全探索でやってみます。&lt;/p&gt;
 
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ull3d&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ull2d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ull1d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// Graph[i][j] = {Up, Down, Left, Right}&lt;/span&gt;
@@ -616,14 +591,14 @@ $ b_k \times e_k $ は実質経路の長さなので、最短経路を求める�
 
 &lt;p&gt;これで $ \min(8, \vert x-tx \vert , \vert y-ty \vert) $ 歩先まで読んで、一番経路が短い（と思っていた）ものを求めます。&lt;br /&gt;
 同じ行・列になった場合、ゴールまで直進します。&lt;br /&gt;
-訪れていない場合は、経路を 10,000 に設定して、優先的に選ばれるようにしています。&lt;/p&gt;
+訪れていない場合は、経路を10,000に設定して、優先的に選ばれるようにしています。&lt;/p&gt;
 
 &lt;p&gt;結果、52,326,846,043 点。落ちてるやん。&lt;br /&gt;
-9 歩先を読んでも、61,387,035,970 点。&lt;/p&gt;
+9歩先を読んでも、61,387,035,970	点。&lt;/p&gt;
 
 &lt;h3 id=&quot;そして気づく&quot;&gt;そして気づく&lt;/h3&gt;
 
-&lt;p&gt;「あっ。最短経路を求めるやつやん。なんで訪れてない場合 10,000 にして経路長いほう選んでるんだ…。」&lt;/p&gt;
+&lt;p&gt;「あっ。最短経路を求めるやつやん。なんで訪れてない場合10,000にして経路長いほう選んでるんだ…。」&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/ahc003/submissions/22842801&quot;&gt;提出 #22842801 - AtCoder Heuristic Contest 003&lt;/a&gt;&lt;br /&gt;
 で訂正（したつもり）。&lt;/p&gt;
@@ -700,11 +675,10 @@ $ b_k \times e_k $ は実質経路の長さなので、最短経路を求める�
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;10 歩先を読んでも、61,387,035,970 点。&lt;br /&gt;
+&lt;p&gt;10歩先を読んでも、61,387,035,970 点。&lt;br /&gt;
 入力される得点をなぜか &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;point = 1e10 - (point - (prevScore/0.998))&lt;/code&gt; としていたため、実質的には最長経路を求めることになり、あまり伸びず…。&lt;/p&gt;
 
 &lt;h3 id=&quot;平均値をとってみる&quot;&gt;平均値をとってみる&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/ahc003/submissions/22907260&quot;&gt;提出 #22907260 - AtCoder Heuristic Contest 003&lt;/a&gt;&lt;br /&gt;
 入力は $ b_k \times e_k $ であることに気付いたため、先ほどの部分を削除。$ \max $ 関数だと外れ値に当たった時怖いな…と考えて、相加平均をとることにしました。&lt;/p&gt;
 
@@ -830,15 +804,13 @@ $ b_k \times e_k $ は実質経路の長さなので、最短経路を求める�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;ゴール地点の座標を超えていた場合、経路の長さを $ 10^{10} $ にすることで選ばれないようにして、経路長さ更新は相加平均 $ {a+b} \over 2 $ にしてみました。&lt;br /&gt;
-10 歩先を読んで、73,881,366,834 点。爆上がりしました。&lt;br /&gt;
-あとは実行時間制限とのチキンレース。10 歩で 288ms だったので、実行時間ギリギリを攻めます。&lt;br /&gt;
-11 歩で 74,551,308,026 点（550ms）、12 歩で 75,212,574,804 点（970ms）、13 歩で 76,004,221,978 点（1969ms）。&lt;br /&gt;
-本番で &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TLE&lt;/code&gt; になったら怖いので、12 歩にロールバックしました。&lt;/p&gt;
+10歩先を読んで、73,881,366,834 点。爆上がりしました。&lt;br /&gt;
+あとは実行時間制限とのチキンレース。10歩で288msだったので、実行時間ギリギリを攻めます。&lt;br /&gt;
+11歩で 74,551,308,026 点（550ms）、12歩で 75,212,574,804 点（970ms）、13歩で 76,004,221,978 点（1969ms）。&lt;br /&gt;
+本番で &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TLE&lt;/code&gt; になったら怖いので、12歩にロールバックしました。&lt;/p&gt;
 
 &lt;h3 id=&quot;またも気づく&quot;&gt;またも気づく&lt;/h3&gt;
-
 &lt;p&gt;経路長さの更新時、&lt;/p&gt;
-
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]){&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'U'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;Graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -862,16 +834,14 @@ $ b_k \times e_k $ は実質経路の長さなので、最短経路を求める�
       &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;としていました。&lt;/p&gt;
 
 &lt;p&gt;「あっ、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;L&lt;/code&gt; と &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt; の場合の処理、正しく書けてないやん…」&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/ahc003/submissions/23020247&quot;&gt;提出 #23020247 - AtCoder Heuristic Contest 003&lt;/a&gt;&lt;br /&gt;
-これを訂正して、12 歩先を読んで、81,150,992,107 点（1084ms）。夢の 8 割に到達…！&lt;/p&gt;
+これを訂正して、12歩先を読んで、81,150,992,107 点（1084ms）。夢の8割に到達…！&lt;/p&gt;
 
 &lt;h3 id=&quot;相乗平均をとってみる&quot;&gt;相乗平均をとってみる&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/ahc003/submissions/23020788&quot;&gt;提出 #23020788 - AtCoder Heuristic Contest 003&lt;/a&gt;&lt;br /&gt;
 &lt;del&gt;何を思ったか、&lt;/del&gt; 相乗平均をとってみました。&lt;/p&gt;
 
@@ -900,52 +870,47 @@ $ b_k \times e_k $ は実質経路の長さなので、最短経路を求める�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;オーバーフローのことを一応考えて、それぞれについて &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sqrt&lt;/code&gt; してます。&lt;br /&gt;
-結果、62,207,792,606 点。経路長を 0 で初期化したことが原因のようです。&lt;br /&gt;
-&lt;a href=&quot;https://atcoder.jp/contests/ahc003/submissions/23025023&quot;&gt;1 で初期化するよう訂正&lt;/a&gt;した結果、77,153,634,281 点。相加平均には敵わず…。&lt;br /&gt;
+結果、62,207,792,606 点。経路長を0で初期化したことが原因のようです。&lt;br /&gt;
+&lt;a href=&quot;https://atcoder.jp/contests/ahc003/submissions/23025023&quot;&gt;1で初期化するよう訂正&lt;/a&gt;した結果、77,153,634,281 点。相加平均には敵わず…。&lt;br /&gt;
 相加平均にロールバックしました。&lt;/p&gt;
 
 &lt;p&gt;そして終了…。&lt;/p&gt;
 
 &lt;h2 id=&quot;結果&quot;&gt;結果&lt;/h2&gt;
 
-&lt;p&gt;3,000 件あるテストケースで、それぞれについて 1,000,000,000 ( $ 10^9 $ ) 点が満点になるので、全部の満点は $ 3.0 \times 10^{12} $ になります。&lt;br /&gt;
-そして私が得た得点は、2,442,902,260,623 点。81.4%の得点率で、519 位でした。&lt;br /&gt;
-8 割得点しましたが、未提出者（0 点）で 860 位なので半分以下みたいです。&lt;/p&gt;
+&lt;p&gt;3,000件あるテストケースで、それぞれについて1,000,000,000 ( $ 10^9 $ ) 点が満点になるので、全部の満点は $ 3.0 \times 10^{12} $ になります。&lt;br /&gt;
+そして私が得た得点は、2,442,902,260,623 点。81.4%の得点率で、519位でした。&lt;br /&gt;
+8割得点しましたが、未提出者（0点）で860位なので半分以下みたいです。&lt;/p&gt;
 
-&lt;p&gt;（2021.06.08 追記）Perf は 1309 で、レーティング（β）は 307→644 と、+337 でした。&lt;br /&gt;
+&lt;p&gt;（2021.06.08追記）Perfは1309で、レーティング（β）は307→644と、+337でした。&lt;br /&gt;
 &lt;a href=&quot;https://www.dropbox.com/s/sf66bk4vizdnqmf/result_ahc003.csv?dl=0&quot;&gt;https://www.dropbox.com/s/sf66bk4vizdnqmf/result_ahc003.csv?dl=0&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;（2021.06.10 追記）システムリジャッジが終了した結果、得点は変わらず、520 位に。Perf は 1308 と 1 下がりましたが、新レーディングは変わらず+337 で 644 のようです。&lt;/p&gt;
+&lt;p&gt;（2021.06.10追記）システムリジャッジが終了した結果、得点は変わらず、520位に。Perfは1308と1下がりましたが、新レーディングは変わらず+337で644のようです。&lt;/p&gt;
 
-&lt;p&gt;もっと問題文を理解できるようにしたりアルゴリズムを学んだりして、ABC はもちろん AHC でも高得点を狙っていきたいですね…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="AHC" /><category term="Competitive-Programming" /><summary type="html">ABC203 に引き続き、AHC003 を振り返ります。</summary></entry><entry><title type="html">ABC203</title><link href="https://a01sa01to.com/blog/2021/05/abc203" rel="alternate" type="text/html" title="ABC203" /><published>2021-05-31T00:00:00+09:00</published><updated>2020-05-31T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/05/abc203</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/05/abc203">&lt;p&gt;ABC203 振り返りします。（唐突）&lt;/p&gt;
+&lt;p&gt;もっと問題文を理解できるようにしたりアルゴリズムを学んだりして、ABCはもちろんAHCでも高得点を狙っていきたいですね…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="AHC" /><category term="Competitive-Programming" /><summary type="html">ABC203 に引き続き、AHC003を振り返ります。</summary></entry><entry><title type="html">ABC203</title><link href="https://a01sa01to.com/blog/2021/05/abc203" rel="alternate" type="text/html" title="ABC203" /><published>2021-05-31T00:00:00+00:00</published><updated>2020-05-31T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/05/abc203</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/05/abc203">&lt;p&gt;ABC203振り返りします。（唐突）&lt;/p&gt;
 
-&lt;p&gt;今回解けたのは、A-C 問題です。もうちょっと解きたかった…。&lt;/p&gt;
+&lt;p&gt;今回解けたのは、A-C問題です。もうちょっと解きたかった…。&lt;/p&gt;
 
 &lt;h2 id=&quot;問題概要&quot;&gt;問題概要&lt;/h2&gt;
 
 &lt;h3 id=&quot;a&quot;&gt;A&lt;/h3&gt;
-
-&lt;p&gt;サイコロを 3 つ振った。出た目は $ a,b,c $。これらのうち、ある 2 つが同じなら残りの 1 つを、同じものがなければ 0 を出力する。&lt;/p&gt;
+&lt;p&gt;サイコロを3つ振った。出た目は $ a,b,c $。これらのうち、ある2つが同じなら残りの1つを、同じものがなければ0を出力する。&lt;/p&gt;
 
 &lt;h3 id=&quot;b&quot;&gt;B&lt;/h3&gt;
-
-&lt;p&gt;$ 1 \leq (N, K) \leq 9 $ 。 $ i \in N , j \in K $ に対して、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i0j&lt;/code&gt;（3 桁の数字）の総和は？&lt;/p&gt;
+&lt;p&gt;$ 1 \leq (N, K) \leq 9 $ 。 $ i \in N , j \in K $ に対して、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i0j&lt;/code&gt;（3桁の数字）の総和は？&lt;/p&gt;
 
 &lt;h3 id=&quot;c&quot;&gt;C&lt;/h3&gt;
-
-&lt;p&gt;村 $ i $ で 1 円払うと、村 $ (i+1) $ に移動できる。
+&lt;p&gt;村 $ i $ で 1円払うと、村 $ (i+1) $ に移動できる。
 $ N $ 人の友だちがいて、友だち $ i $ は、村 $ A_i $ に着くと $ B_i $ 円をくれる。
-最初、 $ K $ 円持って村 0 にいる。
+最初、 $ K $ 円持って村0にいる。
 最終的にたどり着ける村は？&lt;/p&gt;
 
 &lt;h2 id=&quot;提出と結果&quot;&gt;提出と結果&lt;/h2&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc203/submissions?f.User=a01sa01to&quot;&gt;こちらから&lt;/a&gt; 私の実装を見れます。&lt;/p&gt;
 
 &lt;h3 id=&quot;a-1&quot;&gt;A&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc203/submissions/23034219&quot;&gt;提出 #23034219 - AtCoder Beginner Contest 203（Sponsored by Panasonic）&lt;/a&gt;&lt;br /&gt;
-問題で指示されたように、if 文で場合分けすれば十分です。&lt;/p&gt;
+問題で指示されたように、if文で場合分けすれば十分です。&lt;/p&gt;
 
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -960,14 +925,13 @@ $ N $ 人の友だちがいて、友だち $ i $ は、村 $ A_i $ に着くと 
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;提出時刻は 21:01:20 なので、開始 80 秒で提出できました。爆速！！&lt;br /&gt;
-実行時間は 7ms、メモリは 3628KB になりました。&lt;/p&gt;
+&lt;p&gt;提出時刻は 21:01:20 なので、開始80秒で提出できました。爆速！！&lt;br /&gt;
+実行時間は7ms、メモリは3628KBになりました。&lt;/p&gt;
 
 &lt;h3 id=&quot;b-1&quot;&gt;B&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc203/submissions/23040604&quot;&gt;提出 #23040604 - AtCoder Beginner Contest 203（Sponsored by Panasonic）&lt;/a&gt;&lt;br /&gt;
-$ (N,K) \leq 9 $ という制約から、2 重ループでも十分間に合いそうです。&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i0j&lt;/code&gt; という 3 桁の数字は、 $ 100 \cdot i + j $ で表せます。&lt;/p&gt;
+$ (N,K) \leq 9 $ という制約から、2重ループでも十分間に合いそうです。&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i0j&lt;/code&gt; という3桁の数字は、 $ 100 \cdot i + j $ で表せます。&lt;/p&gt;
 
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -987,23 +951,21 @@ $ (N,K) \leq 9 $ という制約から、2 重ループでも十分間に合い�
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;提出時刻は 21:04:06、実行時間は 9ms、メモリは 3596KB になりました。&lt;/p&gt;
+&lt;p&gt;提出時刻は 21:04:06、実行時間は9ms、メモリは3596KBになりました。&lt;/p&gt;
 
 &lt;p&gt;かなり早く解けるようになったと思います。&lt;/p&gt;
 
 &lt;h3 id=&quot;c-1&quot;&gt;C&lt;/h3&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc203/submissions/23048601&quot;&gt;提出 #23048601 - AtCoder Beginner Contest 203（Sponsored by Panasonic）&lt;/a&gt;&lt;br /&gt;
-$ N \leq 2 \times 10^5, (K, B_i) \leq 10^9 $ なので、たどり着ける最大の村は $ 2 \times 10^{14} + 10^9 $ となるので、いちいち「たどり着いたらお金をプラスして、1 村渡るごとにお金をマイナスして…」としても当然間に合わないですよね…&lt;br /&gt;
+$ N \leq 2 \times 10^5, (K, B_i) \leq 10^9 $ なので、たどり着ける最大の村は $ 2 \times 10^{14} + 10^9 $ となるので、いちいち「たどり着いたらお金をプラスして、1村渡るごとにお金をマイナスして…」としても当然間に合わないですよね…&lt;br /&gt;
 そこで、現在の所持金で次の友だちがいるところまでたどり着けるかを考えます。&lt;br /&gt;
-友だちの数は $ N (\leq 2 \times 10^5) $ なので、1 重ループ(?) なら間に合います。&lt;/p&gt;
+友だちの数は $ N (\leq 2 \times 10^5) $ なので、1重ループ(?) なら間に合います。&lt;/p&gt;
 
-&lt;p&gt;ここで、村を 1 つ通過するには 1 円しかかからないことから、一般に村を $ n $ 個通過するには $ n $ 円必要だとわかります。&lt;br /&gt;
-なので、村 0 から村 $ A&lt;em&gt;1 $ に行くには $ A_1 $ 円が必要で、村 $ A_1 $ から 村 $ A_2 $ に行くには $ (A_2 - A_1) $ 円が必要で、…と繰り返すと、村 $ A_n $ に行くには $ A_n $ 円が必要なわけです。&lt;br /&gt;
-よって、友だちのいる村で着くまでの経費（ $ A&lt;/em&gt;{i} - A_{i-1} $ ）を求めて、所持金と比較して、足りるなら所持金を $ B_i $ 増やして、…としなくても、所持金に貰った金額を足して、その金額が次の村番号より小さいことを確認できればよくなります。&lt;/p&gt;
+&lt;p&gt;ここで、村を1つ通過するには1円しかかからないことから、一般に村を $ n $ 個通過するには $ n $ 円必要だとわかります。&lt;br /&gt;
+なので、村0から村 $ A_1 $ に行くには $ A_1 $ 円が必要で、村 $ A_1 $ から 村 $ A_2 $ に行くには $ (A_2 - A_1) $ 円が必要で、…と繰り返すと、村 $ A_n $ に行くには $ A_n $ 円が必要なわけです。&lt;br /&gt;
+よって、友だちのいる村で着くまでの経費（ $ A_{i} - A_{i-1} $ ）を求めて、所持金と比較して、足りるなら所持金を $ B_i $ 増やして、…としなくても、所持金に貰った金額を足して、その金額が次の村番号より小さいことを確認できればよくなります。&lt;/p&gt;
 
 &lt;p&gt;私の場合の実装はこうです。&lt;/p&gt;
-
 &lt;ol&gt;
   &lt;li&gt;入力を取り込みます。ここで $ O(N) $ かかります。&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;「累計金額」を $ K $ （現在の所持金）に設定します。&lt;/li&gt;
@@ -1041,33 +1003,32 @@ $ N \leq 2 \times 10^5, (K, B_i) \leq 10^9 $ なので、たどり着ける最�
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;提出時刻は 21:11:14、実行時間は 516ms、メモリは 20348KB になりました。&lt;br /&gt;
+&lt;p&gt;提出時刻は 21:11:14、実行時間は516ms、メモリは20348KBになりました。&lt;br /&gt;
 やっぱり時間とメモリ食いますね…&lt;/p&gt;
 
-&lt;p&gt;その後、D-F をいろいろ試すも答えが合わず、諦めた。&lt;/p&gt;
+&lt;p&gt;その後、D-Fをいろいろ試すも答えが合わず、諦めた。&lt;/p&gt;
 
 &lt;h2 id=&quot;結果と感想&quot;&gt;結果と感想&lt;/h2&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;爆上がり！これを維持するのがね...&lt;br /&gt;&lt;br /&gt;a01sa01toさんのAtCoder Beginner Contest 203（Sponsored by Panasonic）での成績：1393位&lt;br /&gt;パフォーマンス：1288相当&lt;br /&gt;レーティング：501→622 (+121) :)&lt;br /&gt;Highestを更新し、7 級になりました！&lt;a href=&quot;https://twitter.com/hashtag/AtCoder?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#AtCoder&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/ABC203?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ABC203&lt;/a&gt;（SponsoredbyPanasonic） &lt;a href=&quot;https://t.co/Ju6dwptms5&quot;&gt;https://t.co/Ju6dwptms5&lt;/a&gt;&lt;/p&gt;&amp;mdash; Asa (@a01sa01to) &lt;a href=&quot;https://twitter.com/a01sa01to/status/1399001520717262850?ref_src=twsrc%5Etfw&quot;&gt;May 30, 2021&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;1,393 位で、レーティングは+121。7 級になりました。&lt;/p&gt;
+&lt;p&gt;1,393位で、レーティングは+121。7級になりました。&lt;/p&gt;
 
-&lt;p&gt;今回の問題が比較的簡単だったのかもしれませんが、C 問題までを解くのに 10 分強しかかかっていないのは、かなり成長を感じました。このペースを維持できるように精進していきたいですね。&lt;/p&gt;
+&lt;p&gt;今回の問題が比較的簡単だったのかもしれませんが、C問題までを解くのに10分強しかかかっていないのは、かなり成長を感じました。このペースを維持できるように精進していきたいですね。&lt;/p&gt;
 
-&lt;p&gt;それと、今回初の振り返り記事。振り返ると記憶に定着し、また他者にもわかるように説明することでより理解が深まるという、誰かが言っていたメソッド。三日坊主にならないよう頑張りたいですね。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">ABC203 振り返りします。（唐突）</summary></entry><entry><title type="html">FirebaseUIで日本語にしてAuthDomainを設定したい</title><link href="https://a01sa01to.com/blog/2021/05/firebaseui" rel="alternate" type="text/html" title="FirebaseUIで日本語にしてAuthDomainを設定したい" /><published>2021-05-19T00:00:00+09:00</published><updated>2020-05-30T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/05/firebaseui</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/05/firebaseui">&lt;p&gt;とある用で Firebase Authentication を使っていて、FirebaseUI をログイン画面に実装していました。&lt;/p&gt;
+&lt;p&gt;それと、今回初の振り返り記事。振り返ると記憶に定着し、また他者にもわかるように説明することでより理解が深まるという、誰かが言っていたメソッド。三日坊主にならないよう頑張りたいですね。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">ABC203振り返りします。（唐突）</summary></entry><entry><title type="html">FirebaseUIで日本語にしてAuthDomainを設定したい</title><link href="https://a01sa01to.com/blog/2021/05/firebaseui" rel="alternate" type="text/html" title="FirebaseUIで日本語にしてAuthDomainを設定したい" /><published>2021-05-19T00:00:00+00:00</published><updated>2020-05-30T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/05/firebaseui</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/05/firebaseui">&lt;p&gt;とある用でFirebase Authenticationを使っていて、FirebaseUIをログイン画面に実装していました。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://firebase.google.com/docs/auth/web/firebaseui?hl=ja&quot;&gt;FirebaseUI でウェブアプリに簡単にログイン機能を追加する&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;上のリンクを見てもらえればわかるように、FirebaseUI では以下の画像のように、ただコンテナを作れば、勝手にログイン画面を作ってくれます。
+&lt;p&gt;上のリンクを見てもらえればわかるように、FirebaseUIでは以下の画像のように、ただコンテナを作れば、勝手にログイン画面を作ってくれます。
 &lt;img src=&quot;/img/blog/2021/05/firebaseui/01.png&quot; alt=&quot;FirebaseUI&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;最終的にここまでたどり着くまでに、いろいろ躓いたので、備忘録的な？&lt;/p&gt;
 
 &lt;h2 id=&quot;point1&quot;&gt;Point1&lt;/h2&gt;
-
-&lt;p&gt;まず、Google のガイドにはいくつかの方法が載っていました。&lt;br /&gt;
-自分は ESM（ES Modules）で、Webpack を使って 1 ファイルにまとめていたので、ガイド通り &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install firebaseui --save&lt;/code&gt; を実行して、プロジェクトに組み込みました。&lt;/p&gt;
+&lt;p&gt;まず、Googleのガイドにはいくつかの方法が載っていました。&lt;br /&gt;
+自分はESM（ES Modules）で、Webpackを使って1ファイルにまとめていたので、ガイド通り &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install firebaseui --save&lt;/code&gt; を実行して、プロジェクトに組み込みました。&lt;/p&gt;
 
 &lt;p&gt;この際用いたコードは、途中省きますが以下の通りです。&lt;/p&gt;
 
@@ -1075,11 +1036,7 @@ $ N \leq 2 \times 10^5, (K, B_i) \leq 10^9 $ なので、たどり着ける最�
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ja&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./bundle.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/css&quot;&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css&quot;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;firebaseui-auth-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
@@ -1089,14 +1046,15 @@ $ N \leq 2 \times 10^5, (K, B_i) \leq 10^9 $ なので、たどり着ける最�
 
 &lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//----- ログイン処理 -----//&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebaseui&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;firebaseui&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;firebase/app&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;firebase/auth&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;firebase/app&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebaseConfig&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./firebaseConfig&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;rebaseを初期化&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;fire&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Firebaseを初期化&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initializeApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firebaseConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;languageCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;ja&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
 &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pathname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/login&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ui&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebaseui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AuthUI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#firebaseui-auth-container&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -1122,8 +1080,7 @@ $ N \leq 2 \times 10^5, (K, B_i) \leq 10^9 $ なので、たどり着ける最�
 &lt;p&gt;&lt;img src=&quot;/img/blog/2021/05/firebaseui/02.png&quot; alt=&quot;英語じゃない...&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;point2&quot;&gt;Point2&lt;/h2&gt;
-
-&lt;p&gt;「でも、やっぱりユーザーのことを考えたら日本語がいいな…」ということで、もう一つの方法「CDN を使う」を試すべく、先ほどの TypeScript ファイルを消して、HTML ファイルを変更。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;タグが終わる前に、これを追記しました。&lt;/p&gt;
+&lt;p&gt;「でも、やっぱりユーザーのことを考えたら日本語がいいな…」ということで、もう一つの方法「CDNを使う」を試すべく、先ほどの TypeScriptファイルを消して、HTMLファイルを変更。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;タグが終わる前に、これを追記しました。&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/__/firebase/7.23.0/firebase-app.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/__/firebase/7.23.0/firebase-analytics.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
@@ -1153,21 +1110,19 @@ $ N \leq 2 \times 10^5, (K, B_i) \leq 10^9 $ なので、たどり着ける最�
 &lt;p&gt;&lt;img src=&quot;/img/blog/2021/05/firebaseui/01.png&quot; alt=&quot;日本語になった！&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;しかし、ここでも問題が。
-例えば今 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge.com&lt;/code&gt; にいても、ログインボタンを押したら &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;project-id&amp;gt;.firebaseapp.com&lt;/code&gt; に飛ばされてから、OAuth 画面へ飛びます。&lt;br /&gt;
-つまり、例えば Google でのアカウント選択画面では、「（サイト名）に移動」と表示されますが、このドメインが独自ドメインじゃないという…。&lt;/p&gt;
+例えば今 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge.com&lt;/code&gt; にいても、ログインボタンを押したら &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;project-id&amp;gt;.firebaseapp.com&lt;/code&gt; に飛ばされてから、OAuth画面へ飛びます。&lt;br /&gt;
+つまり、例えばGoogleでのアカウント選択画面では、「（サイト名）に移動」と表示されますが、このドメインが独自ドメインじゃないという…。&lt;/p&gt;
 
-&lt;p&gt;これについては、Firebase の設定の &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;authDomain&lt;/code&gt; という Key で設定できますが、そもそも CDN では設定ファイルを埋め込めない…。&lt;/p&gt;
+&lt;p&gt;これについては、Firebaseの設定の &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;authDomain&lt;/code&gt; というKeyで設定できますが、そもそもCDNでは設定ファイルを埋め込めない…。&lt;/p&gt;
 
 &lt;h2 id=&quot;解決策&quot;&gt;解決策&lt;/h2&gt;
-
-&lt;p&gt;ドキュメントを見てみると、FirebaseUI のソースコードから自分でビルドすれば解決するのでは？と考え、試してみました。結果成功しました。&lt;/p&gt;
+&lt;p&gt;ドキュメントを見てみると、FirebaseUIのソースコードから自分でビルドすれば解決するのでは？と考え、試してみました。結果成功しました。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/firebase/firebaseui-web&quot;&gt;GitHub: firebase/firebaseui-web&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;参考： &lt;a href=&quot;https://github.com/firebase/firebaseui-web/blob/master/README.md#building-firebaseui&quot;&gt;firebaseui-web/README.md at master · firebase/firebaseui-web&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step1&quot;&gt;Step1&lt;/h3&gt;
-
 &lt;p&gt;まず、ビルドのために必要となる開発環境をインストールします。&lt;/p&gt;
 
 &lt;ul&gt;
@@ -1177,8 +1132,7 @@ $ N \leq 2 \times 10^5, (K, B_i) \leq 10^9 $ なので、たどり着ける最�
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;step2&quot;&gt;Step2&lt;/h3&gt;
-
-&lt;p&gt;ソースコードを Clone します。&lt;/p&gt;
+&lt;p&gt;ソースコードをCloneします。&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/firebase/firebaseui-web.git
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;firebaseui-web
@@ -1186,8 +1140,7 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;step3&quot;&gt;Step3&lt;/h3&gt;
-
-&lt;p&gt;ESM 用の日本語版ファイルをビルドします。&lt;/p&gt;
+&lt;p&gt;ESM用の日本語版ファイルをビルドします。&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm run build build-esm-ja
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1195,15 +1148,13 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dist&lt;/code&gt; フォルダ 内にある &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;esm__ja.js&lt;/code&gt; が出力されたファイルになります。&lt;/p&gt;
 
 &lt;h3 id=&quot;step4&quot;&gt;Step4&lt;/h3&gt;
-
-&lt;p&gt;読み込みます。TypeScript を用いているので、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.d.ts&lt;/code&gt; もコピーしました。&lt;/p&gt;
+&lt;p&gt;読み込みます。TypeScriptを用いているので、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.d.ts&lt;/code&gt; もコピーしました。&lt;/p&gt;
 
 &lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./firebaseui/@types/index&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./firebaseui/esm__ja&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
 
-&lt;span class=&quot;err&quot;&gt;～&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Firebaseの設定は略&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;～&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// ～ Firebaseの設定は略 ～ //&lt;/span&gt;
 
-&lt;span class=&quot;nx&quot;&gt;w&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;DOMContentLoaded&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pathname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/login&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ui&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AuthUI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
@@ -1231,9 +1182,8 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;step5&quot;&gt;Step5&lt;/h3&gt;
-
-&lt;p&gt;Step4 のままだと、まだ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;projectid&amp;gt;.firebaseapp.com&lt;/code&gt; に飛ばされます。&lt;br /&gt;
-そこで、Firebase の設定ファイルを変更します。&lt;/p&gt;
+&lt;p&gt;Step4のままだと、まだ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;projectid&amp;gt;.firebaseapp.com&lt;/code&gt; に飛ばされます。&lt;br /&gt;
+そこで、Firebaseの設定ファイルを変更します。&lt;/p&gt;
 
 &lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;apiKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -1244,29 +1194,27 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;これで、Webpack でビルドすると、きちんと日本語になり、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge.com&lt;/code&gt; に飛ばされました！&lt;/p&gt;</content><author><name>Asa</name></author><category term="Google" /><category term="Firebase" /><summary type="html">とある用で Firebase Authentication を使っていて、FirebaseUI をログイン画面に実装していました。</summary></entry><entry><title type="html">Googleカレンダーで予定別にカレンダーを仕分ける</title><link href="https://a01sa01to.com/blog/2021/03/separate-gcalendar" rel="alternate" type="text/html" title="Googleカレンダーで予定別にカレンダーを仕分ける" /><published>2021-03-16T00:00:00+09:00</published><updated>2021-05-30T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/03/separate-gcalendar</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/03/separate-gcalendar">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
-
+&lt;p&gt;これで、Webpackでビルドすると、きちんと日本語になり、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge.com&lt;/code&gt; に飛ばされました！&lt;/p&gt;</content><author><name>Asa</name></author><category term="Google" /><category term="Firebase" /><summary type="html">とある用でFirebase Authenticationを使っていて、FirebaseUIをログイン画面に実装していました。</summary></entry><entry><title type="html">Googleカレンダーで予定別にカレンダーを仕分ける</title><link href="https://a01sa01to.com/blog/2021/03/separate-gcalendar" rel="alternate" type="text/html" title="Googleカレンダーで予定別にカレンダーを仕分ける" /><published>2021-03-16T00:00:00+00:00</published><updated>2021-05-30T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/03/separate-gcalendar</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/03/separate-gcalendar">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;Google カレンダーをよく使っています。&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Googleカレンダーをよく使っています。&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;学校でよく&lt;a href=&quot;http://classroom.google.com/&quot;&gt;Google Classroom&lt;/a&gt;を使っていて、画面横にクラスごとのカレンダーが出てくるので、予定の種類ごとにクラスを作っていました。&lt;br /&gt;&lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/01.png&quot; alt=&quot;モザイクがかかっているけど、横にとにかく仕分けられている&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;「Google 製だし、Google カレンダーだけで済ませられないのかな～？」&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;「Google製だし、Googleカレンダーだけで済ませられないのかな～？」&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;その方法があったので紹介。&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;読むのにおすすめな人&quot;&gt;読むのにおすすめな人&lt;/h2&gt;
-
 &lt;ul&gt;
-  &lt;li&gt;Google アカウントを分けて、予定を分けている人&lt;/li&gt;
-  &lt;li&gt;Google Classroom など別の方法で予定を分けている人&lt;/li&gt;
-  &lt;li&gt;Google カレンダーや Outlook などで予定を分けている人&lt;/li&gt;
+  &lt;li&gt;Googleアカウントを分けて、予定を分けている人&lt;/li&gt;
+  &lt;li&gt;Google Classroomなど別の方法で予定を分けている人&lt;/li&gt;
+  &lt;li&gt;GoogleカレンダーやOutlookなどで予定を分けている人&lt;/li&gt;
   &lt;li&gt;その他、いろいろな方法で予定を分けている人&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;step-by-step&quot;&gt;Step by Step&lt;/h2&gt;
 
-&lt;h3 id=&quot;step1---ブラウザ版の-google-カレンダーを開く&quot;&gt;Step1 - ブラウザ版の Google カレンダーを開く&lt;/h3&gt;
+&lt;h3 id=&quot;step1---ブラウザ版のgoogleカレンダーを開く&quot;&gt;Step1 - ブラウザ版のGoogleカレンダーを開く&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://calendar.google.com/&quot;&gt;Google カレンダー&lt;/a&gt; を開きます。
+&lt;p&gt;&lt;a href=&quot;https://calendar.google.com/&quot;&gt;Googleカレンダー&lt;/a&gt; を開きます。
 スマホの場合、アプリ版だとできませんでしたが、ブラウザ版では同じようにできました。&lt;/p&gt;
 
 &lt;h3 id=&quot;step2---設定を開く&quot;&gt;Step2 - 設定を開く&lt;/h3&gt;
@@ -1300,9 +1248,9 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;p&gt;月間予定などを見ると、仕分けられているのがわかります。
 &lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;その予定だけ見たい場合は、ブラウザ版の画面左側にある「マイカレンダー」のチェックボックスから切り替えられます。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Google" /><category term="Calendar" /><summary type="html">経緯</summary></entry><entry><title type="html">ドメインパーキングを使ってみる</title><link href="https://a01sa01to.com/blog/2021/02/domain-parking" rel="alternate" type="text/html" title="ドメインパーキングを使ってみる" /><published>2021-02-02T00:00:00+09:00</published><updated>2021-05-30T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/02/domain-parking</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/02/domain-parking">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
+&lt;p&gt;その予定だけ見たい場合は、ブラウザ版の画面左側にある「マイカレンダー」のチェックボックスから切り替えられます。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Google" /><category term="Calendar" /><summary type="html">経緯 Googleカレンダーをよく使っています。 学校でよくGoogle Classroomを使っていて、画面横にクラスごとのカレンダーが出てくるので、予定の種類ごとにクラスを作っていました。 「Google製だし、Googleカレンダーだけで済ませられないのかな～？」 その方法があったので紹介。</summary></entry><entry><title type="html">ドメインパーキングを使ってみる</title><link href="https://a01sa01to.com/blog/2021/02/domain-parking" rel="alternate" type="text/html" title="ドメインパーキングを使ってみる" /><published>2021-02-02T00:00:00+00:00</published><updated>2021-05-30T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/02/domain-parking</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/02/domain-parking">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
 
-&lt;p&gt;2 月から &lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FPLU8Q+0K+10FASI&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;A8.net&lt;/a&gt;&lt;img border=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot; src=&quot;https://www14.a8.net/0.gif?a8mat=3H5C5X+FPLU8Q+0K+10FASI&quot; alt=&quot;&quot; class=&quot;a8&quot; /&gt; という、割と有名なアフィリエイトサイトに申し込んでみました。&lt;br /&gt;
+&lt;p&gt;2月から &lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FPLU8Q+0K+10FASI&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;A8.net&lt;/a&gt;&lt;img border=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot; src=&quot;https://www14.a8.net/0.gif?a8mat=3H5C5X+FPLU8Q+0K+10FASI&quot; alt=&quot;&quot; class=&quot;a8&quot; /&gt; という、割と有名なアフィリエイトサイトに申し込んでみました。&lt;br /&gt;
 &lt;a href=&quot;./domain-transfer&quot;&gt;前回の記事&lt;/a&gt; で試しに「&lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;お名前.com&lt;/a&gt;&lt;img border=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot; src=&quot;https://www18.a8.net/0.gif?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; alt=&quot;&quot; class=&quot;a8&quot; /&gt;」やってみようかな～と提携申し込みしたら…&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-parking/01.png&quot; alt=&quot;ドメイン無料プレゼント！？&quot; /&gt;&lt;/p&gt;
@@ -1314,18 +1262,16 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 
 &lt;p&gt;これは激熱でしょ…&lt;/p&gt;
 
-&lt;p&gt;で &lt;a href=&quot;http://asas.work&quot;&gt;asas.work&lt;/a&gt; と &lt;a href=&quot;http://asas.tokyo&quot;&gt;asas.tokyo&lt;/a&gt; の 2 ドメインを取得したはいいが、使う予定がない…。
+&lt;p&gt;で &lt;a href=&quot;http://asas.work&quot;&gt;asas.work&lt;/a&gt; と &lt;a href=&quot;http://asas.tokyo&quot;&gt;asas.tokyo&lt;/a&gt; の2ドメインを取得したはいいが、使う予定がない…。
 &lt;img src=&quot;/img/blog/2021/02/domain-parking/03.png&quot; alt=&quot;使う予定がない&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;そこで、使わないドメインを有効活用できるかな～と思い始めることにした。&lt;/p&gt;
 
 &lt;h2 id=&quot;ドメインパーキングとは&quot;&gt;ドメインパーキングとは？&lt;/h2&gt;
-
 &lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-parking/04.png&quot; alt=&quot;&quot; /&gt;
 &lt;a href=&quot;https://www.onamae.com/service/parking/?btn_id=commonfooter_op_parking&quot;&gt;ドメインパーキング｜ドメイン取るならお名前.com&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;上のページを見てもらえればわかるんですけど、&lt;/p&gt;
-
 &lt;blockquote&gt;
   &lt;p&gt;ドメインパーキングを設定すると、お持ちのドメインに対して広告掲載ページを展開します。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1337,27 +1283,25 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;p&gt;ドメインパーキングに使用するドメインを追加します。
 &lt;img src=&quot;/img/blog/2021/02/domain-parking/05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;私は 2 つとも追加しました。&lt;br /&gt;
-（一応このサイトの &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a01sa01to.com&lt;/code&gt; は&lt;a href=&quot;./domain-transfer&quot;&gt;前回の記事&lt;/a&gt;で述べていますが、Google ドメインに移管したので表示されていません。）&lt;/p&gt;
+&lt;p&gt;私は2つとも追加しました。&lt;br /&gt;
+（一応このサイトの &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a01sa01to.com&lt;/code&gt; は&lt;a href=&quot;./domain-transfer&quot;&gt;前回の記事&lt;/a&gt;で述べていますが、Googleドメインに移管したので表示されていません。）&lt;/p&gt;
 
 &lt;p&gt;次の画面で同意すれば、終わり。
 &lt;img src=&quot;/img/blog/2021/02/domain-parking/06.png&quot; alt=&quot;ネームサーバーとAレコードが変わるらしい&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;一応-dns-確認してみる&quot;&gt;一応 DNS 確認してみる&lt;/h2&gt;
-
+&lt;h2 id=&quot;一応dns確認してみる&quot;&gt;一応DNS確認してみる&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-parking/07.png&quot; alt=&quot;よくわからんレコードが追加されてる&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;試しにアクセスしてみると、Simcast なるサイトに飛ばされました。&lt;br /&gt;
+&lt;p&gt;試しにアクセスしてみると、Simcastなるサイトに飛ばされました。&lt;br /&gt;
 &lt;del&gt;リダイレクトなのね？？広告掲載じゃないのかよ…&lt;/del&gt;
 &lt;img src=&quot;/img/blog/2021/02/domain-parking/08.png&quot; alt=&quot;飛ばされた&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;（2021.03.16 追記）&lt;br /&gt;
-飛ばされる先は、（定期的なのか不定期的なのかは不明ですが）変わるようです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Domain-Parking" /><summary type="html">経緯</summary></entry><entry><title type="html">ドメインを移管しました</title><link href="https://a01sa01to.com/blog/2021/02/domain-transfer" rel="alternate" type="text/html" title="ドメインを移管しました" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-05-30T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/02/domain-transfer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/02/domain-transfer">&lt;p&gt;この記事、今更感がすごい&lt;/p&gt;
+&lt;p&gt;（2021.03.16追記）&lt;br /&gt;
+飛ばされる先は、（定期的なのか不定期的なのかは不明ですが）変わるようです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Domain-Parking" /><summary type="html">経緯</summary></entry><entry><title type="html">ドメインを移管しました</title><link href="https://a01sa01to.com/blog/2021/02/domain-transfer" rel="alternate" type="text/html" title="ドメインを移管しました" /><published>2021-02-01T00:00:00+00:00</published><updated>2021-05-30T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/02/domain-transfer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/02/domain-transfer">&lt;p&gt;この記事、今更感がすごい&lt;/p&gt;
 
 &lt;h2 id=&quot;移管した理由&quot;&gt;移管した理由&lt;/h2&gt;
-
-&lt;p&gt;最初にドメインを登録したのが 2019 年 4 月 1 日。&lt;br /&gt;
-だから 1 年と 7 ヶ月くらい？ &lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;お名前.com&lt;/a&gt;
+&lt;p&gt;最初にドメインを登録したのが2019年4月1日。&lt;br /&gt;
+だから1年と7ヶ月くらい？ &lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;お名前.com&lt;/a&gt;
 &lt;img border=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot; src=&quot;https://www18.a8.net/0.gif?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; alt=&quot;&quot; class=&quot;a8&quot; /&gt;を使っていたんですよね。&lt;/p&gt;
 
 &lt;p&gt;サイトを再構築するときに考えていたのは&lt;/p&gt;
@@ -1368,12 +1312,11 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Google App Engine なら GitHub にソース上げればデプロイしてくれるからベストだと思い、
-いっそのこと Google サービスにまとめちゃえ！！っていうだけ。
-（GitHub Actions 使えば FTP で上げられたりするんですけどね）&lt;/p&gt;
+&lt;p&gt;Google App Engine ならGitHubにソース上げればデプロイしてくれるからベストだと思い、
+いっそのことGoogleサービスにまとめちゃえ！！っていうだけ。
+（GitHub Actions使えばFTPで上げられたりするんですけどね）&lt;/p&gt;
 
 &lt;h2 id=&quot;タイムライン&quot;&gt;タイムライン&lt;/h2&gt;
-
 &lt;ul&gt;
   &lt;li&gt;2020.11.29 19:50 ドメイン移管手続き開始&lt;/li&gt;
   &lt;li&gt;2020.11.29 19:57 支払い&lt;/li&gt;
@@ -1385,24 +1328,20 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;step-by-step&quot;&gt;Step by Step&lt;/h2&gt;
-
 &lt;p&gt;今回は「お名前.com（以下「移管元」）」から「Google Domains（以下「移管先」）」に移管しました。&lt;/p&gt;
 
 &lt;h3 id=&quot;step1---入力&quot;&gt;Step1 - 入力&lt;/h3&gt;
-
 &lt;p&gt;移管先のサイトを開き、「移管する」ページを開きます。
 移管したいドメインを入力します。
 &lt;img src=&quot;/img/blog/2021/02/domain-transfer/01.png&quot; alt=&quot;移管するドメインをテキストボックスに入力&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step2---authcode&quot;&gt;Step2 - AuthCode&lt;/h3&gt;
-
-&lt;p&gt;移管元から、AuthCode を取得します。移管先に入力します。
+&lt;p&gt;移管元から、AuthCodeを取得します。移管先に入力します。
 &lt;img src=&quot;/img/blog/2021/02/domain-transfer/02.png&quot; alt=&quot;移管元から取得して...&quot; /&gt;
 &lt;img src=&quot;/img/blog/2021/02/domain-transfer/03.png&quot; alt=&quot;移管先に貼り付け&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;step3---whois-代行公開を一時無効化&quot;&gt;Step3 - Whois 代行公開を一時無効化&lt;/h3&gt;
-
-&lt;p&gt;Whois 公開代行を一時的に無効化しないと、移管できないようです（お名前.com の場合は）。&lt;br /&gt;
+&lt;h3 id=&quot;step3---whois代行公開を一時無効化&quot;&gt;Step3 - Whois代行公開を一時無効化&lt;/h3&gt;
+&lt;p&gt;Whois公開代行を一時的に無効化しないと、移管できないようです（お名前.comの場合は）。&lt;br /&gt;
 私は無効化していなかったので、拒否されました。
 &lt;img src=&quot;/img/blog/2021/02/domain-transfer/10.png&quot; alt=&quot;拒否された！？&quot; /&gt;
 &lt;img src=&quot;/img/blog/2021/02/domain-transfer/11.png&quot; alt=&quot;Whois公開代行されているとダメらしい&quot; /&gt;&lt;/p&gt;
@@ -1410,65 +1349,55 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;p&gt;なので、忘れずに無効化しておきましょう。&lt;/p&gt;
 
 &lt;h3 id=&quot;step4---設定確認&quot;&gt;Step4 - 設定確認&lt;/h3&gt;
-
 &lt;p&gt;設定を確認します。&lt;br /&gt;
-&lt;del&gt;DNS 設定は引き継がれるらしい。まあ引き継がれなかったら困る。&lt;/del&gt;&lt;br /&gt;
+&lt;del&gt;DNS設定は引き継がれるらしい。まあ引き継がれなかったら困る。&lt;/del&gt;&lt;br /&gt;
 一部引き継がれてなかった。一応移管後に確認しておいたほうがよさそうです。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-transfer/04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;なお、この時支払うのは、1 年間分の料金である￥ 1,400 です。
+&lt;p&gt;なお、この時支払うのは、1年間分の料金である￥1,400です。
 &lt;img src=&quot;/img/blog/2021/02/domain-transfer/05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step5---支払い&quot;&gt;Step5 - 支払い&lt;/h3&gt;
-
 &lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-transfer/06.png&quot; alt=&quot;JCBで払おうとすると...？&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;いつも使っている JCB（LINE Pay）でやろうとしたところ、何度やってもダメでした。
+&lt;p&gt;いつも使っているJCB（LINE Pay）でやろうとしたところ、何度やってもダメでした。
 &lt;img src=&quot;/img/blog/2021/02/domain-transfer/07.png&quot; alt=&quot;なんでや！&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;そこで Visa を使ってみると、支払い完了しました。
+&lt;p&gt;そこでVisaを使ってみると、支払い完了しました。
 &lt;img src=&quot;/img/blog/2021/02/domain-transfer/08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-transfer/09.png&quot; alt=&quot;支払いが完了するとステータスが表示される&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step6---移管承認&quot;&gt;Step6 - 移管承認&lt;/h3&gt;
-
 &lt;p&gt;支払い後、移管元からメールが届きます。&lt;br /&gt;
 このメールから承認しないと、移管できないので、承認します。
 &lt;img src=&quot;/img/blog/2021/02/domain-transfer/12.png&quot; alt=&quot;確認メールが届くので&quot; /&gt;
 &lt;img src=&quot;/img/blog/2021/02/domain-transfer/13.png&quot; alt=&quot;承認&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step7---移管完了&quot;&gt;Step7 - 移管完了&lt;/h3&gt;
-
 &lt;p&gt;しばらくすると、移管が完了し、移管先からメールが届きました。
 &lt;img src=&quot;/img/blog/2021/02/domain-transfer/14.png&quot; alt=&quot;！！！&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;DNS はいくつか引き継がれていませんでした。
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/15.png&quot; alt=&quot;DNS一覧&quot; /&gt;&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Website" /><summary type="html">この記事、今更感がすごい</summary></entry><entry><title type="html">Hello World, publishing my website</title><link href="https://a01sa01to.com/blog/2020/12/hello-world" rel="alternate" type="text/html" title="Hello World, publishing my website" /><published>2020-12-01T00:00:00+09:00</published><updated>2021-05-30T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2020/12/hello-world</id><content type="html" xml:base="https://a01sa01to.com/blog/2020/12/hello-world">&lt;h1 id=&quot;hello-world&quot;&gt;Hello World!&lt;/h1&gt;
-
+&lt;p&gt;DNSはいくつか引き継がれていませんでした。
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/15.png&quot; alt=&quot;DNS一覧&quot; /&gt;&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Website" /><summary type="html">この記事、今更感がすごい</summary></entry><entry><title type="html">Hello World, publishing my website</title><link href="https://a01sa01to.com/blog/2020/12/hello-world" rel="alternate" type="text/html" title="Hello World, publishing my website" /><published>2020-12-01T00:00:00+00:00</published><updated>2021-05-30T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2020/12/hello-world</id><content type="html" xml:base="https://a01sa01to.com/blog/2020/12/hello-world">&lt;h1 id=&quot;hello-world&quot;&gt;Hello World!&lt;/h1&gt;
 &lt;p&gt;この度、このサイトを立ち上げました。&lt;br /&gt;
 というか、以前のサイトをリフォームしました。&lt;/p&gt;
 
 &lt;h2 id=&quot;このサイトについて&quot;&gt;このサイトについて&lt;/h2&gt;
-
-&lt;p&gt;Asa のブログです。&lt;br /&gt;
+&lt;p&gt;Asaのブログです。&lt;br /&gt;
 えっ？うん。それだけ。&lt;/p&gt;
 
-&lt;h2 id=&quot;このファイルは-markdown-で書かれています&quot;&gt;このファイルは Markdown で書かれています。&lt;/h2&gt;
-
+&lt;h2 id=&quot;このファイルはmarkdownで書かれています&quot;&gt;このファイルはMarkdownで書かれています。&lt;/h2&gt;
 &lt;p&gt;だから…&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;太字&lt;/strong&gt; も &lt;em&gt;斜体&lt;/em&gt; も &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Code&lt;/code&gt; も&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;JavaScriptも。&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;JavaScriptも。&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;Markdown 恐るべし…。&lt;/p&gt;
 
 &lt;p&gt;そのうち技術記事出すつもり。「そのうち」ね。&lt;/p&gt;
 
 &lt;h2 id=&quot;thanks&quot;&gt;Thanks&lt;/h2&gt;
-
 &lt;p&gt;Build with &lt;a href=&quot;https://jekyllrb.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;/img/footer/jekyll_logo.png&quot; alt=&quot;Jekyll&quot; style=&quot;width: 59px;height: 30px;&quot; class=&quot;hv_gray no_alt&quot; /&gt;&lt;/a&gt;&lt;br /&gt;
-Deploy on &lt;a href=&quot;https://cloud.google.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;/img/footer/google_cloud_logo.png&quot; alt=&quot;Google Cloud&quot; style=&quot;width: 118px;height: 30px;&quot; class=&quot;hv_gray no_alt&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Asa</name></author><category term="Hello-World" /><summary type="html">Hello World!</summary></entry></feed>
+Deploy on &lt;a href=&quot;https://cloud.google.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;/img/footer/google_cloud_logo.png&quot; alt=&quot;Google Cloud&quot; style=&quot;width: 118px;height: 30px;&quot; class=&quot;hv_gray no_alt&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Asa</name></author><category term="Hello-World" /><summary type="html">Hello World! この度、このサイトを立ち上げました。 というか、以前のサイトをリフォームしました。</summary></entry></feed>
