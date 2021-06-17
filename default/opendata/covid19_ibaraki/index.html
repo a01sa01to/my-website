@@ -5,7 +5,8 @@ titleEn: COVID-19 Status in Ibaraki
 relPath: /covid19_ibaraki/
 last_modified_at: 2021-02-14
 ---
-<link rel="stylesheet" href="/css/sitemap.css">
+
+<link rel="stylesheet" href="/css/sitemap.css" />
 <div class="container center">
   <div lang="ja">
     <h1>茨城県 新型コロナウイルス感染症のオープンデータ</h1>
@@ -13,21 +14,35 @@ last_modified_at: 2021-02-14
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb" lang="ja">
         <li class="breadcrumb-item"><a href="/opendata/">Home</a></li>
-        <li class="breadcrumb-item"><a href="/opendata/list">提供オープンデータ一覧</a></li>
-        <li class="breadcrumb-item active" aria-current="page">{{ page.titleJa }}</li>
+        <li class="breadcrumb-item">
+          <a href="/opendata/list">提供オープンデータ一覧</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {{ page.titleJa }}
+        </li>
       </ol>
       <ol class="breadcrumb" lang="en">
         <li class="breadcrumb-item"><a href="/opendata/">Home</a></li>
-        <li class="breadcrumb-item"><a href="/opendata/list">Open Data List</a></li>
-        <li class="breadcrumb-item active" aria-current="page">{{ page.titleEn }}</li>
+        <li class="breadcrumb-item">
+          <a href="/opendata/list">Open Data List</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {{ page.titleEn }}
+        </li>
       </ol>
     </nav>
 
     <h2>提供ファイル一覧</h2>
     <ul>
       <li><a href="./patients">陽性患者属性</a></li>
-      <li><a href="./test_people">検査実施人数（県衛生研究所・水戸市保健所実施分）</a></li>
-      <li><a href="./mutant_test_people">変異株検査実施件数（県衛生研究所）</a></li>
+      <li>
+        <a href="./test_people"
+          >検査実施人数（県衛生研究所・水戸市保健所実施分）</a
+        >
+      </li>
+      <li>
+        <a href="./mutant_test_people">変異株検査実施件数（県衛生研究所）</a>
+      </li>
       <li><a href="./call_center">受診相談窓口における相談件数</a></li>
       <li><a href="./positive_number">陽性確認数</a></li>
       <li><a href="./mutant_positive_number">変異株陽性確認数</a></li>
@@ -42,19 +57,39 @@ last_modified_at: 2021-02-14
   </div>
   <div lang="en">
     <h1>Open data of COVID-19 Status in Ibaraki</h1>
-    <a href="../list">&lt; Open Data List</a><br><br>
+    <a href="../list">&lt; Open Data List</a><br /><br />
     <h2>Available Data</h2>
     <ul>
       <li><a href="./patients">Attributes of Confirmed Cases</a></li>
-      <li><a href="./test_people">Number of Tested (Prefectural Health Research Institute and Mito City Public Health Center)</a></li>
-      <li><a href="./test_people">Number of Mutant Strain Test (Prefectural Health Research Institute)</a></li>
-      <li><a href="./call_center">Number of consultations at the consultation counter</a></li>
+      <li>
+        <a href="./test_people"
+          >Number of Tested (Prefectural Health Research Institute and Mito City
+          Public Health Center)</a
+        >
+      </li>
+      <li>
+        <a href="./test_people"
+          >Number of Mutant Strain Test (Prefectural Health Research
+          Institute)</a
+        >
+      </li>
+      <li>
+        <a href="./call_center"
+          >Number of consultations at the consultation counter</a
+        >
+      </li>
       <li><a href="./positive_number">Number of Positive cases</a></li>
-      <li><a href="./mutant_positive_number">Number of Positive cases of Mutant strain</a></li>
+      <li>
+        <a href="./mutant_positive_number"
+          >Number of Positive cases of Mutant strain</a
+        >
+      </li>
       <li><a href="./recovered_number">Number of Recovered</a></li>
       <li><a href="./death_number">Number of Deaths</a></li>
       <li><a href="./death_attr">Attributes of the dead</a></li>
-      <li><a href="./inspections_summary">The total number of people tested</a></li>
+      <li>
+        <a href="./inspections_summary">The total number of people tested</a>
+      </li>
       <li><a href="./patients_summary">Summary of Patients</a></li>
       <li><a href="./corona_next">Ibaraki Corona Next</a></li>
       <li><a href="./vaccination">Vaccination Status</a></li>

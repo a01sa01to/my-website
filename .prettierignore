@@ -4,3 +4,5 @@ slick.ts
 _site
 kss-new
 default/opendata/data
+default/_data
+tsconfig.json

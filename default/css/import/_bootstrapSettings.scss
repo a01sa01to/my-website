@@ -1,37 +1,36 @@
-nav[aria-label = "breadcrumb"]{
-  --bs-breadcrumb-divider: ">";
+nav[aria-label='breadcrumb'] {
+  --bs-breadcrumb-divider: '>';
 
-  li{
+  li {
     margin: initial;
   }
 }
 
-.list-group-item{
+.list-group-item {
   width: 500px;
   margin-top: 0;
 
-  a{
+  a {
     color: inherit;
     text-decoration: 1px underline var(--bs-gray);
   }
 }
 
-.card{
+.card {
   width: 18rem;
   margin: 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 
-  a:not(.decorate){
+  a:not(.decorate) {
     display: inline-block;
     width: 100%;
     height: 100%;
     text-decoration: none;
   }
 
-  div.card-body{
-
-    small.text-muted{
+  div.card-body {
+    small.text-muted {
       display: block;
       width: 100%;
       margin: 0.25rem;
@@ -40,22 +39,21 @@ nav[aria-label = "breadcrumb"]{
   }
 }
 
-.carousel .carousel-inner .carousel-item{
-
-  img{
+.carousel .carousel-inner .carousel-item {
+  img {
     filter: blur(3px);
   }
 
-  .carousel-caption{
+  .carousel-caption {
     background-color: #fffa;
     border-radius: 5px;
   }
 }
 
-.btn.btn-primary.btn-custom{
+.btn.btn-primary.btn-custom {
   margin: 4px;
 
-  i{
+  i {
     display: inline-block;
     margin-right: 8px;
   }

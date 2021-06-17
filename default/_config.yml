@@ -1,6 +1,6 @@
 permalink: /blog/:year/:month/:title
 name: Asa's Website
-url: "https://a01sa01to.com"
+url: 'https://a01sa01to.com'
 author: Asa
 
 sass:
@@ -13,14 +13,13 @@ plugins:
   - jekyll-paginate-v2
 
 exclude:
-  - "src"
+  - 'src'
 
 defaults:
--
-  scope:
-    path: "err/**"
-  values:
-    sitemap: false
+  - scope:
+      path: 'err/**'
+    values:
+      sitemap: false
 
 autopages:
   enabled: true

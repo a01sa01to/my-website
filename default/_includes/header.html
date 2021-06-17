@@ -3,13 +3,16 @@
   <p id="title">Asa's {{ include.logotitle }}</p>
 </div>
 <div id="right">
-  <input type="checkbox" id="menuShow">
-  <div id="menuIcon"><div id="bar1"></div><div id="bar2"></div></div>
+  <input type="checkbox" id="menuShow" />
+  <div id="menuIcon">
+    <div id="bar1"></div>
+    <div id="bar2"></div>
+  </div>
   <div id="menuItem">
     <li><a href="{{ include.subdomain }}/">{{ include.logotitle }} Top</a></li>
     {% if include.logotitle == "Website" %}
-      <li><a href="/about">About Me</a></li>
-      <li><a href="/works">Works</a></li>
+    <li><a href="/about">About Me</a></li>
+    <li><a href="/works">Works</a></li>
     {% endif %}
     <p class="border"></p>
     <li><a href="/">Asa's Website Home</a></li>
@@ -18,13 +21,25 @@
     <li><a href="/works">Works</a></li>
     <li><a href="/sitemap/">Sitemap</a></li>
     <li class="social">
-      <a href="https://github.com/a01sa01to" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://github.com/a01sa01to"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://twitter.com/a01sa01to" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://twitter.com/a01sa01to"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://instagram.com/a01sa01to" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://instagram.com/a01sa01to"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i class="fab fa-instagram"></i>
       </a>
       <a href="/feed.xml" target="_blank" rel="noopener">
@@ -34,6 +49,6 @@
     <p class="border"></p>
     <li><a href="?lang=ja">Japanese</a></li>
     <li><a href="?lang=en">English</a></li>
-    <li style="height: 54px;"></li>
+    <li style="height: 54px"></li>
   </div>
 </div>

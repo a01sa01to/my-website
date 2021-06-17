@@ -8,22 +8,24 @@ a_few_word: これはますます便利になりそう...
 ---
 
 ## 経緯
-1. Googleカレンダーをよく使っています。<br>
+
+1. Google カレンダーをよく使っています。<br>
 2. 学校でよく[Google Classroom](http://classroom.google.com/)を使っていて、画面横にクラスごとのカレンダーが出てくるので、予定の種類ごとにクラスを作っていました。<br>![モザイクがかかっているけど、横にとにかく仕分けられている](/img/blog/2021/03/separate-gcalendar/01.png)
-3. 「Google製だし、Googleカレンダーだけで済ませられないのかな～？」<br>
+3. 「Google 製だし、Google カレンダーだけで済ませられないのかな～？」<br>
 4. その方法があったので紹介。
 
 ## 読むのにおすすめな人
- - Googleアカウントを分けて、予定を分けている人
- - Google Classroomなど別の方法で予定を分けている人
- - GoogleカレンダーやOutlookなどで予定を分けている人
- - その他、いろいろな方法で予定を分けている人
+
+- Google アカウントを分けて、予定を分けている人
+- Google Classroom など別の方法で予定を分けている人
+- Google カレンダーや Outlook などで予定を分けている人
+- その他、いろいろな方法で予定を分けている人
 
 ## Step by Step
 
-### Step1 - ブラウザ版のGoogleカレンダーを開く
+### Step1 - ブラウザ版の Google カレンダーを開く
 
-[Googleカレンダー](https://calendar.google.com/) を開きます。
+[Google カレンダー](https://calendar.google.com/) を開きます。
 スマホの場合、アプリ版だとできませんでしたが、ブラウザ版では同じようにできました。
 
 ### Step2 - 設定を開く

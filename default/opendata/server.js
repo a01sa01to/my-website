@@ -3,8 +3,8 @@ const path = require('path')
 
 exports.opendataRequest = (req, res) => {
   const c400 = () => {
-    res.status(400).sendFile(path.join(__dirname, '..', `err/400.html`));
-    return;
+    res.status(400).sendFile(path.join(__dirname, '..', `err/400.html`))
+    return
   }
   try {
     res.header('Access-Control-Allow-Origin', '*')
@@ -108,5 +108,5 @@ exports.opendataRequest = (req, res) => {
   } catch {
     c400()
   }
-  return;
+  return
 }

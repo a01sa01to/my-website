@@ -7,4 +7,5 @@ module.exports = {
   jsxSingleQuote: true,
   bracketSpacing: true,
   jsxBracketSameLine: false,
+  importOrder: ['^[./]', './(.+)'],
 }

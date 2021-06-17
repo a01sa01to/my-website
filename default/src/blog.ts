@@ -1,4 +1,5 @@
 import ace from 'ace-builds'
+import $ from 'jquery'
 import mode_cpp from 'ace-builds/src-noconflict/mode-c_cpp'
 import mode_html from 'ace-builds/src-noconflict/mode-html'
 import mode_js from 'ace-builds/src-noconflict/mode-javascript'
@@ -7,7 +8,6 @@ import mode_plaintext from 'ace-builds/src-noconflict/mode-plain_text'
 import mode_bash from 'ace-builds/src-noconflict/mode-sh'
 import mode_ts from 'ace-builds/src-noconflict/mode-typescript'
 import theme_dracula from 'ace-builds/src-noconflict/theme-dracula'
-import $ from 'jquery'
 
 if (location.pathname.includes('/blog/')) {
   window.addEventListener('DOMContentLoaded', () => {

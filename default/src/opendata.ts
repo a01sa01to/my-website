@@ -1,10 +1,10 @@
 import Ace from 'ace-builds'
-import mode_json from 'ace-builds/src-noconflict/mode-json'
-import mode_csv from 'ace-builds/src-noconflict/mode-plain_text'
-import theme_github from 'ace-builds/src-noconflict/theme-github'
 import { Toast } from 'bootstrap'
 import ClipboardJS from 'clipboard'
 import $ from 'jquery'
+import mode_json from 'ace-builds/src-noconflict/mode-json'
+import mode_csv from 'ace-builds/src-noconflict/mode-plain_text'
+import theme_github from 'ace-builds/src-noconflict/theme-github'
 
 if (location.pathname.includes('/opendata/')) {
   window.addEventListener('DOMContentLoaded', () => {

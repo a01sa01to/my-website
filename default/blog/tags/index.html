@@ -16,7 +16,11 @@ last_modified_at: 2021-05-02
     </nav>
     <ul class="list-group">
       {% for tag in site.tags %}
-        <li class="list-group-item"><a href="./{{ tag[0] | downcase }}/">{{ tag[0] }}（{{ tag[1] | size }}記事）</a></li>
+      <li class="list-group-item">
+        <a href="./{{ tag[0] | downcase }}/"
+          >{{ tag[0] }}（{{ tag[1] | size }}記事）</a
+        >
+      </li>
       {% endfor %}
     </ul>
   </div>
