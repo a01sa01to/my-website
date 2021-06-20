@@ -1,22 +1,22 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     labels:
-      - "dependencies"
+      - 'dependencies'
 
-  - package-ecosystem: "npm"
-    directory: "/default/"
+  - package-ecosystem: 'npm'
+    directory: '/default/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     labels:
-      - "dependencies"
+      - 'dependencies'
 
-  - package-ecosystem: "bundler"
-    directory: "/default/"
+  - package-ecosystem: 'bundler'
+    directory: '/default/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     labels:
-      - "dependencies"
+      - 'dependencies'

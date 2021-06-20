@@ -1,4 +1,4 @@
-.flex > button{
+.flex > button {
   width: auto;
   padding: 8px;
   margin: 8px;
@@ -8,52 +8,52 @@
   border-radius: 5px;
 }
 
-.flex > button.dl::before{
+.flex > button.dl::before {
   padding-right: 8px;
-  font-family: "Material Icons",sans-serif;
-  content: "save_alt";
+  font-family: 'Material Icons', sans-serif;
+  content: 'save_alt';
 }
 
-.flex > button.pre::before{
+.flex > button.pre::before {
   padding-right: 8px;
-  font-family: "Material Icons",sans-serif;
-  content: "preview";
+  font-family: 'Material Icons', sans-serif;
+  content: 'preview';
 }
 
-.flex > button.api::before{
+.flex > button.api::before {
   padding-right: 8px;
-  font-family: "Material Icons",sans-serif;
-  content: "api";
+  font-family: 'Material Icons', sans-serif;
+  content: 'api';
 }
 
-.modal ul{
+.modal ul {
   padding: initial;
   list-style: circle;
 }
 
-.modal ul li{
+.modal ul li {
   padding: initial;
   margin: 1em 0;
   margin-left: 40px;
 }
 
-#ace{
+#ace {
   width: 100%;
   height: 30vh;
   font-size: 12px;
 }
 
-#ace *{
+#ace * {
   max-width: initial;
   max-height: initial;
 }
 
-button span{
+button span {
   padding-right: 8px;
-  font-family: "Material Icons", sans-serif;
+  font-family: 'Material Icons', sans-serif;
 }
 
-table{
+table {
   margin: auto;
   text-align: center;
   word-wrap: break-word;
@@ -62,16 +62,17 @@ table{
   border-collapse: collapse;
 }
 
-table td, table th{
+table td,
+table th {
   width: fit-content;
   padding: 8px;
   border: var(--bs-gray-dark) solid 1px;
 }
 
-table th{
+table th {
   border-bottom: var(--bs-gray-dark) double 3px;
 }
 
-table tr td:nth-child(1){
+table tr td:nth-child(1) {
   min-width: 100px;
 }

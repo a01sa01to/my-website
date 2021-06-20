@@ -1,4 +1,4 @@
-header{
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -16,37 +16,37 @@ header{
   box-shadow: 0 0 10px 0 var(--bs-gray);
   backdrop-filter: blur(7.5px);
 
-  p#title{
+  p#title {
     margin: 0;
     font-size: 1.3rem;
     text-align: center;
   }
 
-  #left{
+  #left {
     margin: 0;
     margin-right: auto;
     text-align: left;
   }
 
-  #center{
+  #center {
     margin: 0 auto;
     text-align: center;
   }
 
-  #right{
+  #right {
     position: relative;
     margin: 0;
     margin-left: auto;
     text-align: right;
 
-    div#menuIcon{
+    div#menuIcon {
       position: relative;
       top: 0;
       right: 0;
       width: 36px;
       height: 36px;
 
-      [id^="bar"]{
+      [id^='bar'] {
         position: absolute;
         left: 4px;
         width: 28px;
@@ -55,16 +55,16 @@ header{
         transition: 0.3s;
       }
 
-      #bar1{
+      #bar1 {
         top: 12px;
       }
 
-      #bar2{
+      #bar2 {
         bottom: 12px;
       }
     }
 
-    div#menuItem{
+    div#menuItem {
       position: fixed;
       top: 54px;
       left: 0;
@@ -79,28 +79,29 @@ header{
       opacity: 0;
       transition: 0.3s;
 
-      p.border{
+      p.border {
         height: 0;
         margin: 8px;
         border: 0.5px dotted var(--bs-gray);
       }
 
-      li{
+      li {
         font-size: 1.3em;
         list-style: none;
 
-        a{ text-decoration: none; }
+        a {
+          text-decoration: none;
+        }
 
-        &.social{
-
-          > *{
+        &.social {
+          > * {
             margin: 8px;
           }
         }
       }
     }
 
-    input{
+    input {
       position: absolute;
       top: 0;
       right: 0;
@@ -110,29 +111,23 @@ header{
       cursor: pointer;
       opacity: 0;
 
-
-      &:checked+ div#menuIcon{
-
-        #bar1{
+      &:checked + div#menuIcon {
+        #bar1 {
           top: 17px;
           transform: rotate(45deg);
         }
 
-        #bar2{
+        #bar2 {
           bottom: 17px;
           transform: rotate(-45deg);
-
         }
       }
 
-
-      &:checked ~ div#menuItem{
+      &:checked ~ div#menuItem {
         z-index: 1;
         visibility: visible;
         opacity: 1;
       }
     }
-
   }
-
 }

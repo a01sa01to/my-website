@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  {% include meta.html logotitle="Blog" subdomain="/blog" %}
-  <title>{{ page.title }} - Asa's Blog</title>
-  {% feed_meta %}
-  {% include css.html %}
-  {% include script.html %}
-  <link rel="canonical" href="https://a01sa01to.com/blog{{ page.relPath }}">
-  <link rel="stylesheet" href="/css/blog_post.css">
-</head>
-<body id="top">
-  <header>{% include header.html logotitle="Blog" subdomain="/blog" %}</header>
-  <main>
-    <div class="container">
-      <div>
-        <h1>{{ page.title }}</h1>
-        {% assign pageYear = page.date | date: "%Y" %}
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb" lang="ja">
-            <li class="breadcrumb-item"><a href="/blog/">Home</a></li>
-            <li class="breadcrumb-item"><a href="/blog/list/{{ pageYear }}">{{ pageYear }}年の記事</a></li>
-            <li class="breadcrumb-item active" aria-current="page">この記事</li>
-          </ol>
-        </nav>
+  <head>
+    {% include meta.html logotitle="Blog" subdomain="/blog" %}
+    <title>{{ page.title }} - Asa's Blog</title>
+    {% feed_meta %} {% include css.html %} {% include script.html %}
+    <link rel="canonical" href="https://a01sa01to.com/blog{{ page.relPath }}" />
+    <link rel="stylesheet" href="/css/blog_post.css" />
+  </head>
+  <body id="top">
+    <header>
+      {% include header.html logotitle="Blog" subdomain="/blog" %}
+    </header>
+    <main>
+      <div class="container">
+        <div>
+          <h1>{{ page.title }}</h1>
+          {% assign pageYear = page.date | date: "%Y" %}
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" lang="ja">
+              <li class="breadcrumb-item"><a href="/blog/">Home</a></li>
+              <li class="breadcrumb-item">
+                <a href="/blog/list/{{ pageYear }}">{{ pageYear }}年の記事</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                この記事
+              </li>
+            </ol>
+          </nav>
 
-        <p class="tags">
-          Tags:
-          {% for tag in page.tags %}
-            <a href="/blog/tags/{{ tag | downcase }}/" class="tag"><nobr>{{ tag }}</nobr></a>&nbsp;
-          {% endfor %}
-        </p>
-        <p class="date"><nobr>Published on {{ page.date | date: "%Y.%m.%d"}}.<wbr> Last Modified on {{ page.last_modified_at | date: "%Y.%m.%d"}}.</nobr></p>
-        <div class="accordion" id="toc">
-          <div class="accordion-item">
-            <p class="accordion-header" id="headingToc">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
-                Table of Contents
-              </button>
-            </p>
-            <div id="collapseToc" class="accordion-collapse collapse" aria-labelledby="headingToc" data-bs-parent="#toc">
-              <div class="accordion-body"></div>
+          <p class="tags">
+            Tags: {% for tag in page.tags %}
+            <a href="/blog/tags/{{ tag | downcase }}/" class="tag"
+              ><nobr>{{ tag }}</nobr></a
+            >&nbsp; {% endfor %}
+          </p>
+          <p class="date">
+            <nobr
+              >Published on {{ page.date | date: "%Y.%m.%d"}}.<wbr /> Last
+              Modified on {{ page.last_modified_at | date: "%Y.%m.%d"}}.</nobr
+            >
+          </p>
+          <div class="accordion" id="toc">
+            <div class="accordion-item">
+              <p class="accordion-header" id="headingToc">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseToc"
+                  aria-expanded="false"
+                  aria-controls="collapseToc"
+                >
+                  Table of Contents
+                </button>
+              </p>
+              <div
+                id="collapseToc"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingToc"
+                data-bs-parent="#toc"
+              >
+                <div class="accordion-body"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="article">
-          {{ content }}
-          <p class="a_few_word">{{ page.a_few_word }}</p>
+          <div class="article">
+            {{ content }}
+            <p class="a_few_word">{{ page.a_few_word }}</p>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-  <footer>{% include footer.html %}</footer>
-  <a href="#top" id="gototop"><span class="material-icons">keyboard_arrow_up</span></a>
-</body>
+    </main>
+    <footer>{% include footer.html %}</footer>
+    <a href="#top" id="gototop"
+      ><span class="material-icons">keyboard_arrow_up</span></a
+    >
+  </body>
 </html>

@@ -1,4 +1,4 @@
-footer{
+footer {
   width: 100vw;
   height: fit-content;
   padding: 6px;
@@ -6,7 +6,7 @@ footer{
   background-color: var(--bs-white);
   box-shadow: 0 0 10px 0 var(--bs-gray);
 
-  p#copyright{
+  p#copyright {
     text-align: center;
   }
 
@@ -23,26 +23,31 @@ footer{
     text-align: center;
     text-decoration: none;
 
-    &, &:link, &:visited, &:hover, &:active, &:focus {
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
       // color: #666;
       color: var(--bs-white);
     }
   }
 
-  div#links{
+  div#links {
     margin-bottom: 24px;
 
-    ul{
+    ul {
       display: flex;
       justify-content: space-around;
       list-style: none;
 
-      li{
+      li {
         // display: inline-block;
         width: fit-content;
         margin: auto;
 
-        a{
+        a {
           color: var(--bs-gray-dark);
           text-decoration: none;
         }
@@ -56,7 +61,7 @@ footer{
     font-size: 18px;
     text-align: center;
 
-    .sbInner{
+    .sbInner {
       display: flex;
       justify-content: space-around;
       margin-top: 8px;
@@ -67,9 +72,8 @@ footer{
       height: 0;
       clear: both;
       visibility: hidden;
-      content: ".";
+      content: '.';
     }
-
 
     .sBtn {
       transition: 0.3s ease-in-out;
@@ -103,31 +107,29 @@ footer{
 
   /* 画面サイズが768px以上の時 */
   @media only screen and (min-width: 768px) {
-
     footer .sBtn::after {
       margin-left: 0.25em;
       font-weight: 700;
 
       &.sBtn-facebook::after {
-        content: "Facebook";
+        content: 'Facebook';
       }
 
       &.sBtn-twitter::after {
-        content: "Twitter";
+        content: 'Twitter';
       }
 
       &.sBtn-line::after {
-        content: "LINE";
+        content: 'LINE';
       }
 
       &.sBtn-pocket::after {
-        content: "Pocket";
+        content: 'Pocket';
       }
 
       &.sBtn-hatena::after {
-        content: "Hatena";
+        content: 'Hatena';
       }
     }
-
   }
 }

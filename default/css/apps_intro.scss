@@ -1,9 +1,10 @@
 ---
 ---
 
-@import "importCommon";
-@import "blog_post";
+@import 'importCommon';
+@import 'blog_post';
 
-h2, .container> h2{
+h2,
+.container > h2 {
   text-align: left;
 }

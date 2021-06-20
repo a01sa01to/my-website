@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  {% include meta.html logotitle="Opendata Catalog" subdomain="/opendata" %}
-  <title lang="ja">{% if page.titleJa != "TOP" %}{{ page.titleJa }} - {% endif %}Asa's Opendata Catalog</title>
-  <title lang="en">{% if page.titleEn != "TOP" %}{{ page.titleEn }} - {% endif %}Asa's Opendata Catalog</title>
-  {% feed_meta %}
-  {% include css.html %}
-  {% include script.html %}
-</head>
-<body id="top">
-  <header>{% include header.html logotitle="Opendata Catalog" subdomain="/opendata" %}</header>
-  <main>{{ content }}</main>
-  <footer>{% include footer.html %}</footer>
-  <a href="#top" id="gototop"><span class="material-icons">keyboard_arrow_up</span></a>
-</body>
+  <head>
+    {% include meta.html logotitle="Opendata Catalog" subdomain="/opendata" %}
+    <title lang="ja">
+      {% if page.titleJa != "TOP" %}{{ page.titleJa }} - {% endif %}Asa's
+      Opendata Catalog
+    </title>
+    <title lang="en">
+      {% if page.titleEn != "TOP" %}{{ page.titleEn }} - {% endif %}Asa's
+      Opendata Catalog
+    </title>
+    {% feed_meta %} {% include css.html %} {% include script.html %}
+  </head>
+  <body id="top">
+    <header>
+      {% include header.html logotitle="Opendata Catalog" subdomain="/opendata"
+      %}
+    </header>
+    <main>{{ content }}</main>
+    <footer>{% include footer.html %}</footer>
+    <a href="#top" id="gototop"
+      ><span class="material-icons">keyboard_arrow_up</span></a
+    >
+  </body>
 </html>
