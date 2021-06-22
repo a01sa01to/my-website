@@ -46,9 +46,11 @@
         <i class="fas fa-rss"></i>
       </a>
     </li>
+    {% if include.logotitle != "Blog" %}
     <p class="border"></p>
     <li><a href="?lang=ja">Japanese</a></li>
     <li><a href="?lang=en">English</a></li>
+    {% endif %}
     <li style="height: 54px"></li>
   </div>
 </div>
