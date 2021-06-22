@@ -35,9 +35,13 @@
             >&nbsp; {% endfor %}
           </p>
           <p class="date">
+            {% assign thisPageLastModify = "2021-06-22" | date: "%s" | times: 1
+            %} {% assign articleLastModify = page.last_modified_at | date: "%s"
+            | times: 1 %}
             <nobr
               >Published on {{ page.date | date: "%Y.%m.%d"}}.<wbr /> Last
-              Modified on {{ page.last_modified_at | date: "%Y.%m.%d"}}.</nobr
+              Modified on {{ articleLastModify | at_least: thisPageLastModify |
+              date: "%Y.%m.%d"}}.</nobr
             >
           </p>
           <div class="accordion" id="toc">
