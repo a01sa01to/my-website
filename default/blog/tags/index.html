@@ -9,13 +9,14 @@ last_modified_at: 2021-05-02
   <div>
     <h1>タグ一覧</h1>
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb" lang="ja">
+      <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/blog/">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">タグ一覧</li>
       </ol>
     </nav>
+    <p>以下のタグはアルファベット順にソートされています。</p>
     <ul class="list-group">
-      {% for tag in site.tags %}
+      {% assign tags = site.tags | sort_natural %} {% for tag in tags %}
       <li class="list-group-item">
         <a href="./{{ tag[0] | downcase }}/"
           >{{ tag[0] }}（{{ tag[1] | size }}記事）</a
