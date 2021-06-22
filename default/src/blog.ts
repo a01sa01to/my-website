@@ -5,6 +5,7 @@ import mode_html from 'ace-builds/src-noconflict/mode-html'
 import mode_js from 'ace-builds/src-noconflict/mode-javascript'
 import mode_json from 'ace-builds/src-noconflict/mode-json'
 import mode_plaintext from 'ace-builds/src-noconflict/mode-plain_text'
+import mode_ps from 'ace-builds/src-noconflict/mode-powershell'
 import mode_bash from 'ace-builds/src-noconflict/mode-sh'
 import mode_ts from 'ace-builds/src-noconflict/mode-typescript'
 import theme_dracula from 'ace-builds/src-noconflict/theme-dracula'
@@ -24,6 +25,10 @@ if (location.pathname.includes('/blog/')) {
     for (let i = 0; i < codeHighlight.length; i++) {
       const e = codeHighlight[i] as HTMLElement
       e.setAttribute('id', `editor_${i}`)
+      // これがないとPowershellとかで毎単語で改行される
+      e.querySelectorAll('span').forEach((_) => {
+        _.outerHTML = _.innerHTML
+      })
       const code = e.innerText
       e.innerHTML = ''
       const editor = ace.edit(`editor_${i}`, {
@@ -56,6 +61,9 @@ if (location.pathname.includes('/blog/')) {
           break
         case 'ts':
           editor.session.setMode(new mode_ts.Mode())
+          break
+        case 'powershell':
+          editor.session.setMode(new mode_ps.Mode())
           break
         default:
           editor.session.setMode(new mode_plaintext.Mode())
