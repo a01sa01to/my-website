@@ -1,4 +1,168 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-06-23T08:45:31+00:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">ABC206</title><link href="https://a01sa01to.com/blog/2021/06/abc206" rel="alternate" type="text/html" title="ABC206" /><published>2021-06-19T00:00:00+00:00</published><updated>2020-06-19T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/abc206</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc206">&lt;p&gt;今日はきつかったです…。（早速感想から入っていくパターン）&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-06-24T11:34:14+09:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">Cleaning Up My Computer</title><link href="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer" rel="alternate" type="text/html" title="Cleaning Up My Computer" /><published>2021-06-24T00:00:00+09:00</published><updated>2021-06-24T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer">&lt;p&gt;クリーンアップって大事ですよね……。&lt;/p&gt;
+
+&lt;p&gt;ただパソコンのクリーンアップをするだけの記事です。&lt;/p&gt;
+
+&lt;h2 id=&quot;使用容量を確認してみる&quot;&gt;使用容量を確認してみる&lt;/h2&gt;
+
+&lt;p&gt;スクショ取り忘れました…。空き容量は 31.8GB です。ここからどのくらい減るか見ものです。&lt;/p&gt;
+
+&lt;h2 id=&quot;不要ファイルを削除していく&quot;&gt;不要ファイルを削除していく&lt;/h2&gt;
+
+&lt;h3 id=&quot;不要なプログラムを削除&quot;&gt;不要なプログラムを削除&lt;/h3&gt;
+
+&lt;p&gt;はい、まず最初にやるべきことと言ったらこれです。不要なプログラムをアンインストールします。&lt;/p&gt;
+
+&lt;p&gt;「設定 &amp;gt; アプリ &amp;gt; アプリと機能 &amp;gt; （アプリ選択） &amp;gt; アンインストール」です。全く使っていないアプリ（1 桁台）をアンインストール。&lt;br /&gt;
+プログラムサイズが小さかったのか、消すプログラムが少なかったのか、3GB くらいしか増えず…。&lt;/p&gt;
+
+&lt;h3 id=&quot;フォルダ整理&quot;&gt;フォルダ整理&lt;/h3&gt;
+
+&lt;p&gt;とりあえず、今後見やすくするために、空フォルダを削除していきます。&lt;/p&gt;
+
+&lt;p&gt;Powershell で削除したい親フォルダに移動した後、以下のコマンドを実行します。子孫フォルダが多いと、かなり時間がかかります。&lt;br /&gt;
+（※一応動作確認はしていますが、以下のコマンドを実行したことにより生じた損害については責任を負いかねます）&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Measure-Command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dirs&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-ChildItem&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Directory&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Recurse&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sort-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Descending&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dirs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$item&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-ChildItem&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Recurse&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Count&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-eq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write-Host&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Deleting &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Remove-Item&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$dirs&lt;/code&gt;に子孫フォルダを保存し、それぞれについて、ファイル数が 0 なら削除、といった流れです。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Measure-Command&lt;/code&gt;で時間計測をしています。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%UserProfile%&lt;/code&gt;フォルダで試してみた結果、1464 フォルダが削除されました。実行時間は 13 分 11 秒でした。&lt;/p&gt;
+
+&lt;h3 id=&quot;windows-のクリーンアップ機能を使う&quot;&gt;Windows のクリーンアップ機能を使う&lt;/h3&gt;
+
+&lt;p&gt;Windows に標準搭載されている、クリーンアップツールを使います。&lt;br /&gt;
+エクスプローラーで、C ドライブなどを選択して、上の「管理・ドライブツール」にあるやつです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/2021/06/cleaning-up/01.png&quot; alt=&quot;2GB増やせるみたい&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;33.7GB まで空きました。&lt;/p&gt;
+
+&lt;h3 id=&quot;tempフォルダを消す&quot;&gt;%temp%フォルダを消す&lt;/h3&gt;
+
+&lt;p&gt;一応、ある程度は上のツールで消えてくれるんですが、まだ割と残っているので、エクスプローラーから削除します。&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Measure-Command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dirs&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-ChildItem&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Directory&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Recurse&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sort-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Descending&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dirs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write-Host&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Deleting &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Remove-Item&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-force&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Recurse&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$files&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-ChildItem&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write-Host&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Deleting &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Remove-Item&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-force&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;空き容量は 35.3GB です。そこまで期待はしていませんでした。&lt;/p&gt;
+
+&lt;h3 id=&quot;ccleaner-で消していく&quot;&gt;CCleaner で消していく&lt;/h3&gt;
+
+&lt;p&gt;クリーニングソフトでは有名な、&lt;a href=&quot;https://www.ccleaner.com/&quot;&gt;CCleaner&lt;/a&gt; を使って消していきます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/2021/06/cleaning-up/02.png&quot; alt=&quot;Custom Cleanをしてみる&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;スキャンしてみた結果、「約 4,687MB（=4.58GB）消せそう」と出ていましたが、実際に消してみると 5,139MB（=5.02GB）消せました。&lt;br /&gt;空き容量は 39.8GB になりました。&lt;/p&gt;
+
+&lt;p&gt;ついでにレジストリも削除しました。&lt;/p&gt;
+
+&lt;h3 id=&quot;手作業で消していく&quot;&gt;手作業で消していく&lt;/h3&gt;
+
+&lt;p&gt;はい、結局これに尽きます。アンインストールしたソフトでも、完全にはファイルが消えているわけではないので。&lt;/p&gt;
+
+&lt;p&gt;以下のコードは、開いたフォルダ内のファイルのうち、最新の書き込み日時を取得して出力するコードです。&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Measure-Command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dirs&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-ChildItem&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Recurse&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sort-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Descending&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System.Datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$lastUpdate&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2000/01/01 00:00&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dirs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;LastWriteTime&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-gt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$lastUpdate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$lastUpdate&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;LastWriteTime&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write-Host&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Last Update: &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$lastUpdate&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;要らなさそうなファイルを消した結果、47.6GB まで増えました。&lt;br /&gt;
+（アンインストールしたプログラムや、Cache フォルダ、最終更新から 1 年経っているフォルダなどを削除しました）&lt;/p&gt;
+
+&lt;p&gt;この後に念のため、CCleaner のレジストリクリーナーを走らせました。&lt;/p&gt;
+
+&lt;h3 id=&quot;git-フォルダの軽量化&quot;&gt;.git フォルダの軽量化&lt;/h3&gt;
+
+&lt;p&gt;C ドライブの Documents フォルダ内に Git 管理のプログラムを大量においていたため、Git により容量が使われている可能性があったので、軽量化します。&lt;/p&gt;
+
+&lt;p&gt;なお、日をまたいでしまったので 45.0GB にリバウンドしました()。&lt;/p&gt;
+
+&lt;p&gt;さて、Git リポジトリで以下のコマンドを実行します。&lt;br /&gt;
+&lt;a href=&quot;https://git-scm.com/book/ja/v2/Git%E3%81%AE%E5%86%85%E5%81%B4-%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%83%AA%E3%82%AB%E3%83%90%E3%83%AA&quot;&gt;Git - メンテナンスとデータリカバリ&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gc&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;例えば、&lt;a href=&quot;https://github.com/a01sa01to/covid19-ibaraki&quot;&gt;a01sa01to/covid19-ibaraki&lt;/a&gt; における &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git&lt;/code&gt; フォルダの容量は、4.72GB から 4.68GB に減りました。ほんとに誤差ですね…。ちなみに 12 分かかりました。&lt;/p&gt;
+
+&lt;h3 id=&quot;node_modules-フォルダの軽量化&quot;&gt;node_modules フォルダの軽量化&lt;/h3&gt;
+
+&lt;p&gt;node_modules フォルダによっても容量が使われている可能性があったので、軽量化します。&lt;/p&gt;
+
+&lt;p&gt;この手法は npm を利用している場合有効で、Yarn を利用している場合は必要ないようです。&lt;br /&gt;
+Yarn の場合 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn install&lt;/code&gt; 時に&lt;a href=&quot;https://classic.yarnpkg.com/en/docs/cli/prune/&quot;&gt;自動で軽量化される&lt;/a&gt;らしいです。&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;npm&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prune&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;えっと、npm を使っているプロジェクトがありませんでした…笑&lt;/p&gt;
+
+&lt;p&gt;次に、Yarn で不要なファイルを削除します。上の代替なのかもしれませんが。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;注意（[yarn autoclean&lt;/td&gt;
+      &lt;td&gt;Yarn](https://classic.yarnpkg.com/en/docs/cli/autoclean)より意訳）&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;このコマンドは上級者向けと思っておいてください。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; 内に大量のファイルがあることで問題が生じているとき以外は、このコマンドは推奨されません。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;内のファイルを恒久的に削除するため、パッケージが停止する原因になり得ます。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;はい、やっていきます。（なにか損害が生じても責任は負いかねますよ。）&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;autoclean&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--init&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;autoclean&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--force&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn autoclean --init&lt;/code&gt; で &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.yarnclean&lt;/code&gt; ファイルを作成します。このファイルが存在すると、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn install&lt;/code&gt; や &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn add&lt;/code&gt; の際に自動的に不要ファイルが削除されるとのことです。&lt;br /&gt;
+でも、もうすでに &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn install&lt;/code&gt; はしてあるし、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn add&lt;/code&gt; するパッケージもない…ということで、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn autoclean --force&lt;/code&gt; で実行しています。&lt;/p&gt;
+
+&lt;p&gt;再び &lt;a href=&quot;https://github.com/a01sa01to/covid19-ibaraki&quot;&gt;a01sa01to/covid19-ibaraki&lt;/a&gt; で実験してみた結果、3,697 ファイルが削除され、14.23MB が空きました。ちなみに実行時間は 25.43 秒でした。十分高速。&lt;/p&gt;
+
+&lt;h2 id=&quot;結果は&quot;&gt;結果は…？&lt;/h2&gt;
+
+&lt;p&gt;前述したように、日をまたぐ前は &lt;del&gt;47.6GB&lt;/del&gt; 47.8GB まで増えました。&lt;br /&gt;
+日をまたいだことにより 45.0GB までリバウンドしましたが、45.2GB まで増加。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/2021/06/cleaning-up/03.png&quot; alt=&quot;47.8GBまで増えた！&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;内訳は上の画像の通り。システムは変更できないけど、「アプリと機能」も必要なものしか残っていないはず…です。たぶん。&lt;/p&gt;
+
+&lt;p&gt;上記以外にもいろいろな手法を試してみたいと思います。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Computer" /><summary type="html">クリーンアップって大事ですよね……。</summary></entry><entry><title type="html">ABC206</title><link href="https://a01sa01to.com/blog/2021/06/abc206" rel="alternate" type="text/html" title="ABC206" /><published>2021-06-19T00:00:00+09:00</published><updated>2020-06-19T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc206</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc206">&lt;p&gt;今日はきつかったです…。（早速感想から入っていくパターン）&lt;/p&gt;
 
 &lt;p&gt;今回は3完です。D飛ばしてEが解けそうだったけど、うまくパターンが作れなかった…。&lt;/p&gt;
 
@@ -112,7 +276,7 @@
 &lt;p&gt;D問題はまったく思いつかなかったので、飛ばしました。&lt;br /&gt;
 E問題は、あとちょっとで解けてました。悔しい…。&lt;/p&gt;
 
-&lt;p&gt;D問題をすぐに思いつけるように頑張りたいですね…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今日はきつかったです…。（早速感想から入っていくパターン）</summary></entry><entry><title type="html">ABC205</title><link href="https://a01sa01to.com/blog/2021/06/abc205" rel="alternate" type="text/html" title="ABC205" /><published>2021-06-13T00:00:00+00:00</published><updated>2020-06-14T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/abc205</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc205">&lt;p&gt;今週もやっていきましょう振り返りを。（謎の倒置）&lt;/p&gt;
+&lt;p&gt;D問題をすぐに思いつけるように頑張りたいですね…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今日はきつかったです…。（早速感想から入っていくパターン）</summary></entry><entry><title type="html">ABC205</title><link href="https://a01sa01to.com/blog/2021/06/abc205" rel="alternate" type="text/html" title="ABC205" /><published>2021-06-13T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc205</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc205">&lt;p&gt;今週もやっていきましょう振り返りを。（謎の倒置）&lt;/p&gt;
 
 &lt;p&gt;今回解けたのは A から D。かなり時間がかかってしまった…。&lt;/p&gt;
 
@@ -269,7 +433,7 @@ chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintex
 &lt;p&gt;C と D 問題のペナルティと、D 問題のメモ無しが響いてきたと思います…。&lt;br /&gt;
 4 ペナがなければ、 20 分マイナスで &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;84:45&lt;/code&gt; となったため、順位は 2870 位となり、680 くらいまで届いたのかなぁと。ミス修正の時間も引けばさらに上がったかも…。&lt;/p&gt;
 
-&lt;p&gt;何とかレーティングは下がりませんでした。これからも維持できるよう頑張りたいです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今週もやっていきましょう振り返りを。（謎の倒置）</summary></entry><entry><title type="html">ABC204</title><link href="https://a01sa01to.com/blog/2021/06/abc204" rel="alternate" type="text/html" title="ABC204" /><published>2021-06-06T00:00:00+00:00</published><updated>2020-06-06T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/abc204</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc204">&lt;p&gt;&lt;a href=&quot;./ahc003&quot;&gt;前回の AHC003&lt;/a&gt; に引き続き、競プロ振り返りますかね…。&lt;/p&gt;
+&lt;p&gt;何とかレーティングは下がりませんでした。これからも維持できるよう頑張りたいです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今週もやっていきましょう振り返りを。（謎の倒置）</summary></entry><entry><title type="html">ABC204</title><link href="https://a01sa01to.com/blog/2021/06/abc204" rel="alternate" type="text/html" title="ABC204" /><published>2021-06-06T00:00:00+09:00</published><updated>2020-06-06T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc204</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc204">&lt;p&gt;&lt;a href=&quot;./ahc003&quot;&gt;前回の AHC003&lt;/a&gt; に引き続き、競プロ振り返りますかね…。&lt;/p&gt;
 
 &lt;p&gt;今回解けたのは、A-C 問題。D も解けそうだったけど WA 出た…。&lt;/p&gt;
 
@@ -449,7 +613,7 @@ chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintex
 &lt;p&gt;微増しました。3,830 位の+8 です。&lt;/p&gt;
 
 &lt;p&gt;D 問題での反例探しができていれば、思考が固定されなかったのかなぁと…。&lt;br /&gt;
-このレートを維持できるように特訓しなければ…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">前回の AHC003 に引き続き、競プロ振り返りますかね…。</summary></entry><entry><title type="html">AHC003</title><link href="https://a01sa01to.com/blog/2021/06/ahc003" rel="alternate" type="text/html" title="AHC003" /><published>2021-06-01T00:00:00+00:00</published><updated>2020-06-10T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/ahc003</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/ahc003">&lt;p&gt;&lt;a href=&quot;/blog/2021/05/abc203&quot;&gt;ABC203&lt;/a&gt; に引き続き、AHC003 を振り返ります。&lt;/p&gt;
+このレートを維持できるように特訓しなければ…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">前回の AHC003 に引き続き、競プロ振り返りますかね…。</summary></entry><entry><title type="html">AHC003</title><link href="https://a01sa01to.com/blog/2021/06/ahc003" rel="alternate" type="text/html" title="AHC003" /><published>2021-06-01T00:00:00+09:00</published><updated>2020-06-10T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/ahc003</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/ahc003">&lt;p&gt;&lt;a href=&quot;/blog/2021/05/abc203&quot;&gt;ABC203&lt;/a&gt; に引き続き、AHC003 を振り返ります。&lt;/p&gt;
 
 &lt;h2 id=&quot;問題概要&quot;&gt;問題概要&lt;/h2&gt;
 
@@ -1031,7 +1195,7 @@ $ b_k \times e_k $ は実質経路の長さなので、最短経路を求める�
 
 &lt;p&gt;（2021.06.10 追記）システムリジャッジが終了した結果、得点は変わらず、520 位に。Perf は 1308 と 1 下がりましたが、新レーディングは変わらず+337 で 644 のようです。&lt;/p&gt;
 
-&lt;p&gt;もっと問題文を理解できるようにしたりアルゴリズムを学んだりして、ABC はもちろん AHC でも高得点を狙っていきたいですね…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="AHC" /><category term="Competitive-Programming" /><summary type="html">ABC203 に引き続き、AHC003 を振り返ります。</summary></entry><entry><title type="html">ABC203</title><link href="https://a01sa01to.com/blog/2021/05/abc203" rel="alternate" type="text/html" title="ABC203" /><published>2021-05-31T00:00:00+00:00</published><updated>2020-05-31T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/05/abc203</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/05/abc203">&lt;p&gt;ABC203 振り返りします。（唐突）&lt;/p&gt;
+&lt;p&gt;もっと問題文を理解できるようにしたりアルゴリズムを学んだりして、ABC はもちろん AHC でも高得点を狙っていきたいですね…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="AHC" /><category term="Competitive-Programming" /><summary type="html">ABC203 に引き続き、AHC003 を振り返ります。</summary></entry><entry><title type="html">ABC203</title><link href="https://a01sa01to.com/blog/2021/05/abc203" rel="alternate" type="text/html" title="ABC203" /><published>2021-05-31T00:00:00+09:00</published><updated>2020-05-31T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/05/abc203</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/05/abc203">&lt;p&gt;ABC203 振り返りします。（唐突）&lt;/p&gt;
 
 &lt;p&gt;今回解けたのは、A-C 問題です。もうちょっと解きたかった…。&lt;/p&gt;
 
@@ -1169,7 +1333,7 @@ $ N \leq 2 \times 10^5, (K, B_i) \leq 10^9 $ なので、たどり着ける最�
 
 &lt;p&gt;今回の問題が比較的簡単だったのかもしれませんが、C 問題までを解くのに 10 分強しかかかっていないのは、かなり成長を感じました。このペースを維持できるように精進していきたいですね。&lt;/p&gt;
 
-&lt;p&gt;それと、今回初の振り返り記事。振り返ると記憶に定着し、また他者にもわかるように説明することでより理解が深まるという、誰かが言っていたメソッド。三日坊主にならないよう頑張りたいですね。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">ABC203 振り返りします。（唐突）</summary></entry><entry><title type="html">FirebaseUIで日本語にしてAuthDomainを設定したい</title><link href="https://a01sa01to.com/blog/2021/05/firebaseui" rel="alternate" type="text/html" title="FirebaseUIで日本語にしてAuthDomainを設定したい" /><published>2021-05-19T00:00:00+00:00</published><updated>2020-05-30T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/05/firebaseui</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/05/firebaseui">&lt;p&gt;とある用で Firebase Authentication を使っていて、FirebaseUI をログイン画面に実装していました。&lt;/p&gt;
+&lt;p&gt;それと、今回初の振り返り記事。振り返ると記憶に定着し、また他者にもわかるように説明することでより理解が深まるという、誰かが言っていたメソッド。三日坊主にならないよう頑張りたいですね。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">ABC203 振り返りします。（唐突）</summary></entry><entry><title type="html">FirebaseUIで日本語にしてAuthDomainを設定したい</title><link href="https://a01sa01to.com/blog/2021/05/firebaseui" rel="alternate" type="text/html" title="FirebaseUIで日本語にしてAuthDomainを設定したい" /><published>2021-05-19T00:00:00+09:00</published><updated>2020-05-30T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/05/firebaseui</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/05/firebaseui">&lt;p&gt;とある用で Firebase Authentication を使っていて、FirebaseUI をログイン画面に実装していました。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://firebase.google.com/docs/auth/web/firebaseui?hl=ja&quot;&gt;FirebaseUI でウェブアプリに簡単にログイン機能を追加する&lt;/a&gt;&lt;/p&gt;
 
@@ -1358,7 +1522,7 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;これで、Webpack でビルドすると、きちんと日本語になり、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge.com&lt;/code&gt; に飛ばされました！&lt;/p&gt;</content><author><name>Asa</name></author><category term="Google" /><category term="Firebase" /><summary type="html">とある用で Firebase Authentication を使っていて、FirebaseUI をログイン画面に実装していました。</summary></entry><entry><title type="html">Googleカレンダーで予定別にカレンダーを仕分ける</title><link href="https://a01sa01to.com/blog/2021/03/separate-gcalendar" rel="alternate" type="text/html" title="Googleカレンダーで予定別にカレンダーを仕分ける" /><published>2021-03-16T00:00:00+00:00</published><updated>2021-05-30T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/03/separate-gcalendar</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/03/separate-gcalendar">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
+&lt;p&gt;これで、Webpack でビルドすると、きちんと日本語になり、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge.com&lt;/code&gt; に飛ばされました！&lt;/p&gt;</content><author><name>Asa</name></author><category term="Google" /><category term="Firebase" /><summary type="html">とある用で Firebase Authentication を使っていて、FirebaseUI をログイン画面に実装していました。</summary></entry><entry><title type="html">Googleカレンダーで予定別にカレンダーを仕分ける</title><link href="https://a01sa01to.com/blog/2021/03/separate-gcalendar" rel="alternate" type="text/html" title="Googleカレンダーで予定別にカレンダーを仕分ける" /><published>2021-03-16T00:00:00+09:00</published><updated>2021-05-30T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/03/separate-gcalendar</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/03/separate-gcalendar">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Google カレンダーをよく使っています。&lt;br /&gt;&lt;/li&gt;
@@ -1414,7 +1578,7 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;p&gt;月間予定などを見ると、仕分けられているのがわかります。
 &lt;img src=&quot;/img/blog/2021/03/separate-gcalendar/05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;その予定だけ見たい場合は、ブラウザ版の画面左側にある「マイカレンダー」のチェックボックスから切り替えられます。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Google" /><category term="Calendar" /><summary type="html">経緯</summary></entry><entry><title type="html">ドメインパーキングを使ってみる</title><link href="https://a01sa01to.com/blog/2021/02/domain-parking" rel="alternate" type="text/html" title="ドメインパーキングを使ってみる" /><published>2021-02-02T00:00:00+00:00</published><updated>2021-05-30T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/02/domain-parking</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/02/domain-parking">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
+&lt;p&gt;その予定だけ見たい場合は、ブラウザ版の画面左側にある「マイカレンダー」のチェックボックスから切り替えられます。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Google" /><category term="Calendar" /><summary type="html">経緯</summary></entry><entry><title type="html">ドメインパーキングを使ってみる</title><link href="https://a01sa01to.com/blog/2021/02/domain-parking" rel="alternate" type="text/html" title="ドメインパーキングを使ってみる" /><published>2021-02-02T00:00:00+09:00</published><updated>2021-05-30T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/02/domain-parking</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/02/domain-parking">&lt;h2 id=&quot;経緯&quot;&gt;経緯&lt;/h2&gt;
 
 &lt;p&gt;2 月から &lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FPLU8Q+0K+10FASI&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;A8.net&lt;/a&gt;&lt;img border=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot; src=&quot;https://www14.a8.net/0.gif?a8mat=3H5C5X+FPLU8Q+0K+10FASI&quot; alt=&quot;&quot; class=&quot;a8&quot; /&gt; という、割と有名なアフィリエイトサイトに申し込んでみました。&lt;br /&gt;
 &lt;a href=&quot;./domain-transfer&quot;&gt;前回の記事&lt;/a&gt; で試しに「&lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;お名前.com&lt;/a&gt;&lt;img border=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot; src=&quot;https://www18.a8.net/0.gif?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; alt=&quot;&quot; class=&quot;a8&quot; /&gt;」やってみようかな～と提携申し込みしたら…&lt;/p&gt;
@@ -1466,7 +1630,7 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;img src=&quot;/img/blog/2021/02/domain-parking/08.png&quot; alt=&quot;飛ばされた&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;（2021.03.16 追記）&lt;br /&gt;
-飛ばされる先は、（定期的なのか不定期的なのかは不明ですが）変わるようです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Domain-Parking" /><summary type="html">経緯</summary></entry><entry><title type="html">ドメインを移管しました</title><link href="https://a01sa01to.com/blog/2021/02/domain-transfer" rel="alternate" type="text/html" title="ドメインを移管しました" /><published>2021-02-01T00:00:00+00:00</published><updated>2021-05-30T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/02/domain-transfer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/02/domain-transfer">&lt;p&gt;この記事、今更感がすごい&lt;/p&gt;
+飛ばされる先は、（定期的なのか不定期的なのかは不明ですが）変わるようです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Domain-Parking" /><summary type="html">経緯</summary></entry><entry><title type="html">ドメインを移管しました</title><link href="https://a01sa01to.com/blog/2021/02/domain-transfer" rel="alternate" type="text/html" title="ドメインを移管しました" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-05-30T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/02/domain-transfer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/02/domain-transfer">&lt;p&gt;この記事、今更感がすごい&lt;/p&gt;
 
 &lt;h2 id=&quot;移管した理由&quot;&gt;移管した理由&lt;/h2&gt;
 
@@ -1559,30 +1723,4 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;img src=&quot;/img/blog/2021/02/domain-transfer/14.png&quot; alt=&quot;！！！&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;DNS はいくつか引き継がれていませんでした。
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/15.png&quot; alt=&quot;DNS一覧&quot; /&gt;&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Website" /><summary type="html">この記事、今更感がすごい</summary></entry><entry><title type="html">Hello World, publishing my website</title><link href="https://a01sa01to.com/blog/2020/12/hello-world" rel="alternate" type="text/html" title="Hello World, publishing my website" /><published>2020-12-01T00:00:00+00:00</published><updated>2021-05-30T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2020/12/hello-world</id><content type="html" xml:base="https://a01sa01to.com/blog/2020/12/hello-world">&lt;h1 id=&quot;hello-world&quot;&gt;Hello World!&lt;/h1&gt;
-
-&lt;p&gt;この度、このサイトを立ち上げました。&lt;br /&gt;
-というか、以前のサイトをリフォームしました。&lt;/p&gt;
-
-&lt;h2 id=&quot;このサイトについて&quot;&gt;このサイトについて&lt;/h2&gt;
-
-&lt;p&gt;Asa のブログです。&lt;br /&gt;
-えっ？うん。それだけ。&lt;/p&gt;
-
-&lt;h2 id=&quot;このファイルは-markdown-で書かれています&quot;&gt;このファイルは Markdown で書かれています。&lt;/h2&gt;
-
-&lt;p&gt;だから…&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;太字&lt;/strong&gt; も &lt;em&gt;斜体&lt;/em&gt; も &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Code&lt;/code&gt; も&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;JavaScriptも。&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Markdown 恐るべし…。&lt;/p&gt;
-
-&lt;p&gt;そのうち技術記事出すつもり。「そのうち」ね。&lt;/p&gt;
-
-&lt;h2 id=&quot;thanks&quot;&gt;Thanks&lt;/h2&gt;
-
-&lt;p&gt;Build with &lt;a href=&quot;https://jekyllrb.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;/img/footer/jekyll_logo.png&quot; alt=&quot;Jekyll&quot; style=&quot;width: 59px;height: 30px;&quot; class=&quot;hv_gray no_alt&quot; /&gt;&lt;/a&gt;&lt;br /&gt;
-Deploy on &lt;a href=&quot;https://cloud.google.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;/img/footer/google_cloud_logo.png&quot; alt=&quot;Google Cloud&quot; style=&quot;width: 118px;height: 30px;&quot; class=&quot;hv_gray no_alt&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Asa</name></author><category term="Hello-World" /><summary type="html">Hello World!</summary></entry></feed>
+&lt;img src=&quot;/img/blog/2021/02/domain-transfer/15.png&quot; alt=&quot;DNS一覧&quot; /&gt;&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Website" /><summary type="html">この記事、今更感がすごい</summary></entry></feed>
