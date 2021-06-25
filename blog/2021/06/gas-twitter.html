@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+<link
+  rel="icon"
+  href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:60px;font-family:cursive;%22 fill=%22%230d47a1%22>Asa</text></svg>"
+/>
+<meta
+  name="viewport"
+  content="width=device-width,minimum-scale=1.0, initial-scale=1.0, maximum-scale=10.0, shrink-to-fit=no"
+/>
+ 
+<meta name="keywords" content="a01sa01to" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:domain" content="https://a01sa01to.com/" />
+<meta name="twitter:site" content="@a01sa01to" />
+<meta name="twitter:creator" content="@a01sa01to" />
+<meta
+  property="og:url"
+  content="https://a01sa01to.com/blog/2021/06/gas-twitter"
+/>
+<meta property="og:title" content=" - Asa's Blog" lang="ja"> <meta
+property="og:title" content=" -
+Asa's Blog" lang="en">
+<meta property="og:image" content="https://a01sa01to.com/img/twittercard.jpg" />
+<meta property="og:type" content="website" />
+<link
+  rel="canonical"
+  href="https://a01sa01to.com/blog/2021/06/gas-twitter"
+/>
+
+<!-- Change Chrome Tab Color -->
+<meta name="theme-color" content="#ffffff" />
+
+    <title>GASでライブラリを使わずにTwitterクライアントを作成する - Asa's Blog</title>
+    <link type="application/atom+xml" rel="alternate" href="https://a01sa01to.com/feed.xml" title="Asa's Website" /> <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="/css/main.css" />
+ <script
+  src="https://kit.fontawesome.com/7fba4a39db.js"
+  crossorigin="anonymous"
+  async
+></script>
+<script src="/bundle.js"></script>
+<script
+  data-ad-client="ca-pub-3296104264173235"
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-Z23EQDNLQY"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+
+  gtag('config', 'G-Z23EQDNLQY')
+</script>
+
+    <link rel="canonical" href="https://a01sa01to.com/blog/2021/06/gas-twitter" />
+    <link rel="stylesheet" href="/css/blog_post.css" />
+  </head>
+  <body id="top">
+    <header>
+      <div id="left"></div>
+<div id="center">
+  <p id="title">Asa's Blog</p>
+</div>
+<div id="right">
+  <input type="checkbox" id="menuShow" />
+  <div id="menuIcon">
+    <div id="bar1"></div>
+    <div id="bar2"></div>
+  </div>
+  <div id="menuItem">
+    <li><a href="/blog/">Blog Top</a></li>
+    
+    <p class="border"></p>
+    <li><a href="/">Asa's Website Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/opendata/">Opendata Catalog</a></li>
+    <li><a href="/works">Works</a></li>
+    <li><a href="/sitemap/">Sitemap</a></li>
+    <li class="social">
+      <a
+        href="https://github.com/a01sa01to"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="https://twitter.com/a01sa01to"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a
+        href="https://instagram.com/a01sa01to"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="/feed.xml" target="_blank" rel="noopener">
+        <i class="fas fa-rss"></i>
+      </a>
+    </li>
+    
+    <li style="height: 54px"></li>
+  </div>
+</div>
+
+    </header>
+    <main>
+      <div class="container">
+        <div>
+          <h1>GASでライブラリを使わずにTwitterクライアントを作成する</h1>
+          
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" lang="ja">
+              <li class="breadcrumb-item"><a href="/blog/">Home</a></li>
+              <li class="breadcrumb-item">
+                <a href="/blog/list/2021">2021年の記事</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                この記事
+              </li>
+            </ol>
+          </nav>
+
+          <p class="tags">
+            Tags: 
+            <a href="/blog/tags/computer/" class="tag"
+              ><nobr>Computer</nobr></a
+            >&nbsp; 
+            <a href="/blog/tags/google/" class="tag"
+              ><nobr>Google</nobr></a
+            >&nbsp; 
+            <a href="/blog/tags/gas/" class="tag"
+              ><nobr>GAS</nobr></a
+            >&nbsp; 
+          </p>
+          <p class="date">
+             
+            <nobr
+              >Published on 2021.06.25.<wbr /> Last
+              Modified on 2021.06.25.</nobr
+            >
+          </p>
+          <div class="accordion" id="toc">
+            <div class="accordion-item">
+              <p class="accordion-header" id="headingToc">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseToc"
+                  aria-expanded="false"
+                  aria-controls="collapseToc"
+                >
+                  Table of Contents
+                </button>
+              </p>
+              <div
+                id="collapseToc"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingToc"
+                data-bs-parent="#toc"
+              >
+                <div class="accordion-body"></div>
+              </div>
+            </div>
+          </div>
+          <div class="article">
+            <p>GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。<br />
+でもそれだと自分のやりたいことは達成できない…ということでいろいろ試行錯誤した結果を書きます。</p>
+
+<h2 id="やりたいこと">やりたいこと</h2>
+
+<ul>
+  <li>Access Token と Secret はもう既に持っているので、認証画面を通さずに投稿したい</li>
+  <li>ライブラリは使いたくない（というか上の条件を満たせるものがない…？）</li>
+</ul>
+
+<p>この 2 つです。<br />
+調べて出てくるものでは、API Key と API Secret を設定しておいて、認証画面に飛ばす、という処理がありました。<br />
+しかしもうすでに認証で得られる Access Token と Access Token Secret は取得していたため、この処理が必要なかったのです。<br />
+（詳しく見ていなかったのでわかりませんが、この処理は 1 回限りなのかもしれません…）</p>
+
+<h2 id="実装">実装</h2>
+
+<p>主に、<a href="https://syncer.jp/Web/API/Twitter/REST_API/#section-5">Twitter REST API の使い方</a> と <a href="https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-update">POST statuses/update | Docs | Twitter Developer Platform</a> を参考に実装しました。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">createParams</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="nx">separator</span><span class="p">){</span>
+  <span class="kd">let</span> <span class="nx">params</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">const</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="nx">key</span><span class="p">)){</span>
+      <span class="c1">// "&amp;key=value" を params に追加</span>
+      <span class="nx">params</span> <span class="o">+=</span> <span class="nx">separator</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">=</span><span class="dl">"</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="c1">// 先頭の "&amp;" が不要なので、取り除いたものを返す</span>
+  <span class="k">return</span> <span class="nx">params</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">tweet</span><span class="p">(</span><span class="nx">status</span><span class="p">){</span>
+  <span class="c1">// ----- 設定 ----- //</span>
+  <span class="kd">const</span> <span class="nx">apiKey</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">API Key</span><span class="dl">"</span>
+  <span class="kd">const</span> <span class="nx">apiSec</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">API Secret</span><span class="dl">"</span>
+  <span class="kd">const</span> <span class="nx">accessToken</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Access Token</span><span class="dl">"</span>
+  <span class="kd">const</span> <span class="nx">accessSecret</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Access Token Secret</span><span class="dl">"</span>
+  <span class="kd">const</span> <span class="nx">reqUrl</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">https://api.twitter.com/1.1/statuses/update.json</span><span class="dl">"</span><span class="p">;</span>  <span class="c1">// APIのリソースURL</span>
+
+  <span class="c1">// 現在の時刻を取得</span>
+  <span class="kd">const</span> <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+
+  <span class="kd">const</span> <span class="nx">param</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">oauth_consumer_key</span><span class="p">:</span> <span class="nx">apiKey</span><span class="p">,</span>
+    <span class="na">oauth_token</span><span class="p">:</span> <span class="nx">accessToken</span><span class="p">,</span>
+    <span class="na">status</span><span class="p">:</span> <span class="nx">status</span>
+    <span class="na">oauth_nonce</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">().</span><span class="nx">toString</span><span class="p">(</span><span class="mi">32</span><span class="p">).</span><span class="nx">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>  <span class="c1">// ランダムな文字列を得る</span>
+    <span class="na">oauth_signature_method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">HMAC-SHA1</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">oauth_timestamp</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">now</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">).</span><span class="nx">toString</span><span class="p">(),</span>  <span class="c1">// エポック秒</span>
+    <span class="na">oauth_version</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">}</span>
+
+
+  <span class="c1">// HMAC-SHA1方式のハッシュ値に変換</span>
+  <span class="kd">const</span> <span class="nx">hash</span> <span class="o">=</span> <span class="nx">Utilities</span><span class="p">.</span><span class="nx">computeHmacSignature</span><span class="p">(</span>
+    <span class="nx">Utilities</span><span class="p">.</span><span class="nx">MacAlgorithm</span><span class="p">.</span><span class="nx">HMAC_SHA_1</span><span class="p">,</span>
+    <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;</span><span class="dl">"</span><span class="o">+</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">reqUrl</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;</span><span class="dl">"</span><span class="o">+</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">createParams</span><span class="p">(</span><span class="nx">param</span><span class="p">,</span><span class="dl">"</span><span class="s2">&amp;</span><span class="dl">"</span><span class="p">)),</span>
+    <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">apiSec</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;</span><span class="dl">"</span><span class="o">+</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">accessSecret</span><span class="p">)</span>
+  <span class="p">)</span>
+
+  <span class="c1">// ハッシュをbase64エンコードすると署名になる</span>
+  <span class="kd">const</span> <span class="nx">sign</span> <span class="o">=</span> <span class="nx">Utilities</span><span class="p">.</span><span class="nx">base64Encode</span><span class="p">(</span><span class="nx">hash</span><span class="p">)</span>
+  <span class="nx">param</span><span class="p">[</span><span class="dl">"</span><span class="s2">oauth_signature</span><span class="dl">"</span><span class="p">]</span> <span class="o">=</span> <span class="nx">sign</span>
+
+
+  <span class="kd">const</span> <span class="nx">header</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">authorization</span><span class="p">:</span> <span class="s2">`OAuth </span><span class="p">${</span><span class="nx">createParams</span><span class="p">(</span><span class="nx">param</span><span class="p">,</span><span class="dl">"</span><span class="s2">,</span><span class="dl">"</span><span class="p">)}</span><span class="s2">`</span>
+  <span class="p">}</span>
+
+  <span class="kd">const</span> <span class="nx">option</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="nx">header</span><span class="p">,</span>
+    <span class="na">payload</span><span class="p">:</span> <span class="p">{</span><span class="na">status</span><span class="p">:</span> <span class="nx">status</span><span class="p">},</span>
+    <span class="na">muteHttpExceptions</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">}</span>
+
+  <span class="c1">// APIを叩く</span>
+  <span class="kd">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">UrlFetchApp</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="nx">reqUrl</span><span class="p">,</span> <span class="nx">option</span><span class="p">)</span>
+
+  <span class="c1">// 結果を出力する</span>
+  <span class="nx">Logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">getResponseCode</span><span class="p">())</span>
+  <span class="nx">Logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">getAllHeaders</span><span class="p">())</span>
+  <span class="nx">Logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">getContentText</span><span class="p">())</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>もっときれいに処理ができたり、セキュリティ的に危ないところもあったりするかもしれないので、コピペの際は自己責任でお願いします…。</p>
+
+<p>これで、どこかの処理で <code class="language-plaintext highlighter-rouge">tweet("hogehoge")</code> と呼び出せば <code class="language-plaintext highlighter-rouge">hogehoge</code> とツイートされるかと思います。以上。</p>
+
+            <p class="a_few_word">実はこれコロナ対策サイトの自動化の一環だったりします</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><div class="sb">
+  Share this page!
+  <div class="sbInner">
+    <!-- Facebook -->
+    <a
+      class="shadow-lg mb-5 rounded sBtn sBtn-facebook"
+      href="https://www.facebook.com/sharer/sharer.php?u=PAGEURL"
+      rel="nofollow"
+      target="_blank"
+      title="Share on Facebook"
+      ><i class="fab fa-facebook-f"></i
+    ></a>
+    <!-- Twitter -->
+    <a
+      class="shadow-lg mb-5 rounded sBtn sBtn-twitter"
+      href="http://twitter.com/share?url=PAGEURL&text=PAGETITLE&via=a01sa01to"
+      rel="nofollow"
+      target="_blank"
+      title="Share on Twitter"
+      ><i class="fab fa-twitter"></i
+    ></a>
+    <!-- LINE -->
+    <a
+      class="shadow-lg mb-5 rounded sBtn sBtn-line"
+      href="http://line.me/R/msg/text/?PAGETITLE%0APAGEURL"
+      rel="nofollow"
+      target="_blank"
+      title="Share on LINE"
+      ><i class="fab fa-line"></i
+    ></a>
+    <!-- Pocket -->
+    <a
+      class="shadow-lg mb-5 rounded sBtn sBtn-pocket"
+      href="https://getpocket.com/edit?url=PAGEURL&title=PAGETITLE"
+      rel="nofollow"
+      target="blank"
+      title="Share on Pocket"
+      ><i class="fab fa-get-pocket"></i
+    ></a>
+    <!-- B! Hatena -->
+    <a
+      class="shadow-lg mb-5 rounded sBtn sBtn-hatena"
+      href="https://b.hatena.ne.jp/add?mode=confirm&url=PAGEURL&title=PAGETITLE"
+      rel="nofollow"
+      target="_blank"
+      title="Share on Hatena"
+      ><i aria-hidden="true" class="fa fa-hatena" style="font-weight: bold"
+        >B!</i
+      ></a
+    >
+  </div>
+</div>
+
+<p id="copyright">Copyright &copy; 2020-2021 Asa(@a01sa01to)</p>
+</footer>
+    <a href="#top" id="gototop"
+      ><span class="material-icons">keyboard_arrow_up</span></a
+    >
+  </body>
+</html>

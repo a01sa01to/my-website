@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-06-25T19:47:16+09:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">Cleaning Up My Computer</title><link href="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer" rel="alternate" type="text/html" title="Cleaning Up My Computer" /><published>2021-06-24T00:00:00+09:00</published><updated>2021-06-24T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer">&lt;p&gt;クリーンアップって大事ですよね……。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-06-25T20:26:48+09:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">GASでライブラリを使わずにTwitterクライアントを作成する</title><link href="https://a01sa01to.com/blog/2021/06/gas-twitter" rel="alternate" type="text/html" title="GASでライブラリを使わずにTwitterクライアントを作成する" /><published>2021-06-25T00:00:00+09:00</published><updated>2021-06-25T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/gas-twitter</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/gas-twitter">&lt;p&gt;GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。&lt;br /&gt;
+でもそれだと自分のやりたいことは達成できない…ということでいろいろ試行錯誤した結果を書きます。&lt;/p&gt;
+
+&lt;h2 id=&quot;やりたいこと&quot;&gt;やりたいこと&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Access Token と Secret はもう既に持っているので、認証画面を通さずに投稿したい&lt;/li&gt;
+  &lt;li&gt;ライブラリは使いたくない（というか上の条件を満たせるものがない…？）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この 2 つです。&lt;br /&gt;
+調べて出てくるものでは、API Key と API Secret を設定しておいて、認証画面に飛ばす、という処理がありました。&lt;br /&gt;
+しかしもうすでに認証で得られる Access Token と Access Token Secret は取得していたため、この処理が必要なかったのです。&lt;br /&gt;
+（詳しく見ていなかったのでわかりませんが、この処理は 1 回限りなのかもしれません…）&lt;/p&gt;
+
+&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
+
+&lt;p&gt;主に、&lt;a href=&quot;https://syncer.jp/Web/API/Twitter/REST_API/#section-5&quot;&gt;Twitter REST API の使い方&lt;/a&gt; と &lt;a href=&quot;https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-update&quot;&gt;POST statuses/update | Docs | Twitter Developer Platform&lt;/a&gt; を参考に実装しました。&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;separator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hasOwnProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// &quot;&amp;amp;key=value&quot; を params に追加&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;encodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;encodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// 先頭の &quot;&amp;amp;&quot; が不要なので、取り除いたものを返す&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tweet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// ----- 設定 ----- //&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apiKey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;API Key&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apiSec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;API Secret&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accessToken&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Access Token&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accessSecret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Access Token Secret&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reqUrl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;https://api.twitter.com/1.1/statuses/update.json&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// APIのリソースURL&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// 現在の時刻を取得&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;now&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;oauth_consumer_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apiKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;oauth_token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accessToken&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;oauth_nonce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// ランダムな文字列を得る&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;oauth_signature_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;HMAC-SHA1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;oauth_timestamp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// エポック秒&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;oauth_version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+  &lt;span class=&quot;c1&quot;&gt;// HMAC-SHA1方式のハッシュ値に変換&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hash&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Utilities&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;computeHmacSignature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;Utilities&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;MacAlgorithm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;HMAC_SHA_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;encodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;encodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reqUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;encodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;encodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apiSec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;encodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;accessSecret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// ハッシュをbase64エンコードすると署名になる&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sign&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Utilities&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;base64Encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;oauth_signature&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sign&lt;/span&gt;
+
+
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;authorization&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`OAuth &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;option&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;muteHttpExceptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// APIを叩く&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;UrlFetchApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reqUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// 結果を出力する&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getResponseCode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getAllHeaders&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getContentText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;もっときれいに処理ができたり、セキュリティ的に危ないところもあったりするかもしれないので、コピペの際は自己責任でお願いします…。&lt;/p&gt;
+
+&lt;p&gt;これで、どこかの処理で &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tweet(&quot;hogehoge&quot;)&lt;/code&gt; と呼び出せば &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge&lt;/code&gt; とツイートされるかと思います。以上。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Computer" /><category term="Google" /><category term="GAS" /><summary type="html">GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。 でもそれだと自分のやりたいことは達成できない…ということでいろいろ試行錯誤した結果を書きます。</summary></entry><entry><title type="html">Cleaning Up My Computer</title><link href="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer" rel="alternate" type="text/html" title="Cleaning Up My Computer" /><published>2021-06-24T00:00:00+09:00</published><updated>2021-06-24T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer">&lt;p&gt;クリーンアップって大事ですよね……。&lt;/p&gt;
 
 &lt;p&gt;ただパソコンのクリーンアップをするだけの記事です。&lt;/p&gt;
 
@@ -1630,97 +1718,4 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;img src=&quot;/img/blog/2021/02/domain-parking/08.png&quot; alt=&quot;飛ばされた&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;（2021.03.16 追記）&lt;br /&gt;
-飛ばされる先は、（定期的なのか不定期的なのかは不明ですが）変わるようです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Domain-Parking" /><summary type="html">経緯</summary></entry><entry><title type="html">ドメインを移管しました</title><link href="https://a01sa01to.com/blog/2021/02/domain-transfer" rel="alternate" type="text/html" title="ドメインを移管しました" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-05-30T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/02/domain-transfer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/02/domain-transfer">&lt;p&gt;この記事、今更感がすごい&lt;/p&gt;
-
-&lt;h2 id=&quot;移管した理由&quot;&gt;移管した理由&lt;/h2&gt;
-
-&lt;p&gt;最初にドメインを登録したのが 2019 年 4 月 1 日。&lt;br /&gt;
-だから 1 年と 7 ヶ月くらい？ &lt;a href=&quot;https://px.a8.net/svt/ejp?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;お名前.com&lt;/a&gt;
-&lt;img border=&quot;0&quot; width=&quot;1&quot; height=&quot;1&quot; src=&quot;https://www18.a8.net/0.gif?a8mat=3H5C5X+FQ79UI+50+2HHVNM&quot; alt=&quot;&quot; class=&quot;a8&quot; /&gt;を使っていたんですよね。&lt;/p&gt;
-
-&lt;p&gt;サイトを再構築するときに考えていたのは&lt;/p&gt;
-
-&lt;div class=&quot;card&quot;&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    Git と 連携 させたい ... ！！
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Google App Engine なら GitHub にソース上げればデプロイしてくれるからベストだと思い、
-いっそのこと Google サービスにまとめちゃえ！！っていうだけ。
-（GitHub Actions 使えば FTP で上げられたりするんですけどね）&lt;/p&gt;
-
-&lt;h2 id=&quot;タイムライン&quot;&gt;タイムライン&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;2020.11.29 19:50 ドメイン移管手続き開始&lt;/li&gt;
-  &lt;li&gt;2020.11.29 19:57 支払い&lt;/li&gt;
-  &lt;li&gt;2020.11.29 20:27 拒否られた&lt;/li&gt;
-  &lt;li&gt;2020.11.30 18:43 リベンジ&lt;/li&gt;
-  &lt;li&gt;2020.11.30 19:38 確認メールが来た&lt;/li&gt;
-  &lt;li&gt;2020.11.30 22:15 メールに気づき、承認&lt;/li&gt;
-  &lt;li&gt;2020.11.30 22:27 移管完了&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;step-by-step&quot;&gt;Step by Step&lt;/h2&gt;
-
-&lt;p&gt;今回は「お名前.com（以下「移管元」）」から「Google Domains（以下「移管先」）」に移管しました。&lt;/p&gt;
-
-&lt;h3 id=&quot;step1---入力&quot;&gt;Step1 - 入力&lt;/h3&gt;
-
-&lt;p&gt;移管先のサイトを開き、「移管する」ページを開きます。
-移管したいドメインを入力します。
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/01.png&quot; alt=&quot;移管するドメインをテキストボックスに入力&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step2---authcode&quot;&gt;Step2 - AuthCode&lt;/h3&gt;
-
-&lt;p&gt;移管元から、AuthCode を取得します。移管先に入力します。
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/02.png&quot; alt=&quot;移管元から取得して...&quot; /&gt;
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/03.png&quot; alt=&quot;移管先に貼り付け&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step3---whois-代行公開を一時無効化&quot;&gt;Step3 - Whois 代行公開を一時無効化&lt;/h3&gt;
-
-&lt;p&gt;Whois 公開代行を一時的に無効化しないと、移管できないようです（お名前.com の場合は）。&lt;br /&gt;
-私は無効化していなかったので、拒否されました。
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/10.png&quot; alt=&quot;拒否された！？&quot; /&gt;
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/11.png&quot; alt=&quot;Whois公開代行されているとダメらしい&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;なので、忘れずに無効化しておきましょう。&lt;/p&gt;
-
-&lt;h3 id=&quot;step4---設定確認&quot;&gt;Step4 - 設定確認&lt;/h3&gt;
-
-&lt;p&gt;設定を確認します。&lt;br /&gt;
-&lt;del&gt;DNS 設定は引き継がれるらしい。まあ引き継がれなかったら困る。&lt;/del&gt;&lt;br /&gt;
-一部引き継がれてなかった。一応移管後に確認しておいたほうがよさそうです。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-transfer/04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;なお、この時支払うのは、1 年間分の料金である￥ 1,400 です。
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step5---支払い&quot;&gt;Step5 - 支払い&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-transfer/06.png&quot; alt=&quot;JCBで払おうとすると...？&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;いつも使っている JCB（LINE Pay）でやろうとしたところ、何度やってもダメでした。
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/07.png&quot; alt=&quot;なんでや！&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;そこで Visa を使ってみると、支払い完了しました。
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/blog/2021/02/domain-transfer/09.png&quot; alt=&quot;支払いが完了するとステータスが表示される&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step6---移管承認&quot;&gt;Step6 - 移管承認&lt;/h3&gt;
-
-&lt;p&gt;支払い後、移管元からメールが届きます。&lt;br /&gt;
-このメールから承認しないと、移管できないので、承認します。
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/12.png&quot; alt=&quot;確認メールが届くので&quot; /&gt;
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/13.png&quot; alt=&quot;承認&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step7---移管完了&quot;&gt;Step7 - 移管完了&lt;/h3&gt;
-
-&lt;p&gt;しばらくすると、移管が完了し、移管先からメールが届きました。
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/14.png&quot; alt=&quot;！！！&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;DNS はいくつか引き継がれていませんでした。
-&lt;img src=&quot;/img/blog/2021/02/domain-transfer/15.png&quot; alt=&quot;DNS一覧&quot; /&gt;&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Website" /><summary type="html">この記事、今更感がすごい</summary></entry></feed>
+飛ばされる先は、（定期的なのか不定期的なのかは不明ですが）変わるようです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Domain" /><category term="Domain-Parking" /><summary type="html">経緯</summary></entry></feed>
