@@ -15,9 +15,9 @@ last_modified_at: 2021-05-02
       </ol>
     </nav>
     <p>以下のタグはアルファベット順にソートされています。</p>
-    <ul class="list-group">
-      {% assign tags = site.tags | sort_natural %} {% for tag in tags %}
-      <li class="list-group-item">
+    <ul class="list-group sort">
+      {% for tag in site.tags %}
+      <li class="list-group-item" data-sort-key="{{ tag[0] }}">
         <a href="./{{ tag[0] | downcase }}/"
           >{{ tag[0] }}（{{ tag[1] | size }}記事）</a
         >

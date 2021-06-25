@@ -128,5 +128,28 @@ if (location.pathname.includes('/blog/')) {
           }</a>`
         )
       })
+
+    document.querySelectorAll('ul.list-group.sort').forEach((_) => {
+      const arr: HTMLLIElement[] = Array.prototype.slice.call(
+        _.querySelectorAll('li')
+      )
+      arr.sort((a, b) => {
+        if (
+          a.getAttribute('data-sort-key')! > b.getAttribute('data-sort-key')!
+        ) {
+          return 1
+        } else if (
+          a.getAttribute('data-sort-key')! < b.getAttribute('data-sort-key')!
+        ) {
+          return -1
+        } else {
+          return 0
+        }
+      })
+      for (const list of arr) {
+        _.appendChild(_.removeChild(list))
+        console.log(list)
+      }
+    })
   })
 }
