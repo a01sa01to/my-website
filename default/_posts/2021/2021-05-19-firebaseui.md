@@ -3,7 +3,7 @@ title: FirebaseUIで日本語にしてAuthDomainを設定したい
 layout: blog_posts
 tags: Google Firebase
 relPath: /2021/05/firebaseui
-last_modified_at: 2020-05-30
+last_modified_at: 2021-05-30
 a_few_word: なんだかんだで初のプログラミング系記事やな...
 ---
 
