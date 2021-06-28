@@ -3,7 +3,7 @@ title: FirebaseUIで日本語にしてAuthDomainを設定したい
 layout: blog_posts
 tags: Google Firebase
 relPath: /2021/05/firebaseui
-last_modified_at: 2021-05-30
+last_modified_at: 2021-06-28
 a_few_word: なんだかんだで初のプログラミング系記事やな...
 ---
 
@@ -46,8 +46,7 @@ import * as firebaseui from 'firebaseui'
 import { firebaseConfig } from './firebaseConfig'
 import firebase from 'firebase/app'
 import 'firebase/auth'
-rebaseを初期化
-fire
+
 firebase.initializeApp(firebaseConfig)
 const auth = firebase.auth()
 auth.languageCode = 'ja'
@@ -73,7 +72,7 @@ if (location.pathname === '/login') {
 
 これを開いてみると、以下のような表示になりました。
 
-![英語じゃない...](/img/blog/2021/05/firebaseui/02.png)
+![日本語じゃない...](/img/blog/2021/05/firebaseui/02.png)
 
 ## Point2
 
@@ -108,8 +107,8 @@ if (location.pathname === '/login') {
 ![日本語になった！](/img/blog/2021/05/firebaseui/01.png)
 
 しかし、ここでも問題が。
-例えば今 `hogehoge.com` にいても、ログインボタンを押したら `<project-id>.firebaseapp.com` に飛ばされてから、OAuth 画面へ飛びます。<br>
-つまり、例えば Google でのアカウント選択画面では、「（サイト名）に移動」と表示されますが、このドメインが独自ドメインじゃないという...。
+例えば今 `hogehoge.com` にいても、ログインボタンを押したら `<project-id>.firebaseapp.com` に飛ばされてから、OAuth 画面へ飛びます。<br
+つまり、OAuthの流れとしては「`hogehoge.com`→`<project-id>.firebaseapp.com`→（OAuth認証）→`<project-id>.firebaseapp.com`→`hogehoge.com`」と、謎(?) の `firebaseapp.com` を経由してしまうというわけです。
 
 これについては、Firebase の設定の `authDomain` という Key で設定できますが、そもそも CDN では設定ファイルを埋め込めない...。
 
@@ -157,9 +156,8 @@ npm run build build-esm-ja
 import './firebaseui/@types/index'
 import { auth } from './firebaseui/esm__ja'
 
-～ Firebaseの設定は略 ～ //
+// ～ Firebaseの設定は略 ～ //
 
-w
 window.addEventListener('DOMContentLoaded', () => {
   if (location.pathname === '/login') {
     const ui = new auth.AuthUI(firebase.auth())
@@ -202,3 +200,5 @@ Step4 のままだと、まだ `<projectid>.firebaseapp.com` に飛ばされま�
 ```
 
 これで、Webpack でビルドすると、きちんと日本語になり、 `hogehoge.com` に飛ばされました！
+
+※この記事は、[Qiita](https://qiita.com/a01sa01to/items/5c8324e0f37bdf0eacd7) でも公開しています。
