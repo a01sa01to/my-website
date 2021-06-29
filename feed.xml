@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-06-29T09:25:58+00:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">ABC207</title><link href="https://a01sa01to.com/blog/2021/06/abc207" rel="alternate" type="text/html" title="ABC207" /><published>2021-06-26T00:00:00+00:00</published><updated>2021-06-19T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/abc207</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc207">&lt;p&gt;今回は 3 完です。概要は以下のツイートの通りです。（双括型）&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-06-29T21:55:19+09:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">Windows 11 がやってきた！！</title><link href="https://a01sa01to.com/blog/2021/06/windows11" rel="alternate" type="text/html" title="Windows 11 がやってきた！！" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/windows11</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/windows11">&lt;p&gt;はい、題名の通りです。Windows Insider の特権です。&lt;br /&gt;
+以下のツイートのように、「Windows 11 を実行できない」と言われたコンピュータで試したらできちゃいました。てへぺろ&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;PC正常性チェックアプリ（なおWindows11上で実行） &lt;a href=&quot;https://t.co/pv9d147DlQ&quot;&gt;pic.twitter.com/pv9d147DlQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Asa (@a01sa01to) &lt;a href=&quot;https://twitter.com/a01sa01to/status/1409752298977329153?ref_src=twsrc%5Etfw&quot;&gt;June 29, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;てっきり実行できずに Windows10 のクリーンインストールを覚悟していたので、インストールできてよかった。&lt;/p&gt;
+
+&lt;h2 id=&quot;インストール方法&quot;&gt;インストール方法&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Windows Insider になる&lt;/li&gt;
+  &lt;li&gt;チャネルを「Dev チャネル」にする&lt;/li&gt;
+  &lt;li&gt;Windows Update を開いて、更新をチェックする&lt;/li&gt;
+  &lt;li&gt;更新プログラム「Windows 11 Insider Preview」をインストール&lt;/li&gt;
+  &lt;li&gt;1 時間くらい待つ（個体差あり）&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;以上です。&lt;/p&gt;
+
+&lt;p&gt;なお、インストールは&lt;strong&gt;自己責任&lt;/strong&gt;でお願いします。私の場合は問題なくアップデートされましたが、データが消える可能性もあるので、&lt;strong&gt;必ずバックアップを&lt;/strong&gt;とってください。&lt;/p&gt;
+
+&lt;h2 id=&quot;感想&quot;&gt;感想&lt;/h2&gt;
+
+&lt;p&gt;こちらの Moments にまとめてあります。&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;und&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://t.co/yzjgaXZ7Xf&quot;&gt;https://t.co/yzjgaXZ7Xf&lt;/a&gt;&lt;/p&gt;&amp;mdash; Asa (@a01sa01to) &lt;a href=&quot;https://twitter.com/a01sa01to/status/1409773296564932626?ref_src=twsrc%5Etfw&quot;&gt;June 29, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;ウィンドウが角丸になったり、エクスプローラーのファイルのアイコンが変わったり、ウィンドウの表示/最小化にアニメーションがついたり、…など、UI は大幅に刷新されましたが、今のところは機能追加はあまりないような印象です。今後のアップデートに期待です。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Windows" /><category term="Windows11" /><summary type="html">はい、題名の通りです。Windows Insider の特権です。 以下のツイートのように、「Windows 11 を実行できない」と言われたコンピュータで試したらできちゃいました。てへぺろ</summary></entry><entry><title type="html">ABC207</title><link href="https://a01sa01to.com/blog/2021/06/abc207" rel="alternate" type="text/html" title="ABC207" /><published>2021-06-26T00:00:00+09:00</published><updated>2021-06-19T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc207</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc207">&lt;p&gt;今回は 3 完です。概要は以下のツイートの通りです。（双括型）&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/hashtag/ABC207?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ABC207&lt;/a&gt; 3完...&lt;br /&gt;A: a + b + c - min(a,b,c)&lt;br /&gt;B: a + nb ≦ d*nc を解いて、ceil(a/(cd-b)) を出力&lt;br /&gt;C: doubleで読み取って、左端が開いてるなら+0.1、右端が開いてるなら-0.1して、(a[i]左端 ≦ a[j]右端) かつ (a[j]左端 ≦ a[i]右端) の組を全部出力&lt;br /&gt;D: 移動するx,yと回転するθ[°]を全探索でTLEした...&lt;/p&gt;&amp;mdash; Asa (@a01sa01to) &lt;a href=&quot;https://twitter.com/a01sa01to/status/1408782347667853322?ref_src=twsrc%5Etfw&quot;&gt;June 26, 2021&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
@@ -122,7 +151,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;はい、水パフォでした。やった。今回は比較的難しかった…？&lt;br /&gt;
-次も同じくらいのパフォーマンスで緑勢になれるかも…！？&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今回は 3 完です。概要は以下のツイートの通りです。（双括型）</summary></entry><entry><title type="html">AHC004</title><link href="https://a01sa01to.com/blog/2021/06/ahc004" rel="alternate" type="text/html" title="AHC004" /><published>2021-06-26T00:00:00+00:00</published><updated>2021-06-26T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/ahc004</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/ahc004">&lt;p&gt;AHC004 の振り返りです。今回は全然思いつかなかったのでかなり悪いです。はい。&lt;/p&gt;
+次も同じくらいのパフォーマンスで緑勢になれるかも…！？&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今回は 3 完です。概要は以下のツイートの通りです。（双括型）</summary></entry><entry><title type="html">AHC004</title><link href="https://a01sa01to.com/blog/2021/06/ahc004" rel="alternate" type="text/html" title="AHC004" /><published>2021-06-26T00:00:00+09:00</published><updated>2021-06-26T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/ahc004</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/ahc004">&lt;p&gt;AHC004 の振り返りです。今回は全然思いつかなかったのでかなり悪いです。はい。&lt;/p&gt;
 
 &lt;h2 id=&quot;問題概要&quot;&gt;問題概要&lt;/h2&gt;
 
@@ -341,7 +370,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 ただ、最高点の人でも得点率 36%+ちょっとなので、4 割とるのも難しいっぽいです。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/ahc004/submissions?f.User=a01sa01to&quot;&gt;すべての提出 - AtCoder Heuristic Contest 004&lt;/a&gt; で見れますが、終了後もいくつか試してみてます。&lt;br /&gt;
-今後追記するかもしれません。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="AHC" /><category term="Competitive-Programming" /><summary type="html">AHC004 の振り返りです。今回は全然思いつかなかったのでかなり悪いです。はい。</summary></entry><entry><title type="html">GASでライブラリを使わずにTwitterクライアントを作成する</title><link href="https://a01sa01to.com/blog/2021/06/gas-twitter" rel="alternate" type="text/html" title="GASでライブラリを使わずにTwitterクライアントを作成する" /><published>2021-06-25T00:00:00+00:00</published><updated>2021-06-25T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/gas-twitter</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/gas-twitter">&lt;p&gt;GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。&lt;br /&gt;
+今後追記するかもしれません。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="AHC" /><category term="Competitive-Programming" /><summary type="html">AHC004 の振り返りです。今回は全然思いつかなかったのでかなり悪いです。はい。</summary></entry><entry><title type="html">GASでライブラリを使わずにTwitterクライアントを作成する</title><link href="https://a01sa01to.com/blog/2021/06/gas-twitter" rel="alternate" type="text/html" title="GASでライブラリを使わずにTwitterクライアントを作成する" /><published>2021-06-25T00:00:00+09:00</published><updated>2021-06-25T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/gas-twitter</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/gas-twitter">&lt;p&gt;GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。&lt;br /&gt;
 でもそれだと自分のやりたいことは達成できない…ということでいろいろ試行錯誤した結果を書きます。&lt;/p&gt;
 
 &lt;h2 id=&quot;やりたいこと&quot;&gt;やりたいこと&lt;/h2&gt;
@@ -429,7 +458,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 
 &lt;p&gt;もっときれいに処理ができたり、セキュリティ的に危ないところもあったりするかもしれないので、コピペの際は自己責任でお願いします…。&lt;/p&gt;
 
-&lt;p&gt;これで、どこかの処理で &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tweet(&quot;hogehoge&quot;)&lt;/code&gt; と呼び出せば &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge&lt;/code&gt; とツイートされるかと思います。以上。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Computer" /><category term="Google" /><category term="GAS" /><summary type="html">GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。 でもそれだと自分のやりたいことは達成できない…ということでいろいろ試行錯誤した結果を書きます。</summary></entry><entry><title type="html">Cleaning Up My Computer</title><link href="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer" rel="alternate" type="text/html" title="Cleaning Up My Computer" /><published>2021-06-24T00:00:00+00:00</published><updated>2021-06-24T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer">&lt;p&gt;クリーンアップって大事ですよね……。&lt;/p&gt;
+&lt;p&gt;これで、どこかの処理で &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tweet(&quot;hogehoge&quot;)&lt;/code&gt; と呼び出せば &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge&lt;/code&gt; とツイートされるかと思います。以上。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Computer" /><category term="Google" /><category term="GAS" /><summary type="html">GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。 でもそれだと自分のやりたいことは達成できない…ということでいろいろ試行錯誤した結果を書きます。</summary></entry><entry><title type="html">Cleaning Up My Computer</title><link href="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer" rel="alternate" type="text/html" title="Cleaning Up My Computer" /><published>2021-06-24T00:00:00+09:00</published><updated>2021-06-24T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer">&lt;p&gt;クリーンアップって大事ですよね……。&lt;/p&gt;
 
 &lt;p&gt;ただパソコンのクリーンアップをするだけの記事です。&lt;/p&gt;
 
@@ -593,7 +622,7 @@ Yarn の場合 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&g
 
 &lt;p&gt;内訳は上の画像の通り。システムは変更できないけど、「アプリと機能」も必要なものしか残っていないはず…です。たぶん。&lt;/p&gt;
 
-&lt;p&gt;上記以外にもいろいろな手法を試してみたいと思います。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Computer" /><summary type="html">クリーンアップって大事ですよね……。</summary></entry><entry><title type="html">ABC206</title><link href="https://a01sa01to.com/blog/2021/06/abc206" rel="alternate" type="text/html" title="ABC206" /><published>2021-06-19T00:00:00+00:00</published><updated>2021-06-19T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/abc206</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc206">&lt;p&gt;今日はきつかったです…。（早速感想から入っていくパターン）&lt;/p&gt;
+&lt;p&gt;上記以外にもいろいろな手法を試してみたいと思います。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Computer" /><summary type="html">クリーンアップって大事ですよね……。</summary></entry><entry><title type="html">ABC206</title><link href="https://a01sa01to.com/blog/2021/06/abc206" rel="alternate" type="text/html" title="ABC206" /><published>2021-06-19T00:00:00+09:00</published><updated>2021-06-19T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc206</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc206">&lt;p&gt;今日はきつかったです…。（早速感想から入っていくパターン）&lt;/p&gt;
 
 &lt;p&gt;今回は 3 完です。D 飛ばして E が解けそうだったけど、うまくパターンが作れなかった…。&lt;/p&gt;
 
@@ -711,7 +740,7 @@ Yarn の場合 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&g
 &lt;p&gt;D 問題はまったく思いつかなかったので、飛ばしました。&lt;br /&gt;
 E 問題は、あとちょっとで解けてました。悔しい…。&lt;/p&gt;
 
-&lt;p&gt;D 問題をすぐに思いつけるように頑張りたいですね…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今日はきつかったです…。（早速感想から入っていくパターン）</summary></entry><entry><title type="html">ABC205</title><link href="https://a01sa01to.com/blog/2021/06/abc205" rel="alternate" type="text/html" title="ABC205" /><published>2021-06-13T00:00:00+00:00</published><updated>2021-06-14T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/abc205</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc205">&lt;p&gt;今週もやっていきましょう振り返りを。（謎の倒置）&lt;/p&gt;
+&lt;p&gt;D 問題をすぐに思いつけるように頑張りたいですね…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今日はきつかったです…。（早速感想から入っていくパターン）</summary></entry><entry><title type="html">ABC205</title><link href="https://a01sa01to.com/blog/2021/06/abc205" rel="alternate" type="text/html" title="ABC205" /><published>2021-06-13T00:00:00+09:00</published><updated>2021-06-14T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc205</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc205">&lt;p&gt;今週もやっていきましょう振り返りを。（謎の倒置）&lt;/p&gt;
 
 &lt;p&gt;今回解けたのは A から D。かなり時間がかかってしまった…。&lt;/p&gt;
 
@@ -868,7 +897,7 @@ chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintex
 &lt;p&gt;C と D 問題のペナルティと、D 問題のメモ無しが響いてきたと思います…。&lt;br /&gt;
 4 ペナがなければ、 20 分マイナスで &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;84:45&lt;/code&gt; となったため、順位は 2870 位となり、680 くらいまで届いたのかなぁと。ミス修正の時間も引けばさらに上がったかも…。&lt;/p&gt;
 
-&lt;p&gt;何とかレーティングは下がりませんでした。これからも維持できるよう頑張りたいです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今週もやっていきましょう振り返りを。（謎の倒置）</summary></entry><entry><title type="html">ABC204</title><link href="https://a01sa01to.com/blog/2021/06/abc204" rel="alternate" type="text/html" title="ABC204" /><published>2021-06-06T00:00:00+00:00</published><updated>2021-06-06T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/abc204</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc204">&lt;p&gt;&lt;a href=&quot;./ahc003&quot;&gt;前回の AHC003&lt;/a&gt; に引き続き、競プロ振り返りますかね…。&lt;/p&gt;
+&lt;p&gt;何とかレーティングは下がりませんでした。これからも維持できるよう頑張りたいです。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今週もやっていきましょう振り返りを。（謎の倒置）</summary></entry><entry><title type="html">ABC204</title><link href="https://a01sa01to.com/blog/2021/06/abc204" rel="alternate" type="text/html" title="ABC204" /><published>2021-06-06T00:00:00+09:00</published><updated>2021-06-06T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc204</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc204">&lt;p&gt;&lt;a href=&quot;./ahc003&quot;&gt;前回の AHC003&lt;/a&gt; に引き続き、競プロ振り返りますかね…。&lt;/p&gt;
 
 &lt;p&gt;今回解けたのは、A-C 問題。D も解けそうだったけど WA 出た…。&lt;/p&gt;
 
@@ -1048,7 +1077,7 @@ chokudai さんの 解説(?) Spaces で、&lt;code class=&quot;language-plaintex
 &lt;p&gt;微増しました。3,830 位の+8 です。&lt;/p&gt;
 
 &lt;p&gt;D 問題での反例探しができていれば、思考が固定されなかったのかなぁと…。&lt;br /&gt;
-このレートを維持できるように特訓しなければ…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">前回の AHC003 に引き続き、競プロ振り返りますかね…。</summary></entry><entry><title type="html">AHC003</title><link href="https://a01sa01to.com/blog/2021/06/ahc003" rel="alternate" type="text/html" title="AHC003" /><published>2021-06-01T00:00:00+00:00</published><updated>2021-06-10T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/ahc003</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/ahc003">&lt;p&gt;&lt;a href=&quot;/blog/2021/05/abc203&quot;&gt;ABC203&lt;/a&gt; に引き続き、AHC003 を振り返ります。&lt;/p&gt;
+このレートを維持できるように特訓しなければ…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">前回の AHC003 に引き続き、競プロ振り返りますかね…。</summary></entry><entry><title type="html">AHC003</title><link href="https://a01sa01to.com/blog/2021/06/ahc003" rel="alternate" type="text/html" title="AHC003" /><published>2021-06-01T00:00:00+09:00</published><updated>2021-06-10T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/ahc003</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/ahc003">&lt;p&gt;&lt;a href=&quot;/blog/2021/05/abc203&quot;&gt;ABC203&lt;/a&gt; に引き続き、AHC003 を振り返ります。&lt;/p&gt;
 
 &lt;h2 id=&quot;問題概要&quot;&gt;問題概要&lt;/h2&gt;
 
@@ -1630,7 +1659,7 @@ $ b_k \times e_k $ は実質経路の長さなので、最短経路を求める�
 
 &lt;p&gt;（2021.06.10 追記）システムリジャッジが終了した結果、得点は変わらず、520 位に。Perf は 1308 と 1 下がりましたが、新レーディングは変わらず+337 で 644 のようです。&lt;/p&gt;
 
-&lt;p&gt;もっと問題文を理解できるようにしたりアルゴリズムを学んだりして、ABC はもちろん AHC でも高得点を狙っていきたいですね…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="AHC" /><category term="Competitive-Programming" /><summary type="html">ABC203 に引き続き、AHC003 を振り返ります。</summary></entry><entry><title type="html">ABC203</title><link href="https://a01sa01to.com/blog/2021/05/abc203" rel="alternate" type="text/html" title="ABC203" /><published>2021-05-31T00:00:00+00:00</published><updated>2021-05-31T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/05/abc203</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/05/abc203">&lt;p&gt;ABC203 振り返りします。（唐突）&lt;/p&gt;
+&lt;p&gt;もっと問題文を理解できるようにしたりアルゴリズムを学んだりして、ABC はもちろん AHC でも高得点を狙っていきたいですね…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="AHC" /><category term="Competitive-Programming" /><summary type="html">ABC203 に引き続き、AHC003 を振り返ります。</summary></entry><entry><title type="html">ABC203</title><link href="https://a01sa01to.com/blog/2021/05/abc203" rel="alternate" type="text/html" title="ABC203" /><published>2021-05-31T00:00:00+09:00</published><updated>2021-05-31T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/05/abc203</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/05/abc203">&lt;p&gt;ABC203 振り返りします。（唐突）&lt;/p&gt;
 
 &lt;p&gt;今回解けたのは、A-C 問題です。もうちょっと解きたかった…。&lt;/p&gt;
 
@@ -1768,193 +1797,4 @@ $ N \leq 2 \times 10^5, (K, B_i) \leq 10^9 $ なので、たどり着ける最�
 
 &lt;p&gt;今回の問題が比較的簡単だったのかもしれませんが、C 問題までを解くのに 10 分強しかかかっていないのは、かなり成長を感じました。このペースを維持できるように精進していきたいですね。&lt;/p&gt;
 
-&lt;p&gt;それと、今回初の振り返り記事。振り返ると記憶に定着し、また他者にもわかるように説明することでより理解が深まるという、誰かが言っていたメソッド。三日坊主にならないよう頑張りたいですね。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">ABC203 振り返りします。（唐突）</summary></entry><entry><title type="html">FirebaseUIで日本語にしてAuthDomainを設定したい</title><link href="https://a01sa01to.com/blog/2021/05/firebaseui" rel="alternate" type="text/html" title="FirebaseUIで日本語にしてAuthDomainを設定したい" /><published>2021-05-19T00:00:00+00:00</published><updated>2021-06-28T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/05/firebaseui</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/05/firebaseui">&lt;p&gt;とある用で Firebase Authentication を使っていて、FirebaseUI をログイン画面に実装していました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://firebase.google.com/docs/auth/web/firebaseui?hl=ja&quot;&gt;FirebaseUI でウェブアプリに簡単にログイン機能を追加する&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;上のリンクを見てもらえればわかるように、FirebaseUI では以下の画像のように、ただコンテナを作れば、勝手にログイン画面を作ってくれます。
-&lt;img src=&quot;/img/blog/2021/05/firebaseui/01.png&quot; alt=&quot;FirebaseUI&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;最終的にここまでたどり着くまでに、いろいろ躓いたので、備忘録的な？&lt;/p&gt;
-
-&lt;h2 id=&quot;point1&quot;&gt;Point1&lt;/h2&gt;
-
-&lt;p&gt;まず、Google のガイドにはいくつかの方法が載っていました。&lt;br /&gt;
-自分は ESM（ES Modules）で、Webpack を使って 1 ファイルにまとめていたので、ガイド通り &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install firebaseui --save&lt;/code&gt; を実行して、プロジェクトに組み込みました。&lt;/p&gt;
-
-&lt;p&gt;この際用いたコードは、途中省きますが以下の通りです。&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ja&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./bundle.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/css&quot;&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css&quot;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;firebaseui-auth-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//----- ログイン処理 -----//&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebaseui&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;firebaseui&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebaseConfig&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./firebaseConfig&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;firebase/app&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;firebase/auth&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initializeApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firebaseConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;languageCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;ja&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pathname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/login&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ui&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebaseui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AuthUI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#firebaseui-auth-container&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;signInOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;EmailAuthProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PROVIDER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GoogleAuthProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PROVIDER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;FacebookAuthProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PROVIDER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;TwitterAuthProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PROVIDER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;callbacks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;signInSuccessWithAuthResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;signInSuccessUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;privacyPolicyUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/policy&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;これを開いてみると、以下のような表示になりました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/blog/2021/05/firebaseui/02.png&quot; alt=&quot;日本語じゃない...&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;point2&quot;&gt;Point2&lt;/h2&gt;
-
-&lt;p&gt;「でも、やっぱりユーザーのことを考えたら日本語がいいな…」ということで、もう一つの方法「CDN を使う」を試すべく、先ほどの TypeScript ファイルを消して、HTML ファイルを変更。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;タグが終わる前に、これを追記しました。&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/__/firebase/7.23.0/firebase-app.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/__/firebase/7.23.0/firebase-analytics.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/__/firebase/7.23.0/firebase-auth.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/__/firebase/init.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth__ja.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ui&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebaseui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AuthUI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#firebaseui-auth-container&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;signInOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;EmailAuthProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PROVIDER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GoogleAuthProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PROVIDER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;FacebookAuthProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PROVIDER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;TwitterAuthProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PROVIDER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;callbacks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;signInSuccessWithAuthResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;signInSuccessUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;privacyPolicyUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/policy&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/blog/2021/05/firebaseui/01.png&quot; alt=&quot;日本語になった！&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;しかし、ここでも問題が。
-例えば今 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge.com&lt;/code&gt; にいても、ログインボタンを押したら &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;project-id&amp;gt;.firebaseapp.com&lt;/code&gt; に飛ばされてから、OAuth 画面へ飛びます。&amp;lt;br
-つまり、OAuthの流れとしては「&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge.com&lt;/code&gt;→&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;project-id&amp;gt;.firebaseapp.com&lt;/code&gt;→（OAuth認証）→&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;project-id&amp;gt;.firebaseapp.com&lt;/code&gt;→&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge.com&lt;/code&gt;」と、謎(?) の &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;firebaseapp.com&lt;/code&gt; を経由してしまうというわけです。&lt;/p&gt;
-
-&lt;p&gt;これについては、Firebase の設定の &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;authDomain&lt;/code&gt; という Key で設定できますが、そもそも CDN では設定ファイルを埋め込めない…。&lt;/p&gt;
-
-&lt;h2 id=&quot;解決策&quot;&gt;解決策&lt;/h2&gt;
-
-&lt;p&gt;ドキュメントを見てみると、FirebaseUI のソースコードから自分でビルドすれば解決するのでは？と考え、試してみました。結果成功しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/firebase/firebaseui-web&quot;&gt;GitHub: firebase/firebaseui-web&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;参考： &lt;a href=&quot;https://github.com/firebase/firebaseui-web/blob/master/README.md#building-firebaseui&quot;&gt;firebaseui-web/README.md at master · firebase/firebaseui-web&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step1&quot;&gt;Step1&lt;/h3&gt;
-
-&lt;p&gt;まず、ビルドのために必要となる開発環境をインストールします。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Node.js&lt;/li&gt;
-  &lt;li&gt;npm&lt;/li&gt;
-  &lt;li&gt;Java SE Runtime Environment 8&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;step2&quot;&gt;Step2&lt;/h3&gt;
-
-&lt;p&gt;ソースコードを Clone します。&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/firebase/firebaseui-web.git
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;firebaseui-web
-npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;step3&quot;&gt;Step3&lt;/h3&gt;
-
-&lt;p&gt;ESM 用の日本語版ファイルをビルドします。&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm run build build-esm-ja
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dist&lt;/code&gt; フォルダ 内にある &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;esm__ja.js&lt;/code&gt; が出力されたファイルになります。&lt;/p&gt;
-
-&lt;h3 id=&quot;step4&quot;&gt;Step4&lt;/h3&gt;
-
-&lt;p&gt;読み込みます。TypeScript を用いているので、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.d.ts&lt;/code&gt; もコピーしました。&lt;/p&gt;
-
-&lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./firebaseui/@types/index&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./firebaseui/esm__ja&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// ～ Firebaseの設定は略 ～ //&lt;/span&gt;
-
-&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;DOMContentLoaded&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pathname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/login&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ui&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AuthUI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#firebaseui-auth-container&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;signInOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;EmailAuthProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PROVIDER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GoogleAuthProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PROVIDER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;FacebookAuthProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PROVIDER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;TwitterAuthProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PROVIDER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;callbacks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;signInSuccessWithAuthResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;signInFailure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;uiShown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;signInSuccessUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;privacyPolicyUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/policy&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;step5&quot;&gt;Step5&lt;/h3&gt;
-
-&lt;p&gt;Step4 のままだと、まだ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;projectid&amp;gt;.firebaseapp.com&lt;/code&gt; に飛ばされます。&lt;br /&gt;
-そこで、Firebase の設定ファイルを変更します。&lt;/p&gt;
-
-&lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;apiKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// authDomain: '&amp;lt;projectid&amp;gt;.firebaseapp.com',&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;authDomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hogehoge.com&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;databaseURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// 以下略&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;これで、Webpack でビルドすると、きちんと日本語になり、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge.com&lt;/code&gt; に飛ばされました！&lt;/p&gt;
-
-&lt;p&gt;※この記事は、&lt;a href=&quot;https://qiita.com/a01sa01to/items/5c8324e0f37bdf0eacd7&quot;&gt;Qiita&lt;/a&gt; でも公開しています。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Google" /><category term="Firebase" /><summary type="html">とある用で Firebase Authentication を使っていて、FirebaseUI をログイン画面に実装していました。</summary></entry></feed>
+&lt;p&gt;それと、今回初の振り返り記事。振り返ると記憶に定着し、また他者にもわかるように説明することでより理解が深まるという、誰かが言っていたメソッド。三日坊主にならないよう頑張りたいですね。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">ABC203 振り返りします。（唐突）</summary></entry></feed>
