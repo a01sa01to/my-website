@@ -20,7 +20,7 @@ exports.opendataRequest = (req, res) => {
         const _ = row.split(',')
         const __ = {}
         for (let i = 0; i < key.length; i++) {
-          if (String(Number(_[i])) === _[i]) {
+          if (!isNaN(Number(_[i]))) {
             _[i] = Number(_[i])
           }
           __[key[i]] = _[i]
@@ -31,7 +31,6 @@ exports.opendataRequest = (req, res) => {
       // Queryを成形
       if (req.query.filter) {
         let filt = decodeURIComponent(req.query.filter).split(';')
-        console.log(filt)
         filt = filt.map((f) => {
           const __ = f.split('__')
           return {
