@@ -7,5 +7,7 @@ module.exports = {
   jsxSingleQuote: true,
   bracketSpacing: true,
   jsxBracketSameLine: false,
-  importOrder: ['^[./]', './(.+)'],
+  importOrderSeparation: true,
+  // ↓「/」を含まない、「./」を含まない、それ以外の順にimportをソートする
+  importOrder: ['^(?!.*/).*$', '^(?!.*\\./).*$', '^(.*\\./).*$'],
 }
