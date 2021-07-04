@@ -7,8 +7,7 @@ const app = express()
 const notAllowed = require('./server_notAllowed.json')
 
 app.use((req, res) => {
-  console.log(req.hostname)
-  if (req.hostname === 'www.a01sa01to.com') {
+  if (req.hostname.startsWith('www')) {
     res.redirect(301, `https://a01sa01to.com${req.path}`)
     return
   }
