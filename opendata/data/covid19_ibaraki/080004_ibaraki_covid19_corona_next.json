@@ -1,16 +1,16 @@
 {
   "stage": 2,
   "moveDate": "2021/06/07",
-  "pillar": 5,
-  "sickbed": 105,
-  "new_patients": 23.3,
+  "pillar": 6,
+  "sickbed": 104,
+  "new_patients": 22.9,
   "non_closecontact": 10,
-  "care": 231,
-  "positive_rate": 2.2,
+  "care": 234,
+  "positive_rate": 2,
   "pillar_lastweek": 4,
-  "sickbed_lastweek": 100,
-  "new_patients_lastweek": 31.7,
-  "non_closecontact_lastweek": 15,
-  "care_lastweek": 256,
-  "positive_rate_lastweek": 2.6
+  "sickbed_lastweek": 103,
+  "new_patients_lastweek": 32.7,
+  "non_closecontact_lastweek": 14.9,
+  "care_lastweek": 263,
+  "positive_rate_lastweek": 2.7
 }
