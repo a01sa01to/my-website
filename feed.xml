@@ -1,4 +1,201 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-07-31T09:30:42+00:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">ABC211</title><link href="https://a01sa01to.com/blog/2021/07/abc211" rel="alternate" type="text/html" title="ABC211" /><published>2021-07-24T00:00:00+00:00</published><updated>2021-07-24T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/07/abc211</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc211">&lt;p&gt;今回は 3 完。D 解けそうだったのに解けず、かなり悔しい。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2021-08-01T00:03:09+09:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">ABC212</title><link href="https://a01sa01to.com/blog/2021/07/abc212" rel="alternate" type="text/html" title="ABC212" /><published>2021-07-31T00:00:00+09:00</published><updated>2021-07-31T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/07/abc212</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc212">&lt;p&gt;8 問体制になっても、相変わらず 3 完ですよ。はい。&lt;br /&gt;
+D も解けたけど、謎の TLE（解決済）したので間に合わなかった…。&lt;/p&gt;
+
+&lt;h2 id=&quot;問題概要&quot;&gt;問題概要&lt;/h2&gt;
+
+&lt;h3 id=&quot;a&quot;&gt;A&lt;/h3&gt;
+
+&lt;p&gt;$A$グラムの純金と$B$グラムの純銀。$A \gt 0 \And B = 0$なら&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gold&lt;/code&gt;、$A = 0 \And B \gt 0$なら&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Silver&lt;/code&gt;、$A \gt 0 \And B \gt 0$なら&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alloy&lt;/code&gt;と出力。&lt;/p&gt;
+
+&lt;h3 id=&quot;b&quot;&gt;B&lt;/h3&gt;
+
+&lt;p&gt;4 桁の暗証番号 $X_1 X_2 X_3 X_4$。4 桁が同じ数字か、すべての$i (1,2,3)$について$X_{i+1}$が$X_i$の次の数字なら、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Weak&lt;/code&gt;。そうでなければ&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Strong&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;c&quot;&gt;C&lt;/h3&gt;
+
+&lt;p&gt;2 つの数列から 1 つずつ要素を選んだときの 2 つの値の差の最小値（$\displaystyle \min_{ 1\leq i\leq N}\displaystyle\min_{1\leq j\leq M} \lvert A_i-B_j\rvert$） を求める&lt;/p&gt;
+
+&lt;h3 id=&quot;d&quot;&gt;D&lt;/h3&gt;
+
+&lt;p&gt;$Q$個のクエリ $P_i, X_i$。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$P_i=1$: 袋に整数$X_i$を追加&lt;/li&gt;
+  &lt;li&gt;$P_i=2$: 袋に入っているすべての数字について、$X_i$を足す&lt;/li&gt;
+  &lt;li&gt;$P_i=3$: 袋に入っている最小の数を取り出し、その数字を出力して捨てる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;提出&quot;&gt;提出&lt;/h2&gt;
+
+&lt;h3 id=&quot;a-1&quot;&gt;A&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc212/submissions/24644697&quot;&gt;提出 #24644697 - AtCoder Beginner Contest 212&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;そのまま if 文で場合分けすれば OK。&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fixed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setprecision&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Gold&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Silver&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Alloy&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;提出時刻は 21:01:11。これまでと変わらずって感じ。&lt;/p&gt;
+
+&lt;h3 id=&quot;b-1&quot;&gt;B&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc212/submissions/24656788&quot;&gt;提出 #24656788 - AtCoder Beginner Contest 212&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;問題文を言い換えると、 「i=0 ～ 2 で、$X_{i+1}=(X_i+1) \mathrm{mod} 10$か、$X_{i+1}=X_i$のどちらか一方になっていれば Weak」になります。&lt;br /&gt;
+私は vector&amp;lt;int&amp;gt;を用いて計算しました。&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define loop(i, n) for (ll i = 0; i &amp;lt; n; i++)
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fixed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setprecision&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'0'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'0'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isStrong&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;isStrong&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isStrong&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Strong&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Weak&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;もっと簡潔な方法として、解説にあった「i=0 ～ 2 のいずれかで、$X_{i+1}=(X_i+1) \mathrm{mod} 10$か、$X_{i+1}=X_i$の両方になっていなければ Strong」（私の対偶？）とすることで、「どちらか一方」を無視できるので、かなり場合分けが簡単になっていました。&lt;/p&gt;
+
+&lt;p&gt;提出時刻は 21:11:41。最初ちょっと悩んだので遅れてしまった…。&lt;/p&gt;
+
+&lt;h3 id=&quot;c-1&quot;&gt;C&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc212/submissions/24664712&quot;&gt;提出 #24664712 - AtCoder Beginner Contest 212&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;それぞれをソートすれば、かなり計算量を減らせました。私の解説より、公式解説がめちゃくちゃわかりやすいと思うので、&lt;a href=&quot;https://atcoder.jp/contests/abc212/editorial/2355&quot;&gt;解説 - AtCoder Beginner Contest 212&lt;/a&gt; をご覧いただければ…。&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ll1d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define loop(i, n) for (ll i = 0; i &amp;lt; n; i++)
+#define all(vec) vec.begin(), vec.end()
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fixed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setprecision&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ll1d&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minim&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1e9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;minim&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;minim&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minim&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;最初$A_i - B_j \ge 0$ではないときに、minim を更新しないコードを提出してしまい、1 ペナ。&lt;br /&gt;
+提出時刻は 21:23:01 ですが、ペナルティにより+5 分…。&lt;/p&gt;
+
+&lt;h3 id=&quot;d-1&quot;&gt;D&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc212/submissions/24691944&quot;&gt;提出 #24691944 - AtCoder Beginner Contest 212&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;袋にいれていちいちソートしても間に合わないので、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;priority_queue&lt;/code&gt;を使いました。また、いちいちすべてに「$X_i$を足す」ことはできないので、これまで足された数を$Add$に記録しておき、「$X_i$を追加」を「$X_i - Add$を追加」にしておくことで、計算量は大幅に減ります。&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;atcoder/all&amp;gt;
+#include &amp;lt;bits/stdc++.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;atcoder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#define loop(i, n) for (ll i = 0; i &amp;lt; n; i++)
+#define all(vec) vec.begin(), vec.end()
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fixed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setprecision&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;priority_queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ll1d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;greater&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;しかし、コンテスト中に提出したコードでは TLE が出ました。&lt;br /&gt;
+何がまずかったのか。&lt;a href=&quot;https://atcoder.jp/contests/abc212/submissions/24669623&quot;&gt;提出 #24669623&lt;/a&gt;のファイル先頭にある、「&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#define _GLIBCXX_DEBUG&lt;/code&gt;」です。&lt;br /&gt;
+一応デバッグ用に追加したものなんですが、ファイルをそのままコピペして提出しているため、要は「デバッグ用のコードをそのまま提出している」という状況でした。&lt;br /&gt;
+これまでまったく問題がなかったのですが、今回、この 1 行があることで大幅に実行時間を食ってしまっていたようです。&lt;br /&gt;
+これを消した結果（&lt;a href=&quot;https://atcoder.jp/contests/abc212/submissions/24691944&quot;&gt;提出 #24691944&lt;/a&gt;）、実行時間は 193ms と、大幅に減りました。&lt;/p&gt;
+
+&lt;h2 id=&quot;結果と感想&quot;&gt;結果と感想&lt;/h2&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;下がった。# define _GLIBCXX_DEBUG 許さん😡😡😡 （なければPerf1100超えてたのに...）&lt;br /&gt;&lt;br /&gt;a01sa01toさんのAtCoder Beginner Contest 212での成績：3379位&lt;br /&gt;パフォーマンス：695相当&lt;br /&gt;レーティング：776→768 (-8) :(&lt;a href=&quot;https://twitter.com/hashtag/AtCoder?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#AtCoder&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/ABC212?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ABC212&lt;/a&gt; &lt;a href=&quot;https://t.co/ghSOegpWYP&quot;&gt;https://t.co/ghSOegpWYP&lt;/a&gt;&lt;/p&gt;&amp;mdash; Asa (@a01sa01to) &lt;a href=&quot;https://twitter.com/a01sa01to/status/1421474406052728839?ref_src=twsrc%5Etfw&quot;&gt;July 31, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;はい、下がりました。&lt;br /&gt;
+ツイートの通り、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#define _GLIBCXX_DEBUG&lt;/code&gt;のせいで下がったといっても過言ではありません。&lt;br /&gt;
+（1 回ミスりましたが）実質正解のコードを 21:32:24 に提出しており、コンテスト全体のペナルティ加算の提出時間は「42:24」になっていたはずだったためです。&lt;br /&gt;
+このとき Perf は 1146 になっていたため、まじで&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#define _GLIBCXX_DEBUG&lt;/code&gt;は許しません。&lt;/p&gt;
+
+&lt;p&gt;とはいっても自分の無知のせいなので、今後のコンパイルでは、ソースコードではなくコンパイルオプションとして&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-D_GLIBCXX_DEBUG&lt;/code&gt;を追加することにします…。&lt;/p&gt;
+
+&lt;p&gt;次は 5 完を目指します…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">8 問体制になっても、相変わらず 3 完ですよ。はい。 D も解けたけど、謎の TLE（解決済）したので間に合わなかった…。</summary></entry><entry><title type="html">ABC211</title><link href="https://a01sa01to.com/blog/2021/07/abc211" rel="alternate" type="text/html" title="ABC211" /><published>2021-07-24T00:00:00+09:00</published><updated>2021-07-24T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/07/abc211</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc211">&lt;p&gt;今回は 3 完。D 解けそうだったのに解けず、かなり悔しい。&lt;/p&gt;
 
 &lt;h2 id=&quot;問題概要&quot;&gt;問題概要&lt;/h2&gt;
 
@@ -141,7 +338,7 @@
 
 &lt;p&gt;はい、かなりの微増です。&lt;/p&gt;
 
-&lt;p&gt;次回から 8 問体制になるらしいので、今後のレーティングがどうなってくるんだろう…？という感じですね。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今回は 3 完。D 解けそうだったのに解けず、かなり悔しい。</summary></entry><entry><title type="html">ABC210</title><link href="https://a01sa01to.com/blog/2021/07/abc210" rel="alternate" type="text/html" title="ABC210" /><published>2021-07-17T00:00:00+00:00</published><updated>2021-07-17T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/07/abc210</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc210">&lt;p&gt;今回は 3 完でした。そしてかなり時間を使ってしまいました。&lt;/p&gt;
+&lt;p&gt;次回から 8 問体制になるらしいので、今後のレーティングがどうなってくるんだろう…？という感じですね。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今回は 3 完。D 解けそうだったのに解けず、かなり悔しい。</summary></entry><entry><title type="html">ABC210</title><link href="https://a01sa01to.com/blog/2021/07/abc210" rel="alternate" type="text/html" title="ABC210" /><published>2021-07-17T00:00:00+09:00</published><updated>2021-07-17T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/07/abc210</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc210">&lt;p&gt;今回は 3 完でした。そしてかなり時間を使ってしまいました。&lt;/p&gt;
 
 &lt;h2 id=&quot;問題概要&quot;&gt;問題概要&lt;/h2&gt;
 
@@ -271,7 +468,7 @@
 全体的にもっと早く解けていれば D 問題も解けて、入緑したかもしれない。（結果論）&lt;/p&gt;
 
 &lt;p&gt;レート計算機で計算してみた結果、次回で入緑するにはパフォが 1000 くらい必要だとわかったので、今回はフラグ建てないことにします。&lt;br /&gt;
-爆速で C まで解ければいけるかもしれない（フラグ建築）。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今回は 3 完でした。そしてかなり時間を使ってしまいました。</summary></entry><entry><title type="html">ABC209</title><link href="https://a01sa01to.com/blog/2021/07/abc209" rel="alternate" type="text/html" title="ABC209" /><published>2021-07-10T00:00:00+00:00</published><updated>2021-07-10T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/07/abc209</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc209">&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+爆速で C まで解ければいけるかもしれない（フラグ建築）。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今回は 3 完でした。そしてかなり時間を使ってしまいました。</summary></entry><entry><title type="html">ABC209</title><link href="https://a01sa01to.com/blog/2021/07/abc209" rel="alternate" type="text/html" title="ABC209" /><published>2021-07-10T00:00:00+09:00</published><updated>2021-07-10T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/07/abc209</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc209">&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;入　緑　フ　ラ　グ　回　収　再　び&lt;/p&gt;
 
@@ -454,7 +651,7 @@ $Q$個のクエリで$c_i$と$d_i$が与えられる。1 人が$c_i \rightarrow 
 
 &lt;p&gt;この通り逆ボーダーです。はい。普通に悲しいです。次回こそ入緑します。&lt;/p&gt;
 
-&lt;p&gt;ちなみに E 問題、解き方はすぐにわかりました。でも 15 分で解けるほどの実力がありませんでした。はい。悲しい。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"></summary></entry><entry><title type="html">ABC208</title><link href="https://a01sa01to.com/blog/2021/07/abc208" rel="alternate" type="text/html" title="ABC208" /><published>2021-07-04T00:00:00+00:00</published><updated>2021-07-04T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/07/abc208</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc208">&lt;p&gt;入　緑　フ　ラ　グ　を　回　収　し　ま　し　た&lt;/p&gt;
+&lt;p&gt;ちなみに E 問題、解き方はすぐにわかりました。でも 15 分で解けるほどの実力がありませんでした。はい。悲しい。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"></summary></entry><entry><title type="html">ABC208</title><link href="https://a01sa01to.com/blog/2021/07/abc208" rel="alternate" type="text/html" title="ABC208" /><published>2021-07-04T00:00:00+09:00</published><updated>2021-07-04T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/07/abc208</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc208">&lt;p&gt;入　緑　フ　ラ　グ　を　回　収　し　ま　し　た&lt;/p&gt;
 
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
@@ -584,7 +781,7 @@ $10! = 3,628,800$ で、$P \le 10^7$ なので、こちらは 3 枚で済みそ�
 
 &lt;p&gt;今回のフラグ回収要因は、F 問題を見て「あっこれ授業でやったところだ！」ってなったせいです。解説見たらまったくやっていないところでした。つらい。&lt;/p&gt;
 
-&lt;p&gt;そして、またフラグを建てました。あと 10 なので、まあ次回もこのペースで解ければ大丈夫な気がしますが。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">入　緑　フ　ラ　グ　を　回　収　し　ま　し　た</summary></entry><entry><title type="html">Windows 11 がやってきた！！</title><link href="https://a01sa01to.com/blog/2021/06/windows11" rel="alternate" type="text/html" title="Windows 11 がやってきた！！" /><published>2021-06-29T00:00:00+00:00</published><updated>2021-06-29T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/windows11</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/windows11">&lt;p&gt;はい、題名の通りです。Windows Insider の特権です。&lt;br /&gt;
+&lt;p&gt;そして、またフラグを建てました。あと 10 なので、まあ次回もこのペースで解ければ大丈夫な気がしますが。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">入　緑　フ　ラ　グ　を　回　収　し　ま　し　た</summary></entry><entry><title type="html">Windows 11 がやってきた！！</title><link href="https://a01sa01to.com/blog/2021/06/windows11" rel="alternate" type="text/html" title="Windows 11 がやってきた！！" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/windows11</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/windows11">&lt;p&gt;はい、題名の通りです。Windows Insider の特権です。&lt;br /&gt;
 以下のツイートのように、「Windows 11 を実行できない」と言われたコンピュータで試したらできちゃいました。てへぺろ&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;PC正常性チェックアプリ（なおWindows11上で実行） &lt;a href=&quot;https://t.co/pv9d147DlQ&quot;&gt;pic.twitter.com/pv9d147DlQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Asa (@a01sa01to) &lt;a href=&quot;https://twitter.com/a01sa01to/status/1409752298977329153?ref_src=twsrc%5Etfw&quot;&gt;June 29, 2021&lt;/a&gt;&lt;/blockquote&gt;
@@ -613,7 +810,7 @@ $10! = 3,628,800$ で、$P \le 10^7$ なので、こちらは 3 枚で済みそ�
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;und&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://t.co/yzjgaXZ7Xf&quot;&gt;https://t.co/yzjgaXZ7Xf&lt;/a&gt;&lt;/p&gt;&amp;mdash; Asa (@a01sa01to) &lt;a href=&quot;https://twitter.com/a01sa01to/status/1409773296564932626?ref_src=twsrc%5Etfw&quot;&gt;June 29, 2021&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;ウィンドウが角丸になったり、エクスプローラーのファイルのアイコンが変わったり、ウィンドウの表示/最小化にアニメーションがついたり、…など、UI は大幅に刷新されましたが、今のところは機能追加はあまりないような印象です。今後のアップデートに期待です。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Windows" /><category term="Windows11" /><summary type="html">はい、題名の通りです。Windows Insider の特権です。 以下のツイートのように、「Windows 11 を実行できない」と言われたコンピュータで試したらできちゃいました。てへぺろ</summary></entry><entry><title type="html">ABC207</title><link href="https://a01sa01to.com/blog/2021/06/abc207" rel="alternate" type="text/html" title="ABC207" /><published>2021-06-26T00:00:00+00:00</published><updated>2021-06-19T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/abc207</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc207">&lt;p&gt;今回は 3 完です。概要は以下のツイートの通りです。（双括型）&lt;/p&gt;
+&lt;p&gt;ウィンドウが角丸になったり、エクスプローラーのファイルのアイコンが変わったり、ウィンドウの表示/最小化にアニメーションがついたり、…など、UI は大幅に刷新されましたが、今のところは機能追加はあまりないような印象です。今後のアップデートに期待です。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Windows" /><category term="Windows11" /><summary type="html">はい、題名の通りです。Windows Insider の特権です。 以下のツイートのように、「Windows 11 を実行できない」と言われたコンピュータで試したらできちゃいました。てへぺろ</summary></entry><entry><title type="html">ABC207</title><link href="https://a01sa01to.com/blog/2021/06/abc207" rel="alternate" type="text/html" title="ABC207" /><published>2021-06-26T00:00:00+09:00</published><updated>2021-06-19T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc207</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc207">&lt;p&gt;今回は 3 完です。概要は以下のツイートの通りです。（双括型）&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/hashtag/ABC207?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ABC207&lt;/a&gt; 3完...&lt;br /&gt;A: a + b + c - min(a,b,c)&lt;br /&gt;B: a + nb ≦ d*nc を解いて、ceil(a/(cd-b)) を出力&lt;br /&gt;C: doubleで読み取って、左端が開いてるなら+0.1、右端が開いてるなら-0.1して、(a[i]左端 ≦ a[j]右端) かつ (a[j]左端 ≦ a[i]右端) の組を全部出力&lt;br /&gt;D: 移動するx,yと回転するθ[°]を全探索でTLEした...&lt;/p&gt;&amp;mdash; Asa (@a01sa01to) &lt;a href=&quot;https://twitter.com/a01sa01to/status/1408782347667853322?ref_src=twsrc%5Etfw&quot;&gt;June 26, 2021&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
@@ -737,7 +934,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;はい、水パフォでした。やった。今回は比較的難しかった…？&lt;br /&gt;
-次も同じくらいのパフォーマンスで緑勢になれるかも…！？&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今回は 3 完です。概要は以下のツイートの通りです。（双括型）</summary></entry><entry><title type="html">AHC004</title><link href="https://a01sa01to.com/blog/2021/06/ahc004" rel="alternate" type="text/html" title="AHC004" /><published>2021-06-26T00:00:00+00:00</published><updated>2021-06-26T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/ahc004</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/ahc004">&lt;p&gt;AHC004 の振り返りです。今回は全然思いつかなかったのでかなり悪いです。はい。&lt;/p&gt;
+次も同じくらいのパフォーマンスで緑勢になれるかも…！？&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今回は 3 完です。概要は以下のツイートの通りです。（双括型）</summary></entry><entry><title type="html">AHC004</title><link href="https://a01sa01to.com/blog/2021/06/ahc004" rel="alternate" type="text/html" title="AHC004" /><published>2021-06-26T00:00:00+09:00</published><updated>2021-06-26T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/ahc004</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/ahc004">&lt;p&gt;AHC004 の振り返りです。今回は全然思いつかなかったのでかなり悪いです。はい。&lt;/p&gt;
 
 &lt;h2 id=&quot;問題概要&quot;&gt;問題概要&lt;/h2&gt;
 
@@ -956,7 +1153,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 ただ、最高点の人でも得点率 36%+ちょっとなので、4 割とるのも難しいっぽいです。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/ahc004/submissions?f.User=a01sa01to&quot;&gt;すべての提出 - AtCoder Heuristic Contest 004&lt;/a&gt; で見れますが、終了後もいくつか試してみてます。&lt;br /&gt;
-今後追記するかもしれません。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="AHC" /><category term="Competitive-Programming" /><summary type="html">AHC004 の振り返りです。今回は全然思いつかなかったのでかなり悪いです。はい。</summary></entry><entry><title type="html">GASでライブラリを使わずにTwitterクライアントを作成する</title><link href="https://a01sa01to.com/blog/2021/06/gas-twitter" rel="alternate" type="text/html" title="GASでライブラリを使わずにTwitterクライアントを作成する" /><published>2021-06-25T00:00:00+00:00</published><updated>2021-06-25T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/gas-twitter</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/gas-twitter">&lt;p&gt;GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。&lt;br /&gt;
+今後追記するかもしれません。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="AHC" /><category term="Competitive-Programming" /><summary type="html">AHC004 の振り返りです。今回は全然思いつかなかったのでかなり悪いです。はい。</summary></entry><entry><title type="html">GASでライブラリを使わずにTwitterクライアントを作成する</title><link href="https://a01sa01to.com/blog/2021/06/gas-twitter" rel="alternate" type="text/html" title="GASでライブラリを使わずにTwitterクライアントを作成する" /><published>2021-06-25T00:00:00+09:00</published><updated>2021-06-25T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/gas-twitter</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/gas-twitter">&lt;p&gt;GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。&lt;br /&gt;
 でもそれだと自分のやりたいことは達成できない…ということでいろいろ試行錯誤した結果を書きます。&lt;/p&gt;
 
 &lt;h2 id=&quot;やりたいこと&quot;&gt;やりたいこと&lt;/h2&gt;
@@ -1044,7 +1241,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 
 &lt;p&gt;もっときれいに処理ができたり、セキュリティ的に危ないところもあったりするかもしれないので、コピペの際は自己責任でお願いします…。&lt;/p&gt;
 
-&lt;p&gt;これで、どこかの処理で &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tweet(&quot;hogehoge&quot;)&lt;/code&gt; と呼び出せば &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge&lt;/code&gt; とツイートされるかと思います。以上。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Computer" /><category term="Google" /><category term="GAS" /><summary type="html">GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。 でもそれだと自分のやりたいことは達成できない…ということでいろいろ試行錯誤した結果を書きます。</summary></entry><entry><title type="html">Cleaning Up My Computer</title><link href="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer" rel="alternate" type="text/html" title="Cleaning Up My Computer" /><published>2021-06-24T00:00:00+00:00</published><updated>2021-06-24T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer">&lt;p&gt;クリーンアップって大事ですよね……。&lt;/p&gt;
+&lt;p&gt;これで、どこかの処理で &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tweet(&quot;hogehoge&quot;)&lt;/code&gt; と呼び出せば &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hogehoge&lt;/code&gt; とツイートされるかと思います。以上。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Computer" /><category term="Google" /><category term="GAS" /><summary type="html">GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。 でもそれだと自分のやりたいことは達成できない…ということでいろいろ試行錯誤した結果を書きます。</summary></entry><entry><title type="html">Cleaning Up My Computer</title><link href="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer" rel="alternate" type="text/html" title="Cleaning Up My Computer" /><published>2021-06-24T00:00:00+09:00</published><updated>2021-06-24T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer">&lt;p&gt;クリーンアップって大事ですよね……。&lt;/p&gt;
 
 &lt;p&gt;ただパソコンのクリーンアップをするだけの記事です。&lt;/p&gt;
 
@@ -1208,122 +1405,4 @@ Yarn の場合 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&g
 
 &lt;p&gt;内訳は上の画像の通り。システムは変更できないけど、「アプリと機能」も必要なものしか残っていないはず…です。たぶん。&lt;/p&gt;
 
-&lt;p&gt;上記以外にもいろいろな手法を試してみたいと思います。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Computer" /><summary type="html">クリーンアップって大事ですよね……。</summary></entry><entry><title type="html">ABC206</title><link href="https://a01sa01to.com/blog/2021/06/abc206" rel="alternate" type="text/html" title="ABC206" /><published>2021-06-19T00:00:00+00:00</published><updated>2021-06-19T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/abc206</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc206">&lt;p&gt;今日はきつかったです…。（早速感想から入っていくパターン）&lt;/p&gt;
-
-&lt;p&gt;今回は 3 完です。D 飛ばして E が解けそうだったけど、うまくパターンが作れなかった…。&lt;/p&gt;
-
-&lt;h2 id=&quot;問題概要&quot;&gt;問題概要&lt;/h2&gt;
-
-&lt;h3 id=&quot;a&quot;&gt;A&lt;/h3&gt;
-
-&lt;p&gt;「$N$ 円 + 税（8%）」が、206 円より安ければ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Yay!&lt;/code&gt;、同じなら &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;so-so&lt;/code&gt;、高いなら&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:(&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h3 id=&quot;b&quot;&gt;B&lt;/h3&gt;
-
-&lt;p&gt;毎日 $i$ 日目に $i$ 円を貯金するとき、$N$ 円以上になるのは何日目？&lt;/p&gt;
-
-&lt;h3 id=&quot;c&quot;&gt;C&lt;/h3&gt;
-
-&lt;p&gt;$A=(A_1, A_2,\dots,A_N)$ で、$1 \le i \lt j \le N$ かつ $A_i \ne A_j$ となる $(i,j)$ の組はいくつ？&lt;/p&gt;
-
-&lt;h2 id=&quot;提出結果&quot;&gt;提出結果&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc206/submissions?f.User=a01sa01to&quot;&gt;ここから&lt;/a&gt; 全体の提出結果がわかります。&lt;/p&gt;
-
-&lt;h3 id=&quot;a-1&quot;&gt;A&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc206/submissions/23570003&quot;&gt;提出 #23570003 - AtCoder Beginner Contest 206（Sponsored by Panasonic）&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.08&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;206&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Yay!&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;206&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;so-so&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;:(&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;普通に、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;double&lt;/code&gt;型でインプットしてから、計算して場合分けしました。税抜で場合分けする方法もあるとは思うけど、計算がめんどくさくてやめました()。&lt;/p&gt;
-
-&lt;p&gt;かなり Typo してしまい、21:01:41 に提出。まあ許容範囲かな…。&lt;/p&gt;
-
-&lt;h3 id=&quot;b-1&quot;&gt;B&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc206/tasks/abc206_b&quot;&gt;B - Savings&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ull&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;ull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;えっと、Wolfram で等差数列の総和公式 ${1 \over 2} n(n+1) &amp;gt; 10^9$ を計算してみた結果、$N \gt 44720.9$となったので、全探索しました。&lt;/p&gt;
-
-&lt;p&gt;提出時刻は 21:04:50 。まあ Wolfram 使用+Typo だから許容範囲…。&lt;br /&gt;
-（今回は自分に甘々なスタイル）&lt;/p&gt;
-
-&lt;h3 id=&quot;c-1&quot;&gt;C&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://atcoder.jp/contests/abc206/submissions/23594275&quot;&gt;提出 #23594275 - AtCoder Beginner Contest 206（Sponsored by Panasonic）&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ull&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ull1d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define loop(i,n) for(ull i=0;i&amp;lt;n;i++)
-#define all(vec) vec.begin(),vec.end()
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;ull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;ull1d&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uni&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;ull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1e10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]){&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;uni&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;uni&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uni&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;ull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uni&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()){&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uni&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uni&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;まず、ソートして、同じ個数を数えます。そのあと、「同じもの以外 × 同じもの」を掛け算。「場合の数」的に、これでいけました。&lt;/p&gt;
-
-&lt;p&gt;解釈違いで、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unique&lt;/code&gt;関数を用いてしまったため、21:20:59。うーん…。&lt;/p&gt;
-
-&lt;h2 id=&quot;結果と感想&quot;&gt;結果と感想&lt;/h2&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;微増...だけど下がらなくてよかった...！&lt;br /&gt;&lt;br /&gt;a01sa01toさんのAtCoder Beginner Contest 206（Sponsored by Panasonic）での成績：3618位&lt;br /&gt;パフォーマンス：748相当&lt;br /&gt;レーティング：652→663 (+11) :)&lt;br /&gt;Highestを更新しました！&lt;a href=&quot;https://twitter.com/hashtag/AtCoder?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#AtCoder&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/ABC206?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ABC206&lt;/a&gt;（SponsoredbyPanasonic） &lt;a href=&quot;https://t.co/2COngvLxzA&quot;&gt;https://t.co/2COngvLxzA&lt;/a&gt;&lt;/p&gt;&amp;mdash; Asa (@a01sa01to) &lt;a href=&quot;https://twitter.com/a01sa01to/status/1406250054130667521?ref_src=twsrc%5Etfw&quot;&gt;June 19, 2021&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;はい、+11 で、ギリギリ下がりませんでした。よかった。&lt;/p&gt;
-
-&lt;p&gt;D 問題はまったく思いつかなかったので、飛ばしました。&lt;br /&gt;
-E 問題は、あとちょっとで解けてました。悔しい…。&lt;/p&gt;
-
-&lt;p&gt;D 問題をすぐに思いつけるように頑張りたいですね…。&lt;/p&gt;</content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html">今日はきつかったです…。（早速感想から入っていくパターン）</summary></entry></feed>
+&lt;p&gt;上記以外にもいろいろな手法を試してみたいと思います。&lt;/p&gt;</content><author><name>Asa</name></author><category term="Computer" /><summary type="html">クリーンアップって大事ですよね……。</summary></entry></feed>
