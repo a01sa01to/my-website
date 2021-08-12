@@ -1,4 +1,11 @@
 steps:
   - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: '/bin/bash'
+    args:
+      [
+        '-c',
+        "gcloud app versions list --service=default | grep 0.00 | sort -rk 4,4 | awk '{print $2}' | tail -n +11 | xargs -l gcloud app versions delete {}",
+      ]
+  - name: 'gcr.io/cloud-builders/gcloud'
     args: ['app', 'deploy', 'app.yaml']
     timeout: '1600s'
