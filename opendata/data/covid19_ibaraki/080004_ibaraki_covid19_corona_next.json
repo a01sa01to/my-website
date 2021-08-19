@@ -3,14 +3,14 @@
   "moveDate": "2021/08/03",
   "pillar": 27,
   "sickbed": 427,
-  "new_patients": 289.7,
-  "non_closecontact": 117.6,
+  "new_patients": 250.6,
+  "non_closecontact": 100.9,
   "care": 2201,
   "positive_rate": 15.6,
   "pillar_lastweek": 27,
   "sickbed_lastweek": 396,
-  "new_patients_lastweek": 234.7,
-  "non_closecontact_lastweek": 94.3,
+  "new_patients_lastweek": 247.4,
+  "non_closecontact_lastweek": 99,
   "care_lastweek": 1910,
   "positive_rate_lastweek": 14.4
 }
