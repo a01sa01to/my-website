@@ -8,25 +8,35 @@ exports.opendataRequest = (req, res) => {
   }
   try {
     res.header('Access-Control-Allow-Origin', '*')
-    if (req.query.mode === 'json' && req.path.endsWith('.csv')) {
+    if (
+      (req.query.mode === 'json' && req.path.endsWith('.csv')) ||
+      req.path.endsWith('.json')
+    ) {
       // JSONに変換
       const filecontent = fs
         .readFileSync(path.join(__dirname, '..', req.path))
         .toString()
-      const rows = filecontent.replace(/\r/g, '').split('\n')
-      const key = rows[0].split(',')
-      rows.splice(0, 1)
-      let fileToJson = rows.map((row) => {
-        const _ = row.split(',')
-        const __ = {}
-        for (let i = 0; i < key.length; i++) {
-          if (!isNaN(Number(_[i]))) {
-            _[i] = Number(_[i])
+
+      let fileToJson
+
+      if (req.path.endsWith('.csv')) {
+        const rows = filecontent.replace(/\r/g, '').split('\n')
+        const key = rows[0].split(',')
+        rows.splice(0, 1)
+        fileToJson = rows.map((row) => {
+          const _ = row.split(',')
+          const __ = {}
+          for (let i = 0; i < key.length; i++) {
+            if (!isNaN(Number(_[i]))) {
+              _[i] = Number(_[i])
+            }
+            __[key[i]] = _[i]
           }
-          __[key[i]] = _[i]
-        }
-        return __
-      })
+          return __
+        })
+      } else {
+        fileToJson = JSON.parse(filecontent)
+      }
 
       // Queryを成形
       if (req.query.filter) {
@@ -37,7 +47,7 @@ exports.opendataRequest = (req, res) => {
             type: __[0],
             key: __[1],
             mode: __[2],
-            val: __[3],
+            val: __.slice(3).join('__'),
           }
         })
         filt.forEach((_) => {
@@ -104,7 +114,8 @@ exports.opendataRequest = (req, res) => {
     }
 
     res.sendFile(path.join(__dirname, '..', req.path))
-  } catch {
+  } catch (e) {
+    console.error(e)
     c400()
   }
   return
