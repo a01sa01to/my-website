@@ -47,7 +47,7 @@ exports.opendataRequest = (req, res) => {
             type: __[0],
             key: __[1],
             mode: __[2],
-            val: __[3],
+            val: __.slice(3).join('__'),
           }
         })
         filt.forEach((_) => {
