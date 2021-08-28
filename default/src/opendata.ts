@@ -2,9 +2,12 @@ import Ace from 'ace-builds'
 import { Toast } from 'bootstrap'
 import ClipboardJS from 'clipboard'
 import $ from 'jquery'
+
 import mode_json from 'ace-builds/src-noconflict/mode-json'
 import mode_csv from 'ace-builds/src-noconflict/mode-plain_text'
 import theme_github from 'ace-builds/src-noconflict/theme-github'
+
+import { isEnglish } from './language'
 
 if (location.pathname.includes('/opendata/')) {
   window.addEventListener('DOMContentLoaded', () => {
@@ -84,7 +87,9 @@ if (location.pathname.includes('/opendata/')) {
         console.error('Action:', e.action)
         console.error('Trigger:', e.trigger)
         if (copyToastElem) {
-          copyToastElem.innerHTML = 'コピーに失敗しました'
+          copyToastElem.innerHTML = isEnglish
+            ? 'Failed to Copy the Data'
+            : 'コピーに失敗しました'
           copyToastElem.classList.remove('bg-success')
           copyToastElem.classList.add('bg-danger')
           copyToast.show()
@@ -92,7 +97,7 @@ if (location.pathname.includes('/opendata/')) {
       })
       $('.modal#api button.btn-outline-primary').on('click', () => {
         if (copyToastElem) {
-          copyToastElem.innerHTML = 'コピーしました'
+          copyToastElem.innerHTML = isEnglish ? 'Copied!' : 'コピーしました'
           copyToastElem.classList.remove('bg-danger')
           copyToastElem.classList.add('bg-success')
           copyToast.show()
