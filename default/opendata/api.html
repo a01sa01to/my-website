@@ -1,0 +1,254 @@
+---
+layout: opendata
+titleJa: 当サイトのオープンデータAPIについて
+titleEn: About the Open Data API on this site
+relPath: /api
+last_modified_at: 2021-08-28
+---
+
+<div class="container">
+  <h1 lang="ja">当サイトのオープンデータAPIについて</h1>
+  <h1 lang="en">About the Open Data API on this site</h1>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb" lang="ja">
+      <li class="breadcrumb-item"><a href="/opendata/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">
+        当サイトのオープンデータAPIについて
+      </li>
+    </ol>
+    <ol class="breadcrumb" lang="en">
+      <li class="breadcrumb-item"><a href="/opendata/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">
+        About the Open Data API on this site
+      </li>
+    </ol>
+  </nav>
+  <p class="desc" lang="ja">
+    当サイトのオープンデータカタログでは、APIをご利用いただけます。このページでは、本APIの利用方法をご案内します。
+  </p>
+  <p class="desc" lang="en">
+    You can use the API in the Open Data Catalog on this website. This page will
+    guide you through the use of this API.
+  </p>
+</div>
+<div class="container">
+  <h2 lang="ja">基本仕様</h2>
+  <h2 lang="en">Basic Specifications</h2>
+  <ul lang="ja">
+    <li>a01sa01to.comドメイン配下で提供されます。APIについても同様です。</li>
+    <li><b>HTTPS</b> で提供されます。</li>
+    <li>日付等はすべて日本時間です。</li>
+    <li>
+      Header には
+      <code>Access-Control-Allow-Origin:*</code> が設定されています。
+    </li>
+  </ul>
+  <ul lang="en">
+    <li>
+      All Open Data are provided under the <b>a01sa01to.com</b> domain and
+      <b>HTTPS</b>. The same is true for APIs.
+    </li>
+    <li>All dates are in Japan time.</li>
+    <li>"<code>Access-Control-Allow-Origin:*</code>" is set in the Header</li>
+  </ul>
+</div>
+<div class="container">
+  <h2 lang="ja">利用方法</h2>
+  <h2 lang="en">How to Use</h2>
+  <div class="in_container">
+    <h3 lang="ja">オープンデータのURL取得方法</h3>
+    <h3 lang="en">How to obtain URLs for open data</h3>
+    <ol lang="ja">
+      <li>利用したいオープンデータのページにアクセスします。</li>
+      <li>
+        <br /><img
+          src="/img/opendata/api/getURL.png"
+          alt="データへのURLを取得する"
+          style="border: 1px solid var(--bs-gray)"
+        /><br />「データへのURLを取得する」ボタンをクリックします。
+      </li>
+      <li>
+        <br /><img
+          src="/img/opendata/api/getURL_modal.png"
+          alt="モーダルが表示されます"
+          style="border: 1px solid var(--bs-gray)"
+        /><br />モーダルが表示されます。「URLをコピー」ボタンをクリックすると、URLがクリップボードにコピーされます。
+      </li>
+    </ol>
+    <ol lang="en">
+      <li>Access the page of the open data you want to use.</li>
+      <li>
+        <br /><img
+          src="/img/opendata/api/getURL_en.png"
+          alt="Get URL to the data"
+          style="border: 1px solid var(--bs-gray)"
+        /><br />Click the "Get URL to the data" button
+      </li>
+      <li>
+        <br /><img
+          src="/img/opendata/api/getURL_modal_en.png"
+          alt="Shows a modal"
+          style="border: 1px solid var(--bs-gray)"
+        /><br />A modal will be displayed. Click the "Copy the URL" button to
+        copy the URL to the clipboard.
+      </li>
+    </ol>
+  </div>
+  <div class="in_container">
+    <h3 lang="ja">CSVをJSONとして表示</h3>
+    <h3 lang="en">Convert CSV to JSON</h3>
+    <p lang="ja">
+      CSVのオープンデータのURLの末尾に、<code>?mode=json</code>をつけることで、CSVファイルをJSONファイルとして表示します。
+    </p>
+    <p lang="en">
+      By adding <code>?mode=json</code> to the end of the open data URL, the CSV
+      file will be displayed as a JSON file.
+    </p>
+  </div>
+  <div class="in_container">
+    <h3 lang="ja">データのフィルタリング</h3>
+    <h3 lang="en">Data Filtering</h3>
+    <p lang="ja">
+      URLの末尾に、<code>filter</code>クエリパラメータを渡すことで、データのフィルタリングができます。
+      なお、CSVファイルにおいてフィルタリングする場合、上記「CSVをJSONとして表示」と併用する必要があります。
+    </p>
+    <p lang="en">
+      By passing the <code>filter</code> query parameter at the end of the URL,
+      you can filter the data. Note that if you want to filter CSV files, you
+      need to use it in conjunction with "Convert CSV to JSON" above.
+    </p>
+    <p lang="ja">
+      複数の条件で絞り込みたい場合、<code>filter=条件1;条件2;...</code>のように空白なしのセミコロン区切りで指定してください。
+      AND検索です。条件に合う要素がない場合、<code>[]</code>が返されます。
+    </p>
+    <p lang="en">
+      If you want to filter by more than one condition, use
+      <code>filter=condition1;condition2;...</code>, separated by a semicolon
+      with no spaces. This is AND search. If there is no element that matches
+      the conditions, <code>[]</code> will be returned.
+    </p>
+    <ul lang="ja">
+      <li>
+        <h4>キーの絞り込み</h4>
+        JSONファイルにおいて、指定したキーのみを表示します。<br />
+        形式：<code>key__["キー1","キー2","..."]</code>
+      </li>
+      <li>
+        <h4>日付の絞り込み</h4>
+        指定したキーに対する値において、日付の大小で絞り込みます。<br />
+        形式：<code>date__キー__{fromまたはto}__日付(ISO形式)</code>
+        <ul>
+          <li>
+            キーが「aaa」のデータに対して、2021年1月1月以降のデータのみを表示する場合：
+            <code>date__aaa__from__2021-01-01</code>
+          </li>
+          <li>
+            キーが「bbb」のデータに対して、2020年12月31月以前のデータのみを表示する場合：
+            <code>date__bbb__to__2020-12-31</code>
+          </li>
+          <li>
+            キーが「ccc」のデータに対して、2020年1月1月のみのデータのみを表示する場合は、上の2つを組み合わせることによって実現できます：
+            <code>date__ccc__from__2020-01-01;date__ccc__to__2020-01-01</code>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h4>数字の絞り込み</h4>
+        指定したキーに対する値において、数字の大小で絞り込みます。
+        値が数字ではない場合、常にFalseが返されます。<br />
+        形式：<code>num__キー__{overまたはunder}__数字</code>
+        <ul>
+          <li>
+            キーが「ddd」のデータに対して、値が10以上のものを表示する場合：
+            <code>num__ddd__over__10</code>
+          </li>
+          <li>
+            キーが「eee」のデータに対して、値が20以下のものを表示する場合：
+            <code>num__eee__under__20</code>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h4>文字列の絞り込み</h4>
+        指定したキーに対する値において、文字列と等しいかどうかで絞り込みます。
+        なお、指定された文字列に<code>__</code>が含まれる場合、<code>__</code>も含めて認識されます。<br />
+        数字を絞り込む場合、こちらの方法ではうまくいきません。
+        「数字の絞り込み」の条件を複数組み合わせてください。<br />
+        形式：<code>str__キー__{eqまたはne}__文字列</code>
+        <ul>
+          <li>
+            キーが「fff」のデータに対して、値が「hoge」と等しいものを表示する場合：
+            <code>str__fff__eq__hoge</code>
+          </li>
+          <li>
+            キーが「ggg」のデータに対して、値が「fuga」ではないものを表示する場合：
+            <code>str__ggg__ne__fuga</code>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul lang="en">
+      <li>
+        <h4>Filtering the key</h4>
+        Displays only the specified key in the JSON file.<br />
+        Format: <code>key__["key1","key2","..."]</code>
+      </li>
+      <li>
+        <h4>Filtering the date</h4>
+        Narrows down the list of values for the specified key by the size of the
+        date.<br />
+        Format: <code>date__key__{"from" or "to"}__date(ISO format)</code>
+        <ul>
+          <li>
+            To display only the data after January 1, 2021 for the data whose
+            key is "aaa": <code>date__aaa__from__2021-01-01</code>
+          </li>
+          <li>
+            To display only data before December 31, 2020 for data with the key
+            "bbb": <code>date__aaa__to__2020-12-31</code>
+          </li>
+          <li>
+            For data with the key "ccc", if you want to display only the data
+            for January 1, 2020, you can combine the above two methods:
+            <code>date__ccc__from__2020-01-01;date__ccc__to__2020-01-01</code>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h4>Filtering the number</h4>
+        Narrows down by the number in the value for the specified key. False
+        will always be returned if the value is not a number.<br />
+        Format: <code>num__key__{"over" or "under"}__number</code>
+        <ul>
+          <li>
+            To display data with a key of "ddd" and a value of 10 or more:
+            <code>num__ddd__over__10</code>
+          </li>
+          <li>
+            To display data with a key of "eee" and a value of 20 or less:
+            <code>num__eee__under__20</code>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h4>Filtering the string</h4>
+        Narrows down the list of values for a given key by whether it is equal
+        to a string or not. If the specified string contains <code>__</code>, it
+        will be recognized including <code>__</code>.<br />If you want to narrow
+        down the numbers, this method will not work. Please combine multiple
+        conditions of "Filtering the number".<br />Format:
+        <code>str__key__{"eq" or "ne"}__string</code>
+        <ul>
+          <li>
+            To display data whose key is "fff" and whose value is equal to
+            "hoge": <code>str__fff__eq__hoge</code>
+          </li>
+          <li>
+            To display data whose key is "ggg" and whose value is not "fuga":
+            <code>str__ggg__ne__fuga</code>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
