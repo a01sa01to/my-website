@@ -1,7 +1,7 @@
 {
   "patients": {
-    "lastUpdate": "2021/09/09 18:45",
-    "size": "2.60 MiB"
+    "lastUpdate": "2021/09/10 18:55",
+    "size": "2.62 MiB"
   },
   "test_people": {
     "lastUpdate": "2021/09/07 19:40",
@@ -16,20 +16,20 @@
     "size": "21.26 KiB"
   },
   "positive_number": {
-    "lastUpdate": "2021/09/09 18:45",
-    "size": "23.08 KiB"
+    "lastUpdate": "2021/09/10 18:55",
+    "size": "23.13 KiB"
   },
   "mutant_positive_number": {
     "lastUpdate": "2021/09/07 19:40",
     "size": "69.77 KiB"
   },
   "recovered_number": {
-    "lastUpdate": "2021/09/09 18:45",
-    "size": "21.02 KiB"
+    "lastUpdate": "2021/09/10 18:55",
+    "size": "21.06 KiB"
   },
   "death_number": {
-    "lastUpdate": "2021/09/09 18:45",
-    "size": "20.68 KiB"
+    "lastUpdate": "2021/09/10 18:55",
+    "size": "20.72 KiB"
   },
   "death_attr": {
     "lastUpdate": "2021/09/08 19:35",
@@ -40,15 +40,15 @@
     "size": "250 Byte"
   },
   "main_summary": {
-    "lastUpdate": "2021/09/09 18:45",
+    "lastUpdate": "2021/09/10 18:55",
     "size": "374 Byte"
   },
   "corona_next": {
-    "lastUpdate": "2021/09/09 18:45",
-    "size": "291 Byte"
+    "lastUpdate": "2021/09/10 18:55",
+    "size": "338 Byte"
   },
   "vaccination": {
-    "lastUpdate": "2021/09/09 18:45",
-    "size": "14.36 KiB"
+    "lastUpdate": "2021/09/10 18:55",
+    "size": "14.46 KiB"
   }
 }
