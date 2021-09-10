@@ -37,7 +37,7 @@ jobs:
           curl --compressed https://vrs-data.cio.go.jp/vaccination/opendata/latest/prefecture.ndjson -L -o vaccine_data.ndjson
         working-directory: ./default/opendata/data/covid19_ibaraki/
         env:
-          DATA_UPDATE_URL: 'https://script.google.com/macros/s/AKfycbxlWiL900HMVWTJm_VcxOsveTncrOrzKNvBxF2bNHjMBdnEAcW4oD1rvHJHVOkkMSzTmA/exec'
+          DATA_UPDATE_URL: 'https://script.google.com/macros/s/AKfycbyZ3-XdvJLps3lYccK3nMbeuGhgTtQ9P4aeRE8ygMSKquipq0vqqK7fZVfRk5LxLSxBSg/exec'
       - name: Convert Vaccine Data
         run: python ../../../../workflow_tool/opendata/cov19_vaccine_data.py
         working-directory: ./default/opendata/data/covid19_ibaraki
