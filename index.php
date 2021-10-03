@@ -1,6 +1,6 @@
 <?
-	function minetype($filename){
-		$mineType = array(
+	function mimeType($filename){
+		$mimeType = array(
 			"css"=>"text/css",
 			"txt"=>"text/plain",
 			"html"=>"text/html",
@@ -8,12 +8,13 @@
 			"js"=>"text/javascript",
 			"xml"=>"application/xml",
 			"ico"=>"image/vnd.microsoft.icon"
+			"json"=>"application/json"
 		);
 
 		$_ = explode(".", $filename);
 		$ext = $_[count($_)-1];
-		$m = $mineType[$ext];
-		if(!$m){ $m = $mineType["txt"]; }
+		$m = $mimeType[$ext];
+		if(!$m){ $m = $mimeType["txt"]; }
 		header("Content-Type: ".$m."; charset=utf-8");
 		return $m;
 	}
@@ -30,7 +31,7 @@
 			require_once __DIR__."/preparation.html";
 			exit();
 		}
-		$m = minetype($p);
+		$m = mimeType($p);
 		if($m == "text/html"){
 			require_once $p;
 		}
