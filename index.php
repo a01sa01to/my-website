@@ -7,8 +7,13 @@
 			"php"=>"text/html",
 			"js"=>"text/javascript",
 			"xml"=>"application/xml",
-			"ico"=>"image/vnd.microsoft.icon"
-			"json"=>"application/json"
+			"ico"=>"image/vnd.microsoft.icon",
+			"json"=>"application/json",
+			"png"=>"image/png",
+			"gif"=>"image/gif",
+			"jpeg"=>"image/jpeg",
+			"jpg"=>"image/jpeg",
+			"pdf"=>"application/pdf"
 		);
 
 		$_ = explode(".", $filename);
