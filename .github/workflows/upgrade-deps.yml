@@ -60,7 +60,7 @@ jobs:
           yarn upgrade --latest
           yarn install
           yarn build
-          bundle upgrade
+          bundle update
           bundle install
         working-directory: default
       - name: Upgrade deps (kss-blog)
