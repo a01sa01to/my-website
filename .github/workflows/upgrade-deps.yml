@@ -42,29 +42,53 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Install deps (default)
         run: |
+          echo "::group::yarn"
           yarn install --frozen-lockfile
+          echo "::endgroup::"
+          echo "::group::bundle"
           bundle install
+          echo "::endgroup::"
         working-directory: default
       - name: Install deps (kss-blog)
         run: yarn install --frozen-lockfile
         working-directory: kss-new/blog
       - name: Upgrade deps (root)
         run: |
+          echo "::group::Upgrade"
           yarn upgrade --latest
+          echo "::endgroup::"
+          echo "::group::Install"
           yarn install
+          echo "::endgroup::"
       - name: Upgrade deps (default)
         run: |
+          echo "::group::Upgrade (Node)"
           yarn upgrade --latest
+          echo "::endgroup::"
+          echo "::group::Install (Node)"
           yarn install
+          echo "::endgroup::"
+          echo "::group::Build (Node)"
           yarn build
+          echo "::endgroup::"
+          echo "::group::Upgrade (Bundler)"
           bundle update
+          echo "::endgroup::"
+          echo "::group::Install (Bundler)"
           bundle install
+          echo "::endgroup::"
         working-directory: default
       - name: Upgrade deps (kss-blog)
         run: |
+          echo "::group::Upgrade"
           yarn upgrade --latest
+          echo "::endgroup::"
+          echo "::group::Install"
           yarn install
+          echo "::endgroup::"
+          echo "::group::Build"
           yarn build
+          echo "::endgroup::"
         working-directory: kss-new/blog
       - name: Commit files
         run: |
