@@ -1,0 +1,75 @@
+name: Upgrade dependencies
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 毎週日曜の9時に更新
+    - cron: '0 0 * * SUN'
+
+jobs:
+  upgrade:
+    name: Upgrade deps
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Tokyo
+      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+        with:
+          ref: main
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+      - name: Setup Node
+        uses: actions/setup-node@v2
+      - name: Get yarn cache dir
+        id: yarn-cache-dir
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache yarn
+        uses: actions/cache@v2
+        with:
+          path: ${{steps.yarn-cache-dir.outputs.dir}}
+          key: ${{runner.os}}-yarn-${{hashFiles('yarn.lock')}}
+      - name: Cache bundler
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('./default/Gemfile.lock') }}
+      - name: Prepare bundler
+        run: |
+          gem install bundler
+          bundle config path vendor/bundle
+      - name: Install deps
+        run: |
+          yarn install --frozen-lockfile
+          cd default
+          yarn install --frozen-lockfile
+          bundle install
+          cd ..
+          cd kss-new/blog
+          yarn install --frozen-lockfile
+      - name: Upgrade deps
+        run: |
+          yarn upgrade --latest
+          yarn install
+          cd default
+          yarn upgrade --latest
+          yarn install
+          yarn build
+          bundle upgrade
+          bundle install
+          cd ../kss-new/blog
+          yarn upgrade --latest
+          yarn install
+          yarn build
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update Data" -a
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main

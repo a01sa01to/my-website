@@ -6,17 +6,3 @@ updates:
       interval: 'weekly'
     labels:
       - 'dependencies'
-
-  - package-ecosystem: 'npm'
-    directory: '/default/'
-    schedule:
-      interval: 'weekly'
-    labels:
-      - 'dependencies'
-
-  - package-ecosystem: 'bundler'
-    directory: '/default/'
-    schedule:
-      interval: 'weekly'
-    labels:
-      - 'dependencies'
