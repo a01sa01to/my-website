@@ -22,6 +22,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.0.2
+          bundler-cache: true
+        working-directory: default
       - name: Setup Node
         uses: actions/setup-node@v2
       - name: Get yarn cache dir
@@ -32,11 +34,6 @@ jobs:
         with:
           path: ${{steps.yarn-cache-dir.outputs.dir}}
           key: ${{runner.os}}-yarn-${{hashFiles('yarn.lock')}}
-      - name: Cache bundler
-        uses: actions/cache@v2
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gem-${{ hashFiles('./default/Gemfile.lock') }}
       - name: Prepare bundler
         run: |
           gem install bundler
