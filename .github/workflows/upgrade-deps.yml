@@ -20,6 +20,8 @@ jobs:
           ref: main
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0.2
       - name: Setup Node
         uses: actions/setup-node@v2
       - name: Get yarn cache dir
@@ -39,29 +41,34 @@ jobs:
         run: |
           gem install bundler
           bundle config path vendor/bundle
-      - name: Install deps
+      - name: Install deps (root)
+        run: yarn install --frozen-lockfile
+      - name: Install deps (default)
         run: |
           yarn install --frozen-lockfile
-          cd default
-          yarn install --frozen-lockfile
           bundle install
-          cd ..
-          cd kss-new/blog
-          yarn install --frozen-lockfile
-      - name: Upgrade deps
+        working-directory: default
+      - name: Install deps (kss-blog)
+        run: yarn install --frozen-lockfile
+        working-directory: kss-new/blog
+      - name: Upgrade deps (root)
         run: |
           yarn upgrade --latest
           yarn install
-          cd default
+      - name: Upgrade deps (default)
+        run: |
           yarn upgrade --latest
           yarn install
           yarn build
           bundle upgrade
           bundle install
-          cd ../kss-new/blog
+        working-directory: default
+      - name: Upgrade deps (kss-blog)
+        run: |
           yarn upgrade --latest
           yarn install
           yarn build
+        working-directory: kss-new/blog
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"

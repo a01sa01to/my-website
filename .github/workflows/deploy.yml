@@ -21,6 +21,8 @@ jobs:
           ref: main
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0.2
       - name: Cache deps
         uses: actions/cache@v2.1.6
         with:
