@@ -72,6 +72,7 @@ jobs:
           yarn build
           echo "::endgroup::"
           echo "::group::Upgrade (Bundler)"
+          bundle config unset deployment
           bundle update
           echo "::endgroup::"
           echo "::group::Install (Bundler)"
