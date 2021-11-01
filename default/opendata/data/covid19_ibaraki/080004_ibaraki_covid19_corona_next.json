@@ -6,13 +6,13 @@
   "care_rate": 0,
   "new_patients": 2.7,
   "non_closecontact": 1.4,
-  "care": 24,
+  "care": 21,
   "positive_rate": 0.2,
-  "pillar_lastweek": 4,
-  "sickbed_lastweek": 15,
+  "pillar_lastweek": 3,
+  "sickbed_lastweek": 13,
   "care_rate_lastweek": 0,
-  "new_patients_lastweek": 4,
+  "new_patients_lastweek": 3.9,
   "non_closecontact_lastweek": 1,
-  "care_lastweek": 46,
-  "positive_rate_lastweek": 0.4
+  "care_lastweek": 37,
+  "positive_rate_lastweek": 0.3
 }
