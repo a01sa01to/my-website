@@ -2,7 +2,7 @@
   "children": [
     {
       "attr": "陽性者数",
-      "value": 24432,
+      "value": 24433,
       "children": [
         {
           "attr": "療養中",
@@ -32,7 +32,7 @@
         },
         {
           "attr": "回復済",
-          "value": 23801
+          "value": 23802
         },
         {
           "attr": "死亡",
