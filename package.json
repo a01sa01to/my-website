@@ -8,11 +8,11 @@
     "@trivago/prettier-plugin-sort-imports": "^3.1.1",
     "@types/gtag.js": "^0.0.8",
     "@types/jquery": "^3.5.8",
-    "@types/node": "^16.11.7",
+    "@types/node": "^16.11.9",
     "husky": "^7.0.4",
-    "lint-staged": "^12.0.1",
+    "lint-staged": "^12.0.3",
     "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
