@@ -1217,6 +1217,11 @@ signal-exit@^3.0.3:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.5.tgz#9e3e8cc0c75a99472b44321033a7702e7738252f"
   integrity sha512-KWcOiKeQj6ZyXx7zq4YxSMgHRlod4czeBQZrPb8OKcohcqAXShm7E20kEMle9WBt26hFcAf0qLOcp5zmY7kOqQ==
 
+simple-icons@^5.23.0:
+  version "5.23.0"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-5.23.0.tgz#0061520606092efbc3b9d9632aa7b434d71fd0db"
+  integrity sha512-st//CRHenpF5dRs84Ml4j6iir40+eyyfI2Hv2ZEC9B4EJnM3d6uPck8KBZZ+PLGN/GdvfhAaGqZIMQsdoHNf+A==
+
 source-map-support@~0.5.20:
   version "0.5.20"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.20.tgz#12166089f8f5e5e8c56926b377633392dd2cb6c9"

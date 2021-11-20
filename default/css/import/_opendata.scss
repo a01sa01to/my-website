@@ -8,24 +8,6 @@
   border-radius: 5px;
 }
 
-.flex > button.dl::before {
-  padding-right: 8px;
-  font-family: 'Material Icons', sans-serif;
-  content: 'save_alt';
-}
-
-.flex > button.pre::before {
-  padding-right: 8px;
-  font-family: 'Material Icons', sans-serif;
-  content: 'preview';
-}
-
-.flex > button.api::before {
-  padding-right: 8px;
-  font-family: 'Material Icons', sans-serif;
-  content: 'api';
-}
-
 .modal ul {
   padding: initial;
   list-style: circle;
@@ -48,9 +30,9 @@
   max-height: initial;
 }
 
-button span {
-  padding-right: 8px;
-  font-family: 'Material Icons', sans-serif;
+button span.material-icons {
+  padding-right: 0.25em;
+  font-size: 18px;
 }
 
 table {

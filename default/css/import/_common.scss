@@ -212,14 +212,26 @@ iframe.yt {
 
     &.github:hover {
       color: #181717;
+      path {
+        transition: 250ms;
+        fill: #181717;
+      }
     }
 
     &.twitter:hover {
       color: #1da1f2;
+      path {
+        transition: 250ms;
+        fill: #1da1f2;
+      }
     }
 
     &.insta:hover {
       color: #e4405f;
+      path {
+        transition: 250ms;
+        fill: #e4405f;
+      }
     }
   }
 }
