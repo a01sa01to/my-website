@@ -4,15 +4,15 @@
   "pillar": 0,
   "sickbed": 2,
   "care_rate": 0,
-  "new_patients": 0.4,
-  "non_closecontact": 0.4,
-  "care": 7,
-  "positive_rate": 0.1,
+  "new_patients": 0.3,
+  "non_closecontact": 0.3,
+  "care": 6,
+  "positive_rate": 0,
   "pillar_lastweek": 0,
-  "sickbed_lastweek": 6,
+  "sickbed_lastweek": 5,
   "care_rate_lastweek": 0,
   "new_patients_lastweek": 2,
-  "non_closecontact_lastweek": 0.9,
-  "care_lastweek": 20,
-  "positive_rate_lastweek": 0.1
+  "non_closecontact_lastweek": 1,
+  "care_lastweek": 19,
+  "positive_rate_lastweek": 0.2
 }
