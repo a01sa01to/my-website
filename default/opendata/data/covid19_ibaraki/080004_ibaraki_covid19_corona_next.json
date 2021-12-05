@@ -11,8 +11,8 @@
   "pillar_lastweek": 0,
   "sickbed_lastweek": 2,
   "care_rate_lastweek": 0,
-  "new_patients_lastweek": 0.4,
-  "non_closecontact_lastweek": 0.4,
-  "care_lastweek": 7,
-  "positive_rate_lastweek": 0.1
+  "new_patients_lastweek": 0.3,
+  "non_closecontact_lastweek": 0.3,
+  "care_lastweek": 6,
+  "positive_rate_lastweek": 0
 }
