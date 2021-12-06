@@ -9,10 +9,10 @@
   "care": 0,
   "positive_rate": 0,
   "pillar_lastweek": 0,
-  "sickbed_lastweek": 2,
+  "sickbed_lastweek": 1,
   "care_rate_lastweek": 0,
   "new_patients_lastweek": 0.3,
   "non_closecontact_lastweek": 0.3,
-  "care_lastweek": 6,
+  "care_lastweek": 4,
   "positive_rate_lastweek": 0
 }
