@@ -6,15 +6,15 @@
       "children": [
         {
           "attr": "療養中",
-          "value": 13,
+          "value": 11,
           "children": [
             {
               "attr": "重症",
-              "value": 1
+              "value": 0
             },
             {
               "attr": "中等症",
-              "value": 2
+              "value": 1
             },
             {
               "attr": "軽症",
@@ -32,7 +32,7 @@
         },
         {
           "attr": "回復済",
-          "value": 23860
+          "value": 23862
         },
         {
           "attr": "死亡",
