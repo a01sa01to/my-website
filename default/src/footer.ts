@@ -1,6 +1,6 @@
-import $ from 'jquery'
-
-window.addEventListener('DOMContentLoaded', () => {
+// SocialLink Templateリンクを置き換え
+const FooterSocialBtn = async () => {
+  const { default: $ } = await import('jquery')
   $('footer a.sBtn').each(function () {
     let a = $(this).attr('href')
     if (a) {
@@ -9,4 +9,10 @@ window.addEventListener('DOMContentLoaded', () => {
       $(this).attr('href', a)
     }
   })
-})
+}
+
+const footer_ts = async () => {
+  FooterSocialBtn()
+}
+
+export default footer_ts

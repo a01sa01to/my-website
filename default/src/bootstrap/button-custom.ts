@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+const btn_custom = async () => {
   document.querySelectorAll('.btn.btn-custom').forEach((_) => {
     const color = _.getAttribute('data-bgcolor') || 'initial'
     const foreColor = _.getAttribute('data-fgcolor')
@@ -18,4 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
       `${_.getAttribute('style') || ''} color:${color}; border-color:${color};`
     )
   })
-})
+}
+
+export default btn_custom
