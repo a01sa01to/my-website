@@ -3,7 +3,6 @@
   "/.googleconfig",
   "/.nojekyll",
   "/app.yaml",
-  "/bundle.js.LICENSE.txt",
   "/cloudbuild.yaml",
   "/package.json",
   "/server.js",

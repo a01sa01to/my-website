@@ -7,11 +7,10 @@ Allow: img/
 Allow: opendata/
 Allow: sitemap/
 Disallow: src/
+Allow: js/
 
 Allow: about.html
 Disallow: app.yaml
-Allow: bundle.js
-Disallow: bundle.js.LICENSE.txt
 Disallow: cloudbuild.yaml
 Allow: feed.xml
 Allow: index.html

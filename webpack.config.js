@@ -14,10 +14,12 @@ module.exports = {
       },
     ],
   },
-  entry: './src/main.ts',
+  entry: {
+    main: './src/main.ts',
+  },
   output: {
-    path: path.join(__dirname),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'js'),
+    filename: '[name].bundle.js',
   },
   // mode: "development",
   mode: 'production',
