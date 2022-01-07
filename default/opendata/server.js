@@ -23,17 +23,21 @@ exports.opendataRequest = (req, res) => {
         const rows = filecontent.replace(/\r/g, '').split('\n')
         const key = rows[0].split(',')
         rows.splice(0, 1)
-        fileToJson = rows.map((row) => {
-          const _ = row.split(',')
-          const __ = {}
-          for (let i = 0; i < key.length; i++) {
-            if (!isNaN(Number(_[i]))) {
-              _[i] = Number(_[i])
+        fileToJson = rows
+          .filter((row) => row.split(',').length === key.length)
+          .map((row) => {
+            const _ = row.split(',')
+            const __ = {}
+            for (let i = 0; i < key.length; i++) {
+              if (_[i] && Number(_[i]) !== 0 && String(_[i])[0] === '0') {
+                // Do nothing
+              } else if (!isNaN(Number(_[i]))) {
+                _[i] = Number(_[i])
+              }
+              __[key[i]] = _[i]
             }
-            __[key[i]] = _[i]
-          }
-          return __
-        })
+            return __
+          })
       } else {
         fileToJson = JSON.parse(filecontent)
       }
