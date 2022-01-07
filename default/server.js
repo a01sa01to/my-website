@@ -6,6 +6,8 @@ const { opendataRequest } = require('./opendata/server.js')
 const app = express()
 const notAllowed = require('./server_notAllowed.json')
 
+app.set('json spaces', 2)
+
 app.use((req, res) => {
   if (req.hostname.startsWith('www')) {
     res.redirect(301, `https://a01sa01to.com${req.path}`)
