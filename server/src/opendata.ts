@@ -1,9 +1,12 @@
-const fs = require('fs')
-const path = require('path')
+import express from 'express'
+import fs from 'fs'
+import path from 'path'
 
-exports.opendataRequest = (req, res) => {
+const new_dirname = path.join(__dirname, '..', '..')
+
+const opendataRequest = (req: express.Request, res: express.Response) => {
   const c400 = () => {
-    res.status(400).sendFile(path.join(__dirname, '..', `err/400.html`))
+    res.status(400).sendFile(path.join(new_dirname, 'err', '400.html'))
     return
   }
   try {
@@ -14,10 +17,10 @@ exports.opendataRequest = (req, res) => {
     ) {
       // JSONに変換
       const filecontent = fs
-        .readFileSync(path.join(__dirname, '..', req.path))
+        .readFileSync(path.join(new_dirname, req.path))
         .toString()
 
-      let fileToJson
+      let fileToJson: { [key: string]: number | string }[]
 
       if (req.path.endsWith('.csv')) {
         const rows = filecontent.replace(/\r/g, '').split('\n')
@@ -26,17 +29,22 @@ exports.opendataRequest = (req, res) => {
         fileToJson = rows
           .filter((row) => row.split(',').length === key.length)
           .map((row) => {
-            const _ = row.split(',')
-            const __ = {}
+            const eachvalue = row.split(',')
+            const ret: { [key: string]: number | string } = {}
             for (let i = 0; i < key.length; i++) {
-              if (_[i] && Number(_[i]) !== 0 && String(_[i])[0] === '0') {
+              if (
+                eachvalue[i] &&
+                Number(eachvalue[i]) !== 0 &&
+                String(eachvalue[i])[0] === '0'
+              ) {
                 // Do nothing
-              } else if (!isNaN(Number(_[i]))) {
-                _[i] = Number(_[i])
+              } else if (!isNaN(Number(eachvalue[i]))) {
+                ret[key[i]] = Number(eachvalue[i])
+              } else {
+                ret[key[i]] = eachvalue[i]
               }
-              __[key[i]] = _[i]
             }
-            return __
+            return ret
           })
       } else {
         fileToJson = JSON.parse(filecontent)
@@ -44,8 +52,8 @@ exports.opendataRequest = (req, res) => {
 
       // Queryを成形
       if (req.query.filter) {
-        let filt = decodeURIComponent(req.query.filter).split(';')
-        filt = filt.map((f) => {
+        let filtraw = decodeURIComponent(String(req.query.filter)).split(';')
+        let filt = filtraw.map((f) => {
           const __ = f.split('__')
           return {
             type: __[0],
@@ -54,15 +62,15 @@ exports.opendataRequest = (req, res) => {
             val: __.slice(3).join('__'),
           }
         })
-        filt.forEach((_) => {
-          switch (_.type) {
+        filt.forEach((f) => {
+          switch (f.type) {
             case 'key':
               // array形式
-              _.key = JSON.parse(_.key)
+              const keys: string[] = JSON.parse(f.key)
               const tmp = []
               for (let i = 0; i < fileToJson.length; i++) {
-                const tmp_obj = {}
-                _.key.forEach((key) => {
+                const tmp_obj: { [key: string]: string | number } = {}
+                keys.forEach((key) => {
                   tmp_obj[key] = fileToJson[i][key]
                 })
                 tmp.push(tmp_obj)
@@ -70,13 +78,13 @@ exports.opendataRequest = (req, res) => {
               fileToJson = tmp
               break
             case 'date':
-              if (_.mode === 'from') {
+              if (f.mode === 'from') {
                 fileToJson = fileToJson.filter(
-                  (__) => new Date(__[_.key]) >= new Date(_.val)
+                  (data) => new Date(data[f.key]) >= new Date(f.val)
                 )
-              } else if (_.mode === 'to') {
+              } else if (f.mode === 'to') {
                 fileToJson = fileToJson.filter(
-                  (__) => new Date(__[_.key]) <= new Date(_.val)
+                  (data) => new Date(data[f.key]) <= new Date(f.val)
                 )
               } else {
                 c400()
@@ -84,13 +92,13 @@ exports.opendataRequest = (req, res) => {
               }
               break
             case 'num':
-              if (_.mode === 'over') {
+              if (f.mode === 'over') {
                 fileToJson = fileToJson.filter(
-                  (__) => Number(__[_.key]) >= Number(_.val)
+                  (data) => Number(data[f.key]) >= Number(f.val)
                 )
-              } else if (_.mode === 'under') {
+              } else if (f.mode === 'under') {
                 fileToJson = fileToJson.filter(
-                  (__) => Number(__[_.key]) <= Number(_.val)
+                  (data) => Number(data[f.key]) <= Number(f.val)
                 )
               } else {
                 c400()
@@ -98,10 +106,10 @@ exports.opendataRequest = (req, res) => {
               }
               break
             case 'str':
-              if (_.mode === 'eq') {
-                fileToJson = fileToJson.filter((__) => __[_.key] === _.val)
-              } else if (_.mode === 'ne') {
-                fileToJson = fileToJson.filter((__) => __[_.key] !== _.val)
+              if (f.mode === 'eq') {
+                fileToJson = fileToJson.filter((data) => data[f.key] === f.val)
+              } else if (f.mode === 'ne') {
+                fileToJson = fileToJson.filter((data) => data[f.key] !== f.val)
               } else {
                 c400()
                 return
@@ -117,10 +125,14 @@ exports.opendataRequest = (req, res) => {
       return
     }
 
-    res.sendFile(path.join(__dirname, '..', req.path))
+    if (fs.existsSync(path.join(new_dirname, req.path)))
+      res.sendFile(path.join(new_dirname, req.path))
+    else res.status(404).sendFile(path.join(new_dirname, 'err', '404.html'))
   } catch (e) {
     console.error(e)
     c400()
   }
   return
 }
+
+export { opendataRequest }
