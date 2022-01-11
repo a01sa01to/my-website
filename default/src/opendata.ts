@@ -79,7 +79,7 @@ const PreviewOpendata = async (filepath: string, filefull: string) => {
     editor.clearSelection()
 
     // gtagに送信
-    gtag('event', 'opendata', {
+    gtag('event', 'opendata_preview', {
       mode: 'preview',
       file: filefull,
     })
@@ -101,7 +101,7 @@ const DownloadOpendata = async (
     a.remove()
 
     // gtagに送信
-    gtag('event', 'opendata', {
+    gtag('event', 'opendata_download', {
       mode: 'download',
       file: filefull,
     })
