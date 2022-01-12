@@ -1,19 +1,12 @@
-'use strict'
-var __importDefault =
-  (this && this.__importDefault) ||
-  function (mod) {
-    return mod && mod.__esModule ? mod : { default: mod }
-  }
-Object.defineProperty(exports, '__esModule', { value: true })
-exports.opendataRequest = void 0
-const fs_1 = __importDefault(require('fs'))
-const path_1 = __importDefault(require('path'))
-const new_dirname = path_1.default.join(__dirname, '..', '..')
-const opendataRequest = (req, res) => {
+import express from 'express'
+import fs from 'fs'
+import path from 'path'
+
+const new_dirname = path.join(__dirname, '..', '..')
+
+const opendataRequest_old = (req: express.Request, res: express.Response) => {
   const c400 = () => {
-    res
-      .status(400)
-      .sendFile(path_1.default.join(new_dirname, 'err', '400.html'))
+    res.status(400).sendFile(path.join(new_dirname, 'err', '400.html'))
     return
   }
   try {
@@ -23,10 +16,12 @@ const opendataRequest = (req, res) => {
       req.path.endsWith('.json')
     ) {
       // JSONに変換
-      const filecontent = fs_1.default
-        .readFileSync(path_1.default.join(new_dirname, req.path))
+      const filecontent = fs
+        .readFileSync(path.join(new_dirname, req.path))
         .toString()
-      let fileToJson
+
+      let fileToJson: { [key: string]: number | string }[]
+
       if (req.path.endsWith('.csv')) {
         const rows = filecontent.replace(/\r/g, '').split('\n')
         const key = rows[0].split(',')
@@ -35,7 +30,7 @@ const opendataRequest = (req, res) => {
           .filter((row) => row.split(',').length === key.length)
           .map((row) => {
             const eachvalue = row.split(',')
-            const ret = {}
+            const ret: { [key: string]: number | string } = {}
             for (let i = 0; i < key.length; i++) {
               if (
                 eachvalue[i] &&
@@ -54,6 +49,7 @@ const opendataRequest = (req, res) => {
       } else {
         fileToJson = JSON.parse(filecontent)
       }
+
       // Queryを成形
       if (req.query.filter) {
         let filtraw = decodeURIComponent(String(req.query.filter)).split(';')
@@ -70,10 +66,10 @@ const opendataRequest = (req, res) => {
           switch (f.type) {
             case 'key':
               // array形式
-              const keys = JSON.parse(f.key)
+              const keys: string[] = JSON.parse(f.key)
               const tmp = []
               for (let i = 0; i < fileToJson.length; i++) {
-                const tmp_obj = {}
+                const tmp_obj: { [key: string]: string | number } = {}
                 keys.forEach((key) => {
                   tmp_obj[key] = fileToJson[i][key]
                 })
@@ -128,16 +124,15 @@ const opendataRequest = (req, res) => {
       res.json(fileToJson)
       return
     }
-    if (fs_1.default.existsSync(path_1.default.join(new_dirname, req.path)))
-      res.sendFile(path_1.default.join(new_dirname, req.path))
-    else
-      res
-        .status(404)
-        .sendFile(path_1.default.join(new_dirname, 'err', '404.html'))
+
+    if (fs.existsSync(path.join(new_dirname, req.path)))
+      res.sendFile(path.join(new_dirname, req.path))
+    else res.status(404).sendFile(path.join(new_dirname, 'err', '404.html'))
   } catch (e) {
     console.error(e)
     c400()
   }
   return
 }
-exports.opendataRequest = opendataRequest
+
+export { opendataRequest_old }
