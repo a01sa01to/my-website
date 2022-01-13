@@ -3,7 +3,8 @@ import fs from 'fs'
 import path from 'path'
 
 import notAllowed from './notAllowed'
-import { opendataRequest } from './opendata'
+import opendataRequest from './opendata/main'
+import { opendataRequest_old } from './opendata_old'
 
 const port = process.env.PORT || 3000
 const app = express()
@@ -27,6 +28,11 @@ app.use((req: express.Request, res: express.Response) => {
   }
 
   if (req.path.includes('opendata/data/')) {
+    opendataRequest_old(req, res)
+    return
+  }
+
+  if (req.path.includes('opendata/api/')) {
     opendataRequest(req, res)
     return
   }
@@ -45,11 +51,24 @@ app.use((req: express.Request, res: express.Response) => {
       return
     }
   }
+
   res.sendFile(path.join(new_dirname, req.path))
 })
 
 interface HTTPError {
   statusCode: number
+}
+
+const ReturnError = (
+  err: HTTPError,
+  req: express.Request,
+  res: express.Response,
+  next: express.NextFunction
+) => {
+  console.error(err)
+  res
+    .status(err.statusCode)
+    .sendFile(path.join(new_dirname, `err/${err.statusCode}.html`))
 }
 
 app.use(
@@ -58,12 +77,9 @@ app.use(
     req: express.Request,
     res: express.Response,
     next: express.NextFunction
-  ) => {
-    console.error(err)
-    res
-      .status(err.statusCode)
-      .sendFile(path.join(new_dirname, `err/${err.statusCode}.html`))
-  }
+  ) => ReturnError(err, req, res, next)
 )
 
 app.listen(port, () => console.log(`Listening on ${port}`))
+
+export { ReturnError }
