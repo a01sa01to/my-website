@@ -14,14 +14,14 @@ const applyCursorsToData = (
     const afterIndex = allData.findIndex(
       (item) => JSON.stringify(item) === JSON.stringify(afterData)
     )
-    if (afterIndex > 0) data.splice(0, afterIndex + 1)
+    if (afterIndex >= 0) data.splice(0, afterIndex + 1)
   }
   if (before) {
     const beforeData = JSON.parse(Buffer.from(before, 'base64').toString())
     const beforeIndex = allData.findIndex(
       (item) => JSON.stringify(item) === JSON.stringify(beforeData)
     )
-    if (beforeIndex > 0) data.splice(beforeIndex)
+    if (beforeIndex >= 0) data.splice(beforeIndex)
   }
   return data
 }
@@ -36,15 +36,19 @@ const dataToReturn = (
   const data = applyCursorsToData(allData, before, after)
   if (first) {
     if (first < 0) throw new Error('first must be greater than 0')
-    if (data.length < first)
-      throw new Error('first must be less than or equal to data.length')
-    data.splice(first)
+    if (data.length < first) {
+      // do nothing
+    } else {
+      data.splice(first)
+    }
   }
   if (last) {
     if (last < 0) throw new Error('last must be greater than 0')
-    if (data.length < last)
-      throw new Error('last must be less than or equal to data.length')
-    data.splice(0, data.length - last)
+    if (data.length < last) {
+      // do nothing
+    } else {
+      data.splice(0, data.length - last)
+    }
   }
   return data
 }
