@@ -78,7 +78,7 @@ const getData = () => {
         )
       )
       .toString()
-    const json_data: { [key: string]: string | number } =
+    const json_data: { [key: string]: string | number | null } =
       JSON.parse(filecontent)
     json_data['move_date'] = str2date(json_data['moveDate'] as string)
     delete json_data['moveDate']

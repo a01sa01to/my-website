@@ -760,6 +760,7 @@ type Cov19Ibk_Patients_dataset {
   """
   発症日
   `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  指定がない場合、`null` が返されます。
   """
   onset_date: String
   """

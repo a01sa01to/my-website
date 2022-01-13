@@ -97,7 +97,7 @@ type PaginationReturnType = {
 
 const PaginationFn = (
   allData: any[],
-  last_update: string,
+  last_update: string | null,
   before?: string,
   after?: string,
   first?: number,
