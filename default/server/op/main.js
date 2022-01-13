@@ -5,11 +5,13 @@ var __importDefault =
     return mod && mod.__esModule ? mod : { default: mod }
   }
 Object.defineProperty(exports, '__esModule', { value: true })
+exports.ReturnError = void 0
 const express_1 = __importDefault(require('express'))
 const fs_1 = __importDefault(require('fs'))
 const path_1 = __importDefault(require('path'))
 const notAllowed_1 = __importDefault(require('./notAllowed'))
-const opendata_1 = require('./opendata')
+const main_1 = __importDefault(require('./opendata/main'))
+const opendata_old_1 = require('./opendata_old')
 const port = process.env.PORT || 3000
 const app = (0, express_1.default)()
 const new_dirname = path_1.default.join(__dirname, '..', '..')
@@ -27,7 +29,11 @@ app.use((req, res) => {
     }
   }
   if (req.path.includes('opendata/data/')) {
-    ;(0, opendata_1.opendataRequest)(req, res)
+    ;(0, opendata_old_1.opendataRequest_old)(req, res)
+    return
+  }
+  if (req.path.includes('opendata/api/')) {
+    ;(0, main_1.default)(req, res)
     return
   }
   if (!req.path.includes('.')) {
@@ -49,10 +55,12 @@ app.use((req, res) => {
   }
   res.sendFile(path_1.default.join(new_dirname, req.path))
 })
-app.use((err, req, res, next) => {
+const ReturnError = (err, req, res, next) => {
   console.error(err)
   res
     .status(err.statusCode)
     .sendFile(path_1.default.join(new_dirname, `err/${err.statusCode}.html`))
-})
+}
+exports.ReturnError = ReturnError
+app.use((err, req, res, next) => ReturnError(err, req, res, next))
 app.listen(port, () => console.log(`Listening on ${port}`))

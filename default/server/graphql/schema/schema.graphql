@@ -1,0 +1,1087 @@
+schema {
+  query: Query
+}
+
+# ----- Base ----- #
+
+type Query {
+  """
+  茨城県 新型コロナウイルス感染症 のデータ
+  """
+  covid19_ibaraki: Covid19_ibaraki
+}
+
+# ----- Pagination ----- #
+
+"""
+Paginationの際に必要となる情報
+"""
+type PageInfo {
+  """
+  Pagination: 前のページがあるか
+  """
+  hasPreviousPage: Boolean!
+  """
+  Pagination: 次のページがあるか
+  """
+  hasNextPage: Boolean!
+  """
+  Pagination: 現在のページの最初のCursor
+  """
+  startCursor: String!
+  """
+  Pagination: 現在のページの最後のCursor
+  """
+  endCursor: String!
+}
+
+# ----- Cov19_ibaraki ----- #
+
+"""
+茨城県 新型コロナウイルス感染症 のデータ
+"""
+type Covid19_ibaraki {
+  """
+  受診相談窓口における相談件数
+  """
+  call_center(
+    """
+    Pagination: 指定されたcursorより前のデータを取得
+    """
+    before: String
+    """
+    Pagination: 指定されたcursorより後のデータを取得
+    """
+    after: String
+    """
+    Pagination: 前から順番に取得するデータの件数
+    """
+    first: Int
+    """
+    Pagination: 後ろから順番に取得するデータの件数
+    """
+    last: Int
+  ): Cov19Ibk_CallCenter
+
+  """
+  茨城版コロナNextの指標
+  """
+  corona_next: Cov19Ibk_CoronaNext
+
+  """
+  死亡者属性
+  """
+  death_attributes(
+    """
+    Pagination: 指定されたcursorより前のデータを取得
+    """
+    before: String
+    """
+    Pagination: 指定されたcursorより後のデータを取得
+    """
+    after: String
+    """
+    Pagination: 前から順番に取得するデータの件数
+    """
+    first: Int
+    """
+    Pagination: 後ろから順番に取得するデータの件数
+    """
+    last: Int
+  ): Cov19Ibk_DeathAttributes
+
+  """
+  死亡確認数
+  """
+  death_number(
+    """
+    Pagination: 指定されたcursorより前のデータを取得
+    """
+    before: String
+    """
+    Pagination: 指定されたcursorより後のデータを取得
+    """
+    after: String
+    """
+    Pagination: 前から順番に取得するデータの件数
+    """
+    first: Int
+    """
+    Pagination: 後ろから順番に取得するデータの件数
+    """
+    last: Int
+  ): Cov19Ibk_DeathNumber
+
+  """
+  検査実施件数（県全体）
+  """
+  inspections_summary: Cov19Ibk_InspectionsSummary
+
+  """
+  変異株陽性者数
+  """
+  mutant_positive_number(
+    """
+    Pagination: 指定されたcursorより前のデータを取得
+    """
+    before: String
+    """
+    Pagination: 指定されたcursorより後のデータを取得
+    """
+    after: String
+    """
+    Pagination: 前から順番に取得するデータの件数
+    """
+    first: Int
+    """
+    Pagination: 後ろから順番に取得するデータの件数
+    """
+    last: Int
+  ): Cov19Ibk_MutantPositiveNumber
+
+  """
+  変異株検査実施件数
+  """
+  mutant_test_people(
+    """
+    Pagination: 指定されたcursorより前のデータを取得
+    """
+    before: String
+    """
+    Pagination: 指定されたcursorより後のデータを取得
+    """
+    after: String
+    """
+    Pagination: 前から順番に取得するデータの件数
+    """
+    first: Int
+    """
+    Pagination: 後ろから順番に取得するデータの件数
+    """
+    last: Int
+  ): Cov19Ibk_MutantTestPeople
+
+  """
+  陽性患者属性
+  """
+  patients(
+    """
+    Pagination: 指定されたcursorより前のデータを取得
+    """
+    before: String
+    """
+    Pagination: 指定されたcursorより後のデータを取得
+    """
+    after: String
+    """
+    Pagination: 前から順番に取得するデータの件数
+    """
+    first: Int
+    """
+    Pagination: 後ろから順番に取得するデータの件数
+    """
+    last: Int
+  ): Cov19Ibk_Patients
+
+  """
+  陽性確認数
+  """
+  positive_number(
+    """
+    Pagination: 指定されたcursorより前のデータを取得
+    """
+    before: String
+    """
+    Pagination: 指定されたcursorより後のデータを取得
+    """
+    after: String
+    """
+    Pagination: 前から順番に取得するデータの件数
+    """
+    first: Int
+    """
+    Pagination: 後ろから順番に取得するデータの件数
+    """
+    last: Int
+  ): Cov19Ibk_PositiveNumber
+
+  """
+  回復確認数
+  """
+  recovered_number(
+    """
+    Pagination: 指定されたcursorより前のデータを取得
+    """
+    before: String
+    """
+    Pagination: 指定されたcursorより後のデータを取得
+    """
+    after: String
+    """
+    Pagination: 前から順番に取得するデータの件数
+    """
+    first: Int
+    """
+    Pagination: 後ろから順番に取得するデータの件数
+    """
+    last: Int
+  ): Cov19Ibk_RecoveredNumber
+
+  """
+  陽性者の状況
+  """
+  summary: Cov19Ibk_Summary
+
+  """
+  検査実施件数（県衛生研究所・水戸市保健所実施分）
+  """
+  test_people(
+    """
+    Pagination: 指定されたcursorより前のデータを取得
+    """
+    before: String
+    """
+    Pagination: 指定されたcursorより後のデータを取得
+    """
+    after: String
+    """
+    Pagination: 前から順番に取得するデータの件数
+    """
+    first: Int
+    """
+    Pagination: 後ろから順番に取得するデータの件数
+    """
+    last: Int
+  ): Cov19Ibk_TestPeople
+
+  """
+  ワクチン接種状況
+  """
+  vaccination(
+    """
+    Pagination: 指定されたcursorより前のデータを取得
+    """
+    before: String
+    """
+    Pagination: 指定されたcursorより後のデータを取得
+    """
+    after: String
+    """
+    Pagination: 前から順番に取得するデータの件数
+    """
+    first: Int
+    """
+    Pagination: 後ろから順番に取得するデータの件数
+    """
+    last: Int
+  ): Cov19Ibk_Vaccination
+}
+
+"""
+受診相談窓口における相談件数のデータセット
+"""
+type Cov19Ibk_CallCenter_dataset {
+  """
+  受付の日付
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  date: String!
+  """
+  全国地方公共団体コード
+  Ref: https://www.soumu.go.jp/denshijiti/code.html
+  """
+  government_code: String!
+  """
+  都道府県名
+  `茨城県` が返されます。
+  """
+  prefecture: String!
+  """
+  市区町村名
+  特に指定がない場合、`null` が返されます
+  """
+  city: String
+  """
+  相談件数
+  """
+  value: Int!
+}
+
+"""
+受診相談窓口における相談件数
+"""
+type Cov19Ibk_CallCenter {
+  """
+  データセット
+  """
+  dataset: [Cov19Ibk_CallCenter_dataset]
+  """
+  Paginationの際に必要となる情報
+  """
+  pageinfo: PageInfo!
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+}
+
+"""
+茨城版コロナNextの指標（現在は用いられていない指標も含む）
+"""
+type Cov19Ibk_CoronaNext {
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+  """
+  現在の対策Stage（1～4）
+  """
+  stage: Int!
+  """
+  現在の対策Stageに移行した日付
+  """
+  move_date: String!
+  """
+  重症病床稼働数
+  """
+  severe: Int!
+  """
+  病床稼働数
+  """
+  sickbed: Int!
+  """
+  入院率
+  """
+  care_rate: Float!
+  """
+  直近1週間の新規陽性者数 合計
+  """
+  new_patients: Float!
+  """
+  直近1週間の新規陽性者数のうち、濃厚接触者ではない人数 合計
+  """
+  non_closecontact: Float!
+  """
+  療養者数
+  """
+  care: Int!
+  """
+  陽性率
+  """
+  positive_rate: Float!
+  """
+  1週間前の、重症病床稼働数
+  """
+  severe_lastweek: Int!
+  """
+  1週間前の、病床稼働数
+  """
+  sickbed_lastweek: Int!
+  """
+  1週間前の、入院率
+  """
+  care_rate_lastweek: Float!
+  """
+  1週間前の、直近1週間の新規陽性者数 合計
+  """
+  new_patients_lastweek: Float!
+  """
+  1週間前の、直近1週間の新規陽性者数のうち、濃厚接触者ではない人数 合計
+  """
+  non_closecontact_lastweek: Float!
+  """
+  1週間前の、療養者数
+  """
+  care_lastweek: Int!
+  """
+  1週間前の、陽性率
+  """
+  positive_rate_lastweek: Float!
+}
+
+"""
+死亡者属性のデータセット
+"""
+type Cov19Ibk_DeathAttributes_dataset {
+  """
+  番号
+  """
+  no: Int!
+  """
+  全国地方公共団体コード
+  Ref: https://www.soumu.go.jp/denshijiti/code.html
+  """
+  government_code: String!
+  """
+  都道府県名
+  `茨城県` が返されます。
+  """
+  prefecture: String!
+  """
+  市区町村名
+  特に指定がない場合、`null` が返されます
+  """
+  city: String
+  """
+  公表日
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  date: String!
+  """
+  年代
+  """
+  age: String!
+  """
+  性別
+  """
+  gender: String!
+}
+
+"""
+死亡者属性
+"""
+type Cov19Ibk_DeathAttributes {
+  """
+  データセット
+  """
+  dataset: [Cov19Ibk_DeathAttributes_dataset]
+  """
+  Paginationの際に必要となる情報
+  """
+  pageinfo: PageInfo!
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+}
+
+"""
+死亡確認数のデータセット
+"""
+type Cov19Ibk_DeathNumber_dataset {
+  """
+  公表日
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  date: String!
+  """
+    全国地方公共団体コード
+    Ref: https://www.soumu.go.jp/denshijiti/code.html
+  Ref: https://www.soumu.go.jp/denshijiti/code.html
+  """
+  government_code: String!
+  """
+  都道府県名
+  `茨城県` が返されます。
+  """
+  prefecture: String!
+  """
+  市区町村名
+  特に指定がない場合、`null` が返されます
+  """
+  city: String
+  """
+  死亡確認数
+  """
+  value: Int!
+}
+
+"""
+死亡確認数
+"""
+type Cov19Ibk_DeathNumber {
+  """
+  データセット
+  """
+  dataset: [Cov19Ibk_DeathNumber_dataset]
+  """
+  Paginationの際に必要となる情報
+  """
+  pageinfo: PageInfo!
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+}
+
+"""
+検査実施件数（県全体）のデータセット
+"""
+type Cov19Ibk_InspectionsSummary_dataset {
+  """
+  実施検査機関名
+  """
+  label: String!
+  """
+  検査実施件数
+  """
+  data: Int!
+}
+
+"""
+検査実施件数（県全体）
+"""
+type Cov19Ibk_InspectionsSummary {
+  """
+  データの日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  data_date: String!
+  """
+  データセット
+  """
+  datasets: [Cov19Ibk_InspectionsSummary_dataset]
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+}
+
+"""
+変異株陽性者数のデータセット（年代別）
+"""
+type Cov19Ibk_MutantPositiveNumber_dataset_byage {
+  """
+  20代以下の数
+  """
+  under_twenties: Int!
+  """
+  30代の数
+  """
+  thirties: Int!
+  """
+  40代の数
+  """
+  fourties: Int!
+  """
+  50代の数
+  """
+  fifties: Int!
+  """
+  60代の数
+  """
+  sixties: Int!
+  """
+  70代の数
+  """
+  seventies: Int!
+  """
+  80代の数
+  """
+  eighties: Int!
+  """
+  90代の数
+  """
+  nineties: Int!
+  """
+  100歳以上の数
+  """
+  over_hundred: Int!
+  """
+  不明者数
+  """
+  unknown: Int!
+}
+
+"""
+変異株陽性者数のデータセット（性別）
+"""
+type Cov19Ibk_MutantPositiveNumber_dataset_bygender {
+  """
+  男性の数
+  """
+  male: Int!
+  """
+  女性の数
+  """
+  female: Int!
+  """
+  不明者数
+  """
+  unknown: Int!
+}
+
+"""
+変異株陽性者数のデータセット
+"""
+type Cov19Ibk_MutantPositiveNumber_dataset {
+  """
+  公表日
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  date: String!
+  """
+  全国地方公共団体コード
+  Ref: https://www.soumu.go.jp/denshijiti/code.html
+  """
+  government_code: String!
+  """
+  都道府県名
+  `茨城県` が返されます。
+  """
+  prefecture: String!
+  """
+  市区町村名
+  特に指定がない場合、`null` が返されます
+  """
+  city: String
+  """
+  合計数
+  """
+  total: Int!
+  """
+  変異株名
+  """
+  strain_name: String!
+  """
+  年代別
+  """
+  by_age: Cov19Ibk_MutantPositiveNumber_dataset_byage
+  """
+  性別
+  """
+  by_gender: Cov19Ibk_MutantPositiveNumber_dataset_bygender
+}
+
+"""
+変異株陽性者数のデータセット
+"""
+type Cov19Ibk_MutantPositiveNumber {
+  """
+  データセット
+  """
+  dataset: [Cov19Ibk_MutantPositiveNumber_dataset]
+  """
+  Paginationの際に必要となる情報
+  """
+  pageinfo: PageInfo!
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+}
+
+"""
+変異株検査実施件数のデータセット
+"""
+type Cov19Ibk_MutantTestPeople_dataset {
+  """
+  検査実施期間 始点
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  date_from: String!
+  """
+  検査実施期間 終点
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  date_to: String!
+  """
+  全国地方公共団体コード
+  Ref: https://www.soumu.go.jp/denshijiti/code.html
+  """
+  government_code: String!
+  """
+  都道府県名
+  `茨城県` が返されます。
+  """
+  prefecture: String!
+  """
+  市区町村名
+  特に指定がない場合、`null` が返されます
+  """
+  city: String
+  """
+  検査実施件数
+  """
+  tested: Int!
+  """
+  陽性件数
+  """
+  positive: Int!
+  """
+  変異株名
+  """
+  strain_name: String!
+}
+
+"""
+変異株検査実施件数
+"""
+type Cov19Ibk_MutantTestPeople {
+  """
+  データセット
+  """
+  dataset: [Cov19Ibk_MutantTestPeople_dataset]
+  """
+  Paginationの際に必要となる情報
+  """
+  pageinfo: PageInfo!
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+}
+
+"""
+陽性患者属性のデータセット
+"""
+type Cov19Ibk_Patients_dataset {
+  """
+  番号
+  """
+  no: Int!
+  """
+  全国地方公共団体コード
+  Ref: https://www.soumu.go.jp/denshijiti/code.html
+  """
+  government_code: String!
+  """
+  都道府県名
+  `茨城県` が返されます。
+  """
+  prefecture: String!
+  """
+  市区町村名
+  特に指定がない場合、`null` が返されます
+  """
+  city: String
+  """
+  公表日
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  publish_date: String!
+  """
+  発症日
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  onset_date: String
+  """
+  居住地
+  """
+  address: String!
+  """
+  年代
+  """
+  age: String!
+  """
+  性別
+  """
+  gender: String!
+  """
+  職業
+  """
+  occupation: String
+  """
+  公表時の状態
+  """
+  status: String
+  """
+  公表時の症状
+  """
+  symptoms: String
+  """
+  海外渡航歴があるかどうか
+  """
+  travel_abroad_history: Boolean!
+  """
+  濃厚接触者かどうか
+  """
+  close_contact: Boolean!
+  """
+  検査方法
+  """
+  test_method: String
+  """
+  備考
+  """
+  note: String
+}
+
+"""
+陽性患者属性
+"""
+type Cov19Ibk_Patients {
+  """
+  データセット
+  """
+  dataset: [Cov19Ibk_Patients_dataset]
+  """
+  Paginationの際に必要となる情報
+  """
+  pageinfo: PageInfo!
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+}
+
+"""
+陽性確認数のデータセット
+"""
+type Cov19Ibk_PositiveNumber_dataset {
+  """
+  公表日
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  date: String!
+  """
+  全国地方公共団体コード
+  Ref: https://www.soumu.go.jp/denshijiti/code.html
+  """
+  government_code: String!
+  """
+  都道府県名
+  `茨城県` が返されます。
+  """
+  prefecture: String!
+  """
+  市区町村名
+  特に指定がない場合、`null` が返されます
+  """
+  city: String
+  """
+  陽性者数
+  """
+  positive: Int!
+  """
+  陽性者数のうち、濃厚接触者数
+  """
+  close_contact: Int!
+}
+
+"""
+陽性確認数
+"""
+type Cov19Ibk_PositiveNumber {
+  """
+  データセット
+  """
+  dataset: [Cov19Ibk_PositiveNumber_dataset]
+  """
+  Paginationの際に必要となる情報
+  """
+  pageinfo: PageInfo!
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+}
+
+"""
+回復確認数のデータセット
+"""
+type Cov19Ibk_RecoveredNumber_dataset {
+  """
+  公表日
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  date: String!
+  """
+  全国地方公共団体コード
+  Ref: https://www.soumu.go.jp/denshijiti/code.html
+  """
+  government_code: String!
+  """
+  都道府県名
+  `茨城県` が返されます。
+  """
+  prefecture: String!
+  """
+  市区町村名
+  特に指定がない場合、`null` が返されます
+  """
+  city: String
+  """
+  回復確認数
+  """
+  value: Int!
+}
+
+"""
+回復確認数
+"""
+type Cov19Ibk_RecoveredNumber {
+  """
+  データセット
+  """
+  dataset: [Cov19Ibk_RecoveredNumber_dataset]
+  """
+  Paginationの際に必要となる情報
+  """
+  pageinfo: PageInfo!
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+}
+
+"""
+陽性者の状況
+"""
+type Cov19Ibk_Summary {
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+  """
+  累計陽性者数
+  """
+  total: Int!
+  """
+  現在療養中の人数
+  """
+  care: Int!
+  """
+  現在療養中で、入院中の人数
+  """
+  hospitalized: Int!
+  """
+  現在療養中・入院中で、重症の人数
+  """
+  severe: Int!
+  """
+  現在療養中・入院中で、中等症の人数
+  """
+  moderate: Int!
+  """
+  現在療養中・入院中で、軽症の人数
+  """
+  light: Int!
+  """
+  現在療養中で、自宅療養の人数
+  """
+  home: Int!
+  """
+  現在療養中で、宿泊療養の人数
+  """
+  hotel: Int!
+  """
+  回復者数
+  """
+  recovered: Int!
+  """
+  死亡者数
+  """
+  death: Int!
+  """
+  その他の人数（県外で療養中・回復の方など）
+  """
+  other: Int!
+}
+
+"""
+# 検査実施件数（県衛生研究所・水戸市保健所実施分）のデータセット
+"""
+type Cov19Ibk_TestPeople_dataset {
+  """
+  実施日
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  date: String!
+  """
+  全国地方公共団体コード
+  Ref: https://www.soumu.go.jp/denshijiti/code.html
+  """
+  government_code: String!
+  """
+  都道府県名
+  `茨城県` が返されます。
+  """
+  prefecture: String!
+  """
+  市区町村名
+  特に指定がない場合、`null` が返されます
+  """
+  city: String
+  """
+  検査実施件数
+  """
+  value: Int!
+}
+
+"""
+検査実施件数（県衛生研究所・水戸市保健所実施分）
+"""
+type Cov19Ibk_TestPeople {
+  """
+  データセット
+  """
+  dataset: [Cov19Ibk_TestPeople_dataset]
+  """
+  Paginationの際に必要となる情報
+  """
+  pageinfo: PageInfo!
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+}
+
+"""
+ワクチン接種状況のデータセット
+"""
+type Cov19Ibk_Vaccination_dataset {
+  """
+  接種日
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  date: String!
+  """
+  全国地方公共団体コード
+  Ref: https://www.soumu.go.jp/denshijiti/code.html
+  """
+  government_code: String!
+  """
+  都道府県名
+  `茨城県` が返されます。
+  """
+  prefecture: String!
+  """
+  市区町村名
+  特に指定がない場合、`null` が返されます
+  """
+  city: String
+  """
+  接種者数
+  """
+  total: Int!
+  """
+  1回目接種
+  """
+  first: Int!
+  """
+  2回目接種
+  """
+  second: Int!
+}
+
+"""
+ワクチン接種状況
+"""
+type Cov19Ibk_Vaccination {
+  """
+  データセット
+  """
+  dataset: [Cov19Ibk_Vaccination_dataset]
+  """
+  Paginationの際に必要となる情報
+  """
+  pageinfo: PageInfo!
+  """
+  最終更新日時
+  `YYYY`-`MM`-`DD`T`HH`:`mm`:`ss`.`ミリ秒`+09:00 の形式です。
+  """
+  last_update: String!
+}
