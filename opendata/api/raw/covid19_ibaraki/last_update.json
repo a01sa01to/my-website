@@ -1,15 +1,1 @@
-{
-  "lastUpdate": "2022/01/13 18:15",
-  "patients": "2022/01/13 18:15",
-  "test_people": "2022/01/11 17:50",
-  "mutant_test_people": "2022/01/11 17:50",
-  "call_center": "2021/07/16 18:30",
-  "mutant_positive": "2022/01/11 17:50",
-  "positive_number": "2022/01/13 18:15",
-  "recovered_number": "2022/01/13 18:15",
-  "death_number": "2022/01/13 18:15",
-  "death_attr": "2021/11/17 17:25",
-  "inspections_summary": "2022/01/05 18:00",
-  "main_summary": "2022/01/13 18:15",
-  "corona_next": "2022/01/13 18:15"
-}
+{"lastUpdate":"2022/01/14 19:35","patients":"2022/01/14 19:35","test_people":"2022/01/11 17:50","mutant_test_people":"2022/01/11 17:50","call_center":"2021/07/16 18:30","mutant_positive":"2022/01/11 17:50","positive_number":"2022/01/14 19:35","recovered_number":"2022/01/14 19:35","death_number":"2022/01/14 19:35","death_attr":"2021/11/17 17:25","inspections_summary":"2022/01/14 19:35","main_summary":"2022/01/14 19:35","corona_next":"2022/01/14 19:35"}
