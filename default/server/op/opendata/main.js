@@ -29,7 +29,7 @@ const opendataRequest = (req, res) => {
     }
     (0, express_graphql_1.graphqlHTTP)({
         schema: schema,
-        graphiql: true,
+        graphiql: false,
         rootValue: root,
         pretty: true,
     })(req, res);

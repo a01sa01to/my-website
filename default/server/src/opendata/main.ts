@@ -40,7 +40,7 @@ const opendataRequest = (req: express.Request, res: express.Response) => {
 
   graphqlHTTP({
     schema: schema,
-    graphiql: true,
+    graphiql: false,
     rootValue: root,
     pretty: true,
   })(req, res)
