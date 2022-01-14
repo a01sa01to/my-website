@@ -11,7 +11,8 @@ const opendata_basepath = path.join(
   '..',
   '..',
   'opendata',
-  'data',
+  'api',
+  'raw',
   'covid19_ibaraki'
 )
 

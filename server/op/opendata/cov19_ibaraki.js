@@ -8,7 +8,7 @@ const path_1 = __importDefault(require("path"));
 const csv2json_1 = __importDefault(require("./functions/csv2json"));
 const pagination_1 = require("./functions/pagination");
 const str2date_1 = __importDefault(require("./functions/str2date"));
-const opendata_basepath = path_1.default.join(__dirname, '..', '..', '..', 'opendata', 'data', 'covid19_ibaraki');
+const opendata_basepath = path_1.default.join(__dirname, '..', '..', '..', 'opendata', 'api', 'raw', 'covid19_ibaraki');
 const getData = () => {
     const LastUpdate = JSON.parse(fs_1.default
         .readFileSync(path_1.default.resolve(opendata_basepath, 'last_update.json'))
