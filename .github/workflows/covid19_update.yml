@@ -39,13 +39,13 @@ jobs:
         env:
           DATA_UPDATE_URL: 'https://script.google.com/macros/s/AKfycbxosIdh-8osg4B3LxJgIq3torXZH24S2irfyZHBR1yXtNSWtLuhuYRD_NOnCzao39O_Ng/exec'
       - name: Convert Vaccine Data
-        run: python ../../../../workflow_tool/opendata/cov19_vaccine_data.py
+        run: python ../../../../../workflow_tool/opendata/cov19_vaccine_data.py
         working-directory: ./default/opendata/api/raw/covid19_ibaraki
       - name: Remove Base Vaccine Data
         run: rm vaccine_data.ndjson
         working-directory: ./default/opendata/api/raw/covid19_ibaraki
       - name: Create Info Json
-        run: python ../../../../workflow_tool/opendata/covid19_ibk.py
+        run: python ../../../../../workflow_tool/opendata/covid19_ibk.py
         working-directory: ./default/opendata/api/raw/covid19_ibaraki
       - name: Commit files
         run: |
