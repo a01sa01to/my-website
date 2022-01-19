@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2022-01-18T10:04:09+00:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">ABC212</title><link href="https://a01sa01to.com/blog/2021/07/abc212" rel="alternate" type="text/html" title="ABC212" /><published>2021-07-31T00:00:00+00:00</published><updated>2021-07-31T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/07/abc212</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc212"><![CDATA[<p>8 問体制になっても、相変わらず 3 完ですよ。はい。<br />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2022-01-19T10:58:15+09:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">Nuxtで作り直し</title><link href="https://a01sa01to.com/blog/2022/01/nuxt-recreate" rel="alternate" type="text/html" title="Nuxtで作り直し" /><published>2022-01-15T00:00:00+09:00</published><updated>2022-01-15T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2022/01/nuxt-recreate</id><content type="html" xml:base="https://a01sa01to.com/blog/2022/01/nuxt-recreate"><![CDATA[<p>お久しぶりです。</p>
+
+<p>Nuxt でサイトを作り直してます。詳細はまた後日…。</p>]]></content><author><name>Asa</name></author><category term="Nuxt" /><category term="Website" /><summary type="html"><![CDATA[お久しぶりです。]]></summary></entry><entry><title type="html">ABC212</title><link href="https://a01sa01to.com/blog/2021/07/abc212" rel="alternate" type="text/html" title="ABC212" /><published>2021-07-31T00:00:00+09:00</published><updated>2021-07-31T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/07/abc212</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc212"><![CDATA[<p>8 問体制になっても、相変わらず 3 完ですよ。はい。<br />
 D も解けたけど、謎の TLE（解決済）したので間に合わなかった…。</p>
 
 <h2 id="問題概要">問題概要</h2>
@@ -195,7 +197,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 
 <p>とはいっても自分の無知のせいなので、今後のコンパイルでは、ソースコードではなくコンパイルオプションとして<code class="language-plaintext highlighter-rouge">-D_GLIBCXX_DEBUG</code>を追加することにします…。</p>
 
-<p>次は 5 完を目指します…。</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[8 問体制になっても、相変わらず 3 完ですよ。はい。 D も解けたけど、謎の TLE（解決済）したので間に合わなかった…。]]></summary></entry><entry><title type="html">ABC211</title><link href="https://a01sa01to.com/blog/2021/07/abc211" rel="alternate" type="text/html" title="ABC211" /><published>2021-07-24T00:00:00+00:00</published><updated>2021-07-24T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/07/abc211</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc211"><![CDATA[<p>今回は 3 完。D 解けそうだったのに解けず、かなり悔しい。</p>
+<p>次は 5 完を目指します…。</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[8 問体制になっても、相変わらず 3 完ですよ。はい。 D も解けたけど、謎の TLE（解決済）したので間に合わなかった…。]]></summary></entry><entry><title type="html">ABC211</title><link href="https://a01sa01to.com/blog/2021/07/abc211" rel="alternate" type="text/html" title="ABC211" /><published>2021-07-24T00:00:00+09:00</published><updated>2021-07-24T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/07/abc211</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc211"><![CDATA[<p>今回は 3 完。D 解けそうだったのに解けず、かなり悔しい。</p>
 
 <h2 id="問題概要">問題概要</h2>
 
@@ -338,7 +340,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 
 <p>はい、かなりの微増です。</p>
 
-<p>次回から 8 問体制になるらしいので、今後のレーティングがどうなってくるんだろう…？という感じですね。</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[今回は 3 完。D 解けそうだったのに解けず、かなり悔しい。]]></summary></entry><entry><title type="html">ABC210</title><link href="https://a01sa01to.com/blog/2021/07/abc210" rel="alternate" type="text/html" title="ABC210" /><published>2021-07-17T00:00:00+00:00</published><updated>2021-07-17T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/07/abc210</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc210"><![CDATA[<p>今回は 3 完でした。そしてかなり時間を使ってしまいました。</p>
+<p>次回から 8 問体制になるらしいので、今後のレーティングがどうなってくるんだろう…？という感じですね。</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[今回は 3 完。D 解けそうだったのに解けず、かなり悔しい。]]></summary></entry><entry><title type="html">ABC210</title><link href="https://a01sa01to.com/blog/2021/07/abc210" rel="alternate" type="text/html" title="ABC210" /><published>2021-07-17T00:00:00+09:00</published><updated>2021-07-17T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/07/abc210</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc210"><![CDATA[<p>今回は 3 完でした。そしてかなり時間を使ってしまいました。</p>
 
 <h2 id="問題概要">問題概要</h2>
 
@@ -468,7 +470,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 全体的にもっと早く解けていれば D 問題も解けて、入緑したかもしれない。（結果論）</p>
 
 <p>レート計算機で計算してみた結果、次回で入緑するにはパフォが 1000 くらい必要だとわかったので、今回はフラグ建てないことにします。<br />
-爆速で C まで解ければいけるかもしれない（フラグ建築）。</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[今回は 3 完でした。そしてかなり時間を使ってしまいました。]]></summary></entry><entry><title type="html">ABC209</title><link href="https://a01sa01to.com/blog/2021/07/abc209" rel="alternate" type="text/html" title="ABC209" /><published>2021-07-10T00:00:00+00:00</published><updated>2021-07-10T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/07/abc209</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc209"><![CDATA[<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+爆速で C まで解ければいけるかもしれない（フラグ建築）。</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[今回は 3 完でした。そしてかなり時間を使ってしまいました。]]></summary></entry><entry><title type="html">ABC209</title><link href="https://a01sa01to.com/blog/2021/07/abc209" rel="alternate" type="text/html" title="ABC209" /><published>2021-07-10T00:00:00+09:00</published><updated>2021-07-10T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/07/abc209</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc209"><![CDATA[<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>入　緑　フ　ラ　グ　回　収　再　び</p>
 
@@ -651,7 +653,7 @@ $Q$個のクエリで$c_i$と$d_i$が与えられる。1 人が$c_i \rightarrow 
 
 <p>この通り逆ボーダーです。はい。普通に悲しいです。次回こそ入緑します。</p>
 
-<p>ちなみに E 問題、解き方はすぐにわかりました。でも 15 分で解けるほどの実力がありませんでした。はい。悲しい。</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">ABC208</title><link href="https://a01sa01to.com/blog/2021/07/abc208" rel="alternate" type="text/html" title="ABC208" /><published>2021-07-04T00:00:00+00:00</published><updated>2021-07-04T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/07/abc208</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc208"><![CDATA[<p>入　緑　フ　ラ　グ　を　回　収　し　ま　し　た</p>
+<p>ちなみに E 問題、解き方はすぐにわかりました。でも 15 分で解けるほどの実力がありませんでした。はい。悲しい。</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">ABC208</title><link href="https://a01sa01to.com/blog/2021/07/abc208" rel="alternate" type="text/html" title="ABC208" /><published>2021-07-04T00:00:00+09:00</published><updated>2021-07-04T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/07/abc208</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc208"><![CDATA[<p>入　緑　フ　ラ　グ　を　回　収　し　ま　し　た</p>
 
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -781,7 +783,7 @@ $10! = 3,628,800$ で、$P \le 10^7$ なので、こちらは 3 枚で済みそ�
 
 <p>今回のフラグ回収要因は、F 問題を見て「あっこれ授業でやったところだ！」ってなったせいです。解説見たらまったくやっていないところでした。つらい。</p>
 
-<p>そして、またフラグを建てました。あと 10 なので、まあ次回もこのペースで解ければ大丈夫な気がしますが。</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[入　緑　フ　ラ　グ　を　回　収　し　ま　し　た]]></summary></entry><entry><title type="html">Windows 11 がやってきた！！</title><link href="https://a01sa01to.com/blog/2021/06/windows11" rel="alternate" type="text/html" title="Windows 11 がやってきた！！" /><published>2021-06-29T00:00:00+00:00</published><updated>2021-06-29T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/windows11</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/windows11"><![CDATA[<p>はい、題名の通りです。Windows Insider の特権です。<br />
+<p>そして、またフラグを建てました。あと 10 なので、まあ次回もこのペースで解ければ大丈夫な気がしますが。</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[入　緑　フ　ラ　グ　を　回　収　し　ま　し　た]]></summary></entry><entry><title type="html">Windows 11 がやってきた！！</title><link href="https://a01sa01to.com/blog/2021/06/windows11" rel="alternate" type="text/html" title="Windows 11 がやってきた！！" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/windows11</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/windows11"><![CDATA[<p>はい、題名の通りです。Windows Insider の特権です。<br />
 以下のツイートのように、「Windows 11 を実行できない」と言われたコンピュータで試したらできちゃいました。てへぺろ</p>
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">PC正常性チェックアプリ（なおWindows11上で実行） <a href="https://t.co/pv9d147DlQ">pic.twitter.com/pv9d147DlQ</a></p>&mdash; Asa (@a01sa01to) <a href="https://twitter.com/a01sa01to/status/1409752298977329153?ref_src=twsrc%5Etfw">June 29, 2021</a></blockquote>
@@ -810,7 +812,7 @@ $10! = 3,628,800$ で、$P \le 10^7$ なので、こちらは 3 枚で済みそ�
 <blockquote class="twitter-tweet"><p lang="und" dir="ltr"><a href="https://t.co/yzjgaXZ7Xf">https://t.co/yzjgaXZ7Xf</a></p>&mdash; Asa (@a01sa01to) <a href="https://twitter.com/a01sa01to/status/1409773296564932626?ref_src=twsrc%5Etfw">June 29, 2021</a></blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p>ウィンドウが角丸になったり、エクスプローラーのファイルのアイコンが変わったり、ウィンドウの表示/最小化にアニメーションがついたり、…など、UI は大幅に刷新されましたが、今のところは機能追加はあまりないような印象です。今後のアップデートに期待です。</p>]]></content><author><name>Asa</name></author><category term="Windows" /><category term="Windows11" /><summary type="html"><![CDATA[はい、題名の通りです。Windows Insider の特権です。 以下のツイートのように、「Windows 11 を実行できない」と言われたコンピュータで試したらできちゃいました。てへぺろ]]></summary></entry><entry><title type="html">ABC207</title><link href="https://a01sa01to.com/blog/2021/06/abc207" rel="alternate" type="text/html" title="ABC207" /><published>2021-06-26T00:00:00+00:00</published><updated>2021-06-19T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/abc207</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc207"><![CDATA[<p>今回は 3 完です。概要は以下のツイートの通りです。（双括型）</p>
+<p>ウィンドウが角丸になったり、エクスプローラーのファイルのアイコンが変わったり、ウィンドウの表示/最小化にアニメーションがついたり、…など、UI は大幅に刷新されましたが、今のところは機能追加はあまりないような印象です。今後のアップデートに期待です。</p>]]></content><author><name>Asa</name></author><category term="Windows" /><category term="Windows11" /><summary type="html"><![CDATA[はい、題名の通りです。Windows Insider の特権です。 以下のツイートのように、「Windows 11 を実行できない」と言われたコンピュータで試したらできちゃいました。てへぺろ]]></summary></entry><entry><title type="html">ABC207</title><link href="https://a01sa01to.com/blog/2021/06/abc207" rel="alternate" type="text/html" title="ABC207" /><published>2021-06-26T00:00:00+09:00</published><updated>2021-06-19T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/abc207</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/abc207"><![CDATA[<p>今回は 3 完です。概要は以下のツイートの通りです。（双括型）</p>
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/ABC207?src=hash&amp;ref_src=twsrc%5Etfw">#ABC207</a> 3完...<br />A: a + b + c - min(a,b,c)<br />B: a + nb ≦ d*nc を解いて、ceil(a/(cd-b)) を出力<br />C: doubleで読み取って、左端が開いてるなら+0.1、右端が開いてるなら-0.1して、(a[i]左端 ≦ a[j]右端) かつ (a[j]左端 ≦ a[i]右端) の組を全部出力<br />D: 移動するx,yと回転するθ[°]を全探索でTLEした...</p>&mdash; Asa (@a01sa01to) <a href="https://twitter.com/a01sa01to/status/1408782347667853322?ref_src=twsrc%5Etfw">June 26, 2021</a></blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -934,7 +936,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>はい、水パフォでした。やった。今回は比較的難しかった…？<br />
-次も同じくらいのパフォーマンスで緑勢になれるかも…！？</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[今回は 3 完です。概要は以下のツイートの通りです。（双括型）]]></summary></entry><entry><title type="html">AHC004</title><link href="https://a01sa01to.com/blog/2021/06/ahc004" rel="alternate" type="text/html" title="AHC004" /><published>2021-06-26T00:00:00+00:00</published><updated>2021-06-26T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/ahc004</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/ahc004"><![CDATA[<p>AHC004 の振り返りです。今回は全然思いつかなかったのでかなり悪いです。はい。</p>
+次も同じくらいのパフォーマンスで緑勢になれるかも…！？</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="ABC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[今回は 3 完です。概要は以下のツイートの通りです。（双括型）]]></summary></entry><entry><title type="html">AHC004</title><link href="https://a01sa01to.com/blog/2021/06/ahc004" rel="alternate" type="text/html" title="AHC004" /><published>2021-06-26T00:00:00+09:00</published><updated>2021-06-26T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/ahc004</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/ahc004"><![CDATA[<p>AHC004 の振り返りです。今回は全然思いつかなかったのでかなり悪いです。はい。</p>
 
 <h2 id="問題概要">問題概要</h2>
 
@@ -1153,7 +1155,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 ただ、最高点の人でも得点率 36%+ちょっとなので、4 割とるのも難しいっぽいです。</p>
 
 <p><a href="https://atcoder.jp/contests/ahc004/submissions?f.User=a01sa01to">すべての提出 - AtCoder Heuristic Contest 004</a> で見れますが、終了後もいくつか試してみてます。<br />
-今後追記するかもしれません。</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="AHC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[AHC004 の振り返りです。今回は全然思いつかなかったのでかなり悪いです。はい。]]></summary></entry><entry><title type="html">GASでライブラリを使わずにTwitterクライアントを作成する</title><link href="https://a01sa01to.com/blog/2021/06/gas-twitter" rel="alternate" type="text/html" title="GASでライブラリを使わずにTwitterクライアントを作成する" /><published>2021-06-25T00:00:00+00:00</published><updated>2021-06-25T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/gas-twitter</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/gas-twitter"><![CDATA[<p>GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。<br />
+今後追記するかもしれません。</p>]]></content><author><name>Asa</name></author><category term="AtCoder" /><category term="AHC" /><category term="Competitive-Programming" /><summary type="html"><![CDATA[AHC004 の振り返りです。今回は全然思いつかなかったのでかなり悪いです。はい。]]></summary></entry><entry><title type="html">GASでライブラリを使わずにTwitterクライアントを作成する</title><link href="https://a01sa01to.com/blog/2021/06/gas-twitter" rel="alternate" type="text/html" title="GASでライブラリを使わずにTwitterクライアントを作成する" /><published>2021-06-25T00:00:00+09:00</published><updated>2021-06-25T00:00:00+09:00</updated><id>https://a01sa01to.com/blog/2021/06/gas-twitter</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/gas-twitter"><![CDATA[<p>GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。<br />
 でもそれだと自分のやりたいことは達成できない…ということでいろいろ試行錯誤した結果を書きます。</p>
 
 <h2 id="やりたいこと">やりたいこと</h2>
@@ -1241,168 +1243,4 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 
 <p>もっときれいに処理ができたり、セキュリティ的に危ないところもあったりするかもしれないので、コピペの際は自己責任でお願いします…。</p>
 
-<p>これで、どこかの処理で <code class="language-plaintext highlighter-rouge">tweet("hogehoge")</code> と呼び出せば <code class="language-plaintext highlighter-rouge">hogehoge</code> とツイートされるかと思います。以上。</p>]]></content><author><name>Asa</name></author><category term="Computer" /><category term="Google" /><category term="GAS" /><summary type="html"><![CDATA[GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。 でもそれだと自分のやりたいことは達成できない…ということでいろいろ試行錯誤した結果を書きます。]]></summary></entry><entry><title type="html">Cleaning Up My Computer</title><link href="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer" rel="alternate" type="text/html" title="Cleaning Up My Computer" /><published>2021-06-24T00:00:00+00:00</published><updated>2021-06-24T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/06/cleaning-up-my-computer"><![CDATA[<p>クリーンアップって大事ですよね……。</p>
-
-<p>ただパソコンのクリーンアップをするだけの記事です。</p>
-
-<h2 id="使用容量を確認してみる">使用容量を確認してみる</h2>
-
-<p>スクショ取り忘れました…。空き容量は 31.8GB です。ここからどのくらい減るか見ものです。</p>
-
-<h2 id="不要ファイルを削除していく">不要ファイルを削除していく</h2>
-
-<h3 id="不要なプログラムを削除">不要なプログラムを削除</h3>
-
-<p>はい、まず最初にやるべきことと言ったらこれです。不要なプログラムをアンインストールします。</p>
-
-<p>「設定 &gt; アプリ &gt; アプリと機能 &gt; （アプリ選択） &gt; アンインストール」です。全く使っていないアプリ（1 桁台）をアンインストール。<br />
-プログラムサイズが小さかったのか、消すプログラムが少なかったのか、3GB くらいしか増えず…。</p>
-
-<h3 id="フォルダ整理">フォルダ整理</h3>
-
-<p>とりあえず、今後見やすくするために、空フォルダを削除していきます。</p>
-
-<p>Powershell で削除したい親フォルダに移動した後、以下のコマンドを実行します。子孫フォルダが多いと、かなり時間がかかります。<br />
-（※一応動作確認はしていますが、以下のコマンドを実行したことにより生じた損害については責任を負いかねます）</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Measure-Command</span><span class="p">{</span><span class="w">
-  </span><span class="nv">$dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-ChildItem</span><span class="w"> </span><span class="nt">-Directory</span><span class="w"> </span><span class="nt">-Recurse</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Sort-Object</span><span class="w"> </span><span class="nt">-Descending</span><span class="w">
-  </span><span class="kr">foreach</span><span class="p">(</span><span class="nv">$dir</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">$dirs</span><span class="p">){</span><span class="w">
-    </span><span class="nv">$item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-ChildItem</span><span class="w"> </span><span class="nt">-Path</span><span class="w"> </span><span class="nv">$dir</span><span class="w"> </span><span class="nt">-Recurse</span><span class="w">
-    </span><span class="kr">if</span><span class="p">(</span><span class="nv">$item</span><span class="o">.</span><span class="nf">Count</span><span class="w"> </span><span class="o">-eq</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="w">
-      </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"Deleting </span><span class="nv">$dir</span><span class="s2">"</span><span class="w">
-      </span><span class="n">Remove-Item</span><span class="w"> </span><span class="nv">$dir</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">$dirs</code>に子孫フォルダを保存し、それぞれについて、ファイル数が 0 なら削除、といった流れです。<code class="language-plaintext highlighter-rouge">Measure-Command</code>で時間計測をしています。</p>
-
-<p><code class="language-plaintext highlighter-rouge">%UserProfile%</code>フォルダで試してみた結果、1464 フォルダが削除されました。実行時間は 13 分 11 秒でした。</p>
-
-<h3 id="windows-のクリーンアップ機能を使う">Windows のクリーンアップ機能を使う</h3>
-
-<p>Windows に標準搭載されている、クリーンアップツールを使います。<br />
-エクスプローラーで、C ドライブなどを選択して、上の「管理・ドライブツール」にあるやつです。</p>
-
-<p><img src="/img/blog/2021/06/cleaning-up/01.png" alt="2GB増やせるみたい" /></p>
-
-<p>33.7GB まで空きました。</p>
-
-<h3 id="tempフォルダを消す">%temp%フォルダを消す</h3>
-
-<p>一応、ある程度は上のツールで消えてくれるんですが、まだ割と残っているので、エクスプローラーから削除します。</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cd</span><span class="w"> </span><span class="nv">$</span><span class="nn">ENV</span><span class="p">:</span><span class="nv">temp</span><span class="w">
-</span><span class="n">Measure-Command</span><span class="p">{</span><span class="w">
-  </span><span class="nv">$dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-ChildItem</span><span class="w"> </span><span class="nt">-Directory</span><span class="w"> </span><span class="nt">-Recurse</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Sort-Object</span><span class="w"> </span><span class="nt">-Descending</span><span class="w">
-  </span><span class="kr">foreach</span><span class="p">(</span><span class="nv">$dir</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">$dirs</span><span class="p">){</span><span class="w">
-    </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"Deleting </span><span class="nv">$dir</span><span class="s2">"</span><span class="w">
-    </span><span class="n">Remove-Item</span><span class="w"> </span><span class="nv">$dir</span><span class="w"> </span><span class="nt">-force</span><span class="w"> </span><span class="nt">-Recurse</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-  </span><span class="nv">$files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-ChildItem</span><span class="w">
-  </span><span class="nx">foreach</span><span class="p">(</span><span class="nv">$file</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">$files</span><span class="p">){</span><span class="w">
-    </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"Deleting </span><span class="nv">$file</span><span class="s2">"</span><span class="w">
-    </span><span class="n">Remove-Item</span><span class="w"> </span><span class="nv">$file</span><span class="w"> </span><span class="nt">-force</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<p>空き容量は 35.3GB です。そこまで期待はしていませんでした。</p>
-
-<h3 id="ccleaner-で消していく">CCleaner で消していく</h3>
-
-<p>クリーニングソフトでは有名な、<a href="https://www.ccleaner.com/">CCleaner</a> を使って消していきます。</p>
-
-<p><img src="/img/blog/2021/06/cleaning-up/02.png" alt="Custom Cleanをしてみる" /></p>
-
-<p>スキャンしてみた結果、「約 4,687MB（=4.58GB）消せそう」と出ていましたが、実際に消してみると 5,139MB（=5.02GB）消せました。<br />空き容量は 39.8GB になりました。</p>
-
-<p>ついでにレジストリも削除しました。</p>
-
-<h3 id="手作業で消していく">手作業で消していく</h3>
-
-<p>はい、結局これに尽きます。アンインストールしたソフトでも、完全にはファイルが消えているわけではないので。</p>
-
-<p>以下のコードは、開いたフォルダ内のファイルのうち、最新の書き込み日時を取得して出力するコードです。</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Measure-Command</span><span class="p">{</span><span class="w">
-  </span><span class="nv">$dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-ChildItem</span><span class="w"> </span><span class="nt">-Recurse</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Sort-Object</span><span class="w"> </span><span class="nt">-Descending</span><span class="w">
-  </span><span class="p">[</span><span class="n">System.Datetime</span><span class="p">]</span><span class="w"> </span><span class="nv">$lastUpdate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"2000/01/01 00:00"</span><span class="w">
-  </span><span class="kr">foreach</span><span class="p">(</span><span class="nv">$dir</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">$dirs</span><span class="p">){</span><span class="w">
-    </span><span class="kr">if</span><span class="p">(</span><span class="nv">$dir</span><span class="o">.</span><span class="nf">LastWriteTime</span><span class="w"> </span><span class="o">-gt</span><span class="w"> </span><span class="nv">$lastUpdate</span><span class="p">){</span><span class="w">
-      </span><span class="nv">$lastUpdate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$dir</span><span class="o">.</span><span class="nf">LastWriteTime</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-  </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"Last Update: </span><span class="nv">$lastUpdate</span><span class="s2">"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<p>要らなさそうなファイルを消した結果、47.6GB まで増えました。<br />
-（アンインストールしたプログラムや、Cache フォルダ、最終更新から 1 年経っているフォルダなどを削除しました）</p>
-
-<p>この後に念のため、CCleaner のレジストリクリーナーを走らせました。</p>
-
-<h3 id="git-フォルダの軽量化">.git フォルダの軽量化</h3>
-
-<p>C ドライブの Documents フォルダ内に Git 管理のプログラムを大量においていたため、Git により容量が使われている可能性があったので、軽量化します。</p>
-
-<p>なお、日をまたいでしまったので 45.0GB にリバウンドしました()。</p>
-
-<p>さて、Git リポジトリで以下のコマンドを実行します。<br />
-<a href="https://git-scm.com/book/ja/v2/Git%E3%81%AE%E5%86%85%E5%81%B4-%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%83%AA%E3%82%AB%E3%83%90%E3%83%AA">Git - メンテナンスとデータリカバリ</a></p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span><span class="w"> </span><span class="nx">gc</span><span class="w">
-</span></code></pre></div></div>
-
-<p>例えば、<a href="https://github.com/a01sa01to/covid19-ibaraki">a01sa01to/covid19-ibaraki</a> における <code class="language-plaintext highlighter-rouge">.git</code> フォルダの容量は、4.72GB から 4.68GB に減りました。ほんとに誤差ですね…。ちなみに 12 分かかりました。</p>
-
-<h3 id="node_modules-フォルダの軽量化">node_modules フォルダの軽量化</h3>
-
-<p>node_modules フォルダによっても容量が使われている可能性があったので、軽量化します。</p>
-
-<p>この手法は npm を利用している場合有効で、Yarn を利用している場合は必要ないようです。<br />
-Yarn の場合 <code class="language-plaintext highlighter-rouge">yarn install</code> 時に<a href="https://classic.yarnpkg.com/en/docs/cli/prune/">自動で軽量化される</a>らしいです。</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">npm</span><span class="w"> </span><span class="nx">prune</span><span class="w">
-</span></code></pre></div></div>
-
-<p>えっと、npm を使っているプロジェクトがありませんでした…笑</p>
-
-<p>次に、Yarn で不要なファイルを削除します。上の代替なのかもしれませんが。</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>注意（[yarn autoclean</td>
-      <td>Yarn](https://classic.yarnpkg.com/en/docs/cli/autoclean)より意訳）</td>
-    </tr>
-  </tbody>
-</table>
-
-<blockquote>
-  <p>このコマンドは上級者向けと思っておいてください。<code class="language-plaintext highlighter-rouge">node_modules</code> 内に大量のファイルがあることで問題が生じているとき以外は、このコマンドは推奨されません。<code class="language-plaintext highlighter-rouge">node_modules</code>内のファイルを恒久的に削除するため、パッケージが停止する原因になり得ます。</p>
-</blockquote>
-
-<p>はい、やっていきます。（なにか損害が生じても責任は負いかねますよ。）</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">yarn</span><span class="w"> </span><span class="nx">autoclean</span><span class="w"> </span><span class="nt">--init</span><span class="w">
-</span><span class="n">yarn</span><span class="w"> </span><span class="nx">autoclean</span><span class="w"> </span><span class="nt">--force</span><span class="w">
-</span></code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">yarn autoclean --init</code> で <code class="language-plaintext highlighter-rouge">.yarnclean</code> ファイルを作成します。このファイルが存在すると、<code class="language-plaintext highlighter-rouge">yarn install</code> や <code class="language-plaintext highlighter-rouge">yarn add</code> の際に自動的に不要ファイルが削除されるとのことです。<br />
-でも、もうすでに <code class="language-plaintext highlighter-rouge">yarn install</code> はしてあるし、<code class="language-plaintext highlighter-rouge">yarn add</code> するパッケージもない…ということで、<code class="language-plaintext highlighter-rouge">yarn autoclean --force</code> で実行しています。</p>
-
-<p>再び <a href="https://github.com/a01sa01to/covid19-ibaraki">a01sa01to/covid19-ibaraki</a> で実験してみた結果、3,697 ファイルが削除され、14.23MB が空きました。ちなみに実行時間は 25.43 秒でした。十分高速。</p>
-
-<h2 id="結果は">結果は…？</h2>
-
-<p>前述したように、日をまたぐ前は <del>47.6GB</del> 47.8GB まで増えました。<br />
-日をまたいだことにより 45.0GB までリバウンドしましたが、45.2GB まで増加。</p>
-
-<p><img src="/img/blog/2021/06/cleaning-up/03.png" alt="47.8GBまで増えた！" /></p>
-
-<p>内訳は上の画像の通り。システムは変更できないけど、「アプリと機能」も必要なものしか残っていないはず…です。たぶん。</p>
-
-<p>上記以外にもいろいろな手法を試してみたいと思います。</p>]]></content><author><name>Asa</name></author><category term="Computer" /><summary type="html"><![CDATA[クリーンアップって大事ですよね……。]]></summary></entry></feed>
+<p>これで、どこかの処理で <code class="language-plaintext highlighter-rouge">tweet("hogehoge")</code> と呼び出せば <code class="language-plaintext highlighter-rouge">hogehoge</code> とツイートされるかと思います。以上。</p>]]></content><author><name>Asa</name></author><category term="Computer" /><category term="Google" /><category term="GAS" /><summary type="html"><![CDATA[GAS (Google Apps Script) から Twitter に投稿したいけど、検索してみるとライブラリを使うものだらけで、しかも同じライブラリ…。 でもそれだと自分のやりたいことは達成できない…ということでいろいろ試行錯誤した結果を書きます。]]></summary></entry></feed>
