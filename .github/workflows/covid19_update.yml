@@ -34,7 +34,7 @@ jobs:
           curl ${DATA_UPDATE_URL}?data=forked_sites -L -o otherpref.csv
           curl ${DATA_UPDATE_URL}?data=news_json -L -o news.json
           curl ${DATA_UPDATE_URL}?data=last_update -L -o last_update.json
-          curl --compressed https://vrs-data.cio.go.jp/vaccination/opendata/latest/prefecture.ndjson -L -o vaccine_data.ndjson
+          curl --compressed https://data.vrs.digital.go.jp/vaccination/opendata/latest/prefecture.ndjson -L -o vaccine_data.ndjson
         working-directory: ./default/opendata/api/raw/covid19_ibaraki/
         env:
           DATA_UPDATE_URL: 'https://script.google.com/macros/s/AKfycbxosIdh-8osg4B3LxJgIq3torXZH24S2irfyZHBR1yXtNSWtLuhuYRD_NOnCzao39O_Ng/exec'
