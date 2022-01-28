@@ -2,11 +2,11 @@
   "children": [
     {
       "attr": "陽性者数",
-      "value": 32281,
+      "value": 33264,
       "children": [
         {
           "attr": "療養中",
-          "value": 4623,
+          "value": 4918,
           "children": [
             {
               "attr": "重症",
@@ -14,25 +14,25 @@
             },
             {
               "attr": "中等症",
-              "value": 78
+              "value": 91
             },
             {
               "attr": "軽症",
-              "value": 84
+              "value": 82
             },
             {
               "attr": "自宅療養",
-              "value": 3934
+              "value": 4247
             },
             {
               "attr": "宿泊療養",
-              "value": 525
+              "value": 496
             }
           ]
         },
         {
           "attr": "回復済",
-          "value": 26942
+          "value": 27609
         },
         {
           "attr": "死亡",
@@ -40,7 +40,7 @@
         },
         {
           "attr": "その他",
-          "value": 493
+          "value": 514
         }
       ]
     }
