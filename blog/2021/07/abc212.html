@@ -276,7 +276,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 
 <p>そのまま if 文で場合分けすれば OK。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">fixed</span> <span class="o">&lt;&lt;</span> <span class="n">setprecision</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
@@ -304,7 +304,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 <p>問題文を言い換えると、 「i=0 ～ 2 で、$X_{i+1}=(X_i+1) \mathrm{mod} 10$か、$X_{i+1}=X_i$のどちらか一方になっていれば Weak」になります。<br />
 私は vector&lt;int&gt;を用いて計算しました。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="cp">#define loop(i, n) for (ll i = 0; i &lt; n; i++)
 </span>
@@ -340,7 +340,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 
 <p>それぞれをソートすれば、かなり計算量を減らせました。私の解説より、公式解説がめちゃくちゃわかりやすいと思うので、<a href="https://atcoder.jp/contests/abc212/editorial/2355">解説 - AtCoder Beginner Contest 212</a> をご覧いただければ…。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span> <span class="n">ll1d</span><span class="p">;</span>
@@ -382,8 +382,8 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 
 <p>袋にいれていちいちソートしても間に合わないので、<code class="language-plaintext highlighter-rouge">priority_queue</code>を使いました。また、いちいちすべてに「$X_i$を足す」ことはできないので、これまで足された数を$Add$に記録しておき、「$X_i$を追加」を「$X_i - Add$を追加」にしておくことで、計算量は大幅に減ります。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;atcoder/all&gt;
-#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;atcoder/all&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">atcoder</span><span class="p">;</span>

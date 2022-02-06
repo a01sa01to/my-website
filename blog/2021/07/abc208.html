@@ -270,7 +270,7 @@ Asa's Blog" lang="en">
 
 <p>$A$ 回振ったときの最小値は、全部 1 が出たときの $A$。同じように、最大値は $6A$ 。この範囲内なら全部がなりえるので、この場合に <code class="language-plaintext highlighter-rouge">Yes</code>。それ以外は <code class="language-plaintext highlighter-rouge">No</code>。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
   <span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
@@ -296,7 +296,7 @@ $10! = 3,628,800$ で、$P \le 10^7$ なので、こちらは 3 枚で済みそ�
 
 <p>そして $i=10$ から順に <code class="language-plaintext highlighter-rouge">ans</code> に $\lfloor \frac{P}{i!} \rfloor$ を足して、$P$ から $i! \times \lfloor \frac{P}{i!} \rfloor$ を引きます。つまり $P$ に $P \mathrm{mod} i!$ を代入します。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ull</span><span class="p">;</span>
 
@@ -331,7 +331,7 @@ $10! = 3,628,800$ で、$P \le 10^7$ なので、こちらは 3 枚で済みそ�
 <p>みんなに分けられる$\lfloor \frac{K}{N} \rfloor$個を最初に分けちゃいます。そして、国民番号を昇順にソートして、余りを順番にあげます。そのあとに $i$ の順でソートして出力します。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define _GLIBCXX_DEBUG
-#include &lt;bits/stdc++.h&gt;
+#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ull</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">ull</span><span class="o">&gt;</span> <span class="n">ull1d</span><span class="p">;</span>

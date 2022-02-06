@@ -269,7 +269,7 @@ Asa's Blog" lang="en">
 
 <p>まず、$ans = X \cdot N$にします。そして、$N \gt A$なら、割引額である (1 個あたりの差額)×(割引対象個数) の $(X-Y)(N-A)$を引きました。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
@@ -291,7 +291,7 @@ Asa's Blog" lang="en">
 <p>$N \le 10^5$なので、そのまま順番に試していって、初めて<code class="language-plaintext highlighter-rouge">1</code>となった時の$i$が奇数か偶数かで判定すれば OK です。<br />
 <a href="./abc209">前回</a>の B 問題でもやりましたが、問題文中では商品は 1-indexed ですがプログラム中では 0-indexed なので、「偶数番目」を「i が奇数の時」とする必要があるので注意。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
@@ -324,7 +324,7 @@ Asa's Blog" lang="en">
   <li>消した後、$c_{i-k}$の個数が 0 なら set からも消す。</li>
 </ul>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ull</span><span class="p">;</span>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2022-02-05T09:58:25+00:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">Nuxtで作り直し</title><link href="https://a01sa01to.com/blog/2022/01/nuxt-recreate" rel="alternate" type="text/html" title="Nuxtで作り直し" /><published>2022-01-15T00:00:00+00:00</published><updated>2022-01-15T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2022/01/nuxt-recreate</id><content type="html" xml:base="https://a01sa01to.com/blog/2022/01/nuxt-recreate"><![CDATA[<p>お久しぶりです。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://a01sa01to.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://a01sa01to.com/" rel="alternate" type="text/html" /><updated>2022-02-06T10:46:33+00:00</updated><id>https://a01sa01to.com/feed.xml</id><title type="html">Asa’s Website</title><author><name>Asa</name></author><entry><title type="html">Nuxtで作り直し</title><link href="https://a01sa01to.com/blog/2022/01/nuxt-recreate" rel="alternate" type="text/html" title="Nuxtで作り直し" /><published>2022-01-15T00:00:00+00:00</published><updated>2022-01-15T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2022/01/nuxt-recreate</id><content type="html" xml:base="https://a01sa01to.com/blog/2022/01/nuxt-recreate"><![CDATA[<p>お久しぶりです。</p>
 
 <p>Nuxt でサイトを作り直してます。詳細はまた後日…。</p>]]></content><author><name>Asa</name></author><category term="Nuxt" /><category term="Website" /><summary type="html"><![CDATA[お久しぶりです。]]></summary></entry><entry><title type="html">ABC212</title><link href="https://a01sa01to.com/blog/2021/07/abc212" rel="alternate" type="text/html" title="ABC212" /><published>2021-07-31T00:00:00+00:00</published><updated>2021-07-31T00:00:00+00:00</updated><id>https://a01sa01to.com/blog/2021/07/abc212</id><content type="html" xml:base="https://a01sa01to.com/blog/2021/07/abc212"><![CDATA[<p>8 問体制になっても、相変わらず 3 完ですよ。はい。<br />
 D も解けたけど、謎の TLE（解決済）したので間に合わなかった…。</p>
@@ -35,7 +35,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 
 <p>そのまま if 文で場合分けすれば OK。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">fixed</span> <span class="o">&lt;&lt;</span> <span class="n">setprecision</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
@@ -63,7 +63,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 <p>問題文を言い換えると、 「i=0 ～ 2 で、$X_{i+1}=(X_i+1) \mathrm{mod} 10$か、$X_{i+1}=X_i$のどちらか一方になっていれば Weak」になります。<br />
 私は vector&lt;int&gt;を用いて計算しました。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="cp">#define loop(i, n) for (ll i = 0; i &lt; n; i++)
 </span>
@@ -99,7 +99,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 
 <p>それぞれをソートすれば、かなり計算量を減らせました。私の解説より、公式解説がめちゃくちゃわかりやすいと思うので、<a href="https://atcoder.jp/contests/abc212/editorial/2355">解説 - AtCoder Beginner Contest 212</a> をご覧いただければ…。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span> <span class="n">ll1d</span><span class="p">;</span>
@@ -141,8 +141,8 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 
 <p>袋にいれていちいちソートしても間に合わないので、<code class="language-plaintext highlighter-rouge">priority_queue</code>を使いました。また、いちいちすべてに「$X_i$を足す」ことはできないので、これまで足された数を$Add$に記録しておき、「$X_i$を追加」を「$X_i - Add$を追加」にしておくことで、計算量は大幅に減ります。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;atcoder/all&gt;
-#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;atcoder/all&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">atcoder</span><span class="p">;</span>
@@ -227,7 +227,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 
 <p>double 型でそのまま出力。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;atcoder/all&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;atcoder/all&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
@@ -247,7 +247,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 
 <p>4 次元の bool 配列を用意して、それぞれがあれば true にする。そのあと、false が含まれていれば<code class="language-plaintext highlighter-rouge">No</code>。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">chk</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">t</span><span class="p">,</span> <span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
@@ -279,8 +279,8 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 
 <p>ちょっと悩んで、<code class="language-plaintext highlighter-rouge">chokudai</code>を右から場合の数をすればいいのでは？となった。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;atcoder/all&gt;
-#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;atcoder/all&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">atcoder</span><span class="p">;</span>
 
@@ -368,7 +368,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 
 <p>まず、$ans = X \cdot N$にします。そして、$N \gt A$なら、割引額である (1 個あたりの差額)×(割引対象個数) の $(X-Y)(N-A)$を引きました。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
@@ -390,7 +390,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
 <p>$N \le 10^5$なので、そのまま順番に試していって、初めて<code class="language-plaintext highlighter-rouge">1</code>となった時の$i$が奇数か偶数かで判定すれば OK です。<br />
 <a href="./abc209">前回</a>の B 問題でもやりましたが、問題文中では商品は 1-indexed ですがプログラム中では 0-indexed なので、「偶数番目」を「i が奇数の時」とする必要があるので注意。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
@@ -423,7 +423,7 @@ D も解けたけど、謎の TLE（解決済）したので間に合わなか�
   <li>消した後、$c_{i-k}$の個数が 0 なら set からも消す。</li>
 </ul>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ull</span><span class="p">;</span>
@@ -508,7 +508,7 @@ $Q$個のクエリで$c_i$と$d_i$が与えられる。1 人が$c_i \rightarrow 
 
 <p>さんすう。$B-A+1$を出力する。ただし、$B \lt A$なら、存在しないので 0 を出力。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
   <span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
@@ -527,7 +527,7 @@ $Q$個のクエリで$c_i$と$d_i$が与えられる。1 人が$c_i \rightarrow 
 
 <p>制約が$N \le 100$なので、素直に計算して間に合います。なお、問題文中では商品は 1-indexed ですがプログラム中では 0-indexed なので、「偶数番目」を「i が奇数の時」とする必要があるので注意。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="cp">#define loop(i, n) for (ull i = 0; i &lt; n; i++)
 </span>
@@ -556,8 +556,8 @@ $Q$個のクエリで$c_i$と$d_i$が与えられる。1 人が$c_i \rightarrow 
 
 <p>あと、<a href="https://github.com/atcoder/ac-library">AtCoder Library</a>を使ってみた。これは AtCoder の公式ライブラリで、いろいろ便利なのが入ってる（語彙力）。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;atcoder/all&gt;
-#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;atcoder/all&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">atcoder</span><span class="p">;</span>
 <span class="cp">#define loop(i, n) for (ull i = 0; i &lt; n; i++)
@@ -591,7 +591,7 @@ $Q$個のクエリで$c_i$と$d_i$が与えられる。1 人が$c_i \rightarrow 
 <p><a href="https://atcoder.jp/contests/abc209/submissions/24138951">提出 #24138951 - AtCoder Beginner Contest 209</a><br />
 その後、「えー RE ってなんで出てるんだーー？？」って悩んだ挙句、「よくよく考えたらある 1 点からの道数数えればよくね？」ってなり、実装すると、計算量的にセーフになりました。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ull</span><span class="p">;</span>
@@ -682,7 +682,7 @@ $Q$個のクエリで$c_i$と$d_i$が与えられる。1 人が$c_i \rightarrow 
 
 <p>$A$ 回振ったときの最小値は、全部 1 が出たときの $A$。同じように、最大値は $6A$ 。この範囲内なら全部がなりえるので、この場合に <code class="language-plaintext highlighter-rouge">Yes</code>。それ以外は <code class="language-plaintext highlighter-rouge">No</code>。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
   <span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
@@ -708,7 +708,7 @@ $10! = 3,628,800$ で、$P \le 10^7$ なので、こちらは 3 枚で済みそ�
 
 <p>そして $i=10$ から順に <code class="language-plaintext highlighter-rouge">ans</code> に $\lfloor \frac{P}{i!} \rfloor$ を足して、$P$ から $i! \times \lfloor \frac{P}{i!} \rfloor$ を引きます。つまり $P$ に $P \mathrm{mod} i!$ を代入します。</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ull</span><span class="p">;</span>
 
@@ -743,7 +743,7 @@ $10! = 3,628,800$ で、$P \le 10^7$ なので、こちらは 3 枚で済みそ�
 <p>みんなに分けられる$\lfloor \frac{K}{N} \rfloor$個を最初に分けちゃいます。そして、国民番号を昇順にソートして、余りを順番にあげます。そのあとに $i$ の順でソートして出力します。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define _GLIBCXX_DEBUG
-#include &lt;bits/stdc++.h&gt;
+#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ull</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">ull</span><span class="o">&gt;</span> <span class="n">ull1d</span><span class="p">;</span>
@@ -851,7 +851,7 @@ $10! = 3,628,800$ で、$P \le 10^7$ なので、こちらは 3 枚で済みそ�
 式にすると、 $a+b+c-\max (a,b,c)$</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define _GLIBCXX_DEBUG
-#include &lt;bits/stdc++.h&gt;
+#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
   <span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">;</span>
@@ -875,7 +875,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 ちなみに、$DC-B = 0$ となる場合、不等式に代入してみると $A \ne 0$ となるので、$DC-B = 0$ の場合は考えなくて良いと思います。（提出後の考察）</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define _GLIBCXX_DEBUG
-#include &lt;bits/stdc++.h&gt;
+#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
@@ -899,7 +899,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 （解説では $\max(l_i, l_j) \le \min(r_i, r_j)$ とやっていました。なるほど。）</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define _GLIBCXX_DEBUG
-#include &lt;bits/stdc++.h&gt;
+#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ull</span><span class="p">;</span>
 <span class="cp">#define loop(i,n) for(ull i=0;i&lt;n;i++)
@@ -984,7 +984,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 <p>入力順に出力して、1 行の長さが 20 文字を超えそうなら <code class="language-plaintext highlighter-rouge">.</code> を残りの文字数分出力した後、出力前に改行します。合計行数が 20 行になったら終わりです。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define _GLIBCXX_DEBUG
-#include &lt;bits/stdc++.h&gt;
+#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="cp">#define loop(i,n) for(int i=0;i&lt;n;i++)
 </span>
@@ -1021,7 +1021,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 また、ソートすることで、文字数の多いものから出力するようにします（大は小を兼ねる的な）。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define _GLIBCXX_DEBUG
-#include &lt;bits/stdc++.h&gt;
+#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="cp">#define loop(i,n) for(int i=0;i&lt;n;i++)
 </span>
@@ -1064,7 +1064,7 @@ $DC-B \lt 0$ となると、$N \lt 0$ になってしまうので、この場合
 <p>例えば、$s_1$: <code class="language-plaintext highlighter-rouge">ABC</code> は $s_2$: <code class="language-plaintext highlighter-rouge">ABCDEF</code> の部分文字列になっているので、$s_1$を削除します。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define _GLIBCXX_DEBUG
-#include &lt;bits/stdc++.h&gt;
+#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="cp">#define loop(i,n) for(ull i=0;i&lt;n;i++)
 </span>
