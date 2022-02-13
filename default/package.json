@@ -28,7 +28,7 @@
     "clipboard": "^2.0.10",
     "file-loader": "^6.2.0",
     "jquery": "^3.6.0",
-    "simple-icons": "^6.8.0",
+    "simple-icons": "^6.9.0",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
     "webpack": "^5.68.0",
