@@ -13,7 +13,7 @@
   "author": "Asa <npm@a01sa01to.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.2",
+    "express": "^4.17.3",
     "express-graphql": "^0.12.0",
     "graphql": "^16.3.0"
   },
@@ -28,10 +28,10 @@
     "clipboard": "^2.0.10",
     "file-loader": "^6.2.0",
     "jquery": "^3.6.0",
-    "simple-icons": "^6.9.0",
+    "simple-icons": "^6.10.0",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
-    "webpack": "^5.68.0",
+    "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
   }
 }
