@@ -2010,10 +2010,10 @@
   },
   {
     "date": "2022-01-24",
-    "count": 9158,
+    "count": 9161,
     "status_1": 206,
     "status_2": 58,
-    "status_3": 8894
+    "status_3": 8897
   },
   {
     "date": "2022-01-25",
@@ -2038,10 +2038,10 @@
   },
   {
     "date": "2022-01-28",
-    "count": 13387,
+    "count": 13389,
     "status_1": 484,
     "status_2": 504,
-    "status_3": 12399
+    "status_3": 12401
   },
   {
     "date": "2022-01-29",
@@ -2059,38 +2059,38 @@
   },
   {
     "date": "2022-01-31",
-    "count": 10502,
+    "count": 10504,
     "status_1": 302,
     "status_2": 65,
-    "status_3": 10135
+    "status_3": 10137
   },
   {
     "date": "2022-02-01",
-    "count": 16766,
+    "count": 16874,
     "status_1": 352,
     "status_2": 159,
-    "status_3": 16255
+    "status_3": 16363
   },
   {
     "date": "2022-02-02",
-    "count": 15149,
+    "count": 15151,
     "status_1": 77,
     "status_2": 90,
-    "status_3": 14982
+    "status_3": 14984
   },
   {
     "date": "2022-02-03",
-    "count": 14030,
+    "count": 14095,
     "status_1": 335,
     "status_2": 227,
-    "status_3": 13468
+    "status_3": 13533
   },
   {
     "date": "2022-02-04",
-    "count": 19907,
+    "count": 19982,
     "status_1": 539,
     "status_2": 391,
-    "status_3": 18977
+    "status_3": 19052
   },
   {
     "date": "2022-02-05",
@@ -2101,38 +2101,38 @@
   },
   {
     "date": "2022-02-06",
-    "count": 13216,
+    "count": 13219,
     "status_1": 287,
     "status_2": 209,
-    "status_3": 12720
+    "status_3": 12723
   },
   {
     "date": "2022-02-07",
-    "count": 19089,
+    "count": 19126,
     "status_1": 283,
     "status_2": 177,
-    "status_3": 18629
+    "status_3": 18666
   },
   {
     "date": "2022-02-08",
-    "count": 22745,
+    "count": 22835,
     "status_1": 298,
     "status_2": 289,
-    "status_3": 22158
+    "status_3": 22248
   },
   {
     "date": "2022-02-09",
-    "count": 22098,
+    "count": 22100,
     "status_1": 185,
     "status_2": 182,
-    "status_3": 21731
+    "status_3": 21733
   },
   {
     "date": "2022-02-10",
-    "count": 20114,
+    "count": 20277,
     "status_1": 149,
     "status_2": 316,
-    "status_3": 19649
+    "status_3": 19812
   },
   {
     "date": "2022-02-11",
@@ -2143,79 +2143,86 @@
   },
   {
     "date": "2022-02-12",
-    "count": 18286,
-    "status_1": 320,
+    "count": 18293,
+    "status_1": 321,
     "status_2": 376,
-    "status_3": 17590
+    "status_3": 17596
   },
   {
     "date": "2022-02-13",
-    "count": 16296,
+    "count": 16298,
     "status_1": 120,
     "status_2": 30,
-    "status_3": 16146
+    "status_3": 16148
   },
   {
     "date": "2022-02-14",
-    "count": 18902,
-    "status_1": 360,
-    "status_2": 181,
-    "status_3": 18361
+    "count": 19034,
+    "status_1": 365,
+    "status_2": 182,
+    "status_3": 18487
   },
   {
     "date": "2022-02-15",
-    "count": 21638,
+    "count": 21660,
     "status_1": 208,
     "status_2": 207,
-    "status_3": 21223
+    "status_3": 21245
   },
   {
     "date": "2022-02-16",
-    "count": 21249,
-    "status_1": 151,
+    "count": 21314,
+    "status_1": 157,
     "status_2": 110,
-    "status_3": 20988
+    "status_3": 21047
   },
   {
     "date": "2022-02-17",
-    "count": 19033,
-    "status_1": 193,
+    "count": 19106,
+    "status_1": 194,
     "status_2": 177,
-    "status_3": 18663
+    "status_3": 18735
   },
   {
     "date": "2022-02-18",
-    "count": 22846,
+    "count": 22978,
     "status_1": 340,
     "status_2": 365,
-    "status_3": 22141
+    "status_3": 22273
   },
   {
     "date": "2022-02-19",
-    "count": 22294,
+    "count": 22443,
     "status_1": 262,
     "status_2": 440,
-    "status_3": 21592
+    "status_3": 21741
   },
   {
     "date": "2022-02-20",
-    "count": 16752,
-    "status_1": 70,
-    "status_2": 46,
-    "status_3": 16636
+    "count": 17062,
+    "status_1": 71,
+    "status_2": 48,
+    "status_3": 16943
   },
   {
     "date": "2022-02-21",
-    "count": 18165,
-    "status_1": 113,
-    "status_2": 178,
-    "status_3": 17874
+    "count": 18370,
+    "status_1": 122,
+    "status_2": 190,
+    "status_3": 18058
   },
   {
     "date": "2022-02-22",
-    "count": 19101,
-    "status_1": 141,
-    "status_2": 280,
-    "status_3": 18680
+    "count": 19723,
+    "status_1": 143,
+    "status_2": 287,
+    "status_3": 19293
+  },
+  {
+    "date": "2022-02-23",
+    "count": 6686,
+    "status_1": 0,
+    "status_2": 1,
+    "status_3": 6685
   }
 ]
